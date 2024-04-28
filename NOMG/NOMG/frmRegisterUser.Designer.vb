@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRegistration
+Partial Class frmRegisterUser
 	Inherits System.Windows.Forms.Form
 
 	'Form overrides dispose to clean up the component list.
@@ -24,13 +24,15 @@ Partial Class frmRegistration
 	Private Sub InitializeComponent()
 		Me.SuspendLayout()
 		'
-		'frmRegistration
+		'frmRegisterUser
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(638, 450)
-		Me.Name = "frmRegistration"
-		Me.Text = "frmRegistration"
+		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(72, Byte), Integer))
+		Me.ClientSize = New System.Drawing.Size(800, 450)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+		Me.Name = "frmRegisterUser"
+		Me.Text = "frmRegisterUser"
 		Me.ResumeLayout(False)
 
 	End Sub

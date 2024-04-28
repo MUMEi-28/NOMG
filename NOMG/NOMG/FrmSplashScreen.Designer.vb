@@ -100,6 +100,7 @@ Partial Class FrmSplashScreen
 		Me.Controls.Add(Me.Label1)
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.Name = "FrmSplashScreen"
+		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "FrmSplashScreen"
 		Me.ResumeLayout(False)
 		Me.PerformLayout()

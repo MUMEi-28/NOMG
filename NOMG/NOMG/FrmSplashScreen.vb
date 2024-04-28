@@ -4,7 +4,7 @@
 		panelLoading.Width += 6
 		If panelLoading.Width > 860 Then
 			SplashScreenTImer.Stop()
-			Dim regForm As New frmRegistration()
+			Dim regForm As New frmStart()
 			regForm.Show()
 			Me.Hide()
 		End If
