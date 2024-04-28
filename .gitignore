@@ -1,3 +1,11 @@
 
 NOMG/.vs/NOMG/FileContentIndex/a446c3d5-77ca-4241-820a-4e7f2d55363c.vsidx
 /NOMG/.vs/
+/NOMG/.vs
+
+# Build artifacts
+bin/
+obj/
+Publish/
+/NOMG/NOMG/bin
+/NOMG/NOMG/obj
