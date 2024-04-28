@@ -4,9 +4,6 @@ C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.xml
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.AssemblyReference.cache
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form1.resources
-C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form2.resources
-C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form3.resources
-C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form4.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Resources.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.GenerateResource.cache
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.CoreCompileInputs.cache
@@ -32,3 +29,11 @@ D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.FrmSplashScreen.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmStart.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmLogIn.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmMain.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAppointments.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmDoctors.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmCalendar.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmLogIn.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmStart.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.FrmSplashScreen.resources

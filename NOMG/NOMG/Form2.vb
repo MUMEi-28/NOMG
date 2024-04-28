@@ -1,4 +1,4 @@
-﻿Public Class Form2
+﻿Public Class frmMain
     Public listAppointment As New List(Of Date)
     Dim dteLMC As Date
     Dim dteTracker As Date
@@ -45,7 +45,7 @@
             End If
         Loop
 
-        Form3.Show()
+        frmAppointments.Show()
         Me.Hide()
     End Sub
 
@@ -64,7 +64,7 @@
     End Sub
 
     Private Sub btnViewDoctors_Click(sender As Object, e As EventArgs) Handles btnViewDoctors.Click
-        Form4.Show()
+        frmDoctors.Show()
         Me.Hide()
 
     End Sub

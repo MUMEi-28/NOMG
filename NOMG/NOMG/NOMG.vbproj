@@ -98,6 +98,12 @@
     <Compile Include="Form4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAccountInformation.Designer.vb">
       <DependentUpon>frmAccountInformation.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,9 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAccountInformation.resx">
       <DependentUpon>frmAccountInformation.vb</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +200,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Doctors Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V2 Main - Doctor 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V3 Main - Doctor 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V2 View Appointments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V2 Doctors Panel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

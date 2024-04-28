@@ -32,7 +32,32 @@ NOMG
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:NOMG.My.Resources.Resources.V2_Doctors_Panel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.V2_Main___Doctor_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.V2_View_Appointments">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.V3_Main___Doctor_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:NOMG.My.Resources.Resources.View_Appointments">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.View_Calendar">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

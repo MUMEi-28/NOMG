@@ -1,6 +1,6 @@
-﻿Public Class Form4
+﻿Public Class frmDoctors
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Form2.Show()
+        frmMain.Show()
         Me.Hide()
 
     End Sub
