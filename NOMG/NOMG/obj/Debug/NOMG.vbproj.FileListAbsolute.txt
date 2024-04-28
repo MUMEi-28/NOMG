@@ -1,0 +1,15 @@
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe.config
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.xml
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form1.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form2.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form3.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form4.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Resources.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.GenerateResource.cache
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.exe
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.xml
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.pdb
