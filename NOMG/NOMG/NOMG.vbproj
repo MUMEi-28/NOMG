@@ -216,5 +216,8 @@
   <ItemGroup>
     <None Include="Resources\V2 Doctors Panel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

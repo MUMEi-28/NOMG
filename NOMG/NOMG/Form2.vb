@@ -3,6 +3,10 @@
     Dim dteLMC As Date
     Dim dteTracker As Date
 
+    Public lblFrmMain As New List(Of Label)
+    Public pnlFrmMain As New List(Of Panel)
+    Public btnFrmMain As New List(Of Button)
+
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
         If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
             MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbRetryCancel + vbCritical, "Error")
@@ -14,7 +18,7 @@
         End If
     End Sub
 
-    Private Sub btnViewAppointments_Click(sender As Object, e As EventArgs) Handles btnViewAppointments.Click
+    Private Sub btnViewAppointments_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
         dteTracker = listAppointment(0).Date
 
         Do While dteTracker <= dteLMC.AddMonths(9)
@@ -57,15 +61,57 @@
         End If
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        listAppointment.Add(dtpFirstAppointment.Value.Date)
-        dteLMC = dtpLMC.Value.Date
-
-    End Sub
-
     Private Sub btnViewDoctors_Click(sender As Object, e As EventArgs) Handles btnViewDoctors.Click
         frmDoctors.Show()
         Me.Hide()
 
+    End Sub
+
+    Public Sub New()
+        InitializeComponent()
+        PictureBox1.Hide()
+        listAppointment.Add(dtpFirstAppointment.Value.Date)
+        dteLMC = dtpLMC.Value.Date
+        Me.BackColor = Color.FromArgb(255, 39, 36, 46)
+
+        btnFrmMain.Add(btnBack)
+        btnFrmMain.Add(btnSeeRoutine)
+        btnFrmMain.Add(btnViewDoctors)
+        btnFrmMain.Add(btnBillingInfo)
+        For Each btn In btnFrmMain
+            btn.BackColor = Color.FromArgb(255, 79, 45, 57)
+            btn.ForeColor = Color.FromArgb(255, 255, 255, 255)
+            btn.FlatStyle = FlatStyle.Flat
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 45, 57)
+        Next
+
+        pnlFrmMain.Add(pnlClinicInfo)
+        pnlFrmMain.Add(pnlPatientDetails)
+        For Each pnl In pnlFrmMain
+            pnl.BackColor = Color.FromArgb(255, 79, 45, 57)
+        Next
+
+        lblFrmMain.Add(lblLMC)
+        lblFrmMain.Add(lblSetFirstAppointment)
+        lblFrmMain.Add(lblClinicInfo)
+        lblFrmMain.Add(lblCIName)
+        lblFrmMain.Add(lblCIAddress)
+        lblFrmMain.Add(lblCIContactNum)
+        lblFrmMain.Add(lblPatientDetails)
+        lblFrmMain.Add(lblPDName)
+        lblFrmMain.Add(lblPDAddress)
+        lblFrmMain.Add(lblPDAge)
+        lblFrmMain.Add(lblPDFirstBaby)
+        lblFrmMain.Add(lblPDGestationalAge)
+        lblFrmMain.Add(lblPDAdditionalInfo)
+        For Each lbl In lblFrmMain
+            lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
+            lbl.BackColor = Color.FromArgb(0, Color.Transparent)
+        Next
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Form1.Show()
+        Me.Hide()
     End Sub
 End Class
