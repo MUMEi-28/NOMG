@@ -1,8 +1,18 @@
-﻿Public Class frmAppointments
+﻿Public Class frmRoutine
+    Public btnfrmRoutine As New List(Of Button)
     Public Sub New()
         InitializeComponent()
         For Each appointment In frmMain.listAppointment
             clbAppointments.Items.Add(appointment)
+        Next
+
+        btnfrmRoutine.Add(btnViewCalendar)
+        btnfrmRoutine.Add(btnBack)
+        For Each btn In btnfrmRoutine
+            btn.BackColor = Color.FromArgb(255, 79, 45, 57)
+            btn.ForeColor = Color.FromArgb(255, 255, 255, 255)
+            btn.FlatStyle = FlatStyle.Flat
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 45, 57)
         Next
 
     End Sub

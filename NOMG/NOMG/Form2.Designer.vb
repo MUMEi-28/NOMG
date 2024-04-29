@@ -29,7 +29,6 @@ Partial Class frmMain
         Me.dtpFirstAppointment = New System.Windows.Forms.DateTimePicker()
         Me.btnViewDoctors = New System.Windows.Forms.Button()
         Me.pnlClinicInfo = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblClinicInfo = New System.Windows.Forms.Label()
         Me.lblCIName = New System.Windows.Forms.Label()
         Me.lblCIAddress = New System.Windows.Forms.Label()
@@ -53,7 +52,6 @@ Partial Class frmMain
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnBack
@@ -70,7 +68,7 @@ Partial Class frmMain
         Me.lblSetFirstAppointment.AutoSize = True
         Me.lblSetFirstAppointment.Font = New System.Drawing.Font("Nunito Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSetFirstAppointment.ForeColor = System.Drawing.Color.Black
-        Me.lblSetFirstAppointment.Location = New System.Drawing.Point(129, 164)
+        Me.lblSetFirstAppointment.Location = New System.Drawing.Point(155, 164)
         Me.lblSetFirstAppointment.Name = "lblSetFirstAppointment"
         Me.lblSetFirstAppointment.Size = New System.Drawing.Size(329, 38)
         Me.lblSetFirstAppointment.TabIndex = 3
@@ -79,7 +77,7 @@ Partial Class frmMain
         'btnSeeRoutine
         '
         Me.btnSeeRoutine.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeeRoutine.Location = New System.Drawing.Point(186, 263)
+        Me.btnSeeRoutine.Location = New System.Drawing.Point(212, 263)
         Me.btnSeeRoutine.Name = "btnSeeRoutine"
         Me.btnSeeRoutine.Size = New System.Drawing.Size(219, 46)
         Me.btnSeeRoutine.TabIndex = 4
@@ -90,7 +88,7 @@ Partial Class frmMain
         '
         Me.dtpLMC.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpLMC.Font = New System.Drawing.Font("Nunito", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpLMC.Location = New System.Drawing.Point(118, 95)
+        Me.dtpLMC.Location = New System.Drawing.Point(144, 95)
         Me.dtpLMC.Name = "dtpLMC"
         Me.dtpLMC.Size = New System.Drawing.Size(344, 32)
         Me.dtpLMC.TabIndex = 7
@@ -99,7 +97,7 @@ Partial Class frmMain
         '
         Me.dtpFirstAppointment.CalendarFont = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFirstAppointment.Font = New System.Drawing.Font("Nunito", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFirstAppointment.Location = New System.Drawing.Point(120, 205)
+        Me.dtpFirstAppointment.Location = New System.Drawing.Point(146, 205)
         Me.dtpFirstAppointment.Name = "dtpFirstAppointment"
         Me.dtpFirstAppointment.Size = New System.Drawing.Size(342, 32)
         Me.dtpFirstAppointment.TabIndex = 8
@@ -107,7 +105,7 @@ Partial Class frmMain
         'btnViewDoctors
         '
         Me.btnViewDoctors.Font = New System.Drawing.Font("Nunito Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewDoctors.Location = New System.Drawing.Point(100, 732)
+        Me.btnViewDoctors.Location = New System.Drawing.Point(119, 732)
         Me.btnViewDoctors.Name = "btnViewDoctors"
         Me.btnViewDoctors.Size = New System.Drawing.Size(391, 51)
         Me.btnViewDoctors.TabIndex = 9
@@ -116,20 +114,10 @@ Partial Class frmMain
         '
         'pnlClinicInfo
         '
-        Me.pnlClinicInfo.Location = New System.Drawing.Point(25, 327)
+        Me.pnlClinicInfo.Location = New System.Drawing.Point(44, 327)
         Me.pnlClinicInfo.Name = "pnlClinicInfo"
         Me.pnlClinicInfo.Size = New System.Drawing.Size(541, 388)
         Me.pnlClinicInfo.TabIndex = 10
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.NOMG.My.Resources.Resources._4
-        Me.PictureBox1.Location = New System.Drawing.Point(1, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1280, 800)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 11
-        Me.PictureBox1.TabStop = False
         '
         'lblClinicInfo
         '
@@ -137,7 +125,7 @@ Partial Class frmMain
         Me.lblClinicInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblClinicInfo.Font = New System.Drawing.Font("Nunito Black", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblClinicInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblClinicInfo.Location = New System.Drawing.Point(110, 358)
+        Me.lblClinicInfo.Location = New System.Drawing.Point(129, 358)
         Me.lblClinicInfo.Name = "lblClinicInfo"
         Me.lblClinicInfo.Size = New System.Drawing.Size(370, 55)
         Me.lblClinicInfo.TabIndex = 12
@@ -149,7 +137,7 @@ Partial Class frmMain
         Me.lblCIName.BackColor = System.Drawing.Color.Transparent
         Me.lblCIName.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCIName.ForeColor = System.Drawing.Color.Black
-        Me.lblCIName.Location = New System.Drawing.Point(96, 429)
+        Me.lblCIName.Location = New System.Drawing.Point(115, 429)
         Me.lblCIName.Name = "lblCIName"
         Me.lblCIName.Size = New System.Drawing.Size(56, 23)
         Me.lblCIName.TabIndex = 13
@@ -161,7 +149,7 @@ Partial Class frmMain
         Me.lblCIAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblCIAddress.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCIAddress.ForeColor = System.Drawing.Color.Black
-        Me.lblCIAddress.Location = New System.Drawing.Point(96, 516)
+        Me.lblCIAddress.Location = New System.Drawing.Point(115, 516)
         Me.lblCIAddress.Name = "lblCIAddress"
         Me.lblCIAddress.Size = New System.Drawing.Size(73, 23)
         Me.lblCIAddress.TabIndex = 14
@@ -173,7 +161,7 @@ Partial Class frmMain
         Me.lblCIContactNum.BackColor = System.Drawing.Color.Transparent
         Me.lblCIContactNum.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCIContactNum.ForeColor = System.Drawing.Color.Black
-        Me.lblCIContactNum.Location = New System.Drawing.Point(96, 600)
+        Me.lblCIContactNum.Location = New System.Drawing.Point(115, 600)
         Me.lblCIContactNum.Name = "lblCIContactNum"
         Me.lblCIContactNum.Size = New System.Drawing.Size(136, 23)
         Me.lblCIContactNum.TabIndex = 15
@@ -181,7 +169,7 @@ Partial Class frmMain
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(60, 456)
+        Me.txtName.Location = New System.Drawing.Point(79, 456)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(471, 56)
@@ -189,7 +177,7 @@ Partial Class frmMain
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(60, 541)
+        Me.txtAddress.Location = New System.Drawing.Point(79, 541)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(471, 56)
@@ -197,7 +185,7 @@ Partial Class frmMain
         '
         'txtContactNum
         '
-        Me.txtContactNum.Location = New System.Drawing.Point(60, 626)
+        Me.txtContactNum.Location = New System.Drawing.Point(79, 626)
         Me.txtContactNum.Multiline = True
         Me.txtContactNum.Name = "txtContactNum"
         Me.txtContactNum.Size = New System.Drawing.Size(471, 56)
@@ -208,7 +196,7 @@ Partial Class frmMain
         Me.lblLMC.AutoSize = True
         Me.lblLMC.Font = New System.Drawing.Font("Nunito Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLMC.ForeColor = System.Drawing.Color.Black
-        Me.lblLMC.Location = New System.Drawing.Point(135, 54)
+        Me.lblLMC.Location = New System.Drawing.Point(161, 54)
         Me.lblLMC.Name = "lblLMC"
         Me.lblLMC.Size = New System.Drawing.Size(311, 38)
         Me.lblLMC.TabIndex = 19
@@ -217,7 +205,7 @@ Partial Class frmMain
         'btnBillingInfo
         '
         Me.btnBillingInfo.Font = New System.Drawing.Font("Nunito Black", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBillingInfo.Location = New System.Drawing.Point(666, 681)
+        Me.btnBillingInfo.Location = New System.Drawing.Point(688, 682)
         Me.btnBillingInfo.Name = "btnBillingInfo"
         Me.btnBillingInfo.Size = New System.Drawing.Size(491, 68)
         Me.btnBillingInfo.TabIndex = 20
@@ -226,7 +214,7 @@ Partial Class frmMain
         '
         'pnlPatientDetails
         '
-        Me.pnlPatientDetails.Location = New System.Drawing.Point(608, 54)
+        Me.pnlPatientDetails.Location = New System.Drawing.Point(630, 54)
         Me.pnlPatientDetails.Name = "pnlPatientDetails"
         Me.pnlPatientDetails.Size = New System.Drawing.Size(607, 592)
         Me.pnlPatientDetails.TabIndex = 11
@@ -237,7 +225,7 @@ Partial Class frmMain
         Me.lblPatientDetails.BackColor = System.Drawing.Color.Transparent
         Me.lblPatientDetails.Font = New System.Drawing.Font("Nunito Black", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPatientDetails.ForeColor = System.Drawing.Color.Black
-        Me.lblPatientDetails.Location = New System.Drawing.Point(750, 72)
+        Me.lblPatientDetails.Location = New System.Drawing.Point(772, 72)
         Me.lblPatientDetails.Name = "lblPatientDetails"
         Me.lblPatientDetails.Size = New System.Drawing.Size(314, 55)
         Me.lblPatientDetails.TabIndex = 21
@@ -249,7 +237,7 @@ Partial Class frmMain
         Me.lblPDName.BackColor = System.Drawing.Color.Transparent
         Me.lblPDName.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDName.ForeColor = System.Drawing.Color.Black
-        Me.lblPDName.Location = New System.Drawing.Point(708, 175)
+        Me.lblPDName.Location = New System.Drawing.Point(730, 175)
         Me.lblPDName.Name = "lblPDName"
         Me.lblPDName.Size = New System.Drawing.Size(56, 23)
         Me.lblPDName.TabIndex = 22
@@ -257,7 +245,7 @@ Partial Class frmMain
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(666, 201)
+        Me.TextBox1.Location = New System.Drawing.Point(688, 201)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(491, 56)
@@ -269,7 +257,7 @@ Partial Class frmMain
         Me.lblPDAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAddress.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDAddress.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAddress.Location = New System.Drawing.Point(708, 261)
+        Me.lblPDAddress.Location = New System.Drawing.Point(730, 261)
         Me.lblPDAddress.Name = "lblPDAddress"
         Me.lblPDAddress.Size = New System.Drawing.Size(73, 23)
         Me.lblPDAddress.TabIndex = 24
@@ -281,7 +269,7 @@ Partial Class frmMain
         Me.lblPDAge.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAge.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDAge.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAge.Location = New System.Drawing.Point(708, 357)
+        Me.lblPDAge.Location = New System.Drawing.Point(730, 357)
         Me.lblPDAge.Name = "lblPDAge"
         Me.lblPDAge.Size = New System.Drawing.Size(41, 23)
         Me.lblPDAge.TabIndex = 25
@@ -293,7 +281,7 @@ Partial Class frmMain
         Me.lblPDFirstBaby.BackColor = System.Drawing.Color.Transparent
         Me.lblPDFirstBaby.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDFirstBaby.ForeColor = System.Drawing.Color.Black
-        Me.lblPDFirstBaby.Location = New System.Drawing.Point(868, 357)
+        Me.lblPDFirstBaby.Location = New System.Drawing.Point(886, 357)
         Me.lblPDFirstBaby.Name = "lblPDFirstBaby"
         Me.lblPDFirstBaby.Size = New System.Drawing.Size(87, 23)
         Me.lblPDFirstBaby.TabIndex = 26
@@ -305,7 +293,7 @@ Partial Class frmMain
         Me.lblPDGestationalAge.BackColor = System.Drawing.Color.Transparent
         Me.lblPDGestationalAge.Font = New System.Drawing.Font("Nunito Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDGestationalAge.ForeColor = System.Drawing.Color.Black
-        Me.lblPDGestationalAge.Location = New System.Drawing.Point(1015, 360)
+        Me.lblPDGestationalAge.Location = New System.Drawing.Point(1037, 360)
         Me.lblPDGestationalAge.Name = "lblPDGestationalAge"
         Me.lblPDGestationalAge.Size = New System.Drawing.Size(119, 20)
         Me.lblPDGestationalAge.TabIndex = 27
@@ -317,7 +305,7 @@ Partial Class frmMain
         Me.lblPDAdditionalInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAdditionalInfo.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDAdditionalInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAdditionalInfo.Location = New System.Drawing.Point(708, 453)
+        Me.lblPDAdditionalInfo.Location = New System.Drawing.Point(730, 453)
         Me.lblPDAdditionalInfo.Name = "lblPDAdditionalInfo"
         Me.lblPDAdditionalInfo.Size = New System.Drawing.Size(184, 23)
         Me.lblPDAdditionalInfo.TabIndex = 28
@@ -325,7 +313,7 @@ Partial Class frmMain
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(666, 287)
+        Me.TextBox2.Location = New System.Drawing.Point(688, 287)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(491, 56)
@@ -333,7 +321,7 @@ Partial Class frmMain
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(666, 479)
+        Me.TextBox3.Location = New System.Drawing.Point(688, 479)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(491, 144)
@@ -341,7 +329,7 @@ Partial Class frmMain
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(666, 383)
+        Me.TextBox4.Location = New System.Drawing.Point(688, 383)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(153, 56)
@@ -349,7 +337,7 @@ Partial Class frmMain
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(841, 383)
+        Me.TextBox5.Location = New System.Drawing.Point(863, 383)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(134, 56)
@@ -357,7 +345,7 @@ Partial Class frmMain
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(991, 383)
+        Me.TextBox6.Location = New System.Drawing.Point(1013, 383)
         Me.TextBox6.Multiline = True
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(166, 56)
@@ -398,10 +386,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnSeeRoutine)
         Me.Controls.Add(Me.lblSetFirstAppointment)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frmMain"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -413,7 +400,6 @@ Partial Class frmMain
     Friend WithEvents dtpFirstAppointment As DateTimePicker
     Friend WithEvents btnViewDoctors As Button
     Friend WithEvents pnlClinicInfo As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblClinicInfo As Label
     Friend WithEvents lblCIName As Label
     Friend WithEvents lblCIAddress As Label

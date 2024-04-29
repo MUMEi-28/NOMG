@@ -3,7 +3,8 @@
     Dim dteLMC As Date
     Dim dteTracker As Date
 
-    Public lblFrmMain As New List(Of Label)
+    Public lblFrmMainPnl As New List(Of Label)
+    Public lblFrmMainTtl As New List(Of Label)
     Public pnlFrmMain As New List(Of Panel)
     Public btnFrmMain As New List(Of Button)
 
@@ -49,7 +50,7 @@
             End If
         Loop
 
-        frmAppointments.Show()
+        frmRoutine.Show()
         Me.Hide()
     End Sub
 
@@ -69,7 +70,6 @@
 
     Public Sub New()
         InitializeComponent()
-        PictureBox1.Hide()
         listAppointment.Add(dtpFirstAppointment.Value.Date)
         dteLMC = dtpLMC.Value.Date
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
@@ -91,22 +91,27 @@
             pnl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
 
-        lblFrmMain.Add(lblLMC)
-        lblFrmMain.Add(lblSetFirstAppointment)
-        lblFrmMain.Add(lblClinicInfo)
-        lblFrmMain.Add(lblCIName)
-        lblFrmMain.Add(lblCIAddress)
-        lblFrmMain.Add(lblCIContactNum)
-        lblFrmMain.Add(lblPatientDetails)
-        lblFrmMain.Add(lblPDName)
-        lblFrmMain.Add(lblPDAddress)
-        lblFrmMain.Add(lblPDAge)
-        lblFrmMain.Add(lblPDFirstBaby)
-        lblFrmMain.Add(lblPDGestationalAge)
-        lblFrmMain.Add(lblPDAdditionalInfo)
-        For Each lbl In lblFrmMain
+        lblFrmMainTtl.Add(lblLMC)
+        lblFrmMainTtl.Add(lblSetFirstAppointment)
+        For Each lbl In lblFrmMainTtl
             lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
-            lbl.BackColor = Color.FromArgb(0, Color.Transparent)
+            lbl.BackColor = Color.FromArgb(255, 39, 36, 46)
+        Next
+
+        lblFrmMainPnl.Add(lblClinicInfo)
+        lblFrmMainPnl.Add(lblCIName)
+        lblFrmMainPnl.Add(lblCIAddress)
+        lblFrmMainPnl.Add(lblCIContactNum)
+        lblFrmMainPnl.Add(lblPatientDetails)
+        lblFrmMainPnl.Add(lblPDName)
+        lblFrmMainPnl.Add(lblPDAddress)
+        lblFrmMainPnl.Add(lblPDAge)
+        lblFrmMainPnl.Add(lblPDFirstBaby)
+        lblFrmMainPnl.Add(lblPDGestationalAge)
+        lblFrmMainPnl.Add(lblPDAdditionalInfo)
+        For Each lbl In lblFrmMainPnl
+            lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
+            lbl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
     End Sub
 

@@ -30,10 +30,10 @@ D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmStart.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmLogIn.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmMain.resources
-C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAppointments.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmDoctors.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmCalendar.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmLogIn.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmStart.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.FrmSplashScreen.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine.resources
