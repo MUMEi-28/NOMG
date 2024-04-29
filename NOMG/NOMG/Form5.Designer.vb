@@ -22,18 +22,9 @@ Partial Class frmCalendar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.mclAppointments = New System.Windows.Forms.MonthCalendar()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.mclAppointments = New System.Windows.Forms.MonthCalendar()
         Me.SuspendLayout()
-        '
-        'mclAppointments
-        '
-        Me.mclAppointments.CalendarDimensions = New System.Drawing.Size(4, 3)
-        Me.mclAppointments.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mclAppointments.Location = New System.Drawing.Point(113, 91)
-        Me.mclAppointments.Name = "mclAppointments"
-        Me.mclAppointments.TabIndex = 2
-        Me.mclAppointments.TrailingForeColor = System.Drawing.Color.Gray
         '
         'btnBack
         '
@@ -45,19 +36,27 @@ Partial Class frmCalendar
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'mclAppointments
+        '
+        Me.mclAppointments.CalendarDimensions = New System.Drawing.Size(4, 3)
+        Me.mclAppointments.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mclAppointments.Location = New System.Drawing.Point(110, 67)
+        Me.mclAppointments.Name = "mclAppointments"
+        Me.mclAppointments.TabIndex = 4
+        '
         'frmCalendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1282, 801)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.mclAppointments)
+        Me.Controls.Add(Me.btnBack)
         Me.Name = "frmCalendar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calendar"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents mclAppointments As MonthCalendar
     Friend WithEvents btnBack As Button
+    Friend WithEvents mclAppointments As MonthCalendar
 End Class
