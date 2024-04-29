@@ -39,7 +39,7 @@ Partial Class frmCalendar
         'mclAppointments
         '
         Me.mclAppointments.CalendarDimensions = New System.Drawing.Size(4, 3)
-        Me.mclAppointments.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mclAppointments.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mclAppointments.Location = New System.Drawing.Point(110, 67)
         Me.mclAppointments.Name = "mclAppointments"
         Me.mclAppointments.TabIndex = 4

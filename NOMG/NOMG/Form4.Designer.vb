@@ -25,6 +25,7 @@ Partial Class frmDoctors
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblAdditionalInfo = New System.Windows.Forms.Label()
         Me.pnlDr1 = New System.Windows.Forms.Panel()
+        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
         Me.txtDr1Name = New System.Windows.Forms.TextBox()
         Me.lblDr1Name = New System.Windows.Forms.Label()
         Me.lblDr1Age = New System.Windows.Forms.Label()
@@ -36,7 +37,6 @@ Partial Class frmDoctors
         Me.lblDr1Educ = New System.Windows.Forms.Label()
         Me.txtDr1Educ = New System.Windows.Forms.TextBox()
         Me.lblDr1 = New System.Windows.Forms.Label()
-        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
         Me.lblDr2 = New System.Windows.Forms.Label()
         Me.lblDr3 = New System.Windows.Forms.Label()
         Me.lblDr2Name = New System.Windows.Forms.Label()
@@ -101,13 +101,23 @@ Partial Class frmDoctors
         Me.pnlDr1.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr1.TabIndex = 23
         '
+        'pbxDr1
+        '
+        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
+        Me.pbxDr1.Name = "pbxDr1"
+        Me.pbxDr1.Size = New System.Drawing.Size(129, 124)
+        Me.pbxDr1.TabIndex = 0
+        Me.pbxDr1.TabStop = False
+        '
         'txtDr1Name
         '
+        Me.txtDr1Name.Enabled = False
         Me.txtDr1Name.Location = New System.Drawing.Point(120, 366)
         Me.txtDr1Name.Multiline = True
         Me.txtDr1Name.Name = "txtDr1Name"
         Me.txtDr1Name.Size = New System.Drawing.Size(256, 43)
         Me.txtDr1Name.TabIndex = 24
+        Me.txtDr1Name.Text = "Dr. Richard U. Aganon"
         '
         'lblDr1Name
         '
@@ -135,27 +145,33 @@ Partial Class frmDoctors
         '
         'txtDr1Age
         '
+        Me.txtDr1Age.Enabled = False
         Me.txtDr1Age.Location = New System.Drawing.Point(120, 433)
         Me.txtDr1Age.Multiline = True
         Me.txtDr1Age.Name = "txtDr1Age"
         Me.txtDr1Age.Size = New System.Drawing.Size(120, 43)
         Me.txtDr1Age.TabIndex = 31
+        Me.txtDr1Age.Text = "36"
         '
         'txtDr1Gender
         '
+        Me.txtDr1Gender.Enabled = False
         Me.txtDr1Gender.Location = New System.Drawing.Point(256, 433)
         Me.txtDr1Gender.Multiline = True
         Me.txtDr1Gender.Name = "txtDr1Gender"
         Me.txtDr1Gender.Size = New System.Drawing.Size(120, 43)
         Me.txtDr1Gender.TabIndex = 32
+        Me.txtDr1Gender.Text = "Male"
         '
         'txtDr1Address
         '
+        Me.txtDr1Address.Enabled = False
         Me.txtDr1Address.Location = New System.Drawing.Point(120, 499)
         Me.txtDr1Address.Multiline = True
         Me.txtDr1Address.Name = "txtDr1Address"
         Me.txtDr1Address.Size = New System.Drawing.Size(256, 43)
         Me.txtDr1Address.TabIndex = 33
+        Me.txtDr1Address.Text = "Niña's Ville Subdivision, Tarlac City"
         '
         'lblDr1Address
         '
@@ -195,11 +211,13 @@ Partial Class frmDoctors
         '
         'txtDr1Educ
         '
+        Me.txtDr1Educ.Enabled = False
         Me.txtDr1Educ.Location = New System.Drawing.Point(120, 567)
         Me.txtDr1Educ.Multiline = True
         Me.txtDr1Educ.Name = "txtDr1Educ"
         Me.txtDr1Educ.Size = New System.Drawing.Size(256, 43)
         Me.txtDr1Educ.TabIndex = 37
+        Me.txtDr1Educ.Text = "Angeles University Foundation"
         '
         'lblDr1
         '
@@ -212,14 +230,6 @@ Partial Class frmDoctors
         Me.lblDr1.Size = New System.Drawing.Size(146, 41)
         Me.lblDr1.TabIndex = 38
         Me.lblDr1.Text = "Doctor 1"
-        '
-        'pbxDr1
-        '
-        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
-        Me.pbxDr1.Name = "pbxDr1"
-        Me.pbxDr1.Size = New System.Drawing.Size(129, 124)
-        Me.pbxDr1.TabIndex = 0
-        Me.pbxDr1.TabStop = False
         '
         'lblDr2
         '
@@ -259,11 +269,13 @@ Partial Class frmDoctors
         '
         'txtDr2Name
         '
+        Me.txtDr2Name.Enabled = False
         Me.txtDr2Name.Location = New System.Drawing.Point(514, 366)
         Me.txtDr2Name.Multiline = True
         Me.txtDr2Name.Name = "txtDr2Name"
         Me.txtDr2Name.Size = New System.Drawing.Size(256, 43)
         Me.txtDr2Name.TabIndex = 42
+        Me.txtDr2Name.Text = "Dr. Maya Grace S. Ramos"
         '
         'lblDr2Age
         '
@@ -291,19 +303,23 @@ Partial Class frmDoctors
         '
         'txtDr2Age
         '
+        Me.txtDr2Age.Enabled = False
         Me.txtDr2Age.Location = New System.Drawing.Point(514, 433)
         Me.txtDr2Age.Multiline = True
         Me.txtDr2Age.Name = "txtDr2Age"
         Me.txtDr2Age.Size = New System.Drawing.Size(120, 43)
         Me.txtDr2Age.TabIndex = 45
+        Me.txtDr2Age.Text = "35"
         '
         'txtDr2Gender
         '
+        Me.txtDr2Gender.Enabled = False
         Me.txtDr2Gender.Location = New System.Drawing.Point(650, 433)
         Me.txtDr2Gender.Multiline = True
         Me.txtDr2Gender.Name = "txtDr2Gender"
         Me.txtDr2Gender.Size = New System.Drawing.Size(120, 43)
         Me.txtDr2Gender.TabIndex = 46
+        Me.txtDr2Gender.Text = "Female"
         '
         'lblDr2Address
         '
@@ -319,19 +335,23 @@ Partial Class frmDoctors
         '
         'txtDr2Address
         '
+        Me.txtDr2Address.Enabled = False
         Me.txtDr2Address.Location = New System.Drawing.Point(514, 499)
         Me.txtDr2Address.Multiline = True
         Me.txtDr2Address.Name = "txtDr2Address"
         Me.txtDr2Address.Size = New System.Drawing.Size(256, 43)
         Me.txtDr2Address.TabIndex = 48
+        Me.txtDr2Address.Text = "Macabulos Drive, Tarlac City"
         '
         'txtDr2Educ
         '
+        Me.txtDr2Educ.Enabled = False
         Me.txtDr2Educ.Location = New System.Drawing.Point(514, 567)
         Me.txtDr2Educ.Multiline = True
         Me.txtDr2Educ.Name = "txtDr2Educ"
         Me.txtDr2Educ.Size = New System.Drawing.Size(256, 43)
         Me.txtDr2Educ.TabIndex = 49
+        Me.txtDr2Educ.Text = "University of the Philippines Manila"
         '
         'lblDr2Educ
         '
@@ -375,11 +395,13 @@ Partial Class frmDoctors
         '
         'txtDr3Name
         '
+        Me.txtDr3Name.Enabled = False
         Me.txtDr3Name.Location = New System.Drawing.Point(907, 366)
         Me.txtDr3Name.Multiline = True
         Me.txtDr3Name.Name = "txtDr3Name"
         Me.txtDr3Name.Size = New System.Drawing.Size(256, 43)
         Me.txtDr3Name.TabIndex = 52
+        Me.txtDr3Name.Text = "Dr. Maria D. Lopez"
         '
         'lblDr3Age
         '
@@ -407,27 +429,33 @@ Partial Class frmDoctors
         '
         'txtDr3Age
         '
+        Me.txtDr3Age.Enabled = False
         Me.txtDr3Age.Location = New System.Drawing.Point(907, 432)
         Me.txtDr3Age.Multiline = True
         Me.txtDr3Age.Name = "txtDr3Age"
         Me.txtDr3Age.Size = New System.Drawing.Size(120, 43)
         Me.txtDr3Age.TabIndex = 55
+        Me.txtDr3Age.Text = "38"
         '
         'txtDr3Gender
         '
+        Me.txtDr3Gender.Enabled = False
         Me.txtDr3Gender.Location = New System.Drawing.Point(1043, 432)
         Me.txtDr3Gender.Multiline = True
         Me.txtDr3Gender.Name = "txtDr3Gender"
         Me.txtDr3Gender.Size = New System.Drawing.Size(120, 43)
         Me.txtDr3Gender.TabIndex = 56
+        Me.txtDr3Gender.Text = "Female"
         '
         'txtDr3Address
         '
+        Me.txtDr3Address.Enabled = False
         Me.txtDr3Address.Location = New System.Drawing.Point(907, 499)
         Me.txtDr3Address.Multiline = True
         Me.txtDr3Address.Name = "txtDr3Address"
         Me.txtDr3Address.Size = New System.Drawing.Size(256, 43)
         Me.txtDr3Address.TabIndex = 57
+        Me.txtDr3Address.Text = "San Sebastian Village, Tarlac City"
         '
         'lblDr3Address
         '
@@ -455,11 +483,13 @@ Partial Class frmDoctors
         '
         'txtDr3Educ
         '
+        Me.txtDr3Educ.Enabled = False
         Me.txtDr3Educ.Location = New System.Drawing.Point(907, 567)
         Me.txtDr3Educ.Multiline = True
         Me.txtDr3Educ.Name = "txtDr3Educ"
         Me.txtDr3Educ.Size = New System.Drawing.Size(256, 43)
         Me.txtDr3Educ.TabIndex = 60
+        Me.txtDr3Educ.Text = "Saint Louis University"
         '
         'pnlDr3
         '
