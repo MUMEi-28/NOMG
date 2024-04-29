@@ -44,7 +44,7 @@ Partial Class FrmSplashScreen
 		'
 		Me.Label2.AutoSize = True
 		Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
 		Me.Label2.Location = New System.Drawing.Point(103, 106)
 		Me.Label2.Name = "Label2"
 		Me.Label2.Size = New System.Drawing.Size(710, 63)
@@ -54,17 +54,17 @@ Partial Class FrmSplashScreen
 		'
 		'panelLoadingBG
 		'
-		Me.panelLoadingBG.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
+		Me.panelLoadingBG.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.panelLoadingBG.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
-		Me.panelLoadingBG.Location = New System.Drawing.Point(12, 463)
+		Me.panelLoadingBG.Location = New System.Drawing.Point(11, 463)
 		Me.panelLoadingBG.Name = "panelLoadingBG"
 		Me.panelLoadingBG.Size = New System.Drawing.Size(870, 31)
 		Me.panelLoadingBG.TabIndex = 2
 		'
 		'panelLoading
 		'
-		Me.panelLoading.BackColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(121, Byte), Integer))
-		Me.panelLoading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
+		Me.panelLoading.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.panelLoading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
 		Me.panelLoading.Location = New System.Drawing.Point(12, 463)
 		Me.panelLoading.Name = "panelLoading"
 		Me.panelLoading.Size = New System.Drawing.Size(13, 31)
@@ -79,7 +79,7 @@ Partial Class FrmSplashScreen
 		'
 		Me.Label3.AutoSize = True
 		Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
 		Me.Label3.Location = New System.Drawing.Point(352, 181)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(199, 63)
@@ -91,7 +91,7 @@ Partial Class FrmSplashScreen
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(72, Byte), Integer))
+		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(894, 506)
 		Me.Controls.Add(Me.Label3)
 		Me.Controls.Add(Me.panelLoading)

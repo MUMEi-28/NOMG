@@ -31,7 +31,7 @@ Partial Class frmStart
 		'
 		Me.Label3.AutoSize = True
 		Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
 		Me.Label3.Location = New System.Drawing.Point(150, 52)
 		Me.Label3.Name = "Label3"
 		Me.Label3.Size = New System.Drawing.Size(199, 63)
@@ -41,10 +41,10 @@ Partial Class frmStart
 		'
 		'btnExisting
 		'
-		Me.btnExisting.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
+		Me.btnExisting.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.btnExisting.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnExisting.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnExisting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnExisting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
 		Me.btnExisting.Location = New System.Drawing.Point(125, 235)
 		Me.btnExisting.Name = "btnExisting"
 		Me.btnExisting.Size = New System.Drawing.Size(252, 59)
@@ -54,10 +54,10 @@ Partial Class frmStart
 		'
 		'btnNew
 		'
-		Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
+		Me.btnNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnNew.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
 		Me.btnNew.Location = New System.Drawing.Point(125, 300)
 		Me.btnNew.Name = "btnNew"
 		Me.btnNew.Size = New System.Drawing.Size(252, 59)
@@ -69,7 +69,7 @@ Partial Class frmStart
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(72, Byte), Integer))
+		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(484, 562)
 		Me.Controls.Add(Me.btnNew)
 		Me.Controls.Add(Me.btnExisting)
