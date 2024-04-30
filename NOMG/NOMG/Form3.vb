@@ -1,7 +1,9 @@
 ﻿Public Class frmRoutine
     Public btnfrmRoutine As New List(Of Button)
+    Dim intI As Integer = 0
     Public Sub New()
         InitializeComponent()
+
         For Each appointment In frmMain.listAppointment
             clbAppointments.Items.Add(appointment)
         Next
@@ -26,6 +28,10 @@
     Private Sub btnViewCalendar_Click(sender As Object, e As EventArgs) Handles btnViewCalendar.Click
         frmCalendar.Show()
         Me.Hide()
+
+    End Sub
+
+    Private Sub frmRoutine_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

@@ -25,6 +25,7 @@ Partial Class frmDoctors
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblAdditionalInfo = New System.Windows.Forms.Label()
         Me.pnlDr1 = New System.Windows.Forms.Panel()
+        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
         Me.txtDr1Name = New System.Windows.Forms.TextBox()
         Me.lblDr1Name = New System.Windows.Forms.Label()
         Me.lblDr1Age = New System.Windows.Forms.Label()
@@ -49,6 +50,7 @@ Partial Class frmDoctors
         Me.txtDr2Educ = New System.Windows.Forms.TextBox()
         Me.lblDr2Educ = New System.Windows.Forms.Label()
         Me.pnlDr2 = New System.Windows.Forms.Panel()
+        Me.pbxDr2 = New System.Windows.Forms.PictureBox()
         Me.lblDr3Name = New System.Windows.Forms.Label()
         Me.txtDr3Name = New System.Windows.Forms.TextBox()
         Me.lblDr3Age = New System.Windows.Forms.Label()
@@ -60,14 +62,13 @@ Partial Class frmDoctors
         Me.lblDr3Educ = New System.Windows.Forms.Label()
         Me.txtDr3Educ = New System.Windows.Forms.TextBox()
         Me.pnlDr3 = New System.Windows.Forms.Panel()
-        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
-        Me.pbxDr2 = New System.Windows.Forms.PictureBox()
         Me.pbxDr3 = New System.Windows.Forms.PictureBox()
+        Me.lblMaxPatients = New System.Windows.Forms.Label()
         Me.pnlDr1.SuspendLayout()
-        Me.pnlDr2.SuspendLayout()
-        Me.pnlDr3.SuspendLayout()
         CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDr2.SuspendLayout()
         CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDr3.SuspendLayout()
         CType(Me.pbxDr3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -101,10 +102,20 @@ Partial Class frmDoctors
         Me.pnlDr1.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr1.TabIndex = 23
         '
+        'pbxDr1
+        '
+        Me.pbxDr1.Image = Global.NOMG.My.Resources.Resources.Dr1
+        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
+        Me.pbxDr1.Name = "pbxDr1"
+        Me.pbxDr1.Size = New System.Drawing.Size(124, 124)
+        Me.pbxDr1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbxDr1.TabIndex = 0
+        Me.pbxDr1.TabStop = False
+        '
         'txtDr1Name
         '
         Me.txtDr1Name.Enabled = False
-        Me.txtDr1Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr1Name.Location = New System.Drawing.Point(120, 366)
         Me.txtDr1Name.Multiline = True
         Me.txtDr1Name.Name = "txtDr1Name"
@@ -139,7 +150,7 @@ Partial Class frmDoctors
         'txtDr1Age
         '
         Me.txtDr1Age.Enabled = False
-        Me.txtDr1Age.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Age.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr1Age.Location = New System.Drawing.Point(120, 433)
         Me.txtDr1Age.Multiline = True
         Me.txtDr1Age.Name = "txtDr1Age"
@@ -150,7 +161,7 @@ Partial Class frmDoctors
         'txtDr1Gender
         '
         Me.txtDr1Gender.Enabled = False
-        Me.txtDr1Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Gender.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr1Gender.Location = New System.Drawing.Point(256, 433)
         Me.txtDr1Gender.Multiline = True
         Me.txtDr1Gender.Name = "txtDr1Gender"
@@ -161,7 +172,7 @@ Partial Class frmDoctors
         'txtDr1Address
         '
         Me.txtDr1Address.Enabled = False
-        Me.txtDr1Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr1Address.Location = New System.Drawing.Point(120, 499)
         Me.txtDr1Address.Multiline = True
         Me.txtDr1Address.Name = "txtDr1Address"
@@ -208,7 +219,7 @@ Partial Class frmDoctors
         'txtDr1Educ
         '
         Me.txtDr1Educ.Enabled = False
-        Me.txtDr1Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr1Educ.Location = New System.Drawing.Point(120, 567)
         Me.txtDr1Educ.Multiline = True
         Me.txtDr1Educ.Name = "txtDr1Educ"
@@ -267,7 +278,7 @@ Partial Class frmDoctors
         'txtDr2Name
         '
         Me.txtDr2Name.Enabled = False
-        Me.txtDr2Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Name.Location = New System.Drawing.Point(514, 366)
         Me.txtDr2Name.Multiline = True
         Me.txtDr2Name.Name = "txtDr2Name"
@@ -302,7 +313,7 @@ Partial Class frmDoctors
         'txtDr2Age
         '
         Me.txtDr2Age.Enabled = False
-        Me.txtDr2Age.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Age.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Age.Location = New System.Drawing.Point(514, 433)
         Me.txtDr2Age.Multiline = True
         Me.txtDr2Age.Name = "txtDr2Age"
@@ -313,7 +324,7 @@ Partial Class frmDoctors
         'txtDr2Gender
         '
         Me.txtDr2Gender.Enabled = False
-        Me.txtDr2Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Gender.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Gender.Location = New System.Drawing.Point(650, 433)
         Me.txtDr2Gender.Multiline = True
         Me.txtDr2Gender.Name = "txtDr2Gender"
@@ -336,7 +347,7 @@ Partial Class frmDoctors
         'txtDr2Address
         '
         Me.txtDr2Address.Enabled = False
-        Me.txtDr2Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Address.Location = New System.Drawing.Point(514, 499)
         Me.txtDr2Address.Multiline = True
         Me.txtDr2Address.Name = "txtDr2Address"
@@ -347,7 +358,7 @@ Partial Class frmDoctors
         'txtDr2Educ
         '
         Me.txtDr2Educ.Enabled = False
-        Me.txtDr2Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Educ.Location = New System.Drawing.Point(514, 567)
         Me.txtDr2Educ.Multiline = True
         Me.txtDr2Educ.Name = "txtDr2Educ"
@@ -375,6 +386,16 @@ Partial Class frmDoctors
         Me.pnlDr2.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr2.TabIndex = 24
         '
+        'pbxDr2
+        '
+        Me.pbxDr2.Image = Global.NOMG.My.Resources.Resources.Dr2
+        Me.pbxDr2.Location = New System.Drawing.Point(97, 47)
+        Me.pbxDr2.Name = "pbxDr2"
+        Me.pbxDr2.Size = New System.Drawing.Size(124, 124)
+        Me.pbxDr2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbxDr2.TabIndex = 0
+        Me.pbxDr2.TabStop = False
+        '
         'lblDr3Name
         '
         Me.lblDr3Name.AutoSize = True
@@ -390,7 +411,7 @@ Partial Class frmDoctors
         'txtDr3Name
         '
         Me.txtDr3Name.Enabled = False
-        Me.txtDr3Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr3Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr3Name.Location = New System.Drawing.Point(907, 366)
         Me.txtDr3Name.Multiline = True
         Me.txtDr3Name.Name = "txtDr3Name"
@@ -425,6 +446,7 @@ Partial Class frmDoctors
         'txtDr3Age
         '
         Me.txtDr3Age.Enabled = False
+        Me.txtDr3Age.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr3Age.Location = New System.Drawing.Point(907, 432)
         Me.txtDr3Age.Multiline = True
         Me.txtDr3Age.Name = "txtDr3Age"
@@ -435,7 +457,7 @@ Partial Class frmDoctors
         'txtDr3Gender
         '
         Me.txtDr3Gender.Enabled = False
-        Me.txtDr3Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr3Gender.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr3Gender.Location = New System.Drawing.Point(1043, 432)
         Me.txtDr3Gender.Multiline = True
         Me.txtDr3Gender.Name = "txtDr3Gender"
@@ -446,7 +468,7 @@ Partial Class frmDoctors
         'txtDr3Address
         '
         Me.txtDr3Address.Enabled = False
-        Me.txtDr3Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr3Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr3Address.Location = New System.Drawing.Point(907, 499)
         Me.txtDr3Address.Multiline = True
         Me.txtDr3Address.Name = "txtDr3Address"
@@ -481,7 +503,7 @@ Partial Class frmDoctors
         'txtDr3Educ
         '
         Me.txtDr3Educ.Enabled = False
-        Me.txtDr3Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr3Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr3Educ.Location = New System.Drawing.Point(907, 567)
         Me.txtDr3Educ.Multiline = True
         Me.txtDr3Educ.Name = "txtDr3Educ"
@@ -497,26 +519,6 @@ Partial Class frmDoctors
         Me.pnlDr3.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr3.TabIndex = 25
         '
-        'pbxDr1
-        '
-        Me.pbxDr1.Image = Global.NOMG.My.Resources.Resources.Dr1
-        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
-        Me.pbxDr1.Name = "pbxDr1"
-        Me.pbxDr1.Size = New System.Drawing.Size(124, 124)
-        Me.pbxDr1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbxDr1.TabIndex = 0
-        Me.pbxDr1.TabStop = False
-        '
-        'pbxDr2
-        '
-        Me.pbxDr2.Image = Global.NOMG.My.Resources.Resources.Dr2
-        Me.pbxDr2.Location = New System.Drawing.Point(97, 47)
-        Me.pbxDr2.Name = "pbxDr2"
-        Me.pbxDr2.Size = New System.Drawing.Size(124, 124)
-        Me.pbxDr2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbxDr2.TabIndex = 0
-        Me.pbxDr2.TabStop = False
-        '
         'pbxDr3
         '
         Me.pbxDr3.Image = Global.NOMG.My.Resources.Resources.Dr3
@@ -527,11 +529,24 @@ Partial Class frmDoctors
         Me.pbxDr3.TabIndex = 0
         Me.pbxDr3.TabStop = False
         '
+        'lblMaxPatients
+        '
+        Me.lblMaxPatients.AutoSize = True
+        Me.lblMaxPatients.BackColor = System.Drawing.Color.Transparent
+        Me.lblMaxPatients.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMaxPatients.ForeColor = System.Drawing.Color.Black
+        Me.lblMaxPatients.Location = New System.Drawing.Point(436, 83)
+        Me.lblMaxPatients.Name = "lblMaxPatients"
+        Me.lblMaxPatients.Size = New System.Drawing.Size(403, 23)
+        Me.lblMaxPatients.TabIndex = 61
+        Me.lblMaxPatients.Text = "Doctors can accomodate up to 5 patients per day."
+        '
         'frmDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1282, 801)
+        Me.Controls.Add(Me.lblMaxPatients)
         Me.Controls.Add(Me.txtDr3Educ)
         Me.Controls.Add(Me.lblDr3Educ)
         Me.Controls.Add(Me.lblDr3Address)
@@ -574,10 +589,10 @@ Partial Class frmDoctors
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Doctors"
         Me.pnlDr1.ResumeLayout(False)
-        Me.pnlDr2.ResumeLayout(False)
-        Me.pnlDr3.ResumeLayout(False)
         CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDr2.ResumeLayout(False)
         CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDr3.ResumeLayout(False)
         CType(Me.pbxDr3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -624,4 +639,5 @@ Partial Class frmDoctors
     Friend WithEvents txtDr3Educ As TextBox
     Friend WithEvents pnlDr3 As Panel
     Friend WithEvents pbxDr3 As PictureBox
+    Friend WithEvents lblMaxPatients As Label
 End Class

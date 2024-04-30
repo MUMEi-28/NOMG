@@ -1,5 +1,6 @@
 ﻿Public Class frmDoctors
     Public lblFrmDoctors As New List(Of Label)
+    Public lblFrmDoctorsTtl As New List(Of Label)
     Public pnlFrmDoctors As New List(Of Panel)
     Private Sub btnBack_Click(sender As Object, e As EventArgs)
         frmMain.Show()
@@ -23,8 +24,13 @@
             pnl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
 
-        lblAdditionalInfo.ForeColor = Color.FromArgb(255, 244, 238, 224)
-        lblAdditionalInfo.BackColor = Color.FromArgb(255, 39, 36, 46)
+        lblFrmDoctorsTtl.Add(lblAdditionalInfo)
+        lblFrmDoctorsTtl.Add(lblMaxPatients)
+
+        For Each lbl In lblFrmDoctorsTtl
+            lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
+            lbl.BackColor = Color.FromArgb(255, 39, 36, 46)
+        Next
 
         lblFrmDoctors.Add(lblDr1)
         lblFrmDoctors.Add(lblDr1Name)

@@ -32,10 +32,10 @@ Partial Class frmMain
         Me.lblClinicInfo = New System.Windows.Forms.Label()
         Me.lblCIName = New System.Windows.Forms.Label()
         Me.lblCIAddress = New System.Windows.Forms.Label()
-        Me.lblCIContactNum = New System.Windows.Forms.Label()
+        Me.lblClOperationalDays = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.txtContactNum = New System.Windows.Forms.TextBox()
+        Me.txtOperationalDays = New System.Windows.Forms.TextBox()
         Me.lblLMC = New System.Windows.Forms.Label()
         Me.btnBillingInfo = New System.Windows.Forms.Button()
         Me.pnlPatientDetails = New System.Windows.Forms.Panel()
@@ -125,7 +125,7 @@ Partial Class frmMain
         Me.lblClinicInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblClinicInfo.Font = New System.Drawing.Font("Nunito Black", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblClinicInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblClinicInfo.Location = New System.Drawing.Point(129, 358)
+        Me.lblClinicInfo.Location = New System.Drawing.Point(125, 358)
         Me.lblClinicInfo.Name = "lblClinicInfo"
         Me.lblClinicInfo.Size = New System.Drawing.Size(370, 55)
         Me.lblClinicInfo.TabIndex = 12
@@ -155,48 +155,57 @@ Partial Class frmMain
         Me.lblCIAddress.TabIndex = 14
         Me.lblCIAddress.Text = "Address"
         '
-        'lblCIContactNum
+        'lblClOperationalDays
         '
-        Me.lblCIContactNum.AutoSize = True
-        Me.lblCIContactNum.BackColor = System.Drawing.Color.Transparent
-        Me.lblCIContactNum.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCIContactNum.ForeColor = System.Drawing.Color.Black
-        Me.lblCIContactNum.Location = New System.Drawing.Point(115, 600)
-        Me.lblCIContactNum.Name = "lblCIContactNum"
-        Me.lblCIContactNum.Size = New System.Drawing.Size(136, 23)
-        Me.lblCIContactNum.TabIndex = 15
-        Me.lblCIContactNum.Text = "Contact Number"
+        Me.lblClOperationalDays.AutoSize = True
+        Me.lblClOperationalDays.BackColor = System.Drawing.Color.Transparent
+        Me.lblClOperationalDays.Font = New System.Drawing.Font("Nunito Medium", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClOperationalDays.ForeColor = System.Drawing.Color.Black
+        Me.lblClOperationalDays.Location = New System.Drawing.Point(115, 600)
+        Me.lblClOperationalDays.Name = "lblClOperationalDays"
+        Me.lblClOperationalDays.Size = New System.Drawing.Size(144, 23)
+        Me.lblClOperationalDays.TabIndex = 15
+        Me.lblClOperationalDays.Text = "Operational Days"
         '
         'txtName
         '
+        Me.txtName.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtName.Location = New System.Drawing.Point(79, 456)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(471, 56)
         Me.txtName.TabIndex = 16
+        Me.txtName.Text = "New OB Master GYN Clinic (NOMG)"
+        Me.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtAddress
         '
+        Me.txtAddress.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(79, 541)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(471, 56)
         Me.txtAddress.TabIndex = 17
+        Me.txtAddress.Text = "San Isidro, Tarlac City"
+        Me.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtContactNum
+        'txtOperationalDays
         '
-        Me.txtContactNum.Location = New System.Drawing.Point(79, 626)
-        Me.txtContactNum.Multiline = True
-        Me.txtContactNum.Name = "txtContactNum"
-        Me.txtContactNum.Size = New System.Drawing.Size(471, 56)
-        Me.txtContactNum.TabIndex = 18
+        Me.txtOperationalDays.Font = New System.Drawing.Font("Nunito", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOperationalDays.Location = New System.Drawing.Point(79, 626)
+        Me.txtOperationalDays.Multiline = True
+        Me.txtOperationalDays.Name = "txtOperationalDays"
+        Me.txtOperationalDays.Size = New System.Drawing.Size(471, 56)
+        Me.txtOperationalDays.TabIndex = 18
+        Me.txtOperationalDays.Text = "Tuesday to Saturday"
+        Me.txtOperationalDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblLMC
         '
         Me.lblLMC.AutoSize = True
         Me.lblLMC.Font = New System.Drawing.Font("Nunito Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLMC.ForeColor = System.Drawing.Color.Black
-        Me.lblLMC.Location = New System.Drawing.Point(161, 54)
+        Me.lblLMC.Location = New System.Drawing.Point(161, 52)
         Me.lblLMC.Name = "lblLMC"
         Me.lblLMC.Size = New System.Drawing.Size(311, 38)
         Me.lblLMC.TabIndex = 19
@@ -373,10 +382,10 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnBillingInfo)
         Me.Controls.Add(Me.dtpLMC)
         Me.Controls.Add(Me.lblLMC)
-        Me.Controls.Add(Me.txtContactNum)
+        Me.Controls.Add(Me.txtOperationalDays)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtName)
-        Me.Controls.Add(Me.lblCIContactNum)
+        Me.Controls.Add(Me.lblClOperationalDays)
         Me.Controls.Add(Me.lblCIAddress)
         Me.Controls.Add(Me.lblCIName)
         Me.Controls.Add(Me.lblClinicInfo)
@@ -403,10 +412,10 @@ Partial Class frmMain
     Friend WithEvents lblClinicInfo As Label
     Friend WithEvents lblCIName As Label
     Friend WithEvents lblCIAddress As Label
-    Friend WithEvents lblCIContactNum As Label
+    Friend WithEvents lblClOperationalDays As Label
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtAddress As TextBox
-    Friend WithEvents txtContactNum As TextBox
+    Friend WithEvents txtOperationalDays As TextBox
     Friend WithEvents lblLMC As Label
     Friend WithEvents btnBillingInfo As Button
     Friend WithEvents pnlPatientDetails As Panel
