@@ -4,10 +4,8 @@
 	Public strCurrentUser As User
 
 	Public Sub New()
-		' This call is required by the designer.
 		InitializeComponent()
 
-		' Add any initialization after the InitializeComponent() call.
 
 		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, True, 20)
 		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, False, 15)
@@ -91,13 +89,61 @@
 	End Sub
 
 	Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+		' Check if any TextBox is empty
+		If txtName.Text = "" Then
+			MsgBox("Please enter your name")
+			Return
+		End If
+
+		If txtAddress.Text = "" Then
+			MsgBox("Please enter your address")
+			Return
+		End If
+
+		If txtEmail.Text = "" Then
+			MsgBox("Please enter your email")
+			Return
+		End If
+
+		If txtPassword.Text = "" Then
+			MsgBox("Please enter your password")
+			Return
+		End If
+
+		If txtAge.Text = "" Then
+			MsgBox("Please enter your age")
+			Return
+		End If
+
+		If txtFirstBaby.Text = "" Then
+			MsgBox("Please enter details about your first baby")
+			Return
+		End If
+
+		If txtGasAge.Text = "" Then
+			MsgBox("Please enter the age of your gestational age")
+			Return ' Exit the method if any TextBox is empty
+		End If
+
+		' Create a new user instance
 		Dim newUser As New User()
 		newUser.SetUserCredentials(txtName.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, txtAge.Text, txtFirstBaby.Text, txtGasAge.Text)
 		listUsers.Add(newUser)
 
+		' Clear all TextBoxes
+		txtName.Clear()
+		txtAddress.Clear()
+		txtEmail.Clear()
+		txtPassword.Clear()
+		txtAge.Clear()
+		txtFirstBaby.Clear()
+		txtGasAge.Clear()
+
+		' Hide the current form and show the login form
 		Me.Hide()
 		frmLogIn.Show()
 	End Sub
+
 	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAge.KeyPress
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
 		If Char.IsControl(e.KeyChar) Then
