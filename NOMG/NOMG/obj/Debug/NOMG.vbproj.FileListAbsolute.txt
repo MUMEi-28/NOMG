@@ -16,9 +16,6 @@ D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\bin\Debug\NOMG.xml
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.AssemblyReference.cache
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form1.resources
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form2.resources
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form3.resources
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form4.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Resources.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.GenerateResource.cache
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.CoreCompileInputs.cache
@@ -37,3 +34,7 @@ C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmLogIn.r
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmStart.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.FrmSplashScreen.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine.resources
+D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmMain.resources
+D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine.resources
+D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmDoctors.resources
+D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmCalendar.resources

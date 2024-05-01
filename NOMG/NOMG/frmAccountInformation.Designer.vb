@@ -25,9 +25,12 @@ Partial Class frmAccountInformation
 		Me.txtName = New System.Windows.Forms.TextBox()
 		Me.Label1 = New System.Windows.Forms.Label()
 		Me.Panel1 = New System.Windows.Forms.Panel()
+		Me.txtFirstBaby = New System.Windows.Forms.TextBox()
+		Me.txtAge = New System.Windows.Forms.TextBox()
+		Me.btnRegister = New System.Windows.Forms.Button()
+		Me.btnBackToStart = New System.Windows.Forms.Button()
 		Me.Label9 = New System.Windows.Forms.Label()
 		Me.Label8 = New System.Windows.Forms.Label()
-		Me.cmbFirstBaby = New System.Windows.Forms.ComboBox()
 		Me.Label7 = New System.Windows.Forms.Label()
 		Me.Label6 = New System.Windows.Forms.Label()
 		Me.txtGasAge = New System.Windows.Forms.TextBox()
@@ -38,10 +41,7 @@ Partial Class frmAccountInformation
 		Me.Label3 = New System.Windows.Forms.Label()
 		Me.txtEmail = New System.Windows.Forms.TextBox()
 		Me.Label2 = New System.Windows.Forms.Label()
-		Me.btnBackToStart = New System.Windows.Forms.Button()
-		Me.btnRegister = New System.Windows.Forms.Button()
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-		Me.txtAge = New System.Windows.Forms.TextBox()
 		Me.Panel1.SuspendLayout()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
@@ -70,12 +70,12 @@ Partial Class frmAccountInformation
 		'Panel1
 		'
 		Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
+		Me.Panel1.Controls.Add(Me.txtFirstBaby)
 		Me.Panel1.Controls.Add(Me.txtAge)
 		Me.Panel1.Controls.Add(Me.btnRegister)
 		Me.Panel1.Controls.Add(Me.btnBackToStart)
 		Me.Panel1.Controls.Add(Me.Label9)
 		Me.Panel1.Controls.Add(Me.Label8)
-		Me.Panel1.Controls.Add(Me.cmbFirstBaby)
 		Me.Panel1.Controls.Add(Me.Label7)
 		Me.Panel1.Controls.Add(Me.Label6)
 		Me.Panel1.Controls.Add(Me.txtGasAge)
@@ -91,6 +91,52 @@ Partial Class frmAccountInformation
 		Me.Panel1.Name = "Panel1"
 		Me.Panel1.Size = New System.Drawing.Size(474, 473)
 		Me.Panel1.TabIndex = 2
+		'
+		'txtFirstBaby
+		'
+		Me.txtFirstBaby.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
+		Me.txtFirstBaby.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtFirstBaby.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtFirstBaby.Location = New System.Drawing.Point(171, 319)
+		Me.txtFirstBaby.Name = "txtFirstBaby"
+		Me.txtFirstBaby.Size = New System.Drawing.Size(134, 23)
+		Me.txtFirstBaby.TabIndex = 15
+		'
+		'txtAge
+		'
+		Me.txtAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
+		Me.txtAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.txtAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtAge.Location = New System.Drawing.Point(19, 319)
+		Me.txtAge.Name = "txtAge"
+		Me.txtAge.Size = New System.Drawing.Size(134, 23)
+		Me.txtAge.TabIndex = 14
+		'
+		'btnRegister
+		'
+		Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnRegister.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnRegister.Location = New System.Drawing.Point(259, 370)
+		Me.btnRegister.Name = "btnRegister"
+		Me.btnRegister.Size = New System.Drawing.Size(190, 59)
+		Me.btnRegister.TabIndex = 8
+		Me.btnRegister.Text = "REGISTER"
+		Me.btnRegister.UseVisualStyleBackColor = False
+		'
+		'btnBackToStart
+		'
+		Me.btnBackToStart.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnBackToStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnBackToStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnBackToStart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnBackToStart.Location = New System.Drawing.Point(18, 370)
+		Me.btnBackToStart.Name = "btnBackToStart"
+		Me.btnBackToStart.Size = New System.Drawing.Size(190, 59)
+		Me.btnBackToStart.TabIndex = 7
+		Me.btnBackToStart.Text = "BACK"
+		Me.btnBackToStart.UseVisualStyleBackColor = False
 		'
 		'Label9
 		'
@@ -114,15 +160,6 @@ Partial Class frmAccountInformation
 		Me.Label8.TabIndex = 10
 		Me.Label8.Text = "Create New" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Account"
 		Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-		'
-		'cmbFirstBaby
-		'
-		Me.cmbFirstBaby.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
-		Me.cmbFirstBaby.FormattingEnabled = True
-		Me.cmbFirstBaby.Location = New System.Drawing.Point(190, 321)
-		Me.cmbFirstBaby.Name = "cmbFirstBaby"
-		Me.cmbFirstBaby.Size = New System.Drawing.Size(92, 21)
-		Me.cmbFirstBaby.TabIndex = 12
 		'
 		'Label7
 		'
@@ -232,32 +269,6 @@ Partial Class frmAccountInformation
 		Me.Label2.Text = "NOMG"
 		Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'btnBackToStart
-		'
-		Me.btnBackToStart.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
-		Me.btnBackToStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-		Me.btnBackToStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnBackToStart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-		Me.btnBackToStart.Location = New System.Drawing.Point(18, 370)
-		Me.btnBackToStart.Name = "btnBackToStart"
-		Me.btnBackToStart.Size = New System.Drawing.Size(190, 59)
-		Me.btnBackToStart.TabIndex = 7
-		Me.btnBackToStart.Text = "BACK"
-		Me.btnBackToStart.UseVisualStyleBackColor = False
-		'
-		'btnRegister
-		'
-		Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
-		Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-		Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnRegister.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-		Me.btnRegister.Location = New System.Drawing.Point(259, 370)
-		Me.btnRegister.Name = "btnRegister"
-		Me.btnRegister.Size = New System.Drawing.Size(190, 59)
-		Me.btnRegister.TabIndex = 8
-		Me.btnRegister.Text = "REGISTER"
-		Me.btnRegister.UseVisualStyleBackColor = False
-		'
 		'PictureBox1
 		'
 		Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -266,16 +277,6 @@ Partial Class frmAccountInformation
 		Me.PictureBox1.Size = New System.Drawing.Size(498, 692)
 		Me.PictureBox1.TabIndex = 9
 		Me.PictureBox1.TabStop = False
-		'
-		'txtAge
-		'
-		Me.txtAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
-		Me.txtAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-		Me.txtAge.Location = New System.Drawing.Point(19, 319)
-		Me.txtAge.Name = "txtAge"
-		Me.txtAge.Size = New System.Drawing.Size(134, 23)
-		Me.txtAge.TabIndex = 14
 		'
 		'frmAccountInformation
 		'
@@ -306,7 +307,6 @@ Partial Class frmAccountInformation
 	Friend WithEvents txtEmail As TextBox
 	Friend WithEvents btnBackToStart As Button
 	Friend WithEvents btnRegister As Button
-	Friend WithEvents cmbFirstBaby As ComboBox
 	Friend WithEvents Label7 As Label
 	Friend WithEvents Label6 As Label
 	Friend WithEvents txtGasAge As TextBox
@@ -318,4 +318,5 @@ Partial Class frmAccountInformation
 	Friend WithEvents Label8 As Label
 	Friend WithEvents Label9 As Label
 	Friend WithEvents txtAge As TextBox
+	Friend WithEvents txtFirstBaby As TextBox
 End Class
