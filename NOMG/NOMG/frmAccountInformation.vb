@@ -23,7 +23,7 @@
 		Private strEmail As String
 		Private strPass As String
 		Private intAge As Integer
-		Private boolIsFirstBaby As String
+		Private strIsFirstBaby As String
 		Private intGestationalAge As Integer
 
 		' Constructor with no parameters
@@ -41,7 +41,7 @@
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
-			boolIsFirstBaby = boolTmpIsFirstBaby
+			strIsFirstBaby = boolTmpIsFirstBaby
 			intGestationalAge = intTmpGesAge
 		End Sub
 
@@ -54,8 +54,13 @@
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
-			boolIsFirstBaby = strTmpIsFirstBaby
 			intGestationalAge = intTmpGesAge
+
+			If strTmpIsFirstBaby = "y" Then
+				strIsFirstBaby = "yes"
+			ElseIf strTmpIsFirstBaby = "n" Then
+				strIsFirstBaby = "no"
+			End If
 		End Sub
 		Public Function GetName() As String
 			Return strName
@@ -73,7 +78,7 @@
 			Return intAge
 		End Function
 		Public Function GetIsFirstBaby() As String
-			Return boolIsFirstBaby
+			Return strIsFirstBaby
 		End Function
 		Public Function GetGestationalAge() As Integer
 			Return intGestationalAge
@@ -104,6 +109,7 @@
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
+			MsgBox("Can only digit")
 		End If
 	End Sub
 
@@ -118,6 +124,7 @@
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
+			MsgBox("Can only digit")
 		End If
 	End Sub
 

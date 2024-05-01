@@ -98,6 +98,7 @@ Partial Class frmAccountInformation
 		Me.txtFirstBaby.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.txtFirstBaby.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
 		Me.txtFirstBaby.Location = New System.Drawing.Point(171, 319)
+		Me.txtFirstBaby.MaxLength = 1
 		Me.txtFirstBaby.Name = "txtFirstBaby"
 		Me.txtFirstBaby.Size = New System.Drawing.Size(134, 23)
 		Me.txtFirstBaby.TabIndex = 15
