@@ -123,6 +123,29 @@
 
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
+
+        frmBilling.txtDescription1.Text = "Initial Check up"
+        frmBilling.txtDescription2.Text = "Iron Vitamin"
+        frmBilling.txtDescription3.Text = "B Complex"
+        frmBilling.txtDescription4.Text = "DHA"
+        frmBilling.txtDescription5.Text = "Flu Vac"
+        frmBilling.txtUnitPrice1.Text = 2000
+        frmBilling.txtUnitPrice2.Text = 15
+        frmBilling.txtUnitPrice3.Text = 25
+        frmBilling.txtUnitPrice4.Text = 20
+        frmBilling.txtUnitPrice5.Text = 1500
+        frmBilling.txtQuantity1.Text = 1
+        frmBilling.txtQuantity2.Text = 30
+        frmBilling.txtQuantity3.Text = 30
+        frmBilling.txtQuantity4.Text = 90
+        frmBilling.txtQuantity5.Text = 1
+        frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
+        frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
+        frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
+        frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
+        frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
+        frmBilling.txtAmount6.Text = (Val(frmBilling.txtQuantity6.Text) * Val(frmBilling.txtUnitPrice6.Text))
+        frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text) + Val(frmBilling.txtAmount6.Text))
         Me.Hide()
 
     End Sub

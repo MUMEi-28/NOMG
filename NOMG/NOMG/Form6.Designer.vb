@@ -47,10 +47,10 @@ Partial Class frmBilling
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtAmount6 = New System.Windows.Forms.TextBox()
+        Me.txtUnitPrice6 = New System.Windows.Forms.TextBox()
+        Me.txtDescription6 = New System.Windows.Forms.TextBox()
+        Me.txtQuantity6 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -63,6 +63,7 @@ Partial Class frmBilling
         Me.txtQuantity1.Name = "txtQuantity1"
         Me.txtQuantity1.Size = New System.Drawing.Size(95, 20)
         Me.txtQuantity1.TabIndex = 0
+        Me.txtQuantity1.Text = "0"
         '
         'txtQuantity2
         '
@@ -70,6 +71,7 @@ Partial Class frmBilling
         Me.txtQuantity2.Name = "txtQuantity2"
         Me.txtQuantity2.Size = New System.Drawing.Size(95, 20)
         Me.txtQuantity2.TabIndex = 1
+        Me.txtQuantity2.Text = "0"
         '
         'txtQuantity3
         '
@@ -77,6 +79,7 @@ Partial Class frmBilling
         Me.txtQuantity3.Name = "txtQuantity3"
         Me.txtQuantity3.Size = New System.Drawing.Size(95, 20)
         Me.txtQuantity3.TabIndex = 2
+        Me.txtQuantity3.Text = "0"
         '
         'txtQuantity4
         '
@@ -84,6 +87,7 @@ Partial Class frmBilling
         Me.txtQuantity4.Name = "txtQuantity4"
         Me.txtQuantity4.Size = New System.Drawing.Size(95, 20)
         Me.txtQuantity4.TabIndex = 3
+        Me.txtQuantity4.Text = "0"
         '
         'txtQuantity5
         '
@@ -91,6 +95,7 @@ Partial Class frmBilling
         Me.txtQuantity5.Name = "txtQuantity5"
         Me.txtQuantity5.Size = New System.Drawing.Size(95, 20)
         Me.txtQuantity5.TabIndex = 4
+        Me.txtQuantity5.Text = "0"
         '
         'txtDescription1
         '
@@ -133,6 +138,7 @@ Partial Class frmBilling
         Me.txtUnitPrice1.Name = "txtUnitPrice1"
         Me.txtUnitPrice1.Size = New System.Drawing.Size(71, 20)
         Me.txtUnitPrice1.TabIndex = 10
+        Me.txtUnitPrice1.Text = "0"
         '
         'txtUnitPrice2
         '
@@ -140,6 +146,7 @@ Partial Class frmBilling
         Me.txtUnitPrice2.Name = "txtUnitPrice2"
         Me.txtUnitPrice2.Size = New System.Drawing.Size(71, 20)
         Me.txtUnitPrice2.TabIndex = 11
+        Me.txtUnitPrice2.Text = "0"
         '
         'txtUnitPrice3
         '
@@ -147,6 +154,7 @@ Partial Class frmBilling
         Me.txtUnitPrice3.Name = "txtUnitPrice3"
         Me.txtUnitPrice3.Size = New System.Drawing.Size(71, 20)
         Me.txtUnitPrice3.TabIndex = 12
+        Me.txtUnitPrice3.Text = "0"
         '
         'txtUnitPrice4
         '
@@ -154,6 +162,7 @@ Partial Class frmBilling
         Me.txtUnitPrice4.Name = "txtUnitPrice4"
         Me.txtUnitPrice4.Size = New System.Drawing.Size(71, 20)
         Me.txtUnitPrice4.TabIndex = 13
+        Me.txtUnitPrice4.Text = "0"
         '
         'txtUnitPrice5
         '
@@ -161,6 +170,7 @@ Partial Class frmBilling
         Me.txtUnitPrice5.Name = "txtUnitPrice5"
         Me.txtUnitPrice5.Size = New System.Drawing.Size(71, 20)
         Me.txtUnitPrice5.TabIndex = 14
+        Me.txtUnitPrice5.Text = "0"
         '
         'txtAmount5
         '
@@ -203,7 +213,6 @@ Partial Class frmBilling
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(71, 20)
         Me.txtTotal.TabIndex = 20
-        Me.txtTotal.Text = "10000"
         '
         'TextBox1
         '
@@ -241,33 +250,35 @@ Partial Class frmBilling
         Me.TextBox4.Text = "Quantity"
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox5
+        'txtAmount6
         '
-        Me.TextBox5.Location = New System.Drawing.Point(516, 253)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(71, 20)
-        Me.TextBox5.TabIndex = 28
+        Me.txtAmount6.Location = New System.Drawing.Point(516, 253)
+        Me.txtAmount6.Name = "txtAmount6"
+        Me.txtAmount6.Size = New System.Drawing.Size(71, 20)
+        Me.txtAmount6.TabIndex = 28
         '
-        'TextBox6
+        'txtUnitPrice6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(449, 253)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(71, 20)
-        Me.TextBox6.TabIndex = 27
+        Me.txtUnitPrice6.Location = New System.Drawing.Point(449, 253)
+        Me.txtUnitPrice6.Name = "txtUnitPrice6"
+        Me.txtUnitPrice6.Size = New System.Drawing.Size(71, 20)
+        Me.txtUnitPrice6.TabIndex = 27
+        Me.txtUnitPrice6.Text = "0"
         '
-        'TextBox7
+        'txtDescription6
         '
-        Me.TextBox7.Location = New System.Drawing.Point(213, 253)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(237, 20)
-        Me.TextBox7.TabIndex = 26
+        Me.txtDescription6.Location = New System.Drawing.Point(213, 253)
+        Me.txtDescription6.Name = "txtDescription6"
+        Me.txtDescription6.Size = New System.Drawing.Size(237, 20)
+        Me.txtDescription6.TabIndex = 26
         '
-        'TextBox8
+        'txtQuantity6
         '
-        Me.TextBox8.Location = New System.Drawing.Point(119, 253)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(95, 20)
-        Me.TextBox8.TabIndex = 25
+        Me.txtQuantity6.Location = New System.Drawing.Point(119, 253)
+        Me.txtQuantity6.Name = "txtQuantity6"
+        Me.txtQuantity6.Size = New System.Drawing.Size(95, 20)
+        Me.txtQuantity6.TabIndex = 25
+        Me.txtQuantity6.Text = "0"
         '
         'Label1
         '
@@ -318,10 +329,10 @@ Partial Class frmBilling
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.txtAmount6)
+        Me.Controls.Add(Me.txtUnitPrice6)
+        Me.Controls.Add(Me.txtDescription6)
+        Me.Controls.Add(Me.txtQuantity6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox3)
@@ -379,10 +390,10 @@ Partial Class frmBilling
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtAmount6 As TextBox
+    Friend WithEvents txtUnitPrice6 As TextBox
+    Friend WithEvents txtDescription6 As TextBox
+    Friend WithEvents txtQuantity6 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label2 As Label
