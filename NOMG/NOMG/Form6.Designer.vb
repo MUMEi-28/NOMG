@@ -203,6 +203,7 @@ Partial Class frmBilling
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(71, 20)
         Me.txtTotal.TabIndex = 20
+        Me.txtTotal.Text = "10000"
         '
         'TextBox1
         '
