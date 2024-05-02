@@ -120,4 +120,10 @@
         frmRoutine.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
+        frmBilling.Show()
+        Me.Hide()
+
+    End Sub
 End Class
