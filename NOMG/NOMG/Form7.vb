@@ -5,6 +5,9 @@
         If frmBilling.txtTotal.Text <= txtPayment.Text Then
             MsgBox("Change: " + Change.ToString, vbOKOnly, "Thank you")
             Me.Hide()
+            frmBilling.Hide()
+            frmMain.Show()
+
 
         Else
             MsgBox("Insufficient Amount", vbOKOnly + vbExclamation, "Error")

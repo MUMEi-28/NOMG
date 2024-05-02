@@ -176,9 +176,9 @@
             frmBilling.txtUnitPrice3.Text = 25
             frmBilling.txtUnitPrice4.Text = 20
             frmBilling.txtQuantity1.Text = 1
-            frmBilling.txtQuantity2.Text = 20
-            frmBilling.txtQuantity3.Text = 20
-            frmBilling.txtQuantity4.Text = 60
+            frmBilling.txtQuantity2.Text = 10
+            frmBilling.txtQuantity3.Text = 10
+            frmBilling.txtQuantity4.Text = 30
             frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
             frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
             frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
