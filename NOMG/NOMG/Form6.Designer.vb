@@ -47,10 +47,6 @@ Partial Class frmBilling
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.txtAmount6 = New System.Windows.Forms.TextBox()
-        Me.txtUnitPrice6 = New System.Windows.Forms.TextBox()
-        Me.txtDescription6 = New System.Windows.Forms.TextBox()
-        Me.txtQuantity6 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -209,7 +205,7 @@ Partial Class frmBilling
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(516, 272)
+        Me.txtTotal.Location = New System.Drawing.Point(516, 253)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(71, 20)
         Me.txtTotal.TabIndex = 20
@@ -250,42 +246,12 @@ Partial Class frmBilling
         Me.TextBox4.Text = "Quantity"
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtAmount6
-        '
-        Me.txtAmount6.Location = New System.Drawing.Point(516, 253)
-        Me.txtAmount6.Name = "txtAmount6"
-        Me.txtAmount6.Size = New System.Drawing.Size(71, 20)
-        Me.txtAmount6.TabIndex = 28
-        '
-        'txtUnitPrice6
-        '
-        Me.txtUnitPrice6.Location = New System.Drawing.Point(449, 253)
-        Me.txtUnitPrice6.Name = "txtUnitPrice6"
-        Me.txtUnitPrice6.Size = New System.Drawing.Size(71, 20)
-        Me.txtUnitPrice6.TabIndex = 27
-        Me.txtUnitPrice6.Text = "0"
-        '
-        'txtDescription6
-        '
-        Me.txtDescription6.Location = New System.Drawing.Point(213, 253)
-        Me.txtDescription6.Name = "txtDescription6"
-        Me.txtDescription6.Size = New System.Drawing.Size(237, 20)
-        Me.txtDescription6.TabIndex = 26
-        '
-        'txtQuantity6
-        '
-        Me.txtQuantity6.Location = New System.Drawing.Point(119, 253)
-        Me.txtQuantity6.Name = "txtQuantity6"
-        Me.txtQuantity6.Size = New System.Drawing.Size(95, 20)
-        Me.txtQuantity6.TabIndex = 25
-        Me.txtQuantity6.Text = "0"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(437, 276)
+        Me.Label1.Location = New System.Drawing.Point(437, 258)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 13)
         Me.Label1.TabIndex = 29
@@ -329,10 +295,6 @@ Partial Class frmBilling
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtAmount6)
-        Me.Controls.Add(Me.txtUnitPrice6)
-        Me.Controls.Add(Me.txtDescription6)
-        Me.Controls.Add(Me.txtQuantity6)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox3)
@@ -390,10 +352,6 @@ Partial Class frmBilling
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents txtAmount6 As TextBox
-    Friend WithEvents txtUnitPrice6 As TextBox
-    Friend WithEvents txtDescription6 As TextBox
-    Friend WithEvents txtQuantity6 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label2 As Label
