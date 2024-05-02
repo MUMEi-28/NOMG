@@ -14,4 +14,10 @@
             txtPayment.Clear()
         End If
     End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        frmBilling.Show()
+        Me.Hide()
+
+    End Sub
 End Class
