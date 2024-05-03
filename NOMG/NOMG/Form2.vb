@@ -79,10 +79,17 @@
             lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
             lbl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
+
+        txtPDName.Text = frmAccountInformation.strCurrentUser.GetName()
+        txtPDAddress.Text = frmAccountInformation.strCurrentUser.GetAddress()
+        txtPDAge.Text = frmAccountInformation.strCurrentUser.GetAge()
+        txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
+        txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
+
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Form1.Show()
+        frmLogIn.Show()
         Me.Hide()
     End Sub
 

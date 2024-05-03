@@ -31,4 +31,5 @@
 		txtEmail.Clear()
 		txtPassword.Clear()
 	End Sub
+
 End Class

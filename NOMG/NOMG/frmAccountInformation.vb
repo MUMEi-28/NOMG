@@ -187,6 +187,4 @@
 			MsgBox("Can only write y / n")
 		End If
 	End Sub
-
-
 End Class

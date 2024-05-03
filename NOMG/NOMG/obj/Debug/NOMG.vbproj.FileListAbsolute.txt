@@ -60,3 +60,5 @@ C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NO
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.pdb
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmBilling.resources
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmPayment.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmBilling.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmPayment.resources
