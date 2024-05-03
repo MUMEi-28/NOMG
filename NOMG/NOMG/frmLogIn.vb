@@ -22,6 +22,11 @@
 
 				frmAccountInformation.strCurrentUser = frmAccountInformation.listUsers(intCounter)
 
+				frmMain.txtPDName.Text = frmAccountInformation.strCurrentUser.GetName()
+				frmMain.txtPDAddress.Text = frmAccountInformation.strCurrentUser.GetAddress()
+				frmMain.txtPDAge.Text = frmAccountInformation.strCurrentUser.GetAge()
+				frmMain.txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
+				frmMain.txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
 				Return '' Make sure not to show the other msgBox
 			End If
 			intCounter += 1

@@ -5,6 +5,10 @@
 
     Public lblFrmMainPnl As New List(Of Label)
     Public lblFrmMainTtl As New List(Of Label)
+
+    Public txtFrmMainPD As New List(Of TextBox)
+    Public txtFrmMainCI As New List(Of TextBox)
+
     Public pnlFrmMain As New List(Of Panel)
     Public btnFrmMain As New List(Of Button)
 
@@ -80,12 +84,24 @@
             lbl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
 
-        txtPDName.Text = frmAccountInformation.strCurrentUser.GetName()
-        txtPDAddress.Text = frmAccountInformation.strCurrentUser.GetAddress()
-        txtPDAge.Text = frmAccountInformation.strCurrentUser.GetAge()
-        txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
-        txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
+        txtFrmMainCI.Add(txtCIName)
+        txtFrmMainCI.Add(txtCIAddress)
+        txtFrmMainCI.Add(txtCIOperationalDays)
+        For Each txt In txtFrmMainCI
+            txt.Font = New Font("Nunito", 12, FontStyle.Bold)
+            txt.TextAlign = HorizontalAlignment.Center
+        Next
 
+        txtFrmMainPD.Add(txtPDName)
+        txtFrmMainPD.Add(txtPDAddress)
+        txtFrmMainPD.Add(txtPDAge)
+        txtFrmMainPD.Add(txtPDFirstBaby)
+        txtFrmMainPD.Add(txtPDGestationalAge)
+        txtFrmMainPD.Add(txtPDAdditionalInfo)
+        For Each txt In txtFrmMainPD
+            txt.Font = New Font("Nunito", 12, FontStyle.Bold)
+            txt.TextAlign = HorizontalAlignment.Center
+        Next
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -196,4 +212,5 @@
         Me.Hide()
 
     End Sub
+
 End Class

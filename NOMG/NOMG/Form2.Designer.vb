@@ -52,6 +52,7 @@ Partial Class frmMain
         Me.txtPDAge = New System.Windows.Forms.TextBox()
         Me.txtPDFirstBaby = New System.Windows.Forms.TextBox()
         Me.txtPDGestationalAge = New System.Windows.Forms.TextBox()
+        Me.pnlClinicInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBack
@@ -61,7 +62,7 @@ Partial Class frmMain
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(72, 42)
         Me.btnBack.TabIndex = 1
-        Me.btnBack.Text = "Back"
+        Me.btnBack.Text = "Log Out"
         Me.btnBack.UseVisualStyleBackColor = True
         '
         'lblSetFirstAppointment
@@ -69,7 +70,7 @@ Partial Class frmMain
         Me.lblSetFirstAppointment.AutoSize = True
         Me.lblSetFirstAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSetFirstAppointment.ForeColor = System.Drawing.Color.Black
-        Me.lblSetFirstAppointment.Location = New System.Drawing.Point(155, 164)
+        Me.lblSetFirstAppointment.Location = New System.Drawing.Point(161, 165)
         Me.lblSetFirstAppointment.Name = "lblSetFirstAppointment"
         Me.lblSetFirstAppointment.Size = New System.Drawing.Size(317, 32)
         Me.lblSetFirstAppointment.TabIndex = 3
@@ -78,7 +79,7 @@ Partial Class frmMain
         'btnSeeRoutine
         '
         Me.btnSeeRoutine.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeeRoutine.Location = New System.Drawing.Point(212, 263)
+        Me.btnSeeRoutine.Location = New System.Drawing.Point(205, 263)
         Me.btnSeeRoutine.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSeeRoutine.Name = "btnSeeRoutine"
         Me.btnSeeRoutine.Size = New System.Drawing.Size(219, 46)
@@ -119,6 +120,7 @@ Partial Class frmMain
         '
         'pnlClinicInfo
         '
+        Me.pnlClinicInfo.Controls.Add(Me.lblClinicInfo)
         Me.pnlClinicInfo.Location = New System.Drawing.Point(44, 327)
         Me.pnlClinicInfo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlClinicInfo.Name = "pnlClinicInfo"
@@ -131,7 +133,7 @@ Partial Class frmMain
         Me.lblClinicInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblClinicInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblClinicInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblClinicInfo.Location = New System.Drawing.Point(125, 358)
+        Me.lblClinicInfo.Location = New System.Drawing.Point(93, 32)
         Me.lblClinicInfo.Name = "lblClinicInfo"
         Me.lblClinicInfo.Size = New System.Drawing.Size(347, 46)
         Me.lblClinicInfo.TabIndex = 12
@@ -214,7 +216,7 @@ Partial Class frmMain
         Me.lblLMC.AutoSize = True
         Me.lblLMC.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLMC.ForeColor = System.Drawing.Color.Black
-        Me.lblLMC.Location = New System.Drawing.Point(161, 52)
+        Me.lblLMC.Location = New System.Drawing.Point(164, 54)
         Me.lblLMC.Name = "lblLMC"
         Me.lblLMC.Size = New System.Drawing.Size(307, 32)
         Me.lblLMC.TabIndex = 19
@@ -314,7 +316,7 @@ Partial Class frmMain
         Me.lblPDGestationalAge.BackColor = System.Drawing.Color.Transparent
         Me.lblPDGestationalAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDGestationalAge.ForeColor = System.Drawing.Color.Black
-        Me.lblPDGestationalAge.Location = New System.Drawing.Point(1037, 359)
+        Me.lblPDGestationalAge.Location = New System.Drawing.Point(1032, 359)
         Me.lblPDGestationalAge.Name = "lblPDGestationalAge"
         Me.lblPDGestationalAge.Size = New System.Drawing.Size(127, 18)
         Me.lblPDGestationalAge.TabIndex = 27
@@ -405,7 +407,6 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblClOperationalDays)
         Me.Controls.Add(Me.lblCIAddress)
         Me.Controls.Add(Me.lblCIName)
-        Me.Controls.Add(Me.lblClinicInfo)
         Me.Controls.Add(Me.btnViewDoctors)
         Me.Controls.Add(Me.pnlClinicInfo)
         Me.Controls.Add(Me.dtpFirstAppointment)
@@ -416,6 +417,8 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
+        Me.pnlClinicInfo.ResumeLayout(False)
+        Me.pnlClinicInfo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
