@@ -116,6 +116,7 @@ Partial Class frmDoctors
         '
         Me.txtDr1Name.Enabled = False
         Me.txtDr1Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr1Name.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txtDr1Name.Location = New System.Drawing.Point(120, 366)
         Me.txtDr1Name.Multiline = True
         Me.txtDr1Name.Name = "txtDr1Name"

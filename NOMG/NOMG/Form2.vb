@@ -1,5 +1,5 @@
 ﻿Public Class frmMain
-    Public listAppointment As New List(Of Date)
+
     Dim dteLMC As Date
     Dim dteTracker As Date
 
@@ -11,6 +11,7 @@
 
     Public pnlFrmMain As New List(Of Panel)
     Public btnFrmMain As New List(Of Button)
+    Public listCurrentAppointments As New List(Of Date)
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
         If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
@@ -18,8 +19,7 @@
         ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
             MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
         Else
-            listAppointment(0) = dtpFirstAppointment.Value.Date
-            dtpFirstAppointment.Enabled = False
+            frmAccountInformation.strCurrentUser.GetListAppointments(0) = dtpFirstAppointment.Value.Date
         End If
     End Sub
 
@@ -39,7 +39,6 @@
 
     Public Sub New()
         InitializeComponent()
-        listAppointment.Add(dtpFirstAppointment.Value.Date)
         dteLMC = dtpLMC.Value.Date
 
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
@@ -90,6 +89,7 @@
         For Each txt In txtFrmMainCI
             txt.Font = New Font("Nunito", 12, FontStyle.Bold)
             txt.TextAlign = HorizontalAlignment.Center
+            txt.Enabled = False
         Next
 
         txtFrmMainPD.Add(txtPDName)
@@ -101,6 +101,7 @@
         For Each txt In txtFrmMainPD
             txt.Font = New Font("Nunito", 12, FontStyle.Bold)
             txt.TextAlign = HorizontalAlignment.Center
+            txt.Enabled = False
         Next
     End Sub
 
@@ -110,7 +111,10 @@
     End Sub
 
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
-        dteTracker = listAppointment(0).Date
+        listCurrentAppointments = frmAccountInformation.strCurrentUser.GetListAppointments()
+        listCurrentAppointments.Add(dtpFirstAppointment.Value.Date)
+
+        dteTracker = listCurrentAppointments(0).Date
 
         Do While dteTracker <= dteLMC.AddMonths(9)
             If dteTracker <= dteLMC.AddMonths(3) Then
@@ -120,7 +124,7 @@
                     Loop
                 End If
                 dteTracker = dteTracker.AddDays(30)
-                listAppointment.Add(dteTracker)
+                listCurrentAppointments.Add(dteTracker)
             ElseIf dteTracker <= dteLMC.AddMonths(6) Then
                 If dteTracker.AddDays(20).DayOfWeek = 0 Or dteTracker.AddDays(20).DayOfWeek = 1 Then
                     Do While dteTracker.AddDays(20).DayOfWeek = 0 Or dteTracker.AddDays(20).DayOfWeek = 1
@@ -128,7 +132,7 @@
                     Loop
                 End If
                 dteTracker = dteTracker.AddDays(20)
-                listAppointment.Add(dteTracker)
+                listCurrentAppointments.Add(dteTracker)
             Else
                 If dteTracker.AddDays(10).DayOfWeek = 0 Or dteTracker.AddDays(10).DayOfWeek = 1 Then
                     Do While dteTracker.AddDays(10).DayOfWeek = 0 Or dteTracker.AddDays(10).DayOfWeek = 1
@@ -136,7 +140,7 @@
                     Loop
                 End If
                 dteTracker = dteTracker.AddDays(10)
-                listAppointment.Add(dteTracker)
+                listCurrentAppointments.Add(dteTracker)
             End If
         Loop
 

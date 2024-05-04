@@ -23,6 +23,7 @@
 		Private intAge As Integer
 		Private strIsFirstBaby As String
 		Private intGestationalAge As Integer
+		Private listAppointments As New List(Of Date)
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -80,6 +81,9 @@
 		End Function
 		Public Function GetGestationalAge() As Integer
 			Return intGestationalAge
+		End Function
+		Public Function GetListAppointments() As List(Of Date)
+			Return listAppointments
 		End Function
 	End Class
 	Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click

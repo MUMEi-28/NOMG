@@ -60,7 +60,7 @@ Partial Class frmMain
         Me.btnBack.Location = New System.Drawing.Point(12, 12)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(72, 42)
+        Me.btnBack.Size = New System.Drawing.Size(95, 42)
         Me.btnBack.TabIndex = 1
         Me.btnBack.Text = "Log Out"
         Me.btnBack.UseVisualStyleBackColor = True
