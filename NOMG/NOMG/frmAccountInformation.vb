@@ -2,6 +2,7 @@
 
 	Public listUsers As New List(Of User)
 	Public strCurrentUser As User
+	Public listDoctors As New List(Of Doctor)
 
 	Public Sub New()
 		InitializeComponent()
@@ -14,6 +15,14 @@
 		listUsers.Add(user1)
 		listUsers.Add(user2)
 		listUsers.Add(user3)
+
+		Dim dr1 As New Doctor("Dr. Richard U. Aganon", 36, "Male", "Niña's Ville Subdivision, Tarlac City", "Angeles University Foundation")
+		Dim dr2 As New Doctor("Dr. Maya Grace S. Ramos", 35, "Female", "Macabulos Drive, Tarlac City", "University of the Philippines Manila")
+		Dim dr3 As New Doctor("Dr. Maria D. Lopez", 38, "Female", "San Sebastian Village, Tarlac City", "Saint Louis University")
+
+		listDoctors.Add(dr1)
+		listDoctors.Add(dr2)
+		listDoctors.Add(dr3)
 	End Sub
 	Class User
 		Private strName As String
@@ -24,6 +33,7 @@
 		Private strIsFirstBaby As String
 		Private intGestationalAge As Integer
 		Private listAppointments As New List(Of Date)
+		Private doctor As Doctor
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -85,6 +95,31 @@
 		Public Function GetListAppointments() As List(Of Date)
 			Return listAppointments
 		End Function
+		Public Function GetDoctor() As Doctor
+			Return doctor
+		End Function
+	End Class
+
+	Class Doctor
+		Private strName As String
+		Private intAge As Integer
+		Private strGender As String
+		Private strAddress As String
+		Private strEduc As String
+
+		Public listDrAppointments As New List(Of Date)
+
+		Public Sub New(ByVal strTempName As String, ByVal intTempAge As Integer, ByVal strTempGender As String, ByVal strTempAddress As String, ByVal strTempEduc As String)
+			strName = strTempName
+			intAge = intTempAge
+			strGender = strTempGender
+			strAddress = strTempAddress
+			strEduc = strTempEduc
+		End Sub
+
+		Public Sub New()
+
+		End Sub
 	End Class
 	Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click
 		frmStart.Show()

@@ -11,7 +11,12 @@
 
     Public pnlFrmMain As New List(Of Panel)
     Public btnFrmMain As New List(Of Button)
+
     Public listCurrentAppointments As New List(Of Date)
+
+    Dim intI As Integer = 0
+    Dim blnFullyBooked As Boolean = False
+    Dim counter As Integer = 0
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
         If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
@@ -19,7 +24,23 @@
         ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
             MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
         Else
-            frmAccountInformation.strCurrentUser.GetListAppointments(0) = dtpFirstAppointment.Value.Date
+            Do While intI < frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Count
+                If frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
+                    counter = counter + 1
+                End If
+
+                If counter > 5 Then
+                    MsgBox("The date is fully booked.")
+                    blnFullyBooked = True
+                End If
+
+                intI = intI + 1
+            Loop
+
+            If blnFullyBooked = False Then
+                listCurrentAppointments.Add(dtpFirstAppointment.Value.Date)
+                frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
+            End If
         End If
     End Sub
 
@@ -39,8 +60,6 @@
 
     Public Sub New()
         InitializeComponent()
-        dteLMC = dtpLMC.Value.Date
-
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
 
         btnFrmMain.Add(btnBack)
@@ -103,6 +122,19 @@
             txt.TextAlign = HorizontalAlignment.Center
             txt.Enabled = False
         Next
+
+        dteLMC = dtpLMC.Value.Date
+
+        intI = 0
+        For Each dr In frmAccountInformation.listDoctors
+            Do While intI < dr.listDrAppointments.Count
+                If dr.listDrAppointments(intI) < Today.Date Then
+                    dr.listDrAppointments.Remove(dr.listDrAppointments(intI))
+                End If
+                intI = intI + 1
+            Loop
+        Next
+
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -116,6 +148,11 @@
 
         dteTracker = listCurrentAppointments(0).Date
 
+        blnFullyBooked = False
+
+
+        dteTracker = listCurrentAppointments(0).Date
+
         Do While dteTracker <= dteLMC.AddMonths(9)
             If dteTracker <= dteLMC.AddMonths(3) Then
                 If dteTracker.AddDays(30).DayOfWeek = 0 Or dteTracker.AddDays(30).DayOfWeek = 1 Then
@@ -123,8 +160,27 @@
                         dteTracker = dteTracker.AddDays(1)
                     Loop
                 End If
-                dteTracker = dteTracker.AddDays(30)
-                listCurrentAppointments.Add(dteTracker)
+
+                Do While intI < frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Count
+                    If frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments(intI) = dteTracker.AddDays(30) Then
+                        counter = counter + 1
+                    End If
+
+                    If counter > 5 Then
+                        MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
+                        blnFullyBooked = True
+                    End If
+
+                    intI = intI + 1
+                Loop
+
+                If blnFullyBooked = False Then
+                    dteTracker = dteTracker.AddDays(30)
+                    listCurrentAppointments.Add(dteTracker)
+                    frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dteTracker)
+
+                End If
+
             ElseIf dteTracker <= dteLMC.AddMonths(6) Then
                 If dteTracker.AddDays(20).DayOfWeek = 0 Or dteTracker.AddDays(20).DayOfWeek = 1 Then
                     Do While dteTracker.AddDays(20).DayOfWeek = 0 Or dteTracker.AddDays(20).DayOfWeek = 1
@@ -143,6 +199,7 @@
                 listCurrentAppointments.Add(dteTracker)
             End If
         Loop
+
 
         frmRoutine.Show()
         Me.Hide()
