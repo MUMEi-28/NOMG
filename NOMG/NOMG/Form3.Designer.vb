@@ -32,10 +32,10 @@ Partial Class frmRoutine
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(461, 673)
+        Me.btnBack.Location = New System.Drawing.Point(457, 673)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(359, 48)
+        Me.btnBack.Size = New System.Drawing.Size(366, 48)
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True

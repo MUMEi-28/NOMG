@@ -66,3 +66,5 @@ D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmBilling.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmPayment.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.AccountInformation_Doctor.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Continuation.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.AccountInformation_Doctor.resources
+C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Continuation.resources

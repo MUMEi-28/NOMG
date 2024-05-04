@@ -75,9 +75,9 @@ Partial Class frmDoctors
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Nunito ExtraBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(458, 675)
+        Me.btnBack.Location = New System.Drawing.Point(457, 673)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(359, 48)
+        Me.btnBack.Size = New System.Drawing.Size(366, 48)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True

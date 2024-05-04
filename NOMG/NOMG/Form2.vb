@@ -12,8 +12,6 @@
     Public pnlFrmMain As New List(Of Panel)
     Public btnFrmMain As New List(Of Button)
 
-    Public listCurrentAppointments As New List(Of Date)
-
     Dim intI As Integer = 0
     Dim blnFullyBooked As Boolean = False
     Dim counter As Integer = 0
@@ -38,7 +36,7 @@
             Loop
 
             If blnFullyBooked = False Then
-                listCurrentAppointments.Add(dtpFirstAppointment.Value.Date)
+                frmAccountInformation.strCurrentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
                 frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
             End If
         End If
@@ -47,6 +45,7 @@
     Private Sub dtpLMC_ValueChanged(sender As Object, e As EventArgs) Handles dtpLMC.ValueChanged
         If dtpLMC.Value.Date > Date.Today.Date Then
             MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
+            dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
         Else
             dteLMC = dtpLMC.Value.Date
         End If
@@ -123,8 +122,6 @@
             txt.Enabled = False
         Next
 
-        dteLMC = dtpLMC.Value.Date
-
         intI = 0
         For Each dr In frmAccountInformation.listDoctors
             Do While intI < dr.listDrAppointments.Count
@@ -143,15 +140,12 @@
     End Sub
 
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
-        listCurrentAppointments = frmAccountInformation.strCurrentUser.GetListAppointments()
-        listCurrentAppointments.Add(dtpFirstAppointment.Value.Date)
+        dteLMC = dtpLMC.Value.Date
+        frmAccountInformation.strCurrentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
 
-        dteTracker = listCurrentAppointments(0).Date
+        dteTracker = frmAccountInformation.strCurrentUser.GetListAppointments(0).Date
 
         blnFullyBooked = False
-
-
-        dteTracker = listCurrentAppointments(0).Date
 
         Do While dteTracker <= dteLMC.AddMonths(9)
             If dteTracker <= dteLMC.AddMonths(3) Then
@@ -176,7 +170,7 @@
 
                 If blnFullyBooked = False Then
                     dteTracker = dteTracker.AddDays(30)
-                    listCurrentAppointments.Add(dteTracker)
+                    frmAccountInformation.strCurrentUser.GetListAppointments.Add(dteTracker)
                     frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dteTracker)
 
                 End If
@@ -188,7 +182,7 @@
                     Loop
                 End If
                 dteTracker = dteTracker.AddDays(20)
-                listCurrentAppointments.Add(dteTracker)
+                frmAccountInformation.strCurrentUser.GetListAppointments.Add(dteTracker)
             Else
                 If dteTracker.AddDays(10).DayOfWeek = 0 Or dteTracker.AddDays(10).DayOfWeek = 1 Then
                     Do While dteTracker.AddDays(10).DayOfWeek = 0 Or dteTracker.AddDays(10).DayOfWeek = 1
@@ -196,7 +190,7 @@
                     Loop
                 End If
                 dteTracker = dteTracker.AddDays(10)
-                listCurrentAppointments.Add(dteTracker)
+                frmAccountInformation.strCurrentUser.GetListAppointments.Add(dteTracker)
             End If
         Loop
 

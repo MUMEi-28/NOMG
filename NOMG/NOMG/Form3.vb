@@ -4,7 +4,7 @@
     Public Sub New()
         InitializeComponent()
 
-        For Each appointment In frmMain.listCurrentAppointments
+        For Each appointment In frmAccountInformation.strCurrentUser.GetListAppointments
             clbAppointments.Items.Add(appointment)
         Next
 

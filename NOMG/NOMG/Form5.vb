@@ -4,7 +4,7 @@
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
 
         MsgBox(mclAppointments.Size.ToString())
-        For Each appointment In frmMain.listCurrentAppointments
+        For Each appointment In frmAccountInformation.strCurrentUser.GetListAppointments
             mclAppointments.AddBoldedDate(appointment)
         Next
 

@@ -29,9 +29,9 @@ Partial Class frmCalendar
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Nunito ExtraBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(463, 674)
+        Me.btnBack.Location = New System.Drawing.Point(457, 673)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(359, 48)
+        Me.btnBack.Size = New System.Drawing.Size(366, 48)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -39,8 +39,9 @@ Partial Class frmCalendar
         'mclAppointments
         '
         Me.mclAppointments.CalendarDimensions = New System.Drawing.Size(4, 3)
-        Me.mclAppointments.Location = New System.Drawing.Point(111, 73)
+        Me.mclAppointments.Location = New System.Drawing.Point(110, 72)
         Me.mclAppointments.Name = "mclAppointments"
+        Me.mclAppointments.ShowToday = False
         Me.mclAppointments.TabIndex = 5
         '
         'frmCalendar

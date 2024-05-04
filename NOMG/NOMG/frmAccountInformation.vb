@@ -7,15 +7,6 @@
 	Public Sub New()
 		InitializeComponent()
 
-
-		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, 1)
-		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, 1)
-		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, 1)
-
-		listUsers.Add(user1)
-		listUsers.Add(user2)
-		listUsers.Add(user3)
-
 		Dim dr1 As New Doctor("Dr. Richard U. Aganon", 36, "Male", "Niña's Ville Subdivision, Tarlac City", "Angeles University Foundation")
 		Dim dr2 As New Doctor("Dr. Maya Grace S. Ramos", 35, "Female", "Macabulos Drive, Tarlac City", "University of the Philippines Manila")
 		Dim dr3 As New Doctor("Dr. Maria D. Lopez", 38, "Female", "San Sebastian Village, Tarlac City", "Saint Louis University")
@@ -23,6 +14,14 @@
 		listDoctors.Add(dr1)
 		listDoctors.Add(dr2)
 		listDoctors.Add(dr3)
+
+		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, listDoctors(0), 1)
+		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, listDoctors(1), 1)
+		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, listDoctors(2), 1)
+
+		listUsers.Add(user1)
+		listUsers.Add(user2)
+		listUsers.Add(user3)
 
 		intDoctor = 1
 	End Sub
@@ -47,13 +46,15 @@
 		Public Sub New(ByVal strTempName As String, ByVal strTempAddress As String,
 					   ByVal strTempEmail As String, ByVal strTempPass As String,
 					   ByVal strIntAge As Integer, ByVal strTmpIsFirstBaby As String,
-					   ByVal intTmpGesAge As Integer, ByVal intTmpDoctor As Integer)
+					   ByVal intTmpGesAge As Integer, ByVal tempDoctor As Doctor,
+					   ByVal intTmpDoctor As Integer)
 			strName = strTempName
 			strAddress = strTempAddress
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
 			intGestationalAge = intTmpGesAge
+			doctor = tempDoctor
 			intTmpDoctor = 1
 
 			strIsFirstBaby = strTmpIsFirstBaby
