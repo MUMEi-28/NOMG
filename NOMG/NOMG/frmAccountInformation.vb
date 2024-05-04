@@ -127,63 +127,43 @@
 
 	End Sub
 
-	Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-		' Check if any TextBox is empty
-		If txtName.Text = "" Then
-			MsgBox("Please enter your name")
-			Return
-		End If
+	'Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-		If txtAddress.Text = "" Then
-			MsgBox("Please enter your address")
-			Return
-		End If
+	'	If txtAge.Text = "" Then
+	'		MsgBox("Please enter your age")
+	'		Return
+	'	End If
 
-		If txtEmail.Text = "" Then
-			MsgBox("Please enter your email")
-			Return
-		End If
+	'	If txtFirstBaby.Text = "" Then
+	'		MsgBox("Please enter details about your first baby")
+	'		Return
+	'	End If
 
-		If txtPassword.Text = "" Then
-			MsgBox("Please enter your password")
-			Return
-		End If
+	'	If txtGasAge.Text = "" Then
+	'		MsgBox("Please enter the age of your gestational age")
+	'		Return ' Exit the method if any TextBox is empty
+	'	End If
 
-		If txtAge.Text = "" Then
-			MsgBox("Please enter your age")
-			Return
-		End If
+	'	' Create a new user instance
+	'	Dim newUser As New User()
+	'	newUser.SetUserCredentials(txtName.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, txtAge.Text, txtFirstBaby.Text, txtGasAge.Text)
+	'	listUsers.Add(newUser)
 
-		If txtFirstBaby.Text = "" Then
-			MsgBox("Please enter details about your first baby")
-			Return
-		End If
+	'	' Clear all TextBoxes
+	'	txtName.Clear()
+	'	txtAddress.Clear()
+	'	txtEmail.Clear()
+	'	txtPassword.Clear()
+	'	txtAge.Clear()
+	'	txtFirstBaby.Clear()
+	'	txtGasAge.Clear()
 
-		If txtGasAge.Text = "" Then
-			MsgBox("Please enter the age of your gestational age")
-			Return ' Exit the method if any TextBox is empty
-		End If
+	'	' Hide the current form and show the login form
+	'	Me.Hide()
+	'	frmLogIn.Show()
+	'End Sub
 
-		' Create a new user instance
-		Dim newUser As New User()
-		newUser.SetUserCredentials(txtName.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, txtAge.Text, txtFirstBaby.Text, txtGasAge.Text)
-		listUsers.Add(newUser)
-
-		' Clear all TextBoxes
-		txtName.Clear()
-		txtAddress.Clear()
-		txtEmail.Clear()
-		txtPassword.Clear()
-		txtAge.Clear()
-		txtFirstBaby.Clear()
-		txtGasAge.Clear()
-
-		' Hide the current form and show the login form
-		Me.Hide()
-		frmLogIn.Show()
-	End Sub
-
-	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAge.KeyPress
+	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs)
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
 		If Char.IsControl(e.KeyChar) Then
 			' Allow control keys
@@ -198,7 +178,7 @@
 		End If
 	End Sub
 
-	Private Sub txtGasAge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGasAge.KeyPress
+	Private Sub txtGasAge_KeyPress(sender As Object, e As KeyPressEventArgs)
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
 		If Char.IsControl(e.KeyChar) Then
 			' Allow control keys
@@ -213,7 +193,7 @@
 		End If
 	End Sub
 
-	Private Sub txtFirstBaby_TextChanged(sender As Object, e As EventArgs) Handles txtFirstBaby.TextChanged
+	Private Sub txtFirstBaby_TextChanged(sender As Object, e As EventArgs)
 		Dim textBox As TextBox = CType(sender, TextBox)
 		Dim input As String = textBox.Text.ToLower()
 
@@ -225,5 +205,31 @@
 			' Show message box for invalid input
 			MsgBox("Can only write y / n")
 		End If
+	End Sub
+
+	Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
+
+		'		Check If any TextBox Is empty
+		If txtName.Text = "" Then
+			MsgBox("Please enter your name")
+			Return
+
+
+		ElseIf txtAddress.Text = "" Then
+			MsgBox("Please enter your address")
+			Return
+
+		ElseIf txtEmail.Text = "" Then
+			MsgBox("Please enter your email")
+			Return
+
+		ElseIf txtPassword.Text = "" Then
+			MsgBox("Please enter your password")
+			Return
+		Else
+			frmAccountInformation_Continuation.Show()
+			Me.Hide()
+		End If
+
 	End Sub
 End Class

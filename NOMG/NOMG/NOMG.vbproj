@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInformation-Doctor.Designer.vb">
+      <DependentUpon>AccountInformation-Doctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountInformation-Doctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
       <DependentUpon>Form7.vb</DependentUpon>
     </Compile>
     <Compile Include="Form7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountInformation-Continuation.Designer.vb">
+      <DependentUpon>frmAccountInformation-Continuation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountInformation-Continuation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAccountInformation.Designer.vb">
@@ -158,6 +170,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccountInformation-Doctor.resx">
+      <DependentUpon>AccountInformation-Doctor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountInformation-Continuation.resx">
+      <DependentUpon>frmAccountInformation-Continuation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountInformation.resx">
       <DependentUpon>frmAccountInformation.vb</DependentUpon>
