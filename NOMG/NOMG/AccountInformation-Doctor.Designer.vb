@@ -65,6 +65,9 @@ Partial Class AccountInformation_Doctor
 		Me.pnlDr3 = New System.Windows.Forms.Panel()
 		Me.pbxDr3 = New System.Windows.Forms.PictureBox()
 		Me.btnRegister = New System.Windows.Forms.Button()
+		Me.btnDoctor1 = New System.Windows.Forms.Button()
+		Me.btnDoctor2 = New System.Windows.Forms.Button()
+		Me.btnDoctor3 = New System.Windows.Forms.Button()
 		Me.pnlDr1.SuspendLayout()
 		CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.pnlDr2.SuspendLayout()
@@ -79,7 +82,7 @@ Partial Class AccountInformation_Doctor
 		Me.lblMaxPatients.BackColor = System.Drawing.Color.Transparent
 		Me.lblMaxPatients.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblMaxPatients.ForeColor = System.Drawing.Color.Black
-		Me.lblMaxPatients.Location = New System.Drawing.Point(294, 80)
+		Me.lblMaxPatients.Location = New System.Drawing.Point(293, 55)
 		Me.lblMaxPatients.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblMaxPatients.Name = "lblMaxPatients"
 		Me.lblMaxPatients.Size = New System.Drawing.Size(371, 17)
@@ -88,9 +91,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr3Educ
 		'
+		Me.txtDr3Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr3Educ.Enabled = False
 		Me.txtDr3Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr3Educ.Location = New System.Drawing.Point(680, 481)
+		Me.txtDr3Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr3Educ.Location = New System.Drawing.Point(680, 428)
 		Me.txtDr3Educ.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr3Educ.Multiline = True
 		Me.txtDr3Educ.Name = "txtDr3Educ"
@@ -101,10 +106,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3Educ
 		'
 		Me.lblDr3Educ.AutoSize = True
-		Me.lblDr3Educ.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3Educ.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3Educ.Location = New System.Drawing.Point(682, 464)
+		Me.lblDr3Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3Educ.Location = New System.Drawing.Point(682, 411)
 		Me.lblDr3Educ.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3Educ.Name = "lblDr3Educ"
 		Me.lblDr3Educ.Size = New System.Drawing.Size(64, 13)
@@ -114,10 +119,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3Address
 		'
 		Me.lblDr3Address.AutoSize = True
-		Me.lblDr3Address.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3Address.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3Address.Location = New System.Drawing.Point(682, 408)
+		Me.lblDr3Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3Address.Location = New System.Drawing.Point(682, 355)
 		Me.lblDr3Address.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3Address.Name = "lblDr3Address"
 		Me.lblDr3Address.Size = New System.Drawing.Size(52, 13)
@@ -126,9 +131,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr3Address
 		'
+		Me.txtDr3Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr3Address.Enabled = False
 		Me.txtDr3Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr3Address.Location = New System.Drawing.Point(680, 425)
+		Me.txtDr3Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr3Address.Location = New System.Drawing.Point(680, 372)
 		Me.txtDr3Address.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr3Address.Multiline = True
 		Me.txtDr3Address.Name = "txtDr3Address"
@@ -138,9 +145,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr3Gender
 		'
+		Me.txtDr3Gender.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr3Gender.Enabled = False
 		Me.txtDr3Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr3Gender.Location = New System.Drawing.Point(782, 371)
+		Me.txtDr3Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr3Gender.Location = New System.Drawing.Point(782, 318)
 		Me.txtDr3Gender.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr3Gender.Multiline = True
 		Me.txtDr3Gender.Name = "txtDr3Gender"
@@ -150,9 +159,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr3Age
 		'
+		Me.txtDr3Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr3Age.Enabled = False
 		Me.txtDr3Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr3Age.Location = New System.Drawing.Point(680, 371)
+		Me.txtDr3Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr3Age.Location = New System.Drawing.Point(680, 318)
 		Me.txtDr3Age.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr3Age.Multiline = True
 		Me.txtDr3Age.Name = "txtDr3Age"
@@ -163,10 +174,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3Gender
 		'
 		Me.lblDr3Gender.AutoSize = True
-		Me.lblDr3Gender.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3Gender.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3Gender.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3Gender.Location = New System.Drawing.Point(784, 354)
+		Me.lblDr3Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3Gender.Location = New System.Drawing.Point(784, 301)
 		Me.lblDr3Gender.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3Gender.Name = "lblDr3Gender"
 		Me.lblDr3Gender.Size = New System.Drawing.Size(48, 13)
@@ -176,10 +187,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3Age
 		'
 		Me.lblDr3Age.AutoSize = True
-		Me.lblDr3Age.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3Age.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3Age.Location = New System.Drawing.Point(682, 354)
+		Me.lblDr3Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3Age.Location = New System.Drawing.Point(682, 301)
 		Me.lblDr3Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3Age.Name = "lblDr3Age"
 		Me.lblDr3Age.Size = New System.Drawing.Size(29, 13)
@@ -188,9 +199,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr3Name
 		'
+		Me.txtDr3Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr3Name.Enabled = False
 		Me.txtDr3Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr3Name.Location = New System.Drawing.Point(680, 317)
+		Me.txtDr3Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr3Name.Location = New System.Drawing.Point(680, 264)
 		Me.txtDr3Name.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr3Name.Multiline = True
 		Me.txtDr3Name.Name = "txtDr3Name"
@@ -201,10 +214,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3Name
 		'
 		Me.lblDr3Name.AutoSize = True
-		Me.lblDr3Name.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3Name.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3Name.Location = New System.Drawing.Point(682, 299)
+		Me.lblDr3Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3Name.Location = New System.Drawing.Point(682, 246)
 		Me.lblDr3Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3Name.Name = "lblDr3Name"
 		Me.lblDr3Name.Size = New System.Drawing.Size(39, 13)
@@ -214,10 +227,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2Educ
 		'
 		Me.lblDr2Educ.AutoSize = True
-		Me.lblDr2Educ.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2Educ.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2Educ.Location = New System.Drawing.Point(387, 463)
+		Me.lblDr2Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2Educ.Location = New System.Drawing.Point(387, 410)
 		Me.lblDr2Educ.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2Educ.Name = "lblDr2Educ"
 		Me.lblDr2Educ.Size = New System.Drawing.Size(64, 13)
@@ -226,9 +239,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr2Educ
 		'
+		Me.txtDr2Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr2Educ.Enabled = False
 		Me.txtDr2Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr2Educ.Location = New System.Drawing.Point(386, 481)
+		Me.txtDr2Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr2Educ.Location = New System.Drawing.Point(386, 428)
 		Me.txtDr2Educ.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr2Educ.Multiline = True
 		Me.txtDr2Educ.Name = "txtDr2Educ"
@@ -238,9 +253,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr2Address
 		'
+		Me.txtDr2Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr2Address.Enabled = False
 		Me.txtDr2Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr2Address.Location = New System.Drawing.Point(386, 425)
+		Me.txtDr2Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr2Address.Location = New System.Drawing.Point(386, 372)
 		Me.txtDr2Address.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr2Address.Multiline = True
 		Me.txtDr2Address.Name = "txtDr2Address"
@@ -251,10 +268,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2Address
 		'
 		Me.lblDr2Address.AutoSize = True
-		Me.lblDr2Address.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2Address.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2Address.Location = New System.Drawing.Point(387, 408)
+		Me.lblDr2Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2Address.Location = New System.Drawing.Point(387, 355)
 		Me.lblDr2Address.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2Address.Name = "lblDr2Address"
 		Me.lblDr2Address.Size = New System.Drawing.Size(52, 13)
@@ -263,9 +280,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr2Gender
 		'
+		Me.txtDr2Gender.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr2Gender.Enabled = False
 		Me.txtDr2Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr2Gender.Location = New System.Drawing.Point(488, 372)
+		Me.txtDr2Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr2Gender.Location = New System.Drawing.Point(488, 319)
 		Me.txtDr2Gender.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr2Gender.Multiline = True
 		Me.txtDr2Gender.Name = "txtDr2Gender"
@@ -275,9 +294,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr2Age
 		'
+		Me.txtDr2Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr2Age.Enabled = False
 		Me.txtDr2Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr2Age.Location = New System.Drawing.Point(386, 372)
+		Me.txtDr2Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr2Age.Location = New System.Drawing.Point(386, 319)
 		Me.txtDr2Age.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr2Age.Multiline = True
 		Me.txtDr2Age.Name = "txtDr2Age"
@@ -288,10 +309,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2Gender
 		'
 		Me.lblDr2Gender.AutoSize = True
-		Me.lblDr2Gender.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2Gender.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2Gender.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2Gender.Location = New System.Drawing.Point(494, 354)
+		Me.lblDr2Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2Gender.Location = New System.Drawing.Point(494, 301)
 		Me.lblDr2Gender.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2Gender.Name = "lblDr2Gender"
 		Me.lblDr2Gender.Size = New System.Drawing.Size(48, 13)
@@ -301,10 +322,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2Age
 		'
 		Me.lblDr2Age.AutoSize = True
-		Me.lblDr2Age.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2Age.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2Age.Location = New System.Drawing.Point(387, 354)
+		Me.lblDr2Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2Age.Location = New System.Drawing.Point(387, 301)
 		Me.lblDr2Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2Age.Name = "lblDr2Age"
 		Me.lblDr2Age.Size = New System.Drawing.Size(29, 13)
@@ -313,9 +334,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr2Name
 		'
+		Me.txtDr2Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr2Name.Enabled = False
 		Me.txtDr2Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr2Name.Location = New System.Drawing.Point(386, 317)
+		Me.txtDr2Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr2Name.Location = New System.Drawing.Point(386, 264)
 		Me.txtDr2Name.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr2Name.Multiline = True
 		Me.txtDr2Name.Name = "txtDr2Name"
@@ -326,10 +349,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2Name
 		'
 		Me.lblDr2Name.AutoSize = True
-		Me.lblDr2Name.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2Name.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2Name.Location = New System.Drawing.Point(387, 299)
+		Me.lblDr2Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2Name.Location = New System.Drawing.Point(387, 246)
 		Me.lblDr2Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2Name.Name = "lblDr2Name"
 		Me.lblDr2Name.Size = New System.Drawing.Size(39, 13)
@@ -339,10 +362,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr3
 		'
 		Me.lblDr3.AutoSize = True
-		Me.lblDr3.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr3.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr3.ForeColor = System.Drawing.Color.Black
-		Me.lblDr3.Location = New System.Drawing.Point(722, 165)
+		Me.lblDr3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr3.Location = New System.Drawing.Point(722, 112)
 		Me.lblDr3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr3.Name = "lblDr3"
 		Me.lblDr3.Size = New System.Drawing.Size(111, 29)
@@ -352,10 +375,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr2
 		'
 		Me.lblDr2.AutoSize = True
-		Me.lblDr2.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr2.ForeColor = System.Drawing.Color.Black
-		Me.lblDr2.Location = New System.Drawing.Point(424, 165)
+		Me.lblDr2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr2.Location = New System.Drawing.Point(424, 112)
 		Me.lblDr2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr2.Name = "lblDr2"
 		Me.lblDr2.Size = New System.Drawing.Size(111, 29)
@@ -367,8 +390,8 @@ Partial Class AccountInformation_Doctor
 		Me.lblDr1.AutoSize = True
 		Me.lblDr1.BackColor = System.Drawing.Color.Transparent
 		Me.lblDr1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1.Location = New System.Drawing.Point(133, 165)
+		Me.lblDr1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1.Location = New System.Drawing.Point(133, 112)
 		Me.lblDr1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1.Name = "lblDr1"
 		Me.lblDr1.Size = New System.Drawing.Size(111, 29)
@@ -377,9 +400,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr1Educ
 		'
+		Me.txtDr1Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr1Educ.Enabled = False
 		Me.txtDr1Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr1Educ.Location = New System.Drawing.Point(90, 481)
+		Me.txtDr1Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr1Educ.Location = New System.Drawing.Point(90, 428)
 		Me.txtDr1Educ.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr1Educ.Multiline = True
 		Me.txtDr1Educ.Name = "txtDr1Educ"
@@ -390,10 +415,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr1Educ
 		'
 		Me.lblDr1Educ.AutoSize = True
-		Me.lblDr1Educ.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr1Educ.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr1Educ.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1Educ.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1Educ.Location = New System.Drawing.Point(91, 464)
+		Me.lblDr1Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1Educ.Location = New System.Drawing.Point(91, 411)
 		Me.lblDr1Educ.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1Educ.Name = "lblDr1Educ"
 		Me.lblDr1Educ.Size = New System.Drawing.Size(64, 13)
@@ -405,8 +430,8 @@ Partial Class AccountInformation_Doctor
 		Me.lblDr1Gender.AutoSize = True
 		Me.lblDr1Gender.BackColor = System.Drawing.Color.Transparent
 		Me.lblDr1Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1Gender.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1Gender.Location = New System.Drawing.Point(196, 356)
+		Me.lblDr1Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1Gender.Location = New System.Drawing.Point(196, 303)
 		Me.lblDr1Gender.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1Gender.Name = "lblDr1Gender"
 		Me.lblDr1Gender.Size = New System.Drawing.Size(48, 13)
@@ -416,10 +441,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr1Address
 		'
 		Me.lblDr1Address.AutoSize = True
-		Me.lblDr1Address.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr1Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr1Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1Address.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1Address.Location = New System.Drawing.Point(91, 408)
+		Me.lblDr1Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1Address.Location = New System.Drawing.Point(91, 355)
 		Me.lblDr1Address.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1Address.Name = "lblDr1Address"
 		Me.lblDr1Address.Size = New System.Drawing.Size(52, 13)
@@ -428,9 +453,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr1Address
 		'
+		Me.txtDr1Address.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr1Address.Enabled = False
 		Me.txtDr1Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr1Address.Location = New System.Drawing.Point(90, 425)
+		Me.txtDr1Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr1Address.Location = New System.Drawing.Point(90, 372)
 		Me.txtDr1Address.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr1Address.Multiline = True
 		Me.txtDr1Address.Name = "txtDr1Address"
@@ -440,9 +467,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr1Gender
 		'
+		Me.txtDr1Gender.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr1Gender.Enabled = False
 		Me.txtDr1Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr1Gender.Location = New System.Drawing.Point(192, 372)
+		Me.txtDr1Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr1Gender.Location = New System.Drawing.Point(192, 319)
 		Me.txtDr1Gender.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr1Gender.Multiline = True
 		Me.txtDr1Gender.Name = "txtDr1Gender"
@@ -452,9 +481,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr1Age
 		'
+		Me.txtDr1Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr1Age.Enabled = False
 		Me.txtDr1Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr1Age.Location = New System.Drawing.Point(90, 372)
+		Me.txtDr1Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr1Age.Location = New System.Drawing.Point(90, 319)
 		Me.txtDr1Age.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr1Age.Multiline = True
 		Me.txtDr1Age.Name = "txtDr1Age"
@@ -465,10 +496,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr1Age
 		'
 		Me.lblDr1Age.AutoSize = True
-		Me.lblDr1Age.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr1Age.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr1Age.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1Age.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1Age.Location = New System.Drawing.Point(91, 356)
+		Me.lblDr1Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1Age.Location = New System.Drawing.Point(91, 303)
 		Me.lblDr1Age.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1Age.Name = "lblDr1Age"
 		Me.lblDr1Age.Size = New System.Drawing.Size(29, 13)
@@ -478,10 +509,10 @@ Partial Class AccountInformation_Doctor
 		'lblDr1Name
 		'
 		Me.lblDr1Name.AutoSize = True
-		Me.lblDr1Name.BackColor = System.Drawing.Color.Transparent
+		Me.lblDr1Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.lblDr1Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lblDr1Name.ForeColor = System.Drawing.Color.Black
-		Me.lblDr1Name.Location = New System.Drawing.Point(91, 299)
+		Me.lblDr1Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.lblDr1Name.Location = New System.Drawing.Point(91, 246)
 		Me.lblDr1Name.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblDr1Name.Name = "lblDr1Name"
 		Me.lblDr1Name.Size = New System.Drawing.Size(39, 13)
@@ -490,10 +521,11 @@ Partial Class AccountInformation_Doctor
 		'
 		'txtDr1Name
 		'
+		Me.txtDr1Name.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.txtDr1Name.Enabled = False
 		Me.txtDr1Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.txtDr1Name.ForeColor = System.Drawing.SystemColors.WindowText
-		Me.txtDr1Name.Location = New System.Drawing.Point(90, 317)
+		Me.txtDr1Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.txtDr1Name.Location = New System.Drawing.Point(90, 264)
 		Me.txtDr1Name.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtDr1Name.Multiline = True
 		Me.txtDr1Name.Name = "txtDr1Name"
@@ -503,8 +535,10 @@ Partial Class AccountInformation_Doctor
 		'
 		'pnlDr1
 		'
+		Me.pnlDr1.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.pnlDr1.Controls.Add(Me.pbxDr1)
-		Me.pnlDr1.Location = New System.Drawing.Point(60, 163)
+		Me.pnlDr1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.pnlDr1.Location = New System.Drawing.Point(60, 110)
 		Me.pnlDr1.Margin = New System.Windows.Forms.Padding(2)
 		Me.pnlDr1.Name = "pnlDr1"
 		Me.pnlDr1.Size = New System.Drawing.Size(251, 369)
@@ -512,6 +546,7 @@ Partial Class AccountInformation_Doctor
 		'
 		'pbxDr1
 		'
+		Me.pbxDr1.BackColor = System.Drawing.Color.Transparent
 		Me.pbxDr1.Image = Global.NOMG.My.Resources.Resources.Dr1
 		Me.pbxDr1.Location = New System.Drawing.Point(80, 38)
 		Me.pbxDr1.Margin = New System.Windows.Forms.Padding(2)
@@ -527,7 +562,7 @@ Partial Class AccountInformation_Doctor
 		Me.lblAdditionalInfo.BackColor = System.Drawing.Color.Transparent
 		Me.lblAdditionalInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.lblAdditionalInfo.ForeColor = System.Drawing.Color.Black
-		Me.lblAdditionalInfo.Location = New System.Drawing.Point(363, 43)
+		Me.lblAdditionalInfo.Location = New System.Drawing.Point(362, 18)
 		Me.lblAdditionalInfo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
 		Me.lblAdditionalInfo.Name = "lblAdditionalInfo"
 		Me.lblAdditionalInfo.Size = New System.Drawing.Size(244, 37)
@@ -536,19 +571,24 @@ Partial Class AccountInformation_Doctor
 		'
 		'btnBack
 		'
+		Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnBack.Location = New System.Drawing.Point(192, 568)
+		Me.btnBack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnBack.Location = New System.Drawing.Point(187, 601)
 		Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnBack.Name = "btnBack"
 		Me.btnBack.Size = New System.Drawing.Size(269, 39)
 		Me.btnBack.TabIndex = 62
 		Me.btnBack.Text = "Back"
-		Me.btnBack.UseVisualStyleBackColor = True
+		Me.btnBack.UseVisualStyleBackColor = False
 		'
 		'pnlDr2
 		'
+		Me.pnlDr2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.pnlDr2.Controls.Add(Me.pbxDr2)
-		Me.pnlDr2.Location = New System.Drawing.Point(356, 163)
+		Me.pnlDr2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.pnlDr2.Location = New System.Drawing.Point(356, 110)
 		Me.pnlDr2.Margin = New System.Windows.Forms.Padding(2)
 		Me.pnlDr2.Name = "pnlDr2"
 		Me.pnlDr2.Size = New System.Drawing.Size(251, 369)
@@ -556,6 +596,7 @@ Partial Class AccountInformation_Doctor
 		'
 		'pbxDr2
 		'
+		Me.pbxDr2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.pbxDr2.Image = Global.NOMG.My.Resources.Resources.Dr2
 		Me.pbxDr2.Location = New System.Drawing.Point(73, 38)
 		Me.pbxDr2.Margin = New System.Windows.Forms.Padding(2)
@@ -567,8 +608,10 @@ Partial Class AccountInformation_Doctor
 		'
 		'pnlDr3
 		'
+		Me.pnlDr3.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
 		Me.pnlDr3.Controls.Add(Me.pbxDr3)
-		Me.pnlDr3.Location = New System.Drawing.Point(652, 163)
+		Me.pnlDr3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.pnlDr3.Location = New System.Drawing.Point(652, 110)
 		Me.pnlDr3.Margin = New System.Windows.Forms.Padding(2)
 		Me.pnlDr3.Name = "pnlDr3"
 		Me.pnlDr3.Size = New System.Drawing.Size(251, 369)
@@ -587,20 +630,69 @@ Partial Class AccountInformation_Doctor
 		'
 		'btnRegister
 		'
+		Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btnRegister.Location = New System.Drawing.Point(502, 568)
+		Me.btnRegister.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnRegister.Location = New System.Drawing.Point(497, 601)
 		Me.btnRegister.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnRegister.Name = "btnRegister"
 		Me.btnRegister.Size = New System.Drawing.Size(269, 39)
 		Me.btnRegister.TabIndex = 101
 		Me.btnRegister.Text = "Register"
-		Me.btnRegister.UseVisualStyleBackColor = True
+		Me.btnRegister.UseVisualStyleBackColor = False
+		'
+		'btnDoctor1
+		'
+		Me.btnDoctor1.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnDoctor1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnDoctor1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnDoctor1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnDoctor1.Location = New System.Drawing.Point(110, 493)
+		Me.btnDoctor1.Margin = New System.Windows.Forms.Padding(2)
+		Me.btnDoctor1.Name = "btnDoctor1"
+		Me.btnDoctor1.Size = New System.Drawing.Size(150, 39)
+		Me.btnDoctor1.TabIndex = 102
+		Me.btnDoctor1.Text = "Select"
+		Me.btnDoctor1.UseVisualStyleBackColor = False
+		'
+		'btnDoctor2
+		'
+		Me.btnDoctor2.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnDoctor2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnDoctor2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnDoctor2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnDoctor2.Location = New System.Drawing.Point(405, 493)
+		Me.btnDoctor2.Margin = New System.Windows.Forms.Padding(2)
+		Me.btnDoctor2.Name = "btnDoctor2"
+		Me.btnDoctor2.Size = New System.Drawing.Size(150, 39)
+		Me.btnDoctor2.TabIndex = 103
+		Me.btnDoctor2.Text = "Select"
+		Me.btnDoctor2.UseVisualStyleBackColor = False
+		'
+		'btnDoctor3
+		'
+		Me.btnDoctor3.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+		Me.btnDoctor3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnDoctor3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnDoctor3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+		Me.btnDoctor3.Location = New System.Drawing.Point(707, 493)
+		Me.btnDoctor3.Margin = New System.Windows.Forms.Padding(2)
+		Me.btnDoctor3.Name = "btnDoctor3"
+		Me.btnDoctor3.Size = New System.Drawing.Size(150, 39)
+		Me.btnDoctor3.TabIndex = 104
+		Me.btnDoctor3.Text = "Select"
+		Me.btnDoctor3.UseVisualStyleBackColor = False
 		'
 		'AccountInformation_Doctor
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(962, 651)
+		Me.Controls.Add(Me.btnDoctor3)
+		Me.Controls.Add(Me.btnDoctor2)
+		Me.Controls.Add(Me.btnDoctor1)
 		Me.Controls.Add(Me.btnRegister)
 		Me.Controls.Add(Me.lblMaxPatients)
 		Me.Controls.Add(Me.txtDr3Educ)
@@ -698,4 +790,7 @@ Partial Class AccountInformation_Doctor
 	Friend WithEvents pnlDr3 As Panel
 	Friend WithEvents pbxDr3 As PictureBox
 	Friend WithEvents btnRegister As Button
+	Friend WithEvents btnDoctor1 As Button
+	Friend WithEvents btnDoctor2 As Button
+	Friend WithEvents btnDoctor3 As Button
 End Class

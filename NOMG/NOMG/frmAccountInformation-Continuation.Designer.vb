@@ -141,7 +141,7 @@ Partial Class frmAccountInformation_Continuation
 		Me.btnDoctorChoosing.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnDoctorChoosing.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btnDoctorChoosing.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-		Me.btnDoctorChoosing.Location = New System.Drawing.Point(259, 370)
+		Me.btnDoctorChoosing.Location = New System.Drawing.Point(259, 321)
 		Me.btnDoctorChoosing.Name = "btnDoctorChoosing"
 		Me.btnDoctorChoosing.Size = New System.Drawing.Size(190, 59)
 		Me.btnDoctorChoosing.TabIndex = 8
@@ -154,7 +154,7 @@ Partial Class frmAccountInformation_Continuation
 		Me.btnBackToStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnBackToStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btnBackToStart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-		Me.btnBackToStart.Location = New System.Drawing.Point(18, 370)
+		Me.btnBackToStart.Location = New System.Drawing.Point(18, 321)
 		Me.btnBackToStart.Name = "btnBackToStart"
 		Me.btnBackToStart.Size = New System.Drawing.Size(190, 59)
 		Me.btnBackToStart.TabIndex = 7

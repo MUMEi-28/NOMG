@@ -274,4 +274,16 @@
 
     End Sub
 
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If frmAccountInformation.intDoctor = 1 Then
+            txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 1"
+        ElseIf frmAccountInformation.intDoctor = 2 Then
+
+            txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 2"
+        ElseIf frmAccountInformation.intDoctor = 3 Then
+            txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 3"
+        End If
+
+    End Sub
+
 End Class

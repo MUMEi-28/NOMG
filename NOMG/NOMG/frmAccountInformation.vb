@@ -3,14 +3,14 @@
 	Public listUsers As New List(Of User)
 	Public strCurrentUser As User
 	Public listDoctors As New List(Of Doctor)
-
+	Public intDoctor As New Integer
 	Public Sub New()
 		InitializeComponent()
 
 
-		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, True, 20)
-		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, False, 15)
-		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, False, 12)
+		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, 1)
+		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, 1)
+		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, 1)
 
 		listUsers.Add(user1)
 		listUsers.Add(user2)
@@ -23,6 +23,8 @@
 		listDoctors.Add(dr1)
 		listDoctors.Add(dr2)
 		listDoctors.Add(dr3)
+
+		intDoctor = 1
 	End Sub
 	Class User
 		Private strName As String
@@ -34,6 +36,7 @@
 		Private intGestationalAge As Integer
 		Private listAppointments As New List(Of Date)
 		Private doctor As Doctor
+		Private intDoctor As Integer
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -43,15 +46,17 @@
 		' User Constructor
 		Public Sub New(ByVal strTempName As String, ByVal strTempAddress As String,
 					   ByVal strTempEmail As String, ByVal strTempPass As String,
-					   ByVal strIntAge As Integer, ByVal boolTmpIsFirstBaby As Boolean,
-					   ByVal intTmpGesAge As Integer)
+					   ByVal strIntAge As Integer, ByVal strTmpIsFirstBaby As String,
+					   ByVal intTmpGesAge As Integer, ByVal intTmpDoctor As Integer)
 			strName = strTempName
 			strAddress = strTempAddress
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
-			strIsFirstBaby = boolTmpIsFirstBaby
 			intGestationalAge = intTmpGesAge
+			intTmpDoctor = 1
+
+			strIsFirstBaby = strTmpIsFirstBaby
 		End Sub
 
 		Public Sub SetUserCredentials(ByVal strTempName As String, ByVal strTempAddress As String,
@@ -65,11 +70,8 @@
 			intAge = strIntAge
 			intGestationalAge = intTmpGesAge
 
-			If strTmpIsFirstBaby = "y" Then
-				strIsFirstBaby = "yes"
-			ElseIf strTmpIsFirstBaby = "n" Then
-				strIsFirstBaby = "no"
-			End If
+			strIsFirstBaby = strTmpIsFirstBaby
+
 		End Sub
 		Public Function GetName() As String
 			Return strName
@@ -97,6 +99,9 @@
 		End Function
 		Public Function GetDoctor() As Doctor
 			Return doctor
+		End Function
+		Public Function GetDoctorInt() As Integer
+			Return intDoctor
 		End Function
 	End Class
 
@@ -127,41 +132,7 @@
 
 	End Sub
 
-	'Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
 
-	'	If txtAge.Text = "" Then
-	'		MsgBox("Please enter your age")
-	'		Return
-	'	End If
-
-	'	If txtFirstBaby.Text = "" Then
-	'		MsgBox("Please enter details about your first baby")
-	'		Return
-	'	End If
-
-	'	If txtGasAge.Text = "" Then
-	'		MsgBox("Please enter the age of your gestational age")
-	'		Return ' Exit the method if any TextBox is empty
-	'	End If
-
-	'	' Create a new user instance
-	'	Dim newUser As New User()
-	'	newUser.SetUserCredentials(txtName.Text, txtAddress.Text, txtEmail.Text, txtPassword.Text, txtAge.Text, txtFirstBaby.Text, txtGasAge.Text)
-	'	listUsers.Add(newUser)
-
-	'	' Clear all TextBoxes
-	'	txtName.Clear()
-	'	txtAddress.Clear()
-	'	txtEmail.Clear()
-	'	txtPassword.Clear()
-	'	txtAge.Clear()
-	'	txtFirstBaby.Clear()
-	'	txtGasAge.Clear()
-
-	'	' Hide the current form and show the login form
-	'	Me.Hide()
-	'	frmLogIn.Show()
-	'End Sub
 
 	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs)
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
