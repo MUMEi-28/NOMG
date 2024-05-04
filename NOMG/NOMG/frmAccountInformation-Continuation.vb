@@ -26,7 +26,7 @@
 
 	End Sub
 
-	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs)
+	Private Sub txtAge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAge.KeyPress
 
 		Console.WriteLine("AGE PRESS")
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
@@ -43,7 +43,7 @@
 		End If
 	End Sub
 
-	Private Sub txtGasAge_KeyPress(sender As Object, e As KeyPressEventArgs)
+	Private Sub txtGasAge_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGasAge.KeyPress
 		' Check if the pressed key is a control key (e.g., backspace, delete, arrow keys)
 		If Char.IsControl(e.KeyChar) Then
 			' Allow control keys
@@ -58,7 +58,7 @@
 		End If
 	End Sub
 
-	Private Sub txtFirstBaby_TextChanged(sender As Object, e As EventArgs)
+	Private Sub txtFirstBaby_TextChanged(sender As Object, e As EventArgs) Handles txtFirstBaby.TextChanged
 		Dim textBox As TextBox = CType(sender, TextBox)
 		Dim input As String = textBox.Text.ToLower()
 

@@ -226,6 +226,7 @@ Partial Class frmAccountInformation_Continuation
 		Me.Controls.Add(Me.Panel1)
 		Me.Controls.Add(Me.PictureBox1)
 		Me.Controls.Add(Me.Label2)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
 		Me.Name = "frmAccountInformation_Continuation"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "frmAccountInformation_Continuation"
