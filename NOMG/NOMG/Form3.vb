@@ -45,4 +45,8 @@
             frmMain.lblAppointment.Text = "Next Check Up:" & vbCrLf & getNextCheckUp()
         End If
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles cbMed1.CheckedChanged
+
+    End Sub
 End Class

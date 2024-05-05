@@ -1,4 +1,6 @@
-﻿Public Class frmMain
+﻿Imports System.Drawing.Drawing2D
+
+Public Class frmMain
     Dim dteTracker As Date
 
     Public lblFrmMainPnl As New List(Of Label)
@@ -227,72 +229,83 @@
             MsgBox("First appointment is not set.", vbRetryCancel + vbCritical, "Error")
         End If
     End Sub
-
+    Dim VisitCount As Integer
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
-        If dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(3) Then
+        VisitCount += 1
+        Select Case VisitCount
+            Case 1
+                frmBilling.txtDescription1.Text = "Initial Check up"
+                frmBilling.txtDescription2.Text = "Iron Vitamin"
+                frmBilling.txtDescription3.Text = "B Complex"
+                frmBilling.txtDescription4.Text = "DHA"
+
+                frmBilling.txtUnitPrice1.Text = 2000
+                frmBilling.txtUnitPrice2.Text = 15
+                frmBilling.txtUnitPrice3.Text = 25
+                frmBilling.txtUnitPrice4.Text = 20
+
+                frmBilling.txtQuantity1.Text = 1
+                frmBilling.txtQuantity2.Text = 30
+                frmBilling.txtQuantity3.Text = 30
+                frmBilling.txtQuantity4.Text = 90
+            Case 2, 3
+                frmBilling.txtDescription1.Text = "Follow up Check up"
+                frmBilling.txtDescription2.Text = "Iron Vitamin"
+                frmBilling.txtDescription3.Text = "B Complex"
+                frmBilling.txtDescription4.Text = "DHA"
+                frmBilling.txtUnitPrice1.Text = 500
+                frmBilling.txtUnitPrice2.Text = 15
+                frmBilling.txtUnitPrice3.Text = 25
+                frmBilling.txtUnitPrice4.Text = 20
+                frmBilling.txtQuantity1.Text = 1
+                frmBilling.txtQuantity2.Text = 30
+                frmBilling.txtQuantity3.Text = 30
+                frmBilling.txtQuantity4.Text = 90
+            Case 4 To 6
+                frmBilling.txtDescription1.Text = "Follow up Check up"
+                frmBilling.txtDescription2.Text = "Iron Vitamin"
+                frmBilling.txtDescription3.Text = "B Complex"
+                frmBilling.txtDescription4.Text = "DHA"
+                frmBilling.txtUnitPrice1.Text = 500
+                frmBilling.txtUnitPrice2.Text = 15
+                frmBilling.txtUnitPrice3.Text = 25
+                frmBilling.txtUnitPrice4.Text = 20
+                frmBilling.txtQuantity1.Text = 1
+                frmBilling.txtQuantity2.Text = 20
+                frmBilling.txtQuantity3.Text = 20
+                frmBilling.txtQuantity4.Text = 60
+            Case 7 To 9
+                frmBilling.txtDescription1.Text = "Follow up Check up"
+                frmBilling.txtDescription2.Text = "Iron Vitamin"
+                frmBilling.txtDescription3.Text = "B Complex"
+                frmBilling.txtDescription4.Text = "DHA"
+                frmBilling.txtUnitPrice1.Text = 500
+                frmBilling.txtUnitPrice2.Text = 15
+                frmBilling.txtUnitPrice3.Text = 25
+                frmBilling.txtUnitPrice4.Text = 20
+                frmBilling.txtQuantity1.Text = 1
+                frmBilling.txtQuantity2.Text = 10
+                frmBilling.txtQuantity3.Text = 10
+                frmBilling.txtQuantity4.Text = 30
 
 
-            frmBilling.txtDescription1.Text = "Initial Check up"
-            frmBilling.txtDescription2.Text = "Iron Vitamin"
-            frmBilling.txtDescription3.Text = "B Complex"
-            frmBilling.txtDescription4.Text = "DHA"
-            frmBilling.txtDescription5.Text = "Flu Vac"
-            frmBilling.txtUnitPrice1.Text = 2000
-            frmBilling.txtUnitPrice2.Text = 15
-            frmBilling.txtUnitPrice3.Text = 25
-            frmBilling.txtUnitPrice4.Text = 20
-            frmBilling.txtUnitPrice5.Text = 1500
-            frmBilling.txtQuantity1.Text = 1
-            frmBilling.txtQuantity2.Text = 30
-            frmBilling.txtQuantity3.Text = 30
-            frmBilling.txtQuantity4.Text = 90
+
+        End Select
+        If frmRoutine.cbMed1.Checked = True Then
             frmBilling.txtQuantity5.Text = 1
-            frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
-            frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
-            frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
-            frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
-            frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
-            frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
-        ElseIf dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(6) Then
-            frmBilling.txtDescription1.Text = "Follow up Check up"
-            frmBilling.txtDescription2.Text = "Iron Vitamin"
-            frmBilling.txtDescription3.Text = "B Complex"
-            frmBilling.txtDescription4.Text = "DHA"
-            frmBilling.txtUnitPrice1.Text = 500
-            frmBilling.txtUnitPrice2.Text = 15
-            frmBilling.txtUnitPrice3.Text = 25
-            frmBilling.txtUnitPrice4.Text = 20
-            frmBilling.txtQuantity1.Text = 1
-            frmBilling.txtQuantity2.Text = 20
-            frmBilling.txtQuantity3.Text = 20
-            frmBilling.txtQuantity4.Text = 60
-            frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
-            frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
-            frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
-            frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
-            frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
-            frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
-        Else
-            frmBilling.txtDescription1.Text = "Follow up Check up"
-            frmBilling.txtDescription2.Text = "Iron Vitamin"
-            frmBilling.txtDescription3.Text = "B Complex"
-            frmBilling.txtDescription4.Text = "DHA"
-            frmBilling.txtUnitPrice1.Text = 500
-            frmBilling.txtUnitPrice2.Text = 15
-            frmBilling.txtUnitPrice3.Text = 25
-            frmBilling.txtUnitPrice4.Text = 20
-            frmBilling.txtQuantity1.Text = 1
-            frmBilling.txtQuantity2.Text = 10
-            frmBilling.txtQuantity3.Text = 10
-            frmBilling.txtQuantity4.Text = 30
-            frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
-            frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
-            frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
-            frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
-            frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
-            frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
+            frmBilling.txtDescription5.Text = "Flu Vac"
+            frmBilling.txtUnitPrice5.Text = 1500
         End If
+
+        frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
+        frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))
+        frmBilling.txtAmount3.Text = (Val(frmBilling.txtQuantity3.Text) * Val(frmBilling.txtUnitPrice3.Text))
+        frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
+        frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
+        frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
+
+
         Me.Hide()
 
     End Sub
