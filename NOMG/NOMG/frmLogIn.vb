@@ -27,6 +27,7 @@
 				frmMain.txtPDAge.Text = frmAccountInformation.strCurrentUser.GetAge()
 				frmMain.txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
 				frmMain.txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
+				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.strCurrentUser.GetDoctor.GetName & "."
 				Return '' Make sure not to show the other msgBox
 			End If
 			intCounter += 1

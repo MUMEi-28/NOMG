@@ -126,6 +126,10 @@
 		Public Sub New()
 
 		End Sub
+
+		Public Function GetName() As String
+			Return strName
+		End Function
 	End Class
 	Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click
 		frmStart.Show()
