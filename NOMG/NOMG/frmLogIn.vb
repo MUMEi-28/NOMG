@@ -28,6 +28,12 @@
 				frmMain.txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
 				frmMain.txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
 				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.strCurrentUser.GetDoctor.GetName & "."
+
+				If frmAccountInformation.strCurrentUser.GetBolIsFirst = False Then
+					frmMain.dtpFirstAppointment.Show()
+					frmMain.dtpFirstAppointment.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
+					frmMain.lblAppointment.Text = "First Check Up:"
+				End If
 				Return '' Make sure not to show the other msgBox
 			End If
 			intCounter += 1

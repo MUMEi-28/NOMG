@@ -68,11 +68,11 @@ Partial Class frmMain
         Me.lblAppointment.AutoSize = True
         Me.lblAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAppointment.ForeColor = System.Drawing.Color.Black
-        Me.lblAppointment.Location = New System.Drawing.Point(220, 96)
+        Me.lblAppointment.Location = New System.Drawing.Point(205, 98)
         Me.lblAppointment.Name = "lblAppointment"
-        Me.lblAppointment.Size = New System.Drawing.Size(203, 32)
+        Me.lblAppointment.Size = New System.Drawing.Size(222, 32)
         Me.lblAppointment.TabIndex = 3
-        Me.lblAppointment.Text = "1st Check Up:"
+        Me.lblAppointment.Text = "First Check Up:"
         Me.lblAppointment.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'btnSeeRoutine
@@ -90,7 +90,7 @@ Partial Class frmMain
         '
         Me.dtpFirstAppointment.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFirstAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFirstAppointment.Location = New System.Drawing.Point(151, 144)
+        Me.dtpFirstAppointment.Location = New System.Drawing.Point(141, 144)
         Me.dtpFirstAppointment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dtpFirstAppointment.Name = "dtpFirstAppointment"
         Me.dtpFirstAppointment.Size = New System.Drawing.Size(343, 28)

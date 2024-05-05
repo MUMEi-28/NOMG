@@ -39,6 +39,7 @@
                 frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
                 dtpFirstAppointment.Hide()
                 lblAppointment.Text = "Next Check Up:" & vbCrLf & frmAccountInformation.strCurrentUser.GetListAppointments(0)
+                frmAccountInformation.strCurrentUser.SetBolIsFirst(True)
             End If
         End If
     End Sub
@@ -52,11 +53,6 @@
     Public Sub New()
         InitializeComponent()
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
-        If frmAccountInformation.strCurrentUser.GetListAppointments(0) = Nothing Then
-            dtpFirstAppointment.Show()
-            dtpFirstAppointment.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
-            lblAppointment.Text = "First Check Up:"
-        End If
 
         btnFrmMain.Add(btnBack)
         btnFrmMain.Add(btnSeeRoutine)

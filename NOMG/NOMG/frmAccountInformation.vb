@@ -36,6 +36,7 @@
 		Private listAppointments As New List(Of Date)
 		Private doctor As Doctor
 		Private dteLMC As Date
+		Private bolisFirstSet As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -57,6 +58,7 @@
 			intGestationalAge = intTmpGesAge
 			doctor = tempDoctor
 			dteLMC = dteTempLMC
+			bolisFirstSet = False
 		End Sub
 
 		Public Sub SetUserCredentials(ByVal strTempName As String, ByVal strTempAddress As String,
@@ -73,6 +75,7 @@
 			intGestationalAge = intTmpGesAge
 			doctor = tempDoctor
 			dteLMC = dteTempLMC
+			bolisFirstSet = False
 		End Sub
 		Public Function GetName() As String
 			Return strName
@@ -104,8 +107,15 @@
 		Public Function GetDteLMC() As Date
 			Return dteLMC
 		End Function
+		Public Function GetBolIsFirst() As Boolean
+			Return bolisFirstSet
+		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
+		End Sub
+
+		Public Sub SetBolIsFirst(ByVal bolTempIsFirst As Boolean)
+			bolisFirstSet = bolTempIsFirst
 		End Sub
 	End Class
 
