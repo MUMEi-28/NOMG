@@ -1,10 +1,7 @@
 ﻿Public Class frmMain
-
-    Dim dteLMC As Date
     Dim dteTracker As Date
 
     Public lblFrmMainPnl As New List(Of Label)
-    Public lblFrmMainTtl As New List(Of Label)
 
     Public txtFrmMainPD As New List(Of TextBox)
     Public txtFrmMainCI As New List(Of TextBox)
@@ -40,16 +37,9 @@
             If blnFullyBooked = False Then
                 frmAccountInformation.strCurrentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
                 frmAccountInformation.strCurrentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
+                dtpFirstAppointment.Hide()
+                lblAppointment.Text = "Next Check Up:" & vbCrLf & frmAccountInformation.strCurrentUser.GetListAppointments(0)
             End If
-        End If
-    End Sub
-
-    Private Sub dtpLMC_ValueChanged(sender As Object, e As EventArgs) Handles dtpLMC.ValueChanged
-        If dtpLMC.Value.Date > Date.Today.Date Then
-            MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
-            dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
-        Else
-            dteLMC = dtpLMC.Value.Date
         End If
     End Sub
 
@@ -62,6 +52,11 @@
     Public Sub New()
         InitializeComponent()
         Me.BackColor = Color.FromArgb(255, 39, 36, 46)
+        If frmAccountInformation.strCurrentUser.GetListAppointments(0) = Nothing Then
+            dtpFirstAppointment.Show()
+            dtpFirstAppointment.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
+            lblAppointment.Text = "First Check Up:"
+        End If
 
         btnFrmMain.Add(btnBack)
         btnFrmMain.Add(btnSeeRoutine)
@@ -80,12 +75,8 @@
             pnl.BackColor = Color.FromArgb(255, 79, 45, 57)
         Next
 
-        lblFrmMainTtl.Add(lblLMC)
-        lblFrmMainTtl.Add(lblSetFirstAppointment)
-        For Each lbl In lblFrmMainTtl
-            lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
-            lbl.BackColor = Color.FromArgb(255, 39, 36, 46)
-        Next
+        lblAppointment.ForeColor = Color.FromArgb(255, 244, 238, 224)
+        lblAppointment.BackColor = Color.FromArgb(255, 39, 36, 46)
 
         lblFrmMainPnl.Add(lblClinicInfo)
         lblFrmMainPnl.Add(lblCIName)
@@ -131,7 +122,8 @@
     End Sub
 
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
-        dteLMC = dtpLMC.Value.Date
+        ' In case the date is not changed anymore because the input is today.
+        frmAccountInformation.strCurrentUser.SetDteLMC(frmAccountInformation_Continuation.dtpLMC.Value.Date)
 
         frmAccountInformation.strCurrentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
         dteTracker = frmAccountInformation.strCurrentUser.GetListAppointments(0).Date
@@ -148,8 +140,8 @@
             Loop
         Next
 
-        Do While dteTracker <= dteLMC.AddMonths(9)
-            If dteTracker <= dteLMC.AddMonths(3) Then
+        Do While dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(9)
+            If dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(3) Then
                 ' Checks if the clinic is open
                 Do While dteTracker.AddDays(30).DayOfWeek = 0 Or dteTracker.AddDays(30).DayOfWeek = 1
                     dteTracker = dteTracker.AddDays(1)
@@ -178,7 +170,7 @@
                     blnFullyBooked = False
                 End If
 
-            ElseIf dteTracker <= dteLMC.AddMonths(6) Then
+            ElseIf dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(6) Then
                 ' Checks if the clinic is open
                 Do While dteTracker.AddDays(20).DayOfWeek = 0 Or dteTracker.AddDays(20).DayOfWeek = 1
                     dteTracker = dteTracker.AddDays(1)
@@ -246,7 +238,7 @@
 
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
-        If dteTracker <= dteLMC.AddMonths(3) Then
+        If dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(3) Then
 
 
             frmBilling.txtDescription1.Text = "Initial Check up"
@@ -270,7 +262,7 @@
             frmBilling.txtAmount4.Text = (Val(frmBilling.txtQuantity4.Text) * Val(frmBilling.txtUnitPrice4.Text))
             frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
             frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
-        ElseIf dteTracker <= dteLMC.AddMonths(6) Then
+        ElseIf dteTracker <= frmAccountInformation.strCurrentUser.GetDteLMC.AddMonths(6) Then
             frmBilling.txtDescription1.Text = "Follow up Check up"
             frmBilling.txtDescription2.Text = "Iron Vitamin"
             frmBilling.txtDescription3.Text = "B Complex"
@@ -314,13 +306,6 @@
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' If frmAccountInformation.intDoctor = 1 Then
-        ' txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 1 \n"
-        ' ElseIf frmAccountInformation.intDoctor = 2 Then
-        ' txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 2"
-        ' ElseIf frmAccountInformation.intDoctor = 3 Then
-        ' txtPDAdditionalInfo.Text = "THIS PATIENT IS FOR DOCTOR 3"
-        ' End If
 
     End Sub
 

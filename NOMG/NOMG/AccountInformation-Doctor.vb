@@ -1,4 +1,5 @@
 ﻿Public Class AccountInformation_Doctor
+	Dim tempDoctor As frmAccountInformation.Doctor
 	Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 		frmAccountInformation_Continuation.Show()
 		Me.Hide()
@@ -11,8 +12,8 @@
 		Dim newUser As New frmAccountInformation.User()
 		newUser.SetUserCredentials(frmAccountInformation.txtName.Text, frmAccountInformation.txtAddress.Text,
 								   frmAccountInformation.txtEmail.Text, frmAccountInformation.txtPassword.Text,
-								   frmAccountInformation_Continuation.txtAge.Text, frmAccountInformation_Continuation.txtFirstBaby.Text,
-								   frmAccountInformation_Continuation.txtGasAge.Text)
+								   Val(frmAccountInformation_Continuation.txtAge.Text), frmAccountInformation_Continuation.txtFirstBaby.Text,
+								   Val(frmAccountInformation_Continuation.txtGasAge.Text), tempDoctor, frmAccountInformation_Continuation.dtpLMC.Value)
 
 		frmAccountInformation.listUsers.Add(newUser)
 
@@ -24,6 +25,8 @@
 		frmAccountInformation_Continuation.txtAge.Clear()
 		frmAccountInformation_Continuation.txtFirstBaby.Clear()
 		frmAccountInformation_Continuation.txtGasAge.Clear()
+		tempDoctor = Nothing
+		frmAccountInformation_Continuation.dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 
 		' Hide the current form and show the login form
 		Me.Hide()
@@ -31,17 +34,17 @@
 	End Sub
 
 	Private Sub btnDoctor1_Click(sender As Object, e As EventArgs) Handles btnDoctor1.Click
-		MsgBox("Doctor 1 is selected")
-		frmAccountInformation.intDoctor = 1
+		MsgBox(frmAccountInformation.listDoctors(0).GetName & " is selected.")
+		tempDoctor = frmAccountInformation.listDoctors(0)
 	End Sub
 
 	Private Sub btnDoctor2_Click(sender As Object, e As EventArgs) Handles btnDoctor2.Click
-		MsgBox("Doctor 2 is selected")
-		frmAccountInformation.intDoctor = 2
+		MsgBox(frmAccountInformation.listDoctors(1).GetName & " is selected.")
+		tempDoctor = frmAccountInformation.listDoctors(0)
 	End Sub
 
 	Private Sub btnDoctor3_Click(sender As Object, e As EventArgs) Handles btnDoctor3.Click
-		MsgBox("Doctor 3 is selected")
-		frmAccountInformation.intDoctor = 3
+		MsgBox(frmAccountInformation.listDoctors(2).GetName & " is selected.")
+		tempDoctor = frmAccountInformation.listDoctors(0)
 	End Sub
 End Class

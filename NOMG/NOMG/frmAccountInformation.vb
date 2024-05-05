@@ -15,9 +15,9 @@
 		listDoctors.Add(dr2)
 		listDoctors.Add(dr3)
 
-		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, listDoctors(0), 1)
-		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, listDoctors(1), 1)
-		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, listDoctors(2), 1)
+		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, listDoctors(0), Date.Today.Date)
+		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, listDoctors(1), Date.Today.Date)
+		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, listDoctors(2), Date.Today.Date)
 
 		listUsers.Add(user1)
 		listUsers.Add(user2)
@@ -35,7 +35,7 @@
 		Private intGestationalAge As Integer
 		Private listAppointments As New List(Of Date)
 		Private doctor As Doctor
-		Private intDoctor As Integer
+		Private dteLMC As Date
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -47,32 +47,32 @@
 					   ByVal strTempEmail As String, ByVal strTempPass As String,
 					   ByVal strIntAge As Integer, ByVal strTmpIsFirstBaby As String,
 					   ByVal intTmpGesAge As Integer, ByVal tempDoctor As Doctor,
-					   ByVal intTmpDoctor As Integer)
+					   ByVal dteTempLMC As Date)
 			strName = strTempName
 			strAddress = strTempAddress
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
+			strIsFirstBaby = strTmpIsFirstBaby
 			intGestationalAge = intTmpGesAge
 			doctor = tempDoctor
-			intTmpDoctor = 1
-
-			strIsFirstBaby = strTmpIsFirstBaby
+			dteLMC = dteTempLMC
 		End Sub
 
 		Public Sub SetUserCredentials(ByVal strTempName As String, ByVal strTempAddress As String,
 					   ByVal strTempEmail As String, ByVal strTempPass As String,
 					   ByVal strIntAge As Integer, ByVal strTmpIsFirstBaby As String,
-					   ByVal intTmpGesAge As Integer)
+					   ByVal intTmpGesAge As Integer, ByVal tempDoctor As Doctor,
+					   ByVal dteTempLMC As Date)
 			strName = strTempName
 			strAddress = strTempAddress
 			strEmail = strTempEmail
 			strPass = strTempPass
 			intAge = strIntAge
-			intGestationalAge = intTmpGesAge
-
 			strIsFirstBaby = strTmpIsFirstBaby
-
+			intGestationalAge = intTmpGesAge
+			doctor = tempDoctor
+			dteLMC = dteTempLMC
 		End Sub
 		Public Function GetName() As String
 			Return strName
@@ -101,9 +101,12 @@
 		Public Function GetDoctor() As Doctor
 			Return doctor
 		End Function
-		Public Function GetDoctorInt() As Integer
-			Return intDoctor
+		Public Function GetDteLMC() As Date
+			Return dteLMC
 		End Function
+		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
+			dteLMC = dteTempLMC
+		End Sub
 	End Class
 
 	Class Doctor
