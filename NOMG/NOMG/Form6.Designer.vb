@@ -48,7 +48,7 @@ Partial Class frmBilling
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnPayment = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -257,15 +257,15 @@ Partial Class frmBilling
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Total Amount:"
         '
-        'TextBox9
+        'txtName
         '
-        Me.TextBox9.BackColor = System.Drawing.Color.LightGray
-        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(98, 40)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(237, 23)
-        Me.TextBox9.TabIndex = 30
+        Me.txtName.BackColor = System.Drawing.Color.LightGray
+        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Location = New System.Drawing.Point(98, 40)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(237, 23)
+        Me.txtName.TabIndex = 30
         '
         'Label2
         '
@@ -293,7 +293,7 @@ Partial Class frmBilling
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnPayment)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
@@ -353,7 +353,7 @@ Partial Class frmBilling
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtName As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnPayment As Button
 End Class

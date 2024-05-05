@@ -305,6 +305,7 @@ Public Class frmMain
         frmBilling.txtAmount5.Text = (Val(frmBilling.txtQuantity5.Text) * Val(frmBilling.txtUnitPrice5.Text))
         frmBilling.txtTotal.Text = (Val(frmBilling.txtAmount1.Text) + Val(frmBilling.txtAmount2.Text) + Val(frmBilling.txtAmount3.Text) + Val(frmBilling.txtAmount4.Text) + Val(frmBilling.txtAmount5.Text))
 
+        frmBilling.txtName.Text = frmAccountInformation.txtName.Text
 
         Me.Hide()
 
