@@ -17,9 +17,6 @@
 				txtEmail.Clear()
 				txtPassword.Clear()
 
-				frmMain.Show()
-				Me.Hide()
-
 				frmAccountInformation.strCurrentUser = frmAccountInformation.listUsers(intCounter)
 
 				frmMain.txtPDName.Text = frmAccountInformation.strCurrentUser.GetName()
@@ -31,9 +28,12 @@
 
 				If frmAccountInformation.strCurrentUser.GetBolIsFirst = False Then
 					frmMain.dtpFirstAppointment.Show()
-					frmMain.dtpFirstAppointment.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 					frmMain.lblAppointment.Text = "First Check Up:"
 				End If
+
+				frmMain.Show()
+				Me.Hide()
+
 				Return '' Make sure not to show the other msgBox
 			End If
 			intCounter += 1

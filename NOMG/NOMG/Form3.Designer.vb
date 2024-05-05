@@ -24,7 +24,6 @@ Partial Class frmRoutine
     Private Sub InitializeComponent()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.clbAppointments = New System.Windows.Forms.CheckedListBox()
-        Me.btnViewCalendar = New System.Windows.Forms.Button()
         Me.ptbAppointments = New System.Windows.Forms.PictureBox()
         CType(Me.ptbAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -44,22 +43,11 @@ Partial Class frmRoutine
         '
         Me.clbAppointments.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clbAppointments.FormattingEnabled = True
-        Me.clbAppointments.Location = New System.Drawing.Point(35, 334)
+        Me.clbAppointments.Location = New System.Drawing.Point(34, 331)
         Me.clbAppointments.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.clbAppointments.Name = "clbAppointments"
-        Me.clbAppointments.Size = New System.Drawing.Size(361, 204)
+        Me.clbAppointments.Size = New System.Drawing.Size(361, 279)
         Me.clbAppointments.TabIndex = 3
-        '
-        'btnViewCalendar
-        '
-        Me.btnViewCalendar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewCalendar.Location = New System.Drawing.Point(79, 566)
-        Me.btnViewCalendar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnViewCalendar.Name = "btnViewCalendar"
-        Me.btnViewCalendar.Size = New System.Drawing.Size(276, 44)
-        Me.btnViewCalendar.TabIndex = 5
-        Me.btnViewCalendar.Text = "View Calendar"
-        Me.btnViewCalendar.UseVisualStyleBackColor = True
         '
         'ptbAppointments
         '
@@ -77,7 +65,6 @@ Partial Class frmRoutine
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1280, 801)
-        Me.Controls.Add(Me.btnViewCalendar)
         Me.Controls.Add(Me.clbAppointments)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ptbAppointments)
@@ -93,5 +80,4 @@ Partial Class frmRoutine
     Friend WithEvents ptbAppointments As PictureBox
     Friend WithEvents btnBack As Button
     Friend WithEvents clbAppointments As CheckedListBox
-    Friend WithEvents btnViewCalendar As Button
 End Class

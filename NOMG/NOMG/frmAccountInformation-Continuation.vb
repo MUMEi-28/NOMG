@@ -75,7 +75,6 @@
 	Private Sub dtpLMC_ValueChanged(sender As Object, e As EventArgs) Handles dtpLMC.ValueChanged
 		If dtpLMC.Value.Date > Date.Today.Date Then
 			MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
-			dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 		Else
 			frmAccountInformation.strCurrentUser.SetDteLMC(dtpLMC.Value.Date)
 		End If

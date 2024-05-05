@@ -22,7 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.lblAppointment = New System.Windows.Forms.Label()
         Me.btnSeeRoutine = New System.Windows.Forms.Button()
         Me.dtpFirstAppointment = New System.Windows.Forms.DateTimePicker()
@@ -53,24 +53,24 @@ Partial Class frmMain
         Me.pnlClinicInfo.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnBack
+        'btnLogOut
         '
-        Me.btnBack.Location = New System.Drawing.Point(12, 12)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(95, 42)
-        Me.btnBack.TabIndex = 1
-        Me.btnBack.Text = "Log Out"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnLogOut.Location = New System.Drawing.Point(12, 12)
+        Me.btnLogOut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(95, 42)
+        Me.btnLogOut.TabIndex = 1
+        Me.btnLogOut.Text = "Log Out"
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'lblAppointment
         '
         Me.lblAppointment.AutoSize = True
-        Me.lblAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAppointment.ForeColor = System.Drawing.Color.Black
-        Me.lblAppointment.Location = New System.Drawing.Point(205, 98)
+        Me.lblAppointment.Location = New System.Drawing.Point(211, 100)
         Me.lblAppointment.Name = "lblAppointment"
-        Me.lblAppointment.Size = New System.Drawing.Size(222, 32)
+        Me.lblAppointment.Size = New System.Drawing.Size(202, 29)
         Me.lblAppointment.TabIndex = 3
         Me.lblAppointment.Text = "First Check Up:"
         Me.lblAppointment.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -388,7 +388,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.dtpFirstAppointment)
         Me.Controls.Add(Me.btnSeeRoutine)
         Me.Controls.Add(Me.lblAppointment)
-        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.btnLogOut)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -399,7 +399,7 @@ Partial Class frmMain
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnBack As Button
+    Friend WithEvents btnLogOut As Button
     Friend WithEvents lblAppointment As Label
     Friend WithEvents btnSeeRoutine As Button
 	Friend WithEvents dtpFirstAppointment As DateTimePicker
