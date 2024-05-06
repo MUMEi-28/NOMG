@@ -38,6 +38,7 @@
 		Private dteLMC As Date
 		Private bolisFirstSet As Boolean
 		Private listCheckedAppointments As New List(Of Integer)
+		Private bolHaveCheck As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -60,6 +61,7 @@
 			doctor = tempDoctor
 			dteLMC = dteTempLMC
 			bolisFirstSet = False
+			bolHaveCheck = False
 		End Sub
 
 		Public Sub SetUserCredentials(ByVal strTempName As String, ByVal strTempAddress As String,
@@ -77,6 +79,7 @@
 			doctor = tempDoctor
 			dteLMC = dteTempLMC
 			bolisFirstSet = False
+			bolHaveCheck = False
 		End Sub
 		Public Function GetName() As String
 			Return strName
@@ -111,22 +114,24 @@
 		Public Function GetBolIsFirst() As Boolean
 			Return bolisFirstSet
 		End Function
-
 		Public Function GetListCheckedAppointments() As List(Of Integer)
 			Return listCheckedAppointments
+		End Function
+		Public Function GetBolHaveCheck() As Boolean
+			Return bolHaveCheck
 		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
-
 		Public Sub SetBolIsFirst(ByVal bolTempIsFirst As Boolean)
 			bolisFirstSet = bolTempIsFirst
 		End Sub
-
 		Public Sub SetListCheckedAppointments(ByVal listTempCA As List(Of Integer))
 			listCheckedAppointments = listTempCA
 		End Sub
-
+		Public Sub SetBolHaveCheck(ByVal bolTempHaveCheck As Boolean)
+			bolHaveCheck = bolTempHaveCheck
+		End Sub
 	End Class
 
 	Class Doctor
