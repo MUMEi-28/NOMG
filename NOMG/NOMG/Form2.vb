@@ -120,6 +120,8 @@ Public Class frmMain
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
         If frmAccountInformation.currentUser.GetBolIsFirst Then
             blnFullyBooked = False
+
+            frmAccountInformation.currentUser.SetDteLMC(frmAccountInformation_Continuation.dtpLMC.Value.Date)
             dteTracker = frmAccountInformation.currentUser.GetListAppointments(0)
             MsgBox(dteTracker)
 
@@ -225,6 +227,13 @@ Public Class frmMain
             Loop
 
             MsgBox(frmAccountInformation.currentUser.GetListAppointments(2))
+            MsgBox(frmAccountInformation.currentUser.GetName)
+
+            For Each appointment In frmAccountInformation.currentUser.GetListAppointments
+                frmRoutine.clbAppointments.Items.Add(appointment)
+            Next
+            MsgBox(frmAccountInformation.currentUser.GetListAppointments(0))
+
             frmRoutine.Show()
             Me.Hide()
         Else

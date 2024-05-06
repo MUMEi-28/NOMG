@@ -69,7 +69,7 @@ Partial Class frmRoutine
         Me.cbMed1.AutoSize = True
         Me.cbMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed1.Location = New System.Drawing.Point(479, 350)
-        Me.cbMed1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed1.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMed1.Name = "cbMed1"
         Me.cbMed1.Size = New System.Drawing.Size(121, 33)
         Me.cbMed1.TabIndex = 4
@@ -81,7 +81,7 @@ Partial Class frmRoutine
         Me.cbMed2.AutoSize = True
         Me.cbMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed2.Location = New System.Drawing.Point(479, 402)
-        Me.cbMed2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed2.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMed2.Name = "cbMed2"
         Me.cbMed2.Size = New System.Drawing.Size(170, 33)
         Me.cbMed2.TabIndex = 5
@@ -93,7 +93,7 @@ Partial Class frmRoutine
         Me.cbMed3.AutoSize = True
         Me.cbMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed3.Location = New System.Drawing.Point(479, 455)
-        Me.cbMed3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed3.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMed3.Name = "cbMed3"
         Me.cbMed3.Size = New System.Drawing.Size(159, 33)
         Me.cbMed3.TabIndex = 6
@@ -105,7 +105,7 @@ Partial Class frmRoutine
         Me.cbMed4.AutoSize = True
         Me.cbMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed4.Location = New System.Drawing.Point(479, 510)
-        Me.cbMed4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed4.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMed4.Name = "cbMed4"
         Me.cbMed4.Size = New System.Drawing.Size(88, 33)
         Me.cbMed4.TabIndex = 7

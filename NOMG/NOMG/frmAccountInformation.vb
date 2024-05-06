@@ -126,6 +126,7 @@
 		Public Sub SetListCheckedAppointments(ByVal listTempCA As List(Of Integer))
 			listCheckedAppointments = listTempCA
 		End Sub
+
 	End Class
 
 	Class Doctor

@@ -1,7 +1,7 @@
 ﻿Public Class frmRoutine
     Dim intI As Integer
-    Dim bolHaveCheckedListCA As Boolean = False
-    Dim bolHaveChecked As Boolean = False
+    Dim bolHaveCheckListCA As Boolean = False
+    Dim bolHaveCheck As Boolean = False
     Public Sub New()
         InitializeComponent()
         btnBack.BackColor = Color.FromArgb(255, 79, 45, 57)
@@ -9,33 +9,33 @@
         btnBack.FlatStyle = FlatStyle.Flat
         btnBack.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 45, 57)
 
-        For Each appointment In frmAccountInformation.currentUser.GetListAppointments
-            clbAppointments.Items.Add(appointment)
-        Next
+        If bolHaveCheckListCA Then
+            For Each appointment In frmAccountInformation.currentUser.GetListAppointments
+                clbAppointments.SetItemChecked(frmAccountInformation.currentUser.GetListCheckedAppointments(intI), True)
+            Next
+        End If
 
-        '  If bolHaveCheckedListCA Then
-        ' For Each appointment In frmAccountInformation.currentUser.GetListAppointments
-        ' clbAppointments.SetItemChecked(frmAccountInformation.currentUser.GetListCheckedAppointments(intI), True)
-        ' Next
-        ' End If
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         frmMain.Show()
         Me.Hide()
 
-        ' intI = 0
-        ' While intI < clbAppointments.CheckedIndices.Count
-        ' frmAccountInformation.currentUser.GetListCheckedAppointments(intI) = clbAppointments.CheckedIndices(intI)
-        ' intI = intI + 1
-        ' bolHaveCheckedListCA = True
-        ' End While
-
         intI = 0
-        While intI < clbAppointments.Items.Count
-            clbAppointments.Items.Remove(0)
-            intI = intI + 1
+        If bolHaveCheck Then
+            While intI < clbAppointments.CheckedIndices.Count
+                frmAccountInformation.currentUser.GetListCheckedAppointments(intI) = clbAppointments.CheckedIndices(intI)
+                intI = intI + 1
+                bolHaveCheckListCA = True
+            End While
+        End If
+
+        intI = clbAppointments.Items.Count
+        While intI > 0
+            clbAppointments.Items.RemoveAt(intI - 1)
+            intI = intI - 1
         End While
+
     End Sub
 
     Private Sub clbAppointments_ItemCheck(sender As Object, e As ItemCheckEventArgs) Handles clbAppointments.ItemCheck
@@ -43,7 +43,7 @@
             MsgBox("The appointment has not yet finished because its date is on the future.")
             e.NewValue = CheckState.Unchecked
         Else
-            bolHaveChecked = True
+            bolHaveCheck = True
         End If
 
         If clbAppointments.Items.Count <> frmAccountInformation.currentUser.GetListAppointments.Count Then
@@ -55,7 +55,7 @@
 
     Public Function getNextCheckUp() As Date
         Dim intI As Integer = 0
-        If bolHaveChecked Then
+        If bolHaveCheck Then
             While intI < clbAppointments.Items.Count
                 If clbAppointments.CheckedItems(intI) = clbAppointments.Items(intI) Then
                     intI = intI + 1
