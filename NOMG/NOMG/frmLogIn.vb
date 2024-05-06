@@ -17,18 +17,20 @@
 				txtEmail.Clear()
 				txtPassword.Clear()
 
-				frmAccountInformation.strCurrentUser = frmAccountInformation.listUsers(intCounter)
+				frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
 
-				frmMain.txtPDName.Text = frmAccountInformation.strCurrentUser.GetName()
-				frmMain.txtPDAddress.Text = frmAccountInformation.strCurrentUser.GetAddress()
-				frmMain.txtPDAge.Text = frmAccountInformation.strCurrentUser.GetAge()
-				frmMain.txtPDFirstBaby.Text = frmAccountInformation.strCurrentUser.GetIsFirstBaby()
-				frmMain.txtPDGestationalAge.Text = frmAccountInformation.strCurrentUser.GetGestationalAge()
-				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.strCurrentUser.GetDoctor.GetName & "."
+				frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
+				frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
+				frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
+				frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
+				frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
+				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor.GetName & "."
 
-				If frmAccountInformation.strCurrentUser.GetBolIsFirst = False Then
+				If frmAccountInformation.currentUser.GetBolIsFirst = False Then
 					frmMain.dtpFirstAppointment.Show()
 					frmMain.lblAppointment.Text = "First Check Up:"
+				Else
+					frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmRoutine.getNextCheckUp
 				End If
 
 				frmMain.Show()

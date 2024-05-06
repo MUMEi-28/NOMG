@@ -1,7 +1,7 @@
 ﻿Public Class frmAccountInformation
 
 	Public listUsers As New List(Of User)
-	Public strCurrentUser As User
+	Public currentUser As User
 	Public listDoctors As New List(Of Doctor)
 	Public intDoctor As New Integer
 	Public Sub New()
@@ -37,6 +37,7 @@
 		Private doctor As Doctor
 		Private dteLMC As Date
 		Private bolisFirstSet As Boolean
+		Private listCheckedAppointments As New List(Of Integer)
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -110,12 +111,20 @@
 		Public Function GetBolIsFirst() As Boolean
 			Return bolisFirstSet
 		End Function
+
+		Public Function GetListCheckedAppointments() As List(Of Integer)
+			Return listCheckedAppointments
+		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
 
 		Public Sub SetBolIsFirst(ByVal bolTempIsFirst As Boolean)
 			bolisFirstSet = bolTempIsFirst
+		End Sub
+
+		Public Sub SetListCheckedAppointments(ByVal listTempCA As List(Of Integer))
+			listCheckedAppointments = listTempCA
 		End Sub
 	End Class
 

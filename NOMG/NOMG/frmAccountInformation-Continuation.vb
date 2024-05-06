@@ -76,7 +76,7 @@
 		If dtpLMC.Value.Date > Date.Today.Date Then
 			MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
 		Else
-			frmAccountInformation.strCurrentUser.SetDteLMC(dtpLMC.Value.Date)
+			frmAccountInformation.currentUser.SetDteLMC(dtpLMC.Value.Date)
 		End If
 	End Sub
 End Class
