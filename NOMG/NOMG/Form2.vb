@@ -227,9 +227,20 @@ Public Class frmMain
                     End If
                 Loop
             End If
+
             For Each appointment In frmAccountInformation.currentUser.GetListAppointments
                 frmRoutine.clbAppointments.Items.Add(appointment)
             Next
+
+            If frmAccountInformation.currentUser.GetBolHaveCheck() Then
+                Dim total As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
+                Dim intI As Integer = 0
+
+                While intI < total
+                    frmRoutine.clbAppointments.SetItemChecked(intI, True)
+                    intI = intI + 1
+                End While
+            End If
 
             frmRoutine.Show()
             Me.Hide()

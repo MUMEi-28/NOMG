@@ -1,19 +1,11 @@
 ﻿Public Class frmRoutine
     Dim intI As Integer
-    Dim intIndexClicked As Integer = -1
-    Dim bolIsClicked As Boolean = False
     Public Sub New()
         InitializeComponent()
         btnBack.BackColor = Color.FromArgb(255, 79, 45, 57)
         btnBack.ForeColor = Color.FromArgb(255, 255, 255, 255)
         btnBack.FlatStyle = FlatStyle.Flat
         btnBack.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 45, 57)
-
-        If frmAccountInformation.currentUser.GetBolHaveCheck() Then
-            For Each appointment In frmAccountInformation.currentUser.GetListAppointments
-                clbAppointments.SetItemChecked(frmAccountInformation.currentUser.GetListCheckedAppointments(intI), True)
-            Next
-        End If
 
     End Sub
 
@@ -33,18 +25,40 @@
         ' If clbAppointments.Items(e.Index) > Date.Today.Date Then
         ' MsgBox("The appointment can not be finished because its date is on the future.")
         ' e.NewValue = CheckState.Unchecked
-        MsgBox("Clicked")
-        MsgBox(clbAppointments.GetItemChecked(0))
+        If e.Index <> 0 Then
+            If clbAppointments.Items(e.Index - 1).GetItemCheckState = CheckState.Unchecked Then
+                MsgBox("The appointment can not be finished because the previous check up is not yet finished.")
+                e.NewValue = CheckState.Unchecked
+            Else
+                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+                    frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
+                    frmAccountInformation.currentUser.SetBolHaveCheck(True)
+                Else
+                    frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
+                    frmAccountInformation.currentUser.SetBolHaveCheck(True)
+                End If
+            End If
+        Else
+            If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+                frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
+                frmAccountInformation.currentUser.SetBolHaveCheck(True)
+            Else
+                frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
+                frmAccountInformation.currentUser.SetBolHaveCheck(True)
+            End If
+        End If
 
-        intIndexClicked = e.Index
-        bolIsClicked = True
+        If e.Index = clbAppointments.Items.Count - 1 Then
+            frmMain.lblAppointment.Text = "All Check Ups" & vbCrLf & "are done."
+        Else
+            frmMain.lblAppointment.Text = "Next Check Up:" & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(e.Index + 1)
+        End If
     End Sub
 
     Public Function getNextCheckUp() As Date
         Dim intI As Integer = 0
         If frmAccountInformation.currentUser.GetBolHaveCheck() Then
             While intI < frmAccountInformation.currentUser.GetListAppointments.Count
-
                 If intI = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                     Return frmAccountInformation.currentUser.GetListAppointments(intI)
                 End If
@@ -60,33 +74,4 @@
             Return frmAccountInformation.currentUser.GetListAppointments(0)
         End If
     End Function
-
-    Private Sub frmRoutine_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        If bolIsClicked Then
-            MsgBox("Hello")
-            If intIndexClicked <> -1 Then
-                If intIndexClicked <> 0 Then
-                    If clbAppointments.Items(intIndexClicked - 1).GetItemCheckState = CheckState.Unchecked Then
-                        MsgBox("The appointment can not be finished because the previous check up is not yet finished.")
-                        clbAppointments.SetItemChecked(intIndexClicked, False)
-                    Else
-                        frmAccountInformation.currentUser.GetListCheckedAppointments.Add(intIndexClicked)
-                        frmAccountInformation.currentUser.SetBolHaveCheck(True)
-                    End If
-                Else
-                    MsgBox("Hello")
-                    frmAccountInformation.currentUser.GetListCheckedAppointments.Add(intIndexClicked)
-                    frmAccountInformation.currentUser.SetBolHaveCheck(True)
-                End If
-
-                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count <> frmAccountInformation.currentUser.GetListAppointments.Count Then
-                    frmMain.lblAppointment.Text = "Next Check Up:" & vbCrLf & getNextCheckUp()
-                Else
-                    frmMain.lblAppointment.Text = "All Check Ups" & vbCrLf & "are done."
-                End If
-            End If
-            bolIsClicked = False
-        End If
-    End Sub
 End Class
