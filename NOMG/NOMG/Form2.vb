@@ -248,11 +248,13 @@ Public Class frmMain
             MsgBox("First appointment is not set.", vbRetryCancel + vbCritical, "Error")
         End If
     End Sub
-    Dim VisitCount As Integer
+
+
+
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
-        VisitCount += 1
-        Select Case VisitCount
+
+        Select Case intI
             Case 1
                 frmBilling.txtDescription1.Text = "Initial Check up"
                 frmBilling.txtDescription2.Text = "Iron Vitamin"
@@ -281,7 +283,7 @@ Public Class frmMain
                 frmBilling.txtQuantity2.Text = 30
                 frmBilling.txtQuantity3.Text = 30
                 frmBilling.txtQuantity4.Text = 90
-            Case 4 To 6
+            Case 4 To 8
                 frmBilling.txtDescription1.Text = "Follow up Check up"
                 frmBilling.txtDescription2.Text = "Iron Vitamin"
                 frmBilling.txtDescription3.Text = "B Complex"
@@ -294,7 +296,7 @@ Public Class frmMain
                 frmBilling.txtQuantity2.Text = 20
                 frmBilling.txtQuantity3.Text = 20
                 frmBilling.txtQuantity4.Text = 60
-            Case 7 To 9
+            Case 9 To 18
                 frmBilling.txtDescription1.Text = "Follow up Check up"
                 frmBilling.txtDescription2.Text = "Iron Vitamin"
                 frmBilling.txtDescription3.Text = "B Complex"
