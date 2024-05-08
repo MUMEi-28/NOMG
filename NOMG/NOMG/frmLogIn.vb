@@ -30,7 +30,7 @@
 					frmMain.dtpFirstAppointment.Show()
 					frmMain.lblAppointment.Text = "First Check Up:"
 				Else
-					frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmRoutine.getNextCheckUp
+					frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmRoutine.getNextCheckUp()
 				End If
 
 				frmMain.Show()

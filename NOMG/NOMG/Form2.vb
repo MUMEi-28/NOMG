@@ -128,9 +128,11 @@ Public Class frmMain
 
                 intI = 0
                 For Each dr In frmAccountInformation.listDoctors
-                    Do While intI < dr.listDrAppointments.Count
+                    Dim drTotalApt As Integer = dr.listDrAppointments.Count
+                    Do While intI < drTotalApt
                         If dr.listDrAppointments(intI) < Today.Date Then
                             dr.listDrAppointments.Remove(dr.listDrAppointments(intI))
+                            intI = intI - 1
                         End If
                         intI = intI + 1
                     Loop

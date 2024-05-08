@@ -26,7 +26,7 @@
         ' MsgBox("The appointment can not be finished because its date is on the future.")
         ' e.NewValue = CheckState.Unchecked
         If e.Index <> 0 Then
-            If clbAppointments.Items(e.Index - 1).GetItemCheckState = CheckState.Unchecked Then
+            If clbAppointments.GetItemChecked(e.Index - 1) = False Then
                 MsgBox("The appointment can not be finished because the previous check up is not yet finished.")
                 e.NewValue = CheckState.Unchecked
             Else
@@ -57,21 +57,12 @@
 
     Public Function getNextCheckUp() As Date
         Dim intI As Integer = 0
-        If frmAccountInformation.currentUser.GetBolHaveCheck() Then
-            While intI < frmAccountInformation.currentUser.GetListAppointments.Count
-                If intI = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
-                    Return frmAccountInformation.currentUser.GetListAppointments(intI)
-                End If
-
-                MsgBox(clbAppointments.GetItemChecked(0))
-                If clbAppointments.CheckedItems(intI) = frmAccountInformation.currentUser.GetListAppointments(intI) Then
-                    intI = intI + 1
-                Else
-                    Return frmAccountInformation.currentUser.GetListAppointments(intI)
-                End If
-            End While
+        If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = frmAccountInformation.currentUser.GetListAppointments.Count Then
+            frmMain.lblAppointment.Text = "All Check Ups" & vbCrLf & "are done."
+        ElseIf frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Then
+            frmMain.lblAppointment.Text = "First Check Up."
         Else
-            Return frmAccountInformation.currentUser.GetListAppointments(0)
+            Return frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
         End If
     End Function
 End Class
