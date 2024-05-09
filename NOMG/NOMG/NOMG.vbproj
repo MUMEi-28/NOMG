@@ -273,5 +273,8 @@
   <ItemGroup>
     <None Include="Resources\Dr 3 Profile.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOMG UI 5 Updated.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

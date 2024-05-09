@@ -183,6 +183,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property NOMG_UI_5_Updated() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("NOMG UI 5 Updated", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property V2_Doctors_Panel() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("V2 Doctors Panel", resourceCulture)

@@ -59,7 +59,7 @@ Partial Class frmRoutine
         '
         'ptbAppointments
         '
-        Me.ptbAppointments.Image = Global.NOMG.My.Resources.Resources._5
+        Me.ptbAppointments.Image = Global.NOMG.My.Resources.Resources.NOMG_UI_5_Updated
         Me.ptbAppointments.Location = New System.Drawing.Point(0, 1)
         Me.ptbAppointments.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ptbAppointments.Name = "ptbAppointments"
