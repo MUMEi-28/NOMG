@@ -32,19 +32,15 @@
             Else
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                    frmAccountInformation.currentUser.SetBolHaveCheck(True)
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                    frmAccountInformation.currentUser.SetBolHaveCheck(True)
                 End If
             End If
         Else
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                frmAccountInformation.currentUser.SetBolHaveCheck(True)
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                frmAccountInformation.currentUser.SetBolHaveCheck(True)
             End If
         End If
 

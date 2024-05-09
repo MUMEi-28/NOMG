@@ -2,14 +2,8 @@
 
 Public Class frmMain
     Dim dteTracker As Date
-
-    Public lblFrmMainPnl As New List(Of Label)
-
     Public txtFrmMainPD As New List(Of TextBox)
     Public txtFrmMainCI As New List(Of TextBox)
-
-    Public pnlFrmMain As New List(Of Panel)
-    Public btnFrmMain As New List(Of Button)
 
     Dim intI As Integer = 0
     Dim blnFullyBooked As Boolean = False
@@ -39,7 +33,6 @@ Public Class frmMain
                 frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
                 dtpFirstAppointment.Hide()
                 lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(0)
-                frmAccountInformation.currentUser.SetBolIsFirst(True)
             End If
         End If
     End Sub
@@ -52,43 +45,6 @@ Public Class frmMain
 
     Public Sub New()
         InitializeComponent()
-        Me.BackColor = Color.FromArgb(255, 39, 36, 46)
-
-        btnFrmMain.Add(btnLogOut)
-        btnFrmMain.Add(btnSeeRoutine)
-        btnFrmMain.Add(btnViewDoctors)
-        btnFrmMain.Add(btnBillingInfo)
-        For Each btn In btnFrmMain
-            btn.BackColor = Color.FromArgb(255, 79, 45, 57)
-            btn.ForeColor = Color.FromArgb(255, 255, 255, 255)
-            btn.FlatStyle = FlatStyle.Flat
-            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 79, 45, 57)
-        Next
-
-        pnlFrmMain.Add(pnlClinicInfo)
-        pnlFrmMain.Add(pnlPatientDetails)
-        For Each pnl In pnlFrmMain
-            pnl.BackColor = Color.FromArgb(255, 79, 45, 57)
-        Next
-
-        lblAppointment.ForeColor = Color.FromArgb(255, 244, 238, 224)
-        lblAppointment.BackColor = Color.FromArgb(255, 39, 36, 46)
-
-        lblFrmMainPnl.Add(lblClinicInfo)
-        lblFrmMainPnl.Add(lblCIName)
-        lblFrmMainPnl.Add(lblCIAddress)
-        lblFrmMainPnl.Add(lblClOperationalDays)
-        lblFrmMainPnl.Add(lblPatientDetails)
-        lblFrmMainPnl.Add(lblPDName)
-        lblFrmMainPnl.Add(lblPDAddress)
-        lblFrmMainPnl.Add(lblPDAge)
-        lblFrmMainPnl.Add(lblPDFirstBaby)
-        lblFrmMainPnl.Add(lblPDGestationalAge)
-        lblFrmMainPnl.Add(lblPDAdditionalInfo)
-        For Each lbl In lblFrmMainPnl
-            lbl.ForeColor = Color.FromArgb(255, 244, 238, 224)
-            lbl.BackColor = Color.FromArgb(255, 79, 45, 57)
-        Next
 
         txtFrmMainCI.Add(txtCIName)
         txtFrmMainCI.Add(txtCIAddress)
@@ -118,8 +74,8 @@ Public Class frmMain
     End Sub
 
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
-        If frmAccountInformation.currentUser.GetBolIsFirst Then
-            ' Checks if the user has more than appointments to prevent setting more
+        If frmAccountInformation.currentUser.GetListAppointments.Count > 0 Then
+            ' Checks if the user has appointments to prevent setting more
             If frmAccountInformation.currentUser.GetListAppointments.Count < 2 Then
                 blnFullyBooked = False
 
@@ -234,7 +190,7 @@ Public Class frmMain
                 frmRoutine.clbAppointments.Items.Add(appointment)
             Next
 
-            If frmAccountInformation.currentUser.GetBolHaveCheck() Then
+            If frmAccountInformation.currentUser.GetListCheckedAppointments.Count > 0 Then
                 Dim total As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
                 Dim intI As Integer = 0
 

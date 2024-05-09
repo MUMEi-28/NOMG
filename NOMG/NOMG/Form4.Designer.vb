@@ -25,7 +25,6 @@ Partial Class frmDoctors
         Me.btnBack = New System.Windows.Forms.Button()
         Me.lblAdditionalInfo = New System.Windows.Forms.Label()
         Me.pnlDr1 = New System.Windows.Forms.Panel()
-        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
         Me.txtDr1Name = New System.Windows.Forms.TextBox()
         Me.lblDr1Name = New System.Windows.Forms.Label()
         Me.lblDr1Age = New System.Windows.Forms.Label()
@@ -50,7 +49,6 @@ Partial Class frmDoctors
         Me.txtDr2Educ = New System.Windows.Forms.TextBox()
         Me.lblDr2Educ = New System.Windows.Forms.Label()
         Me.pnlDr2 = New System.Windows.Forms.Panel()
-        Me.pbxDr2 = New System.Windows.Forms.PictureBox()
         Me.lblDr3Name = New System.Windows.Forms.Label()
         Me.txtDr3Name = New System.Windows.Forms.TextBox()
         Me.lblDr3Age = New System.Windows.Forms.Label()
@@ -62,32 +60,37 @@ Partial Class frmDoctors
         Me.lblDr3Educ = New System.Windows.Forms.Label()
         Me.txtDr3Educ = New System.Windows.Forms.TextBox()
         Me.pnlDr3 = New System.Windows.Forms.Panel()
-        Me.pbxDr3 = New System.Windows.Forms.PictureBox()
         Me.lblMaxPatients = New System.Windows.Forms.Label()
+        Me.pbxDr1 = New System.Windows.Forms.PictureBox()
+        Me.pbxDr2 = New System.Windows.Forms.PictureBox()
+        Me.pbxDr3 = New System.Windows.Forms.PictureBox()
         Me.pnlDr1.SuspendLayout()
-        CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDr2.SuspendLayout()
-        CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDr3.SuspendLayout()
+        CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbxDr3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnBack
         '
+        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBack.Font = New System.Drawing.Font("Nunito ExtraBold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnBack.Location = New System.Drawing.Point(457, 673)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(366, 48)
         Me.btnBack.TabIndex = 3
         Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'lblAdditionalInfo
         '
         Me.lblAdditionalInfo.AutoSize = True
         Me.lblAdditionalInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblAdditionalInfo.Font = New System.Drawing.Font("Nunito Black", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdditionalInfo.ForeColor = System.Drawing.Color.Black
+        Me.lblAdditionalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.lblAdditionalInfo.Location = New System.Drawing.Point(402, 28)
         Me.lblAdditionalInfo.Name = "lblAdditionalInfo"
         Me.lblAdditionalInfo.Size = New System.Drawing.Size(469, 55)
@@ -96,21 +99,18 @@ Partial Class frmDoctors
         '
         'pnlDr1
         '
+        Me.pnlDr1.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.pnlDr1.Controls.Add(Me.pbxDr1)
+        Me.pnlDr1.Controls.Add(Me.lblDr1)
+        Me.pnlDr1.Controls.Add(Me.lblDr1Name)
+        Me.pnlDr1.Controls.Add(Me.lblDr1Age)
+        Me.pnlDr1.Controls.Add(Me.lblDr1Gender)
+        Me.pnlDr1.Controls.Add(Me.lblDr1Address)
+        Me.pnlDr1.Controls.Add(Me.lblDr1Educ)
         Me.pnlDr1.Location = New System.Drawing.Point(80, 176)
         Me.pnlDr1.Name = "pnlDr1"
         Me.pnlDr1.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr1.TabIndex = 23
-        '
-        'pbxDr1
-        '
-        Me.pbxDr1.Image = Global.NOMG.My.Resources.Resources.Dr1
-        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
-        Me.pbxDr1.Name = "pbxDr1"
-        Me.pbxDr1.Size = New System.Drawing.Size(124, 124)
-        Me.pbxDr1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbxDr1.TabIndex = 0
-        Me.pbxDr1.TabStop = False
         '
         'txtDr1Name
         '
@@ -129,8 +129,8 @@ Partial Class frmDoctors
         Me.lblDr1Name.AutoSize = True
         Me.lblDr1Name.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1Name.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1Name.Location = New System.Drawing.Point(121, 343)
+        Me.lblDr1Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1Name.Location = New System.Drawing.Point(41, 172)
         Me.lblDr1Name.Name = "lblDr1Name"
         Me.lblDr1Name.Size = New System.Drawing.Size(43, 18)
         Me.lblDr1Name.TabIndex = 29
@@ -141,8 +141,8 @@ Partial Class frmDoctors
         Me.lblDr1Age.AutoSize = True
         Me.lblDr1Age.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1Age.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1Age.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1Age.Location = New System.Drawing.Point(121, 414)
+        Me.lblDr1Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1Age.Location = New System.Drawing.Point(41, 237)
         Me.lblDr1Age.Name = "lblDr1Age"
         Me.lblDr1Age.Size = New System.Drawing.Size(33, 18)
         Me.lblDr1Age.TabIndex = 30
@@ -186,8 +186,8 @@ Partial Class frmDoctors
         Me.lblDr1Address.AutoSize = True
         Me.lblDr1Address.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1Address.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1Address.Location = New System.Drawing.Point(121, 478)
+        Me.lblDr1Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1Address.Location = New System.Drawing.Point(41, 303)
         Me.lblDr1Address.Name = "lblDr1Address"
         Me.lblDr1Address.Size = New System.Drawing.Size(58, 18)
         Me.lblDr1Address.TabIndex = 34
@@ -198,8 +198,8 @@ Partial Class frmDoctors
         Me.lblDr1Gender.AutoSize = True
         Me.lblDr1Gender.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1Gender.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1Gender.Location = New System.Drawing.Point(262, 414)
+        Me.lblDr1Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1Gender.Location = New System.Drawing.Point(177, 237)
         Me.lblDr1Gender.Name = "lblDr1Gender"
         Me.lblDr1Gender.Size = New System.Drawing.Size(53, 18)
         Me.lblDr1Gender.TabIndex = 35
@@ -210,8 +210,8 @@ Partial Class frmDoctors
         Me.lblDr1Educ.AutoSize = True
         Me.lblDr1Educ.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1Educ.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1Educ.Location = New System.Drawing.Point(121, 546)
+        Me.lblDr1Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1Educ.Location = New System.Drawing.Point(41, 369)
         Me.lblDr1Educ.Name = "lblDr1Educ"
         Me.lblDr1Educ.Size = New System.Drawing.Size(68, 18)
         Me.lblDr1Educ.TabIndex = 36
@@ -233,8 +233,8 @@ Partial Class frmDoctors
         Me.lblDr1.AutoSize = True
         Me.lblDr1.BackColor = System.Drawing.Color.Transparent
         Me.lblDr1.Font = New System.Drawing.Font("Nunito Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr1.ForeColor = System.Drawing.Color.Black
-        Me.lblDr1.Location = New System.Drawing.Point(177, 179)
+        Me.lblDr1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr1.Location = New System.Drawing.Point(97, 7)
         Me.lblDr1.Name = "lblDr1"
         Me.lblDr1.Size = New System.Drawing.Size(146, 41)
         Me.lblDr1.TabIndex = 38
@@ -245,8 +245,8 @@ Partial Class frmDoctors
         Me.lblDr2.AutoSize = True
         Me.lblDr2.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2.Font = New System.Drawing.Font("Nunito Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2.Location = New System.Drawing.Point(565, 179)
+        Me.lblDr2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2.Location = New System.Drawing.Point(100, 6)
         Me.lblDr2.Name = "lblDr2"
         Me.lblDr2.Size = New System.Drawing.Size(146, 41)
         Me.lblDr2.TabIndex = 39
@@ -257,8 +257,8 @@ Partial Class frmDoctors
         Me.lblDr3.AutoSize = True
         Me.lblDr3.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3.Font = New System.Drawing.Font("Nunito Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3.Location = New System.Drawing.Point(962, 179)
+        Me.lblDr3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3.Location = New System.Drawing.Point(96, 6)
         Me.lblDr3.Name = "lblDr3"
         Me.lblDr3.Size = New System.Drawing.Size(146, 41)
         Me.lblDr3.TabIndex = 40
@@ -269,8 +269,8 @@ Partial Class frmDoctors
         Me.lblDr2Name.AutoSize = True
         Me.lblDr2Name.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2Name.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2Name.Location = New System.Drawing.Point(516, 343)
+        Me.lblDr2Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2Name.Location = New System.Drawing.Point(41, 171)
         Me.lblDr2Name.Name = "lblDr2Name"
         Me.lblDr2Name.Size = New System.Drawing.Size(43, 18)
         Me.lblDr2Name.TabIndex = 41
@@ -280,7 +280,7 @@ Partial Class frmDoctors
         '
         Me.txtDr2Name.Enabled = False
         Me.txtDr2Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr2Name.Location = New System.Drawing.Point(514, 366)
+        Me.txtDr2Name.Location = New System.Drawing.Point(515, 366)
         Me.txtDr2Name.Multiline = True
         Me.txtDr2Name.Name = "txtDr2Name"
         Me.txtDr2Name.Size = New System.Drawing.Size(256, 43)
@@ -292,8 +292,8 @@ Partial Class frmDoctors
         Me.lblDr2Age.AutoSize = True
         Me.lblDr2Age.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2Age.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2Age.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2Age.Location = New System.Drawing.Point(516, 411)
+        Me.lblDr2Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2Age.Location = New System.Drawing.Point(41, 237)
         Me.lblDr2Age.Name = "lblDr2Age"
         Me.lblDr2Age.Size = New System.Drawing.Size(33, 18)
         Me.lblDr2Age.TabIndex = 43
@@ -304,8 +304,8 @@ Partial Class frmDoctors
         Me.lblDr2Gender.AutoSize = True
         Me.lblDr2Gender.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2Gender.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2Gender.Location = New System.Drawing.Point(658, 411)
+        Me.lblDr2Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2Gender.Location = New System.Drawing.Point(179, 237)
         Me.lblDr2Gender.Name = "lblDr2Gender"
         Me.lblDr2Gender.Size = New System.Drawing.Size(53, 18)
         Me.lblDr2Gender.TabIndex = 44
@@ -315,7 +315,7 @@ Partial Class frmDoctors
         '
         Me.txtDr2Age.Enabled = False
         Me.txtDr2Age.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr2Age.Location = New System.Drawing.Point(514, 433)
+        Me.txtDr2Age.Location = New System.Drawing.Point(515, 433)
         Me.txtDr2Age.Multiline = True
         Me.txtDr2Age.Name = "txtDr2Age"
         Me.txtDr2Age.Size = New System.Drawing.Size(120, 43)
@@ -326,7 +326,7 @@ Partial Class frmDoctors
         '
         Me.txtDr2Gender.Enabled = False
         Me.txtDr2Gender.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr2Gender.Location = New System.Drawing.Point(650, 433)
+        Me.txtDr2Gender.Location = New System.Drawing.Point(651, 433)
         Me.txtDr2Gender.Multiline = True
         Me.txtDr2Gender.Name = "txtDr2Gender"
         Me.txtDr2Gender.Size = New System.Drawing.Size(120, 43)
@@ -338,8 +338,8 @@ Partial Class frmDoctors
         Me.lblDr2Address.AutoSize = True
         Me.lblDr2Address.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2Address.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2Address.Location = New System.Drawing.Point(516, 478)
+        Me.lblDr2Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2Address.Location = New System.Drawing.Point(41, 302)
         Me.lblDr2Address.Name = "lblDr2Address"
         Me.lblDr2Address.Size = New System.Drawing.Size(58, 18)
         Me.lblDr2Address.TabIndex = 47
@@ -349,7 +349,7 @@ Partial Class frmDoctors
         '
         Me.txtDr2Address.Enabled = False
         Me.txtDr2Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr2Address.Location = New System.Drawing.Point(514, 499)
+        Me.txtDr2Address.Location = New System.Drawing.Point(515, 499)
         Me.txtDr2Address.Multiline = True
         Me.txtDr2Address.Name = "txtDr2Address"
         Me.txtDr2Address.Size = New System.Drawing.Size(256, 43)
@@ -360,7 +360,7 @@ Partial Class frmDoctors
         '
         Me.txtDr2Educ.Enabled = False
         Me.txtDr2Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr2Educ.Location = New System.Drawing.Point(514, 567)
+        Me.txtDr2Educ.Location = New System.Drawing.Point(515, 567)
         Me.txtDr2Educ.Multiline = True
         Me.txtDr2Educ.Name = "txtDr2Educ"
         Me.txtDr2Educ.Size = New System.Drawing.Size(256, 43)
@@ -372,8 +372,8 @@ Partial Class frmDoctors
         Me.lblDr2Educ.AutoSize = True
         Me.lblDr2Educ.BackColor = System.Drawing.Color.Transparent
         Me.lblDr2Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr2Educ.ForeColor = System.Drawing.Color.Black
-        Me.lblDr2Educ.Location = New System.Drawing.Point(516, 545)
+        Me.lblDr2Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr2Educ.Location = New System.Drawing.Point(41, 369)
         Me.lblDr2Educ.Name = "lblDr2Educ"
         Me.lblDr2Educ.Size = New System.Drawing.Size(68, 18)
         Me.lblDr2Educ.TabIndex = 50
@@ -381,29 +381,26 @@ Partial Class frmDoctors
         '
         'pnlDr2
         '
+        Me.pnlDr2.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.pnlDr2.Controls.Add(Me.pbxDr2)
+        Me.pnlDr2.Controls.Add(Me.lblDr2)
+        Me.pnlDr2.Controls.Add(Me.lblDr2Name)
+        Me.pnlDr2.Controls.Add(Me.lblDr2Age)
+        Me.pnlDr2.Controls.Add(Me.lblDr2Address)
+        Me.pnlDr2.Controls.Add(Me.lblDr2Educ)
+        Me.pnlDr2.Controls.Add(Me.lblDr2Gender)
         Me.pnlDr2.Location = New System.Drawing.Point(475, 176)
         Me.pnlDr2.Name = "pnlDr2"
         Me.pnlDr2.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr2.TabIndex = 24
-        '
-        'pbxDr2
-        '
-        Me.pbxDr2.Image = Global.NOMG.My.Resources.Resources.Dr2
-        Me.pbxDr2.Location = New System.Drawing.Point(97, 47)
-        Me.pbxDr2.Name = "pbxDr2"
-        Me.pbxDr2.Size = New System.Drawing.Size(124, 124)
-        Me.pbxDr2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbxDr2.TabIndex = 0
-        Me.pbxDr2.TabStop = False
         '
         'lblDr3Name
         '
         Me.lblDr3Name.AutoSize = True
         Me.lblDr3Name.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3Name.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3Name.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3Name.Location = New System.Drawing.Point(909, 343)
+        Me.lblDr3Name.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3Name.Location = New System.Drawing.Point(40, 169)
         Me.lblDr3Name.Name = "lblDr3Name"
         Me.lblDr3Name.Size = New System.Drawing.Size(43, 18)
         Me.lblDr3Name.TabIndex = 51
@@ -413,7 +410,7 @@ Partial Class frmDoctors
         '
         Me.txtDr3Name.Enabled = False
         Me.txtDr3Name.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr3Name.Location = New System.Drawing.Point(907, 366)
+        Me.txtDr3Name.Location = New System.Drawing.Point(908, 366)
         Me.txtDr3Name.Multiline = True
         Me.txtDr3Name.Name = "txtDr3Name"
         Me.txtDr3Name.Size = New System.Drawing.Size(256, 43)
@@ -425,8 +422,8 @@ Partial Class frmDoctors
         Me.lblDr3Age.AutoSize = True
         Me.lblDr3Age.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3Age.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3Age.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3Age.Location = New System.Drawing.Point(909, 411)
+        Me.lblDr3Age.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3Age.Location = New System.Drawing.Point(40, 235)
         Me.lblDr3Age.Name = "lblDr3Age"
         Me.lblDr3Age.Size = New System.Drawing.Size(33, 18)
         Me.lblDr3Age.TabIndex = 53
@@ -437,8 +434,8 @@ Partial Class frmDoctors
         Me.lblDr3Gender.AutoSize = True
         Me.lblDr3Gender.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3Gender.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3Gender.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3Gender.Location = New System.Drawing.Point(1046, 411)
+        Me.lblDr3Gender.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3Gender.Location = New System.Drawing.Point(177, 236)
         Me.lblDr3Gender.Name = "lblDr3Gender"
         Me.lblDr3Gender.Size = New System.Drawing.Size(53, 18)
         Me.lblDr3Gender.TabIndex = 54
@@ -448,7 +445,7 @@ Partial Class frmDoctors
         '
         Me.txtDr3Age.Enabled = False
         Me.txtDr3Age.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr3Age.Location = New System.Drawing.Point(907, 432)
+        Me.txtDr3Age.Location = New System.Drawing.Point(908, 432)
         Me.txtDr3Age.Multiline = True
         Me.txtDr3Age.Name = "txtDr3Age"
         Me.txtDr3Age.Size = New System.Drawing.Size(120, 43)
@@ -459,7 +456,7 @@ Partial Class frmDoctors
         '
         Me.txtDr3Gender.Enabled = False
         Me.txtDr3Gender.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr3Gender.Location = New System.Drawing.Point(1043, 432)
+        Me.txtDr3Gender.Location = New System.Drawing.Point(1044, 432)
         Me.txtDr3Gender.Multiline = True
         Me.txtDr3Gender.Name = "txtDr3Gender"
         Me.txtDr3Gender.Size = New System.Drawing.Size(120, 43)
@@ -470,7 +467,7 @@ Partial Class frmDoctors
         '
         Me.txtDr3Address.Enabled = False
         Me.txtDr3Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr3Address.Location = New System.Drawing.Point(907, 499)
+        Me.txtDr3Address.Location = New System.Drawing.Point(908, 499)
         Me.txtDr3Address.Multiline = True
         Me.txtDr3Address.Name = "txtDr3Address"
         Me.txtDr3Address.Size = New System.Drawing.Size(256, 43)
@@ -482,8 +479,8 @@ Partial Class frmDoctors
         Me.lblDr3Address.AutoSize = True
         Me.lblDr3Address.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3Address.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3Address.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3Address.Location = New System.Drawing.Point(909, 478)
+        Me.lblDr3Address.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3Address.Location = New System.Drawing.Point(40, 302)
         Me.lblDr3Address.Name = "lblDr3Address"
         Me.lblDr3Address.Size = New System.Drawing.Size(58, 18)
         Me.lblDr3Address.TabIndex = 58
@@ -494,8 +491,8 @@ Partial Class frmDoctors
         Me.lblDr3Educ.AutoSize = True
         Me.lblDr3Educ.BackColor = System.Drawing.Color.Transparent
         Me.lblDr3Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDr3Educ.ForeColor = System.Drawing.Color.Black
-        Me.lblDr3Educ.Location = New System.Drawing.Point(909, 546)
+        Me.lblDr3Educ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblDr3Educ.Location = New System.Drawing.Point(40, 370)
         Me.lblDr3Educ.Name = "lblDr3Educ"
         Me.lblDr3Educ.Size = New System.Drawing.Size(68, 18)
         Me.lblDr3Educ.TabIndex = 59
@@ -505,7 +502,7 @@ Partial Class frmDoctors
         '
         Me.txtDr3Educ.Enabled = False
         Me.txtDr3Educ.Font = New System.Drawing.Font("Nunito", 7.799999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDr3Educ.Location = New System.Drawing.Point(907, 567)
+        Me.txtDr3Educ.Location = New System.Drawing.Point(908, 567)
         Me.txtDr3Educ.Multiline = True
         Me.txtDr3Educ.Name = "txtDr3Educ"
         Me.txtDr3Educ.Size = New System.Drawing.Size(256, 43)
@@ -514,72 +511,82 @@ Partial Class frmDoctors
         '
         'pnlDr3
         '
+        Me.pnlDr3.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.pnlDr3.Controls.Add(Me.pbxDr3)
+        Me.pnlDr3.Controls.Add(Me.lblDr3)
+        Me.pnlDr3.Controls.Add(Me.lblDr3Educ)
+        Me.pnlDr3.Controls.Add(Me.lblDr3Name)
+        Me.pnlDr3.Controls.Add(Me.lblDr3Address)
+        Me.pnlDr3.Controls.Add(Me.lblDr3Age)
+        Me.pnlDr3.Controls.Add(Me.lblDr3Gender)
         Me.pnlDr3.Location = New System.Drawing.Point(869, 176)
         Me.pnlDr3.Name = "pnlDr3"
         Me.pnlDr3.Size = New System.Drawing.Size(335, 454)
         Me.pnlDr3.TabIndex = 25
-        '
-        'pbxDr3
-        '
-        Me.pbxDr3.Image = Global.NOMG.My.Resources.Resources.Dr3
-        Me.pbxDr3.Location = New System.Drawing.Point(97, 47)
-        Me.pbxDr3.Name = "pbxDr3"
-        Me.pbxDr3.Size = New System.Drawing.Size(124, 124)
-        Me.pbxDr3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbxDr3.TabIndex = 0
-        Me.pbxDr3.TabStop = False
         '
         'lblMaxPatients
         '
         Me.lblMaxPatients.AutoSize = True
         Me.lblMaxPatients.BackColor = System.Drawing.Color.Transparent
         Me.lblMaxPatients.Font = New System.Drawing.Font("Nunito", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaxPatients.ForeColor = System.Drawing.Color.Black
+        Me.lblMaxPatients.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.lblMaxPatients.Location = New System.Drawing.Point(436, 83)
         Me.lblMaxPatients.Name = "lblMaxPatients"
         Me.lblMaxPatients.Size = New System.Drawing.Size(403, 23)
         Me.lblMaxPatients.TabIndex = 61
         Me.lblMaxPatients.Text = "Doctors can accomodate up to 5 patients per day."
         '
+        'pbxDr1
+        '
+        Me.pbxDr1.Image = Global.NOMG.My.Resources.Resources.Dr_1_Profile
+        Me.pbxDr1.Location = New System.Drawing.Point(106, 47)
+        Me.pbxDr1.Name = "pbxDr1"
+        Me.pbxDr1.Size = New System.Drawing.Size(124, 124)
+        Me.pbxDr1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbxDr1.TabIndex = 0
+        Me.pbxDr1.TabStop = False
+        '
+        'pbxDr2
+        '
+        Me.pbxDr2.Image = Global.NOMG.My.Resources.Resources.Dr_2_Profile
+        Me.pbxDr2.Location = New System.Drawing.Point(107, 47)
+        Me.pbxDr2.Name = "pbxDr2"
+        Me.pbxDr2.Size = New System.Drawing.Size(124, 124)
+        Me.pbxDr2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbxDr2.TabIndex = 0
+        Me.pbxDr2.TabStop = False
+        '
+        'pbxDr3
+        '
+        Me.pbxDr3.Image = Global.NOMG.My.Resources.Resources.Dr_3_Profile
+        Me.pbxDr3.Location = New System.Drawing.Point(105, 47)
+        Me.pbxDr3.Name = "pbxDr3"
+        Me.pbxDr3.Size = New System.Drawing.Size(124, 124)
+        Me.pbxDr3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbxDr3.TabIndex = 0
+        Me.pbxDr3.TabStop = False
+        '
         'frmDoctors
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1282, 801)
         Me.Controls.Add(Me.lblMaxPatients)
         Me.Controls.Add(Me.txtDr3Educ)
-        Me.Controls.Add(Me.lblDr3Educ)
-        Me.Controls.Add(Me.lblDr3Address)
         Me.Controls.Add(Me.txtDr3Address)
         Me.Controls.Add(Me.txtDr3Gender)
         Me.Controls.Add(Me.txtDr3Age)
-        Me.Controls.Add(Me.lblDr3Gender)
-        Me.Controls.Add(Me.lblDr3Age)
         Me.Controls.Add(Me.txtDr3Name)
-        Me.Controls.Add(Me.lblDr3Name)
-        Me.Controls.Add(Me.lblDr2Educ)
         Me.Controls.Add(Me.txtDr2Educ)
         Me.Controls.Add(Me.txtDr2Address)
-        Me.Controls.Add(Me.lblDr2Address)
         Me.Controls.Add(Me.txtDr2Gender)
         Me.Controls.Add(Me.txtDr2Age)
-        Me.Controls.Add(Me.lblDr2Gender)
-        Me.Controls.Add(Me.lblDr2Age)
         Me.Controls.Add(Me.txtDr2Name)
-        Me.Controls.Add(Me.lblDr2Name)
-        Me.Controls.Add(Me.lblDr3)
-        Me.Controls.Add(Me.lblDr2)
-        Me.Controls.Add(Me.lblDr1)
         Me.Controls.Add(Me.txtDr1Educ)
-        Me.Controls.Add(Me.lblDr1Educ)
-        Me.Controls.Add(Me.lblDr1Gender)
-        Me.Controls.Add(Me.lblDr1Address)
         Me.Controls.Add(Me.txtDr1Address)
         Me.Controls.Add(Me.txtDr1Gender)
         Me.Controls.Add(Me.txtDr1Age)
-        Me.Controls.Add(Me.lblDr1Age)
-        Me.Controls.Add(Me.lblDr1Name)
         Me.Controls.Add(Me.txtDr1Name)
         Me.Controls.Add(Me.pnlDr1)
         Me.Controls.Add(Me.lblAdditionalInfo)
@@ -590,10 +597,13 @@ Partial Class frmDoctors
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Doctors"
         Me.pnlDr1.ResumeLayout(False)
-        CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDr1.PerformLayout()
         Me.pnlDr2.ResumeLayout(False)
-        CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDr2.PerformLayout()
         Me.pnlDr3.ResumeLayout(False)
+        Me.pnlDr3.PerformLayout()
+        CType(Me.pbxDr1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbxDr2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbxDr3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

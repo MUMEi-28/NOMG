@@ -264,5 +264,14 @@
   <ItemGroup>
     <None Include="Resources\Dr3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dr 1 Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dr 2 Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dr 3 Profile.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

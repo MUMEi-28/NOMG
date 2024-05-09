@@ -39,35 +39,39 @@ Partial Class frmMain
         Me.pnlPatientDetails = New System.Windows.Forms.Panel()
         Me.lblPatientDetails = New System.Windows.Forms.Label()
         Me.lblPDName = New System.Windows.Forms.Label()
-        Me.txtPDName = New System.Windows.Forms.TextBox()
         Me.lblPDAddress = New System.Windows.Forms.Label()
         Me.lblPDAge = New System.Windows.Forms.Label()
         Me.lblPDFirstBaby = New System.Windows.Forms.Label()
-        Me.lblPDGestationalAge = New System.Windows.Forms.Label()
         Me.lblPDAdditionalInfo = New System.Windows.Forms.Label()
+        Me.lblPDGestationalAge = New System.Windows.Forms.Label()
+        Me.txtPDName = New System.Windows.Forms.TextBox()
         Me.txtPDAddress = New System.Windows.Forms.TextBox()
         Me.txtPDAdditionalInfo = New System.Windows.Forms.TextBox()
         Me.txtPDAge = New System.Windows.Forms.TextBox()
         Me.txtPDFirstBaby = New System.Windows.Forms.TextBox()
         Me.txtPDGestationalAge = New System.Windows.Forms.TextBox()
         Me.pnlClinicInfo.SuspendLayout()
+        Me.pnlPatientDetails.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogOut
         '
+        Me.btnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnLogOut.Location = New System.Drawing.Point(12, 12)
         Me.btnLogOut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(95, 42)
         Me.btnLogOut.TabIndex = 1
         Me.btnLogOut.Text = "Log Out"
-        Me.btnLogOut.UseVisualStyleBackColor = True
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'lblAppointment
         '
         Me.lblAppointment.AutoSize = True
         Me.lblAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAppointment.ForeColor = System.Drawing.Color.Black
+        Me.lblAppointment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.lblAppointment.Location = New System.Drawing.Point(211, 100)
         Me.lblAppointment.Name = "lblAppointment"
         Me.lblAppointment.Size = New System.Drawing.Size(202, 29)
@@ -77,14 +81,17 @@ Partial Class frmMain
         '
         'btnSeeRoutine
         '
+        Me.btnSeeRoutine.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnSeeRoutine.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSeeRoutine.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeeRoutine.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnSeeRoutine.Location = New System.Drawing.Point(204, 223)
         Me.btnSeeRoutine.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSeeRoutine.Name = "btnSeeRoutine"
         Me.btnSeeRoutine.Size = New System.Drawing.Size(219, 46)
         Me.btnSeeRoutine.TabIndex = 4
         Me.btnSeeRoutine.Text = "See Routine"
-        Me.btnSeeRoutine.UseVisualStyleBackColor = True
+        Me.btnSeeRoutine.UseVisualStyleBackColor = False
         '
         'dtpFirstAppointment
         '
@@ -98,18 +105,25 @@ Partial Class frmMain
         '
         'btnViewDoctors
         '
+        Me.btnViewDoctors.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnViewDoctors.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnViewDoctors.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewDoctors.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnViewDoctors.Location = New System.Drawing.Point(119, 722)
         Me.btnViewDoctors.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnViewDoctors.Name = "btnViewDoctors"
         Me.btnViewDoctors.Size = New System.Drawing.Size(391, 50)
         Me.btnViewDoctors.TabIndex = 9
         Me.btnViewDoctors.Text = "View Doctors"
-        Me.btnViewDoctors.UseVisualStyleBackColor = True
+        Me.btnViewDoctors.UseVisualStyleBackColor = False
         '
         'pnlClinicInfo
         '
+        Me.pnlClinicInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.pnlClinicInfo.Controls.Add(Me.lblClinicInfo)
+        Me.pnlClinicInfo.Controls.Add(Me.lblCIName)
+        Me.pnlClinicInfo.Controls.Add(Me.lblCIAddress)
+        Me.pnlClinicInfo.Controls.Add(Me.lblClOperationalDays)
         Me.pnlClinicInfo.Location = New System.Drawing.Point(44, 307)
         Me.pnlClinicInfo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlClinicInfo.Name = "pnlClinicInfo"
@@ -121,7 +135,7 @@ Partial Class frmMain
         Me.lblClinicInfo.AutoSize = True
         Me.lblClinicInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblClinicInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblClinicInfo.ForeColor = System.Drawing.Color.Black
+        Me.lblClinicInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.lblClinicInfo.Location = New System.Drawing.Point(93, 32)
         Me.lblClinicInfo.Name = "lblClinicInfo"
         Me.lblClinicInfo.Size = New System.Drawing.Size(347, 46)
@@ -133,8 +147,8 @@ Partial Class frmMain
         Me.lblCIName.AutoSize = True
         Me.lblCIName.BackColor = System.Drawing.Color.Transparent
         Me.lblCIName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCIName.ForeColor = System.Drawing.Color.Black
-        Me.lblCIName.Location = New System.Drawing.Point(115, 410)
+        Me.lblCIName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblCIName.Location = New System.Drawing.Point(71, 106)
         Me.lblCIName.Name = "lblCIName"
         Me.lblCIName.Size = New System.Drawing.Size(57, 20)
         Me.lblCIName.TabIndex = 13
@@ -145,8 +159,8 @@ Partial Class frmMain
         Me.lblCIAddress.AutoSize = True
         Me.lblCIAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblCIAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCIAddress.ForeColor = System.Drawing.Color.Black
-        Me.lblCIAddress.Location = New System.Drawing.Point(115, 496)
+        Me.lblCIAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblCIAddress.Location = New System.Drawing.Point(71, 192)
         Me.lblCIAddress.Name = "lblCIAddress"
         Me.lblCIAddress.Size = New System.Drawing.Size(78, 20)
         Me.lblCIAddress.TabIndex = 14
@@ -157,8 +171,8 @@ Partial Class frmMain
         Me.lblClOperationalDays.AutoSize = True
         Me.lblClOperationalDays.BackColor = System.Drawing.Color.Transparent
         Me.lblClOperationalDays.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblClOperationalDays.ForeColor = System.Drawing.Color.Black
-        Me.lblClOperationalDays.Location = New System.Drawing.Point(115, 581)
+        Me.lblClOperationalDays.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblClOperationalDays.Location = New System.Drawing.Point(71, 277)
         Me.lblClOperationalDays.Name = "lblClOperationalDays"
         Me.lblClOperationalDays.Size = New System.Drawing.Size(155, 20)
         Me.lblClOperationalDays.TabIndex = 15
@@ -202,17 +216,28 @@ Partial Class frmMain
         '
         'btnBillingInfo
         '
+        Me.btnBillingInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnBillingInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBillingInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBillingInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnBillingInfo.Location = New System.Drawing.Point(688, 682)
         Me.btnBillingInfo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBillingInfo.Name = "btnBillingInfo"
         Me.btnBillingInfo.Size = New System.Drawing.Size(491, 68)
         Me.btnBillingInfo.TabIndex = 20
         Me.btnBillingInfo.Text = "Billing Information"
-        Me.btnBillingInfo.UseVisualStyleBackColor = True
+        Me.btnBillingInfo.UseVisualStyleBackColor = False
         '
         'pnlPatientDetails
         '
+        Me.pnlPatientDetails.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.pnlPatientDetails.Controls.Add(Me.lblPatientDetails)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDName)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDAddress)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDAge)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDFirstBaby)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDAdditionalInfo)
+        Me.pnlPatientDetails.Controls.Add(Me.lblPDGestationalAge)
         Me.pnlPatientDetails.Location = New System.Drawing.Point(629, 54)
         Me.pnlPatientDetails.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlPatientDetails.Name = "pnlPatientDetails"
@@ -224,8 +249,8 @@ Partial Class frmMain
         Me.lblPatientDetails.AutoSize = True
         Me.lblPatientDetails.BackColor = System.Drawing.Color.Transparent
         Me.lblPatientDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPatientDetails.ForeColor = System.Drawing.Color.Black
-        Me.lblPatientDetails.Location = New System.Drawing.Point(772, 71)
+        Me.lblPatientDetails.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPatientDetails.Location = New System.Drawing.Point(167, 29)
         Me.lblPatientDetails.Name = "lblPatientDetails"
         Me.lblPatientDetails.Size = New System.Drawing.Size(292, 46)
         Me.lblPatientDetails.TabIndex = 21
@@ -236,29 +261,20 @@ Partial Class frmMain
         Me.lblPDName.AutoSize = True
         Me.lblPDName.BackColor = System.Drawing.Color.Transparent
         Me.lblPDName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDName.ForeColor = System.Drawing.Color.Black
-        Me.lblPDName.Location = New System.Drawing.Point(731, 175)
+        Me.lblPDName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDName.Location = New System.Drawing.Point(102, 120)
         Me.lblPDName.Name = "lblPDName"
         Me.lblPDName.Size = New System.Drawing.Size(57, 20)
         Me.lblPDName.TabIndex = 22
         Me.lblPDName.Text = "Name"
-        '
-        'txtPDName
-        '
-        Me.txtPDName.Location = New System.Drawing.Point(688, 201)
-        Me.txtPDName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtPDName.Multiline = True
-        Me.txtPDName.Name = "txtPDName"
-        Me.txtPDName.Size = New System.Drawing.Size(491, 56)
-        Me.txtPDName.TabIndex = 23
         '
         'lblPDAddress
         '
         Me.lblPDAddress.AutoSize = True
         Me.lblPDAddress.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDAddress.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAddress.Location = New System.Drawing.Point(731, 261)
+        Me.lblPDAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDAddress.Location = New System.Drawing.Point(102, 208)
         Me.lblPDAddress.Name = "lblPDAddress"
         Me.lblPDAddress.Size = New System.Drawing.Size(78, 20)
         Me.lblPDAddress.TabIndex = 24
@@ -269,8 +285,8 @@ Partial Class frmMain
         Me.lblPDAge.AutoSize = True
         Me.lblPDAge.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDAge.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAge.Location = New System.Drawing.Point(731, 357)
+        Me.lblPDAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDAge.Location = New System.Drawing.Point(118, 304)
         Me.lblPDAge.Name = "lblPDAge"
         Me.lblPDAge.Size = New System.Drawing.Size(41, 20)
         Me.lblPDAge.TabIndex = 25
@@ -281,36 +297,45 @@ Partial Class frmMain
         Me.lblPDFirstBaby.AutoSize = True
         Me.lblPDFirstBaby.BackColor = System.Drawing.Color.Transparent
         Me.lblPDFirstBaby.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDFirstBaby.ForeColor = System.Drawing.Color.Black
-        Me.lblPDFirstBaby.Location = New System.Drawing.Point(885, 357)
+        Me.lblPDFirstBaby.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDFirstBaby.Location = New System.Drawing.Point(255, 305)
         Me.lblPDFirstBaby.Name = "lblPDFirstBaby"
         Me.lblPDFirstBaby.Size = New System.Drawing.Size(96, 20)
         Me.lblPDFirstBaby.TabIndex = 26
         Me.lblPDFirstBaby.Text = "First Baby"
-        '
-        'lblPDGestationalAge
-        '
-        Me.lblPDGestationalAge.AutoSize = True
-        Me.lblPDGestationalAge.BackColor = System.Drawing.Color.Transparent
-        Me.lblPDGestationalAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDGestationalAge.ForeColor = System.Drawing.Color.Black
-        Me.lblPDGestationalAge.Location = New System.Drawing.Point(1032, 359)
-        Me.lblPDGestationalAge.Name = "lblPDGestationalAge"
-        Me.lblPDGestationalAge.Size = New System.Drawing.Size(127, 18)
-        Me.lblPDGestationalAge.TabIndex = 27
-        Me.lblPDGestationalAge.Text = "Gestational Age"
         '
         'lblPDAdditionalInfo
         '
         Me.lblPDAdditionalInfo.AutoSize = True
         Me.lblPDAdditionalInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblPDAdditionalInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPDAdditionalInfo.ForeColor = System.Drawing.Color.Black
-        Me.lblPDAdditionalInfo.Location = New System.Drawing.Point(731, 453)
+        Me.lblPDAdditionalInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDAdditionalInfo.Location = New System.Drawing.Point(102, 401)
         Me.lblPDAdditionalInfo.Name = "lblPDAdditionalInfo"
         Me.lblPDAdditionalInfo.Size = New System.Drawing.Size(192, 20)
         Me.lblPDAdditionalInfo.TabIndex = 28
         Me.lblPDAdditionalInfo.Text = "Additional Information"
+        '
+        'lblPDGestationalAge
+        '
+        Me.lblPDGestationalAge.AutoSize = True
+        Me.lblPDGestationalAge.BackColor = System.Drawing.Color.Transparent
+        Me.lblPDGestationalAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPDGestationalAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblPDGestationalAge.Location = New System.Drawing.Point(404, 304)
+        Me.lblPDGestationalAge.Name = "lblPDGestationalAge"
+        Me.lblPDGestationalAge.Size = New System.Drawing.Size(127, 18)
+        Me.lblPDGestationalAge.TabIndex = 27
+        Me.lblPDGestationalAge.Text = "Gestational Age"
+        '
+        'txtPDName
+        '
+        Me.txtPDName.Location = New System.Drawing.Point(688, 201)
+        Me.txtPDName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtPDName.Multiline = True
+        Me.txtPDName.Name = "txtPDName"
+        Me.txtPDName.Size = New System.Drawing.Size(491, 56)
+        Me.txtPDName.TabIndex = 23
         '
         'txtPDAddress
         '
@@ -361,28 +386,19 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1283, 801)
         Me.Controls.Add(Me.txtPDGestationalAge)
         Me.Controls.Add(Me.txtPDFirstBaby)
         Me.Controls.Add(Me.txtPDAge)
         Me.Controls.Add(Me.txtPDAdditionalInfo)
         Me.Controls.Add(Me.txtPDAddress)
-        Me.Controls.Add(Me.lblPDAdditionalInfo)
-        Me.Controls.Add(Me.lblPDGestationalAge)
-        Me.Controls.Add(Me.lblPDFirstBaby)
-        Me.Controls.Add(Me.lblPDAge)
-        Me.Controls.Add(Me.lblPDAddress)
         Me.Controls.Add(Me.txtPDName)
-        Me.Controls.Add(Me.lblPDName)
-        Me.Controls.Add(Me.lblPatientDetails)
         Me.Controls.Add(Me.pnlPatientDetails)
         Me.Controls.Add(Me.btnBillingInfo)
         Me.Controls.Add(Me.txtCIOperationalDays)
         Me.Controls.Add(Me.txtCIAddress)
         Me.Controls.Add(Me.txtCIName)
-        Me.Controls.Add(Me.lblClOperationalDays)
-        Me.Controls.Add(Me.lblCIAddress)
-        Me.Controls.Add(Me.lblCIName)
         Me.Controls.Add(Me.btnViewDoctors)
         Me.Controls.Add(Me.pnlClinicInfo)
         Me.Controls.Add(Me.dtpFirstAppointment)
@@ -395,6 +411,8 @@ Partial Class frmMain
         Me.Text = "Main"
         Me.pnlClinicInfo.ResumeLayout(False)
         Me.pnlClinicInfo.PerformLayout()
+        Me.pnlPatientDetails.ResumeLayout(False)
+        Me.pnlPatientDetails.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

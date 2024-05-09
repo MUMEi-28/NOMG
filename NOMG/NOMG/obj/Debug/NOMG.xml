@@ -47,6 +47,21 @@ NOMG
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:NOMG.My.Resources.Resources.Dr_1_Profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.Dr_2_Profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.Dr_3_Profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:NOMG.My.Resources.Resources.Dr1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
