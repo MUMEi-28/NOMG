@@ -55,6 +55,7 @@ Partial Class frmBilling
         '
         'txtQuantity1
         '
+        Me.txtQuantity1.BackColor = System.Drawing.SystemColors.Window
         Me.txtQuantity1.Location = New System.Drawing.Point(119, 158)
         Me.txtQuantity1.Name = "txtQuantity1"
         Me.txtQuantity1.Size = New System.Drawing.Size(95, 20)
@@ -63,6 +64,7 @@ Partial Class frmBilling
         '
         'txtQuantity2
         '
+        Me.txtQuantity2.BackColor = System.Drawing.SystemColors.Window
         Me.txtQuantity2.Location = New System.Drawing.Point(119, 177)
         Me.txtQuantity2.Name = "txtQuantity2"
         Me.txtQuantity2.Size = New System.Drawing.Size(95, 20)
@@ -71,6 +73,7 @@ Partial Class frmBilling
         '
         'txtQuantity3
         '
+        Me.txtQuantity3.BackColor = System.Drawing.SystemColors.Window
         Me.txtQuantity3.Location = New System.Drawing.Point(119, 196)
         Me.txtQuantity3.Name = "txtQuantity3"
         Me.txtQuantity3.Size = New System.Drawing.Size(95, 20)
@@ -79,6 +82,7 @@ Partial Class frmBilling
         '
         'txtQuantity4
         '
+        Me.txtQuantity4.BackColor = System.Drawing.SystemColors.Window
         Me.txtQuantity4.Location = New System.Drawing.Point(119, 215)
         Me.txtQuantity4.Name = "txtQuantity4"
         Me.txtQuantity4.Size = New System.Drawing.Size(95, 20)
@@ -87,6 +91,7 @@ Partial Class frmBilling
         '
         'txtQuantity5
         '
+        Me.txtQuantity5.BackColor = System.Drawing.SystemColors.Window
         Me.txtQuantity5.Location = New System.Drawing.Point(119, 234)
         Me.txtQuantity5.Name = "txtQuantity5"
         Me.txtQuantity5.Size = New System.Drawing.Size(95, 20)
@@ -95,6 +100,7 @@ Partial Class frmBilling
         '
         'txtDescription1
         '
+        Me.txtDescription1.BackColor = System.Drawing.SystemColors.Window
         Me.txtDescription1.Location = New System.Drawing.Point(213, 158)
         Me.txtDescription1.Name = "txtDescription1"
         Me.txtDescription1.Size = New System.Drawing.Size(237, 20)
@@ -102,6 +108,7 @@ Partial Class frmBilling
         '
         'txtDescription2
         '
+        Me.txtDescription2.BackColor = System.Drawing.SystemColors.Window
         Me.txtDescription2.Location = New System.Drawing.Point(213, 177)
         Me.txtDescription2.Name = "txtDescription2"
         Me.txtDescription2.Size = New System.Drawing.Size(237, 20)
@@ -109,6 +116,7 @@ Partial Class frmBilling
         '
         'txtDescription3
         '
+        Me.txtDescription3.BackColor = System.Drawing.SystemColors.Window
         Me.txtDescription3.Location = New System.Drawing.Point(213, 196)
         Me.txtDescription3.Name = "txtDescription3"
         Me.txtDescription3.Size = New System.Drawing.Size(237, 20)
@@ -116,6 +124,7 @@ Partial Class frmBilling
         '
         'txtDescription4
         '
+        Me.txtDescription4.BackColor = System.Drawing.SystemColors.Window
         Me.txtDescription4.Location = New System.Drawing.Point(213, 215)
         Me.txtDescription4.Name = "txtDescription4"
         Me.txtDescription4.Size = New System.Drawing.Size(237, 20)
@@ -123,6 +132,7 @@ Partial Class frmBilling
         '
         'txtDescription5
         '
+        Me.txtDescription5.BackColor = System.Drawing.SystemColors.Window
         Me.txtDescription5.Location = New System.Drawing.Point(213, 234)
         Me.txtDescription5.Name = "txtDescription5"
         Me.txtDescription5.Size = New System.Drawing.Size(237, 20)
@@ -130,6 +140,7 @@ Partial Class frmBilling
         '
         'txtUnitPrice1
         '
+        Me.txtUnitPrice1.BackColor = System.Drawing.SystemColors.Window
         Me.txtUnitPrice1.Location = New System.Drawing.Point(449, 158)
         Me.txtUnitPrice1.Name = "txtUnitPrice1"
         Me.txtUnitPrice1.Size = New System.Drawing.Size(71, 20)
@@ -138,6 +149,7 @@ Partial Class frmBilling
         '
         'txtUnitPrice2
         '
+        Me.txtUnitPrice2.BackColor = System.Drawing.SystemColors.Window
         Me.txtUnitPrice2.Location = New System.Drawing.Point(449, 177)
         Me.txtUnitPrice2.Name = "txtUnitPrice2"
         Me.txtUnitPrice2.Size = New System.Drawing.Size(71, 20)
@@ -146,6 +158,7 @@ Partial Class frmBilling
         '
         'txtUnitPrice3
         '
+        Me.txtUnitPrice3.BackColor = System.Drawing.SystemColors.Window
         Me.txtUnitPrice3.Location = New System.Drawing.Point(449, 196)
         Me.txtUnitPrice3.Name = "txtUnitPrice3"
         Me.txtUnitPrice3.Size = New System.Drawing.Size(71, 20)
@@ -154,6 +167,7 @@ Partial Class frmBilling
         '
         'txtUnitPrice4
         '
+        Me.txtUnitPrice4.BackColor = System.Drawing.SystemColors.Window
         Me.txtUnitPrice4.Location = New System.Drawing.Point(449, 215)
         Me.txtUnitPrice4.Name = "txtUnitPrice4"
         Me.txtUnitPrice4.Size = New System.Drawing.Size(71, 20)
@@ -162,6 +176,7 @@ Partial Class frmBilling
         '
         'txtUnitPrice5
         '
+        Me.txtUnitPrice5.BackColor = System.Drawing.SystemColors.Window
         Me.txtUnitPrice5.Location = New System.Drawing.Point(449, 234)
         Me.txtUnitPrice5.Name = "txtUnitPrice5"
         Me.txtUnitPrice5.Size = New System.Drawing.Size(71, 20)
@@ -170,6 +185,7 @@ Partial Class frmBilling
         '
         'txtAmount5
         '
+        Me.txtAmount5.BackColor = System.Drawing.SystemColors.Window
         Me.txtAmount5.Location = New System.Drawing.Point(516, 234)
         Me.txtAmount5.Name = "txtAmount5"
         Me.txtAmount5.Size = New System.Drawing.Size(71, 20)
@@ -177,6 +193,7 @@ Partial Class frmBilling
         '
         'txtAmount4
         '
+        Me.txtAmount4.BackColor = System.Drawing.SystemColors.Window
         Me.txtAmount4.Location = New System.Drawing.Point(516, 215)
         Me.txtAmount4.Name = "txtAmount4"
         Me.txtAmount4.Size = New System.Drawing.Size(71, 20)
@@ -184,6 +201,7 @@ Partial Class frmBilling
         '
         'txtAmount3
         '
+        Me.txtAmount3.BackColor = System.Drawing.SystemColors.Window
         Me.txtAmount3.Location = New System.Drawing.Point(516, 196)
         Me.txtAmount3.Name = "txtAmount3"
         Me.txtAmount3.Size = New System.Drawing.Size(71, 20)
@@ -191,6 +209,7 @@ Partial Class frmBilling
         '
         'txtAmount2
         '
+        Me.txtAmount2.BackColor = System.Drawing.SystemColors.Window
         Me.txtAmount2.Location = New System.Drawing.Point(516, 177)
         Me.txtAmount2.Name = "txtAmount2"
         Me.txtAmount2.Size = New System.Drawing.Size(71, 20)
@@ -198,6 +217,7 @@ Partial Class frmBilling
         '
         'txtAmount1
         '
+        Me.txtAmount1.BackColor = System.Drawing.SystemColors.Window
         Me.txtAmount1.Location = New System.Drawing.Point(516, 158)
         Me.txtAmount1.Name = "txtAmount1"
         Me.txtAmount1.Size = New System.Drawing.Size(71, 20)
@@ -205,6 +225,7 @@ Partial Class frmBilling
         '
         'txtTotal
         '
+        Me.txtTotal.BackColor = System.Drawing.SystemColors.Window
         Me.txtTotal.Location = New System.Drawing.Point(516, 253)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(71, 20)
@@ -212,6 +233,8 @@ Partial Class frmBilling
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(516, 139)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(71, 20)
@@ -221,6 +244,8 @@ Partial Class frmBilling
         '
         'TextBox2
         '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(449, 139)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(71, 20)
@@ -230,6 +255,8 @@ Partial Class frmBilling
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(213, 139)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(237, 20)
@@ -239,6 +266,8 @@ Partial Class frmBilling
         '
         'TextBox4
         '
+        Me.TextBox4.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(119, 139)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(95, 20)
@@ -249,20 +278,21 @@ Partial Class frmBilling
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(437, 258)
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(424, 257)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 13)
+        Me.Label1.Size = New System.Drawing.Size(86, 13)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Total Amount:"
         '
         'txtName
         '
-        Me.txtName.BackColor = System.Drawing.Color.LightGray
+        Me.txtName.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(98, 40)
+        Me.txtName.Location = New System.Drawing.Point(102, 65)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(237, 23)
         Me.txtName.TabIndex = 30
@@ -270,27 +300,33 @@ Partial Class frmBilling
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(30, 40)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(34, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 22)
+        Me.Label2.Size = New System.Drawing.Size(67, 22)
         Me.Label2.TabIndex = 31
         Me.Label2.Text = "Name:"
         '
         'btnPayment
         '
-        Me.btnPayment.Location = New System.Drawing.Point(506, 329)
+        Me.btnPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPayment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.btnPayment.Location = New System.Drawing.Point(505, 310)
         Me.btnPayment.Name = "btnPayment"
         Me.btnPayment.Size = New System.Drawing.Size(91, 29)
         Me.btnPayment.TabIndex = 32
         Me.btnPayment.Text = "Payment"
-        Me.btnPayment.UseVisualStyleBackColor = True
+        Me.btnPayment.UseVisualStyleBackColor = False
         '
         'frmBilling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(746, 450)
         Me.Controls.Add(Me.btnPayment)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtName)
