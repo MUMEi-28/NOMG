@@ -1,4 +1,5 @@
 ﻿Public Class frmAccountInformation_Continuation
+	Private blnLMC As Boolean = False
 	Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click
 		frmAccountInformation.Show()
 		Me.Hide()
@@ -7,7 +8,11 @@
 	Private Sub btnDoctorChoosing_Click(sender As Object, e As EventArgs) Handles btnDoctorChoosing.Click
 
 		'Check if text boxes are empty
-		If txtAge.Text = "" Then
+		If blnLMC = False Then
+			MsgBox("please enter your last menstrual cycle")
+			Return
+
+		ElseIf txtAge.Text = "" Then
 			MsgBox("please enter your age")
 			Return
 
@@ -75,6 +80,8 @@
 	Private Sub dtpLMC_ValueChanged(sender As Object, e As EventArgs) Handles dtpLMC.ValueChanged
 		If dtpLMC.Value.Date > Date.Today.Date Then
 			MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
+		Else
+			blnLMC = True
 		End If
 	End Sub
 End Class

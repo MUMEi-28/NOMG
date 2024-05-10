@@ -18,10 +18,16 @@
 		Dim user1 As New User("Jose", "Tarlac", "jose@email", "1234", 24, "y", 20, listDoctors(0), Date.Today.Date)
 		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 15, listDoctors(1), Date.Today.Date)
 		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 12, listDoctors(2), Date.Today.Date)
+		Dim user4 As New User("a", "a", "a", "a", 30, "n", 12, listDoctors(0), Date.Today.Date)
+		Dim user5 As New User("b", "b", "b", "b", 30, "n", 12, listDoctors(0), Date.Today.Date)
+		Dim user6 As New User("c", "c", "c", "c", 30, "n", 12, listDoctors(0), Date.Today.Date)
 
 		listUsers.Add(user1)
 		listUsers.Add(user2)
 		listUsers.Add(user3)
+		listUsers.Add(user4)
+		listUsers.Add(user5)
+		listUsers.Add(user6)
 
 		intDoctor = 1
 	End Sub

@@ -5,9 +5,8 @@ Public Class frmMain
     Public txtFrmMainPD As New List(Of TextBox)
     Public txtFrmMainCI As New List(Of TextBox)
 
-    Dim intI As Integer = 0
-    Dim blnFullyBooked As Boolean = False
-    Dim counter As Integer = 0
+    Dim intI As Integer
+    Dim counter As Integer
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
         If frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
@@ -16,20 +15,20 @@ Public Class frmMain
             ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
                 MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
             Else
+                intI = 0
+                counter = 0
                 Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
                     If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
                         counter = counter + 1
                     End If
 
-                    If counter > 5 Then
-                        MsgBox("The date is fully booked.")
-                        blnFullyBooked = True
-                    End If
-
                     intI = intI + 1
                 Loop
 
-                If blnFullyBooked = False Then
+                ' Checks if higher than 4 because the other 1 of the 5 is the date being set
+                If counter > 4 Then
+                    MsgBox("The date is fully booked.")
+                Else
                     frmAccountInformation.currentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
                     frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
                     dtpFirstAppointment.Hide()
@@ -80,7 +79,6 @@ Public Class frmMain
         If frmAccountInformation.currentUser.GetListAppointments.Count > 0 Then
             ' Checks if the user has appointments to prevent setting more
             If frmAccountInformation.currentUser.GetListAppointments.Count < 2 Then
-                blnFullyBooked = False
 
                 frmAccountInformation.currentUser.SetDteLMC(frmAccountInformation_Continuation.dtpLMC.Value.Date)
                 dteTracker = frmAccountInformation.currentUser.GetListAppointments(0)
@@ -105,26 +103,24 @@ Public Class frmMain
                         Loop
 
                         ' Checks if the doctor is fully booked
+                        counter = 0
+                        intI = 0
                         Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
                             If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dteTracker.AddDays(30) Then
                                 counter = counter + 1
                             End If
 
-                            If counter > 5 Then
-                                MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
-                                blnFullyBooked = True
-                            End If
-
                             intI = intI + 1
                         Loop
 
-                        If blnFullyBooked = False Then
+                        ' Checks if higher than 4 because the other 1 of the 5 is the date being set
+                        If counter > 4 Then
+                            MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
+                            dteTracker = dteTracker.AddDays(1)
+                        Else
                             dteTracker = dteTracker.AddDays(30)
                             frmAccountInformation.currentUser.GetListAppointments.Add(dteTracker)
                             frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dteTracker)
-                        Else
-                            dteTracker = dteTracker.AddDays(1)
-                            blnFullyBooked = False
                         End If
 
                     ElseIf dteTracker <= frmAccountInformation.currentUser.GetDteLMC.AddMonths(6) Then
@@ -134,26 +130,24 @@ Public Class frmMain
                         Loop
 
                         ' Checks if the doctor is fully booked
+                        counter = 0
+                        intI = 0
                         Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
                             If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dteTracker.AddDays(30) Then
                                 counter = counter + 1
                             End If
 
-                            If counter > 5 Then
-                                MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
-                                blnFullyBooked = True
-                            End If
-
                             intI = intI + 1
                         Loop
 
-                        If blnFullyBooked = False Then
+                        ' Checks if higher than 4 because the other 1 of the 5 is the date being set
+                        If counter > 4 Then
+                            MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
+                            dteTracker = dteTracker.AddDays(1)
+                        Else
                             dteTracker = dteTracker.AddDays(20)
                             frmAccountInformation.currentUser.GetListAppointments.Add(dteTracker)
                             frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dteTracker)
-                        Else
-                            dteTracker = dteTracker.AddDays(1)
-                            blnFullyBooked = False
                         End If
                     Else
                         ' Checks if the clinic is open
@@ -164,26 +158,24 @@ Public Class frmMain
                         End If
 
                         ' Checks if the doctor is fully booked
+                        counter = 0
+                        intI = 0
                         Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
                             If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dteTracker.AddDays(30) Then
                                 counter = counter + 1
                             End If
 
-                            If counter > 5 Then
-                                MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
-                                blnFullyBooked = True
-                            End If
-
                             intI = intI + 1
                         Loop
 
-                        If blnFullyBooked = False Then
+                        ' Checks if higher than 4 because the other 1 of the 5 is the date being set
+                        If counter > 4 Then
+                            MsgBox("One of the appointments is set in a later date because the doctor is fully booked on the former date.")
+                            dteTracker = dteTracker.AddDays(1)
+                        Else
                             dteTracker = dteTracker.AddDays(10)
                             frmAccountInformation.currentUser.GetListAppointments.Add(dteTracker)
                             frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dteTracker)
-                        Else
-                            dteTracker = dteTracker.AddDays(1)
-                            blnFullyBooked = False
                         End If
                     End If
                 Loop
