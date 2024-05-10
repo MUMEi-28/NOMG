@@ -10,29 +10,31 @@ Public Class frmMain
     Dim counter As Integer = 0
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
-        If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
-            MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbRetryCancel + vbCritical, "Error")
-        ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
-            MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
-        Else
-            Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
-                If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
-                    counter = counter + 1
+        If frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
+            If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
+                MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbRetryCancel + vbCritical, "Error")
+            ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
+                MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
+            Else
+                Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
+                    If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
+                        counter = counter + 1
+                    End If
+
+                    If counter > 5 Then
+                        MsgBox("The date is fully booked.")
+                        blnFullyBooked = True
+                    End If
+
+                    intI = intI + 1
+                Loop
+
+                If blnFullyBooked = False Then
+                    frmAccountInformation.currentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
+                    frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
+                    dtpFirstAppointment.Hide()
+                    lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(0)
                 End If
-
-                If counter > 5 Then
-                    MsgBox("The date is fully booked.")
-                    blnFullyBooked = True
-                End If
-
-                intI = intI + 1
-            Loop
-
-            If blnFullyBooked = False Then
-                frmAccountInformation.currentUser.GetListAppointments.Add(dtpFirstAppointment.Value.Date)
-                frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Add(dtpFirstAppointment.Value.Date)
-                dtpFirstAppointment.Hide()
-                lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(0)
             End If
         End If
     End Sub
@@ -40,7 +42,6 @@ Public Class frmMain
     Private Sub btnViewDoctors_Click(sender As Object, e As EventArgs) Handles btnViewDoctors.Click
         frmDoctors.Show()
         Me.Hide()
-
     End Sub
 
     Public Sub New()
@@ -69,8 +70,10 @@ Public Class frmMain
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
-        frmLogIn.Show()
+        frmStart.Show()
         Me.Hide()
+        ' It is not set to current date because if it is set to the said date, users could not set it to the current date.
+        dtpFirstAppointment.Value = New Date(Date.Today.Year, Date.Today.Month, Date.Today.Day - 1)
     End Sub
 
     Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click

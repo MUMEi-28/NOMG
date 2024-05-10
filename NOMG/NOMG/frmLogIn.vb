@@ -26,12 +26,7 @@
 				frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor.GetName & "."
 
-				If frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
-					frmMain.dtpFirstAppointment.Show()
-					frmMain.lblAppointment.Text = "First Check Up:"
-				Else
-					frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmRoutine.getNextCheckUp()
-				End If
+				frmRoutine.getNextCheckUp()
 
 				frmMain.Show()
 				Me.Hide()

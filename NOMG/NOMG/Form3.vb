@@ -42,14 +42,14 @@
         End If
     End Sub
 
-    Public Function getNextCheckUp() As Date
-        Dim intI As Integer = 0
-        If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = frmAccountInformation.currentUser.GetListAppointments.Count Then
+    Public Sub getNextCheckUp()
+        If frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
+            frmMain.lblAppointment.Text = "First Check Up:"
+            frmMain.dtpFirstAppointment.Show()
+        ElseIf frmAccountInformation.currentUser.GetListCheckedAppointments.Count = frmAccountInformation.currentUser.GetListAppointments.Count Then
             frmMain.lblAppointment.Text = "All Check Ups" & vbCrLf & "are done."
-        ElseIf frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Then
-            frmMain.lblAppointment.Text = "First Check Up."
         Else
-            Return frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
+            frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
         End If
-    End Function
+    End Sub
 End Class
