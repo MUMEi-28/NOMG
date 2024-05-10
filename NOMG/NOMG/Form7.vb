@@ -8,6 +8,7 @@
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
                 Me.Hide()
+                txtPayment.Clear()
                 frmBilling.Hide()
                 frmMain.Show()
             Else

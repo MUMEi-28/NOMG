@@ -29,6 +29,8 @@ Partial Class frmRoutine
         Me.cbMed2 = New System.Windows.Forms.CheckBox()
         Me.cbMed3 = New System.Windows.Forms.CheckBox()
         Me.cbMed4 = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.ptbAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +41,7 @@ Partial Class frmRoutine
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnBack.Location = New System.Drawing.Point(343, 547)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(274, 39)
         Me.btnBack.TabIndex = 2
@@ -52,7 +54,7 @@ Partial Class frmRoutine
         Me.clbAppointments.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clbAppointments.FormattingEnabled = True
         Me.clbAppointments.Location = New System.Drawing.Point(26, 269)
-        Me.clbAppointments.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.clbAppointments.Margin = New System.Windows.Forms.Padding(2)
         Me.clbAppointments.Name = "clbAppointments"
         Me.clbAppointments.Size = New System.Drawing.Size(272, 193)
         Me.clbAppointments.TabIndex = 3
@@ -61,7 +63,7 @@ Partial Class frmRoutine
         '
         Me.ptbAppointments.Image = Global.NOMG.My.Resources.Resources.NOMG_UI_5_Updated
         Me.ptbAppointments.Location = New System.Drawing.Point(0, 1)
-        Me.ptbAppointments.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ptbAppointments.Margin = New System.Windows.Forms.Padding(2)
         Me.ptbAppointments.Name = "ptbAppointments"
         Me.ptbAppointments.Size = New System.Drawing.Size(960, 650)
         Me.ptbAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -112,11 +114,31 @@ Partial Class frmRoutine
         Me.cbMed4.Text = "DHA"
         Me.cbMed4.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(737, 314)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Label2"
+        '
         'frmRoutine
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(960, 635)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbMed4)
         Me.Controls.Add(Me.cbMed3)
         Me.Controls.Add(Me.cbMed2)
@@ -124,7 +146,7 @@ Partial Class frmRoutine
         Me.Controls.Add(Me.clbAppointments)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ptbAppointments)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmRoutine"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Routine"
@@ -141,4 +163,6 @@ Partial Class frmRoutine
     Friend WithEvents cbMed2 As CheckBox
     Friend WithEvents cbMed3 As CheckBox
     Friend WithEvents cbMed4 As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

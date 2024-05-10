@@ -52,4 +52,6 @@
             frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
         End If
     End Sub
+
+
 End Class
