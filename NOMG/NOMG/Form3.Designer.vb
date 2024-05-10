@@ -73,10 +73,10 @@ Partial Class frmRoutine
         'cbMed1
         '
         Me.cbMed1.AutoSize = True
-        Me.cbMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed1.Location = New System.Drawing.Point(359, 284)
         Me.cbMed1.Name = "cbMed1"
-        Me.cbMed1.Size = New System.Drawing.Size(98, 29)
+        Me.cbMed1.Size = New System.Drawing.Size(105, 29)
         Me.cbMed1.TabIndex = 4
         Me.cbMed1.Text = "Flu Vac"
         Me.cbMed1.UseVisualStyleBackColor = True
@@ -84,10 +84,10 @@ Partial Class frmRoutine
         'cbMed2
         '
         Me.cbMed2.AutoSize = True
-        Me.cbMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed2.Location = New System.Drawing.Point(359, 327)
         Me.cbMed2.Name = "cbMed2"
-        Me.cbMed2.Size = New System.Drawing.Size(134, 29)
+        Me.cbMed2.Size = New System.Drawing.Size(146, 29)
         Me.cbMed2.TabIndex = 5
         Me.cbMed2.Text = "Iron Vitamin"
         Me.cbMed2.UseVisualStyleBackColor = True
@@ -95,10 +95,10 @@ Partial Class frmRoutine
         'cbMed3
         '
         Me.cbMed3.AutoSize = True
-        Me.cbMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed3.Location = New System.Drawing.Point(359, 370)
         Me.cbMed3.Name = "cbMed3"
-        Me.cbMed3.Size = New System.Drawing.Size(127, 29)
+        Me.cbMed3.Size = New System.Drawing.Size(136, 29)
         Me.cbMed3.TabIndex = 6
         Me.cbMed3.Text = "B Complex"
         Me.cbMed3.UseVisualStyleBackColor = True
@@ -106,10 +106,10 @@ Partial Class frmRoutine
         'cbMed4
         '
         Me.cbMed4.AutoSize = True
-        Me.cbMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbMed4.Location = New System.Drawing.Point(359, 414)
         Me.cbMed4.Name = "cbMed4"
-        Me.cbMed4.Size = New System.Drawing.Size(73, 29)
+        Me.cbMed4.Size = New System.Drawing.Size(76, 29)
         Me.cbMed4.TabIndex = 7
         Me.cbMed4.Text = "DHA"
         Me.cbMed4.UseVisualStyleBackColor = True
@@ -126,11 +126,13 @@ Partial Class frmRoutine
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(737, 314)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(656, 289)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(288, 154)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Iron Vitamin once a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "B Complex once a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DHA 3 times a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Flu Vac o" &
+    "nce during pregnancy"
         '
         'frmRoutine
         '
