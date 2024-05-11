@@ -5,11 +5,12 @@ Public Class frmMain
     Public txtFrmMainPD As New List(Of TextBox)
     Public txtFrmMainCI As New List(Of TextBox)
 
+    Dim blnLogOut As Boolean
     Dim intI As Integer
     Dim counter As Integer
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
-        If frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
+        If blnLogOut = False And frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
             If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
                 MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbRetryCancel + vbCritical, "Error")
             ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
@@ -45,6 +46,7 @@ Public Class frmMain
 
     Public Sub New()
         InitializeComponent()
+        blnLogOut = False
 
         txtFrmMainCI.Add(txtCIName)
         txtFrmMainCI.Add(txtCIAddress)
@@ -71,6 +73,7 @@ Public Class frmMain
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
         frmStart.Show()
         Me.Hide()
+        blnLogOut = True
         ' It is not set to current date because if it is set to the said date, users could not set it to the current date.
         dtpFirstAppointment.Value = New Date(Date.Today.Year, Date.Today.Month, Date.Today.Day - 1)
     End Sub
@@ -82,18 +85,6 @@ Public Class frmMain
 
                 frmAccountInformation.currentUser.SetDteLMC(frmAccountInformation_Continuation.dtpLMC.Value.Date)
                 dteTracker = frmAccountInformation.currentUser.GetListAppointments(0)
-
-                intI = 0
-                For Each dr In frmAccountInformation.listDoctors
-                    Dim drTotalApt As Integer = dr.listDrAppointments.Count
-                    Do While intI < drTotalApt
-                        If dr.listDrAppointments(intI) < Today.Date Then
-                            dr.listDrAppointments.Remove(dr.listDrAppointments(intI))
-                            intI = intI - 1
-                        End If
-                        intI = intI + 1
-                    Loop
-                Next
 
                 Do While dteTracker <= frmAccountInformation.currentUser.GetDteLMC.AddMonths(9)
                     If dteTracker <= frmAccountInformation.currentUser.GetDteLMC.AddMonths(3) Then
@@ -201,8 +192,6 @@ Public Class frmMain
             MsgBox("First appointment is not set.", vbRetryCancel + vbCritical, "Error")
         End If
     End Sub
-
-
 
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()

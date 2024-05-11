@@ -33,9 +33,10 @@ Partial Class frmPayment
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(12, 58)
+        Me.Label1.Location = New System.Drawing.Point(16, 71)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 31)
+        Me.Label1.Size = New System.Drawing.Size(143, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Amount:"
         '
@@ -44,9 +45,10 @@ Partial Class frmPayment
         Me.txtPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.txtPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPayment.Location = New System.Drawing.Point(133, 58)
+        Me.txtPayment.Location = New System.Drawing.Point(177, 71)
+        Me.txtPayment.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPayment.Name = "txtPayment"
-        Me.txtPayment.Size = New System.Drawing.Size(125, 31)
+        Me.txtPayment.Size = New System.Drawing.Size(167, 38)
         Me.txtPayment.TabIndex = 1
         '
         'btnPay
@@ -54,9 +56,10 @@ Partial Class frmPayment
         Me.btnPay.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPay.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.btnPay.Location = New System.Drawing.Point(286, 42)
+        Me.btnPay.Location = New System.Drawing.Point(381, 52)
+        Me.btnPay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPay.Name = "btnPay"
-        Me.btnPay.Size = New System.Drawing.Size(80, 29)
+        Me.btnPay.Size = New System.Drawing.Size(107, 36)
         Me.btnPay.TabIndex = 2
         Me.btnPay.Text = "Pay"
         Me.btnPay.UseVisualStyleBackColor = False
@@ -66,23 +69,26 @@ Partial Class frmPayment
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.btnCancel.Location = New System.Drawing.Point(286, 77)
+        Me.btnCancel.Location = New System.Drawing.Point(381, 95)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(80, 29)
+        Me.btnCancel.Size = New System.Drawing.Size(107, 36)
         Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
         'frmPayment
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(380, 157)
+        Me.ClientSize = New System.Drawing.Size(507, 193)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnPay)
         Me.Controls.Add(Me.txtPayment)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximizeBox = False
         Me.Name = "frmPayment"
         Me.Text = "Form7"
         Me.ResumeLayout(False)

@@ -25,7 +25,7 @@
 			Return ' exit the method if any textbox is empty
 
 		Else
-			AccountInformation_Doctor.Show()
+			frmAccountInformation_Doctor.Show()
 			Me.Hide()
 		End If
 

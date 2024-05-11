@@ -12,7 +12,7 @@
 		Dim intCounter = 0
 		Do While intCounter < frmAccountInformation.listUsers.Count
 			If txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() And txtPassword.Text = frmAccountInformation.listUsers(intCounter).GetPass() Then
-				MsgBox("log in succesful")
+				MsgBox("log in successful")
 
 				txtEmail.Clear()
 				txtPassword.Clear()

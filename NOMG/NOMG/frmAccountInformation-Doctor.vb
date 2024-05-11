@@ -1,4 +1,4 @@
-﻿Public Class AccountInformation_Doctor
+﻿Public Class frmAccountInformation_Doctor
 	Dim tempDoctor As frmAccountInformation.Doctor
 	Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 		frmAccountInformation_Continuation.Show()
