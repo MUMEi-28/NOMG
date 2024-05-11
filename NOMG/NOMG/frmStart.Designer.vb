@@ -48,7 +48,7 @@ Partial Class frmStart
 		Me.btnExisting.Location = New System.Drawing.Point(125, 235)
 		Me.btnExisting.Name = "btnExisting"
 		Me.btnExisting.Size = New System.Drawing.Size(252, 59)
-		Me.btnExisting.TabIndex = 6
+		Me.btnExisting.TabIndex = 1
 		Me.btnExisting.Text = "I AM AN EXISTING PATIENT"
 		Me.btnExisting.UseVisualStyleBackColor = False
 		'
@@ -61,7 +61,7 @@ Partial Class frmStart
 		Me.btnNew.Location = New System.Drawing.Point(125, 300)
 		Me.btnNew.Name = "btnNew"
 		Me.btnNew.Size = New System.Drawing.Size(252, 59)
-		Me.btnNew.TabIndex = 7
+		Me.btnNew.TabIndex = 2
 		Me.btnNew.Text = "I AM A NEW PATIENT"
 		Me.btnNew.UseVisualStyleBackColor = False
 		'

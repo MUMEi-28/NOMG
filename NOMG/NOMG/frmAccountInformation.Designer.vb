@@ -68,7 +68,7 @@ Partial Class frmAccountInformation
 		Me.btnContinue.Location = New System.Drawing.Point(258, 317)
 		Me.btnContinue.Name = "btnContinue"
 		Me.btnContinue.Size = New System.Drawing.Size(190, 59)
-		Me.btnContinue.TabIndex = 8
+		Me.btnContinue.TabIndex = 5
 		Me.btnContinue.Text = "CONTINUE"
 		Me.btnContinue.UseVisualStyleBackColor = False
 		'
@@ -81,7 +81,7 @@ Partial Class frmAccountInformation
 		Me.btnBackToStart.Location = New System.Drawing.Point(17, 317)
 		Me.btnBackToStart.Name = "btnBackToStart"
 		Me.btnBackToStart.Size = New System.Drawing.Size(190, 59)
-		Me.btnBackToStart.TabIndex = 7
+		Me.btnBackToStart.TabIndex = 4
 		Me.btnBackToStart.Text = "BACK"
 		Me.btnBackToStart.UseVisualStyleBackColor = False
 		'
@@ -116,7 +116,7 @@ Partial Class frmAccountInformation
 		Me.txtPassword.Location = New System.Drawing.Point(18, 263)
 		Me.txtPassword.Name = "txtPassword"
 		Me.txtPassword.Size = New System.Drawing.Size(430, 23)
-		Me.txtPassword.TabIndex = 6
+		Me.txtPassword.TabIndex = 3
 		'
 		'Label4
 		'
@@ -137,7 +137,7 @@ Partial Class frmAccountInformation
 		Me.txtAddress.Location = New System.Drawing.Point(19, 155)
 		Me.txtAddress.Name = "txtAddress"
 		Me.txtAddress.Size = New System.Drawing.Size(430, 23)
-		Me.txtAddress.TabIndex = 4
+		Me.txtAddress.TabIndex = 1
 		'
 		'Label3
 		'
@@ -196,11 +196,13 @@ Partial Class frmAccountInformation
 		'
 		'PictureBox1
 		'
-		Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-		Me.PictureBox1.Location = New System.Drawing.Point(492, -4)
+		Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
+		Me.PictureBox1.Image = Global.NOMG.My.Resources.Resources.drLogin_2
+		Me.PictureBox1.Location = New System.Drawing.Point(489, -15)
 		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(498, 692)
-		Me.PictureBox1.TabIndex = 9
+		Me.PictureBox1.Size = New System.Drawing.Size(521, 765)
+		Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PictureBox1.TabIndex = 13
 		Me.PictureBox1.TabStop = False
 		'
 		'frmAccountInformation
@@ -227,7 +229,6 @@ Partial Class frmAccountInformation
 	Friend WithEvents Label2 As Label
 	Friend WithEvents btnBackToStart As Button
 	Friend WithEvents btnContinue As Button
-	Friend WithEvents PictureBox1 As PictureBox
 	Friend WithEvents Label8 As Label
 	Friend WithEvents Label9 As Label
 	Friend WithEvents txtPassword As TextBox
@@ -237,4 +238,5 @@ Partial Class frmAccountInformation
 	Friend WithEvents txtEmail As TextBox
 	Friend WithEvents Label1 As Label
 	Friend WithEvents txtName As TextBox
+	Friend WithEvents PictureBox1 As PictureBox
 End Class

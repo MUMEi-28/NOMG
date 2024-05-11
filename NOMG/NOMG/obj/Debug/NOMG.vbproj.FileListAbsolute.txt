@@ -15,7 +15,6 @@ D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\bin\Debug\NOMG.xml
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.AssemblyReference.cache
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form1.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.Resources.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.GenerateResource.cache
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.CoreCompileInputs.cache
@@ -36,7 +35,6 @@ C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmMain.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmDoctors.resources
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmCalendar.resources
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe.config
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe
 C:\Users\Miguel R. Flores\OneDrive - Tarlac State University\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb

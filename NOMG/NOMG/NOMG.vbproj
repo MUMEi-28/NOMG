@@ -73,47 +73,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountInformation-Doctor.Designer.vb">
-      <DependentUpon>AccountInformation-Doctor.vb</DependentUpon>
+    <Compile Include="frmAccountInformation-Doctor.Designer.vb">
+      <DependentUpon>frmAccountInformation-Doctor.vb</DependentUpon>
     </Compile>
-    <Compile Include="AccountInformation-Doctor.vb">
+    <Compile Include="frmAccountInformation-Doctor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmRoutine.Designer.vb">
+      <DependentUpon>frmRoutine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoutine.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="frmDoctors.Designer.vb">
+      <DependentUpon>frmDoctors.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="frmDoctors.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="frmBilling.Designer.vb">
+      <DependentUpon>frmBilling.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="frmBilling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="frmPayment.Designer.vb">
+      <DependentUpon>frmPayment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form6.Designer.vb">
-      <DependentUpon>Form6.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form6.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form7.Designer.vb">
-      <DependentUpon>Form7.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form7.vb">
+    <Compile Include="frmPayment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAccountInformation-Continuation.Designer.vb">
@@ -164,26 +157,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AccountInformation-Doctor.resx">
-      <DependentUpon>AccountInformation-Doctor.vb</DependentUpon>
+    <EmbeddedResource Include="frmAccountInformation-Doctor.resx">
+      <DependentUpon>frmAccountInformation-Doctor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="frmRoutine.resx">
+      <DependentUpon>frmRoutine.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="frmDoctors.resx">
+      <DependentUpon>frmDoctors.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="frmBilling.resx">
+      <DependentUpon>frmBilling.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.vb</DependentUpon>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountInformation-Continuation.resx">
       <DependentUpon>frmAccountInformation-Continuation.vb</DependentUpon>
@@ -275,6 +265,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NOMG UI 5 Updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dr-Login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drLogin-2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

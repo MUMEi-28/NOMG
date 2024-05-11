@@ -124,8 +124,8 @@
   <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dr3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dr3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dr-Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dr-Login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="V3 Main - Doctor 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\V3 Main - Doctor 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,6 +135,9 @@
   </data>
   <data name="View Appointments" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\View Appointments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Main - Doctor 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main - Doctor 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,17 @@
   <data name="V2 Doctors Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\V2 Doctors Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Main - Doctor 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Main - Doctor 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dr3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dr3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dr1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NOMG UI 5 Updated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NOMG UI 5 Updated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="V2 Main - Doctor 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\V2 Main - Doctor 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +178,7 @@
   <data name="Dr 1 Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dr 1 Profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NOMG UI 5 Updated" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NOMG UI 5 Updated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="drLogin-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drLogin-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

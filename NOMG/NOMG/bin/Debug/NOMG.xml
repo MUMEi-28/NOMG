@@ -62,6 +62,11 @@ NOMG
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:NOMG.My.Resources.Resources.Dr_Login">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:NOMG.My.Resources.Resources.Dr1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -73,6 +78,11 @@ NOMG
 </summary>
 </member>
 <member name="P:NOMG.My.Resources.Resources.Dr3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NOMG.My.Resources.Resources.drLogin_2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
