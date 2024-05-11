@@ -1,9 +1,9 @@
-﻿Public Class frmAccountInformation
+﻿Imports System.Drawing.Text
+Public Class frmAccountInformation
 
 	Public listUsers As New List(Of User)
 	Public currentUser As User
 	Public listDoctors As New List(Of Doctor)
-	Public intDoctor As New Integer
 	Public Sub New()
 		InitializeComponent()
 
@@ -28,8 +28,6 @@
 		listUsers.Add(user4)
 		listUsers.Add(user5)
 		listUsers.Add(user6)
-
-		intDoctor = 1
 	End Sub
 	Class User
 		Private strName As String
