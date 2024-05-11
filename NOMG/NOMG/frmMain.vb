@@ -201,74 +201,155 @@ Public Class frmMain
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
         If frmAccountInformation.currentUser.GetListCheckedAppointments.Count > 0 Then
-            Dim frmMainInstance As frmMain = DirectCast(Application.OpenForms("frmMain"), frmMain)
-            frmMainInstance.ResetPaymentMade()
-        End If
-
+    Dim frmMainInstance As frmMain = DirectCast(Application.OpenForms("frmMain"), frmMain)
+    frmMainInstance.ResetPaymentMade()
+End If
         Dim AppointmentCount As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
 
 
         If AppointmentCount = 0 Then
-                frmBilling.txtDescription1.Clear()
-                frmBilling.txtDescription2.Clear()
-                frmBilling.txtDescription3.Clear()
-                frmBilling.txtDescription4.Clear()
+            frmBilling.txtDescription1.Clear()
+            frmBilling.txtDescription2.Clear()
+            frmBilling.txtDescription3.Clear()
+            frmBilling.txtDescription4.Clear()
 
-                frmBilling.txtUnitPrice1.Text = 0
-                frmBilling.txtUnitPrice2.Text = 0
-                frmBilling.txtUnitPrice3.Text = 0
-                frmBilling.txtUnitPrice4.Text = 0
+            frmBilling.txtUnitPrice1.Text = 0
+            frmBilling.txtUnitPrice2.Text = 0
+            frmBilling.txtUnitPrice3.Text = 0
+            frmBilling.txtUnitPrice4.Text = 0
 
-                frmBilling.txtQuantity1.Text = 0
-                frmBilling.txtQuantity2.Text = 0
-                frmBilling.txtQuantity3.Text = 0
-                frmBilling.txtQuantity4.Text = 0
+            frmBilling.txtQuantity1.Text = 0
+            frmBilling.txtQuantity2.Text = 0
+            frmBilling.txtQuantity3.Text = 0
+            frmBilling.txtQuantity4.Text = 0
 
-            ElseIf AppointmentCount = 1 Then
-                frmBilling.txtDescription1.Text = "Initial Check up"
-                frmBilling.txtDescription2.Text = "Iron Vitamin"
-                frmBilling.txtDescription3.Text = "B Complex"
-                frmBilling.txtDescription4.Text = "DHA"
+        ElseIf AppointmentCount = 1 And paymentMade = True Then
+            frmBilling.txtDescription1.Clear()
+            frmBilling.txtDescription2.Clear()
+            frmBilling.txtDescription3.Clear()
+            frmBilling.txtDescription4.Clear()
+            frmBilling.txtDescription5.Clear()
 
-                frmBilling.txtUnitPrice1.Text = 2000
-                frmBilling.txtUnitPrice2.Text = 15
-                frmBilling.txtUnitPrice3.Text = 25
-                frmBilling.txtUnitPrice4.Text = 20
+            frmBilling.txtUnitPrice1.Text = 0
+            frmBilling.txtUnitPrice2.Text = 0
+            frmBilling.txtUnitPrice3.Text = 0
+            frmBilling.txtUnitPrice4.Text = 0
+            frmBilling.txtUnitPrice5.Text = 0
 
-                frmBilling.txtQuantity1.Text = 1
-                frmBilling.txtQuantity2.Text = 30
-                frmBilling.txtQuantity3.Text = 30
-                frmBilling.txtQuantity4.Text = 90
+            frmBilling.txtQuantity1.Text = 0
+            frmBilling.txtQuantity2.Text = 0
+            frmBilling.txtQuantity3.Text = 0
+            frmBilling.txtQuantity4.Text = 0
+            frmBilling.txtQuantity5.Text = 0
 
-            ElseIf AppointmentCount = 2 Or AppointmentCount = 3 Then
-                frmBilling.txtDescription1.Text = "Follow up Check up"
-                frmBilling.txtDescription2.Text = "Iron Vitamin"
-                frmBilling.txtDescription3.Text = "B Complex"
-                frmBilling.txtDescription4.Text = "DHA"
-                frmBilling.txtUnitPrice1.Text = 500
-                frmBilling.txtUnitPrice2.Text = 15
-                frmBilling.txtUnitPrice3.Text = 25
-                frmBilling.txtUnitPrice4.Text = 20
-                frmBilling.txtQuantity1.Text = 1
-                frmBilling.txtQuantity2.Text = 30
-                frmBilling.txtQuantity3.Text = 30
-                frmBilling.txtQuantity4.Text = 90
-            ElseIf AppointmentCount >= 4 AndAlso AppointmentCount <= 8 Then
-                frmBilling.txtDescription1.Text = "Follow up Check up"
-                frmBilling.txtDescription2.Text = "Iron Vitamin"
-                frmBilling.txtDescription3.Text = "B Complex"
-                frmBilling.txtDescription4.Text = "DHA"
-                frmBilling.txtUnitPrice1.Text = 500
-                frmBilling.txtUnitPrice2.Text = 15
-                frmBilling.txtUnitPrice3.Text = 25
-                frmBilling.txtUnitPrice4.Text = 20
-                frmBilling.txtQuantity1.Text = 1
-                frmBilling.txtQuantity2.Text = 20
-                frmBilling.txtQuantity3.Text = 20
-                frmBilling.txtQuantity4.Text = 60
-            Else
-                frmBilling.txtDescription1.Text = "Follow up Check up"
-                frmBilling.txtDescription2.Text = "Iron Vitamin"
+        ElseIf AppointmentCount = 1 Then
+            frmBilling.txtDescription1.Text = "Initial Check up"
+            frmBilling.txtDescription2.Text = "Iron Vitamin"
+            frmBilling.txtDescription3.Text = "B Complex"
+            frmBilling.txtDescription4.Text = "DHA"
+
+            frmBilling.txtUnitPrice1.Text = 2000
+            frmBilling.txtUnitPrice2.Text = 15
+            frmBilling.txtUnitPrice3.Text = 25
+            frmBilling.txtUnitPrice4.Text = 20
+
+            frmBilling.txtQuantity1.Text = 1
+            frmBilling.txtQuantity2.Text = 30
+            frmBilling.txtQuantity3.Text = 30
+            frmBilling.txtQuantity4.Text = 90
+
+        ElseIf (AppointmentCount = 2 Or AppointmentCount = 3) And paymentMade = True Then
+            frmBilling.txtDescription1.Clear()
+            frmBilling.txtDescription2.Clear()
+            frmBilling.txtDescription3.Clear()
+            frmBilling.txtDescription4.Clear()
+            frmBilling.txtDescription5.Clear()
+
+            frmBilling.txtUnitPrice1.Text = 0
+            frmBilling.txtUnitPrice2.Text = 0
+            frmBilling.txtUnitPrice3.Text = 0
+            frmBilling.txtUnitPrice4.Text = 0
+            frmBilling.txtUnitPrice5.Text = 0
+
+            frmBilling.txtQuantity1.Text = 0
+            frmBilling.txtQuantity2.Text = 0
+            frmBilling.txtQuantity3.Text = 0
+            frmBilling.txtQuantity4.Text = 0
+            frmBilling.txtQuantity5.Text = 0
+
+        ElseIf AppointmentCount = 2 Or AppointmentCount = 3 Then
+            frmBilling.txtDescription1.Text = "Follow up Check up"
+            frmBilling.txtDescription2.Text = "Iron Vitamin"
+            frmBilling.txtDescription3.Text = "B Complex"
+            frmBilling.txtDescription4.Text = "DHA"
+            frmBilling.txtUnitPrice1.Text = 500
+            frmBilling.txtUnitPrice2.Text = 15
+            frmBilling.txtUnitPrice3.Text = 25
+            frmBilling.txtUnitPrice4.Text = 20
+            frmBilling.txtQuantity1.Text = 1
+            frmBilling.txtQuantity2.Text = 30
+            frmBilling.txtQuantity3.Text = 30
+            frmBilling.txtQuantity4.Text = 90
+
+
+
+        ElseIf (AppointmentCount >= 4 AndAlso AppointmentCount <= 8) And paymentMade = True Then
+            frmBilling.txtDescription1.Clear()
+            frmBilling.txtDescription2.Clear()
+            frmBilling.txtDescription3.Clear()
+            frmBilling.txtDescription4.Clear()
+            frmBilling.txtDescription5.Clear()
+
+            frmBilling.txtUnitPrice1.Text = 0
+            frmBilling.txtUnitPrice2.Text = 0
+            frmBilling.txtUnitPrice3.Text = 0
+            frmBilling.txtUnitPrice4.Text = 0
+            frmBilling.txtUnitPrice5.Text = 0
+
+            frmBilling.txtQuantity1.Text = 0
+            frmBilling.txtQuantity2.Text = 0
+            frmBilling.txtQuantity3.Text = 0
+            frmBilling.txtQuantity4.Text = 0
+            frmBilling.txtQuantity5.Text = 0
+
+
+        ElseIf AppointmentCount >= 4 AndAlso AppointmentCount <= 8 Then
+            frmBilling.txtDescription1.Text = "Follow up Check up"
+            frmBilling.txtDescription2.Text = "Iron Vitamin"
+            frmBilling.txtDescription3.Text = "B Complex"
+            frmBilling.txtDescription4.Text = "DHA"
+            frmBilling.txtUnitPrice1.Text = 500
+            frmBilling.txtUnitPrice2.Text = 15
+            frmBilling.txtUnitPrice3.Text = 25
+            frmBilling.txtUnitPrice4.Text = 20
+            frmBilling.txtQuantity1.Text = 1
+            frmBilling.txtQuantity2.Text = 20
+            frmBilling.txtQuantity3.Text = 20
+            frmBilling.txtQuantity4.Text = 60
+        ElseIf AppointmentCount > 8 And paymentMade = True Then
+
+            frmBilling.txtDescription1.Clear()
+            frmBilling.txtDescription2.Clear()
+            frmBilling.txtDescription3.Clear()
+            frmBilling.txtDescription4.Clear()
+            frmBilling.txtDescription5.Clear()
+
+            frmBilling.txtUnitPrice1.Text = 0
+            frmBilling.txtUnitPrice2.Text = 0
+            frmBilling.txtUnitPrice3.Text = 0
+            frmBilling.txtUnitPrice4.Text = 0
+            frmBilling.txtUnitPrice5.Text = 0
+
+            frmBilling.txtQuantity1.Text = 0
+            frmBilling.txtQuantity2.Text = 0
+            frmBilling.txtQuantity3.Text = 0
+            frmBilling.txtQuantity4.Text = 0
+            frmBilling.txtQuantity5.Text = 0
+
+        Else
+
+            frmBilling.txtDescription1.Text = "Follow up Check up"
+            frmBilling.txtDescription2.Text = "Iron Vitamin"
                 frmBilling.txtDescription3.Text = "B Complex"
                 frmBilling.txtDescription4.Text = "DHA"
                 frmBilling.txtUnitPrice1.Text = 500
