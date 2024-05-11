@@ -68,8 +68,6 @@ C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.pdb
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.xml
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.AssemblyReference.cache
-C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.AccountInformation_Doctor.resources
-C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.Form1.resources
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmMain.resources
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmRoutine.resources
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmDoctors.resources
@@ -87,3 +85,4 @@ C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.exe
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.xml
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.pdb
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Doctor.resources
+C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Doctor.resources

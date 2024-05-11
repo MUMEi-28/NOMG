@@ -7,6 +7,8 @@
             Change = Payment - Total
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
+                Dim frmMainInstance As frmMain = DirectCast(Application.OpenForms("frmMain"), frmMain)
+                frmMainInstance.paymentMade = True
                 Me.Hide()
                 txtPayment.Clear()
                 frmBilling.Hide()
@@ -29,11 +31,5 @@
 
     End Sub
 
-    Private Sub txtPayment_TextChanged(sender As Object, e As EventArgs) Handles txtPayment.TextChanged
 
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 End Class
