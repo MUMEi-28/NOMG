@@ -39,10 +39,10 @@ Partial Class frmRoutine
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.btnBack.Location = New System.Drawing.Point(457, 673)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnBack.Location = New System.Drawing.Point(343, 547)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(365, 48)
+        Me.btnBack.Size = New System.Drawing.Size(274, 39)
         Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -52,19 +52,19 @@ Partial Class frmRoutine
         Me.clbAppointments.CheckOnClick = True
         Me.clbAppointments.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clbAppointments.FormattingEnabled = True
-        Me.clbAppointments.Location = New System.Drawing.Point(35, 331)
-        Me.clbAppointments.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.clbAppointments.Location = New System.Drawing.Point(26, 269)
+        Me.clbAppointments.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.clbAppointments.Name = "clbAppointments"
-        Me.clbAppointments.Size = New System.Drawing.Size(361, 229)
+        Me.clbAppointments.Size = New System.Drawing.Size(272, 172)
         Me.clbAppointments.TabIndex = 3
         '
         'ptbAppointments
         '
         Me.ptbAppointments.Image = Global.NOMG.My.Resources.Resources.NOMG_UI_5_Updated
         Me.ptbAppointments.Location = New System.Drawing.Point(0, 1)
-        Me.ptbAppointments.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ptbAppointments.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ptbAppointments.Name = "ptbAppointments"
-        Me.ptbAppointments.Size = New System.Drawing.Size(1280, 800)
+        Me.ptbAppointments.Size = New System.Drawing.Size(960, 650)
         Me.ptbAppointments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbAppointments.TabIndex = 1
         Me.ptbAppointments.TabStop = False
@@ -73,10 +73,9 @@ Partial Class frmRoutine
         '
         Me.cbMed1.AutoSize = True
         Me.cbMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed1.Location = New System.Drawing.Point(479, 350)
-        Me.cbMed1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed1.Location = New System.Drawing.Point(359, 284)
         Me.cbMed1.Name = "cbMed1"
-        Me.cbMed1.Size = New System.Drawing.Size(128, 33)
+        Me.cbMed1.Size = New System.Drawing.Size(105, 29)
         Me.cbMed1.TabIndex = 4
         Me.cbMed1.Text = "Flu Vac"
         Me.cbMed1.UseVisualStyleBackColor = True
@@ -85,10 +84,9 @@ Partial Class frmRoutine
         '
         Me.cbMed2.AutoSize = True
         Me.cbMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed2.Location = New System.Drawing.Point(479, 402)
-        Me.cbMed2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed2.Location = New System.Drawing.Point(359, 327)
         Me.cbMed2.Name = "cbMed2"
-        Me.cbMed2.Size = New System.Drawing.Size(182, 33)
+        Me.cbMed2.Size = New System.Drawing.Size(146, 29)
         Me.cbMed2.TabIndex = 5
         Me.cbMed2.Text = "Iron Vitamin"
         Me.cbMed2.UseVisualStyleBackColor = True
@@ -97,10 +95,9 @@ Partial Class frmRoutine
         '
         Me.cbMed3.AutoSize = True
         Me.cbMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed3.Location = New System.Drawing.Point(479, 455)
-        Me.cbMed3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed3.Location = New System.Drawing.Point(359, 370)
         Me.cbMed3.Name = "cbMed3"
-        Me.cbMed3.Size = New System.Drawing.Size(168, 33)
+        Me.cbMed3.Size = New System.Drawing.Size(136, 29)
         Me.cbMed3.TabIndex = 6
         Me.cbMed3.Text = "B Complex"
         Me.cbMed3.UseVisualStyleBackColor = True
@@ -109,10 +106,9 @@ Partial Class frmRoutine
         '
         Me.cbMed4.AutoSize = True
         Me.cbMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed4.Location = New System.Drawing.Point(479, 510)
-        Me.cbMed4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMed4.Location = New System.Drawing.Point(359, 414)
         Me.cbMed4.Name = "cbMed4"
-        Me.cbMed4.Size = New System.Drawing.Size(91, 33)
+        Me.cbMed4.Size = New System.Drawing.Size(76, 29)
         Me.cbMed4.TabIndex = 7
         Me.cbMed4.Text = "DHA"
         Me.cbMed4.UseVisualStyleBackColor = True
@@ -121,19 +117,18 @@ Partial Class frmRoutine
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(875, 356)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(656, 289)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(341, 182)
+        Me.Label2.Size = New System.Drawing.Size(288, 154)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Iron Vitamin once a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "B Complex once a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "DHA 3 times a day" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Flu Vac o" &
     "nce during pregnancy"
         '
         'frmRoutine
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1280, 782)
+        Me.ClientSize = New System.Drawing.Size(960, 635)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbMed4)
         Me.Controls.Add(Me.cbMed3)
@@ -142,7 +137,7 @@ Partial Class frmRoutine
         Me.Controls.Add(Me.clbAppointments)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ptbAppointments)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.Name = "frmRoutine"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
