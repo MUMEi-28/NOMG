@@ -222,23 +222,7 @@ Public Class frmMain
             frmBilling.txtQuantity3.Text = 0
             frmBilling.txtQuantity4.Text = 0
         ElseIf (AppointmentCount = 1 And paymentMade = True) Or (AppointmentCount >= 2 And AppointmentCount <= 3 And paymentMade = True) Or (AppointmentCount >= 4 AndAlso AppointmentCount <= 8 And paymentMade = True) Or (AppointmentCount > 8 And paymentMade = True) Then
-            frmBilling.txtDescription1.Clear()
-            frmBilling.txtDescription2.Clear()
-            frmBilling.txtDescription3.Clear()
-            frmBilling.txtDescription4.Clear()
-            frmBilling.txtDescription5.Clear()
-
-            frmBilling.txtUnitPrice1.Text = 0
-            frmBilling.txtUnitPrice2.Text = 0
-            frmBilling.txtUnitPrice3.Text = 0
-            frmBilling.txtUnitPrice4.Text = 0
-            frmBilling.txtUnitPrice5.Text = 0
-
-            frmBilling.txtQuantity1.Text = 0
-            frmBilling.txtQuantity2.Text = 0
-            frmBilling.txtQuantity3.Text = 0
-            frmBilling.txtQuantity4.Text = 0
-            frmBilling.txtQuantity5.Text = 0
+            frmBilling.SetIsPaid()
 
 
 
