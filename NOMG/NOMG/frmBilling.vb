@@ -93,5 +93,24 @@
         txtQuantity4.Text = 0
         txtQuantity5.Text = 0
     End Sub
+    Public Sub ClearBillingFields()
+        txtDescription1.Clear()
+        txtDescription2.Clear()
+        txtDescription3.Clear()
+        txtDescription4.Clear()
+        txtDescription5.Clear()
+
+        txtUnitPrice1.Text = 0
+        txtUnitPrice2.Text = 0
+        txtUnitPrice3.Text = 0
+        txtUnitPrice4.Text = 0
+        txtUnitPrice5.Text = 0
+
+        txtQuantity1.Text = 0
+        txtQuantity2.Text = 0
+        txtQuantity3.Text = 0
+        txtQuantity4.Text = 0
+        txtQuantity5.Text = 0
+    End Sub
 
 End Class

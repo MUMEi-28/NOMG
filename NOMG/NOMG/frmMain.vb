@@ -207,20 +207,8 @@ Public Class frmMain
 
 
         If AppointmentCount = 0 Then
-            frmBilling.txtDescription1.Clear()
-            frmBilling.txtDescription2.Clear()
-            frmBilling.txtDescription3.Clear()
-            frmBilling.txtDescription4.Clear()
+            frmBilling.ClearBillingFields()
 
-            frmBilling.txtUnitPrice1.Text = 0
-            frmBilling.txtUnitPrice2.Text = 0
-            frmBilling.txtUnitPrice3.Text = 0
-            frmBilling.txtUnitPrice4.Text = 0
-
-            frmBilling.txtQuantity1.Text = 0
-            frmBilling.txtQuantity2.Text = 0
-            frmBilling.txtQuantity3.Text = 0
-            frmBilling.txtQuantity4.Text = 0
         ElseIf (AppointmentCount = 1 And paymentMade = True) Or (AppointmentCount >= 2 And AppointmentCount <= 3 And paymentMade = True) Or (AppointmentCount >= 4 AndAlso AppointmentCount <= 8 And paymentMade = True) Or (AppointmentCount > 8 And paymentMade = True) Then
             frmBilling.SetIsPaid()
 
@@ -240,7 +228,6 @@ Public Class frmMain
             frmBilling.SetBillingFieldsForForthtoEightAppointment()
 
 
-
         Else
             frmBilling.SetBillingFieldsForMorethanEightAppointment()
 
@@ -249,11 +236,21 @@ Public Class frmMain
 
 
 
+        Me.Hide()
+
+
+
         If frmRoutine.cbMed1.Checked = True Then
+            frmRoutine.cbMed1.Checked = False
             frmRoutine.cbMed1.Enabled = False
             frmBilling.txtQuantity5.Text = 1
             frmBilling.txtDescription5.Text = "Flu Vac"
             frmBilling.txtUnitPrice5.Text = 1500
+        Else
+            frmBilling.txtQuantity5.Text = 0
+            frmBilling.txtDescription5.Clear()
+            frmBilling.txtUnitPrice5.Text = 0
+
         End If
 
         frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
