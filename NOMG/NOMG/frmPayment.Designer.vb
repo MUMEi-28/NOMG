@@ -46,7 +46,7 @@ Partial Class frmPayment
         Me.txtPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPayment.Location = New System.Drawing.Point(177, 71)
-        Me.txtPayment.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPayment.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPayment.Name = "txtPayment"
         Me.txtPayment.Size = New System.Drawing.Size(167, 38)
         Me.txtPayment.TabIndex = 1
@@ -57,7 +57,7 @@ Partial Class frmPayment
         Me.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPay.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnPay.Location = New System.Drawing.Point(381, 52)
-        Me.btnPay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPay.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPay.Name = "btnPay"
         Me.btnPay.Size = New System.Drawing.Size(107, 36)
         Me.btnPay.TabIndex = 2
@@ -70,7 +70,7 @@ Partial Class frmPayment
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnCancel.Location = New System.Drawing.Point(381, 95)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(107, 36)
         Me.btnCancel.TabIndex = 3
@@ -87,10 +87,11 @@ Partial Class frmPayment
         Me.Controls.Add(Me.btnPay)
         Me.Controls.Add(Me.txtPayment)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmPayment"
-        Me.Text = "Form7"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Payment"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
