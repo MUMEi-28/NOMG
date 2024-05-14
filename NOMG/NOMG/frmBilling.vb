@@ -10,6 +10,16 @@
         Me.Hide()
 
     End Sub
+    Public Sub SetInitialCheckup()
+        txtDescription1.Text = "Initial Check up"
+        txtUnitPrice1.Text = 2000
+        txtQuantity1.Text = 1
+    End Sub
+    Public Sub setFollowUpCheckUp()
+        txtDescription1.Text = "Follow up Check up"
+        txtUnitPrice1.Text = 500
+        txtQuantity1.Text = 1
+    End Sub
     Public Sub SetBillingFieldsForFirstAppointment()
         txtDescription1.Text = "Initial Check up"
         txtDescription2.Text = "Iron Vitamin"
