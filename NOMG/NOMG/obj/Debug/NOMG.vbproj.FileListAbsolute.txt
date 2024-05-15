@@ -60,7 +60,6 @@ C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmBilling
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmPayment.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmBilling.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmPayment.resources
-D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.AccountInformation_Doctor.resources
 D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Continuation.resources
 C:\Users\User\OneDrive\Documents\GitHub\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Continuation.resources
 C:\Users\Administrator\Documents\GitHub\NOMG\NOMG\NOMG\bin\Debug\NOMG.exe.config
@@ -108,3 +107,4 @@ C:\Users\Trisha\OneDrive\Desktop\comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.vbproj.Co
 C:\Users\Trisha\OneDrive\Desktop\comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.exe
 C:\Users\Trisha\OneDrive\Desktop\comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.xml
 C:\Users\Trisha\OneDrive\Desktop\comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.pdb
+D:\_Main\Git\Comprog\NOMG\NOMG\NOMG\obj\Debug\NOMG.frmAccountInformation_Doctor.resources
