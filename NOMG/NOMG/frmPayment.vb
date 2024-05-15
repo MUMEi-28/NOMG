@@ -7,8 +7,7 @@
             Change = Payment - Total
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
-                Dim frmMainInstance As frmMain = DirectCast(Application.OpenForms("frmMain"), frmMain)
-                frmMainInstance.paymentMade = True
+                frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
                 Me.Hide()
                 txtPayment.Clear()
                 frmBilling.Hide()

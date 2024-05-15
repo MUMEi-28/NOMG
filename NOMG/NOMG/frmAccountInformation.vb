@@ -41,6 +41,7 @@ Public Class frmAccountInformation
 		Private doctor As Doctor
 		Private dteLMC As Date
 		Private listCheckedAppointments As New List(Of Integer)
+		Private listIsPaid As New List(Of Boolean)
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -112,11 +113,18 @@ Public Class frmAccountInformation
 		Public Function GetListCheckedAppointments() As List(Of Integer)
 			Return listCheckedAppointments
 		End Function
+		Public Function GetListIsPaid() As List(Of Boolean)
+			Return listIsPaid
+		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
 		Public Sub SetListCheckedAppointments(ByVal listTempCA As List(Of Integer))
 			listCheckedAppointments = listTempCA
+		End Sub
+
+		Public Sub SetListIsPaid(ByVal listTempIsPaid As List(Of Boolean))
+			listIsPaid = listTempIsPaid
 		End Sub
 	End Class
 

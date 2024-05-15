@@ -8,10 +8,6 @@ Public Class frmMain
     Dim blnLogOut As Boolean
     Dim intI As Integer
     Dim counter As Integer
-    Public paymentMade As Boolean = False
-    Public Sub ResetPaymentMade()
-        paymentMade = False
-    End Sub
 
     Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
         If blnLogOut = False And frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
@@ -200,40 +196,25 @@ Public Class frmMain
 
     Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
         frmBilling.Show()
-        Dim frmMainInstance As frmMain = DirectCast(Application.OpenForms("frmMain"), frmMain)
-        frmMainInstance.ResetPaymentMade()
-
         Dim AppointmentCount As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
-
 
         If AppointmentCount = 0 Then
             frmBilling.ClearBillingFields()
-
-        ElseIf (AppointmentCount = 1 And paymentMade = True) Or (AppointmentCount >= 2 And AppointmentCount <= 3 And paymentMade = True) Or (AppointmentCount >= 4 AndAlso AppointmentCount <= 8 And paymentMade = True) Or (AppointmentCount > 8 And paymentMade = True) Then
-            frmBilling.SetIsPaid()
-
-
-
-
-        ElseIf AppointmentCount = 1 Then
-            frmBilling.SetBillingFieldsForFirstAppointment()
-
-
-
-        ElseIf AppointmentCount = 2 Or AppointmentCount = 3 Then
-            frmBilling.SetBillingFieldsForSecondorThirdAppointment()
-
-
-        ElseIf AppointmentCount >= 4 AndAlso AppointmentCount <= 8 Then
-            frmBilling.SetBillingFieldsForForthtoEightAppointment()
-
-
         Else
-            frmBilling.SetBillingFieldsForMorethanEightAppointment()
-
-
+            If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
+                If AppointmentCount = 1 Then
+                    frmBilling.SetBillingFieldsForFirstAppointment()
+                ElseIf AppointmentCount = 2 Or AppointmentCount = 3 Then
+                    frmBilling.SetBillingFieldsForSecondorThirdAppointment()
+                ElseIf AppointmentCount >= 4 AndAlso AppointmentCount <= 8 Then
+                    frmBilling.SetBillingFieldsForForthtoEightAppointment()
+                Else
+                    frmBilling.SetBillingFieldsForMorethanEightAppointment()
+                End If
+            Else
+                frmBilling.ClearBillingFields()
+            End If
         End If
-
 
 
         Me.Hide()

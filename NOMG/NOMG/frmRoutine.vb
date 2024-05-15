@@ -1,4 +1,6 @@
-﻿Public Class frmRoutine
+﻿Imports System.Runtime.CompilerServices
+
+Public Class frmRoutine
     Dim intI As Integer
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         frmMain.Show()
@@ -6,7 +8,7 @@
 
         intI = 0
         Dim Total As Integer = clbAppointments.Items.Count
-        While intI < total
+        While intI < Total
             clbAppointments.Items.RemoveAt(0)
             intI = intI + 1
         End While
@@ -23,15 +25,19 @@
             Else
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
+                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
+                    frmAccountInformation.currentUser.GetListIsPaid(e.Index) = False
                 End If
             End If
         Else
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
+                frmAccountInformation.currentUser.GetListIsPaid.Add(False)
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
+                frmAccountInformation.currentUser.GetListIsPaid(e.Index) = False
             End If
         End If
 
