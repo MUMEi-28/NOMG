@@ -1,5 +1,7 @@
 ﻿Public Class frmAccountInformation_Doctor
-	Dim tempDoctor As frmAccountInformation.Doctor
+	Dim tempDoctor2 As frmAccountInformation.Doctor
+
+
 	Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
 		frmAccountInformation_Continuation.Show()
 		Me.Hide()
@@ -13,7 +15,7 @@
 		newUser.SetUserCredentials(frmAccountInformation.txtName.Text, frmAccountInformation.txtAddress.Text,
 								   frmAccountInformation.txtEmail.Text, frmAccountInformation.txtPassword.Text,
 								   Val(frmAccountInformation_Continuation.txtAge.Text), frmAccountInformation_Continuation.txtFirstBaby.Text,
-								   Val(frmAccountInformation_Continuation.txtGasAge.Text), tempDoctor, frmAccountInformation_Continuation.dtpLMC.Value)
+								   Val(frmAccountInformation_Continuation.txtGasAge.Text), tempDoctor2, frmAccountInformation_Continuation.dtpLMC.Value)
 
 		frmAccountInformation.listUsers.Add(newUser)
 
@@ -25,7 +27,7 @@
 		frmAccountInformation_Continuation.txtAge.Clear()
 		frmAccountInformation_Continuation.txtFirstBaby.Clear()
 		frmAccountInformation_Continuation.txtGasAge.Clear()
-		tempDoctor = Nothing
+		tempDoctor2 = Nothing
 		frmAccountInformation_Continuation.dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 
 		' Hide the current form and show the login form
@@ -35,16 +37,16 @@
 
 	Private Sub btnDoctor1_Click(sender As Object, e As EventArgs) Handles btnDoctor1.Click
 		MsgBox(frmAccountInformation.listDoctors(0).GetName & " is selected.")
-		tempDoctor = frmAccountInformation.listDoctors(0)
+		tempDoctor2 = frmAccountInformation.listDoctors(0)
 	End Sub
 
 	Private Sub btnDoctor2_Click(sender As Object, e As EventArgs) Handles btnDoctor2.Click
 		MsgBox(frmAccountInformation.listDoctors(1).GetName & " is selected.")
-		tempDoctor = frmAccountInformation.listDoctors(0)
+		tempDoctor2 = frmAccountInformation.listDoctors(1)
 	End Sub
 
 	Private Sub btnDoctor3_Click(sender As Object, e As EventArgs) Handles btnDoctor3.Click
 		MsgBox(frmAccountInformation.listDoctors(2).GetName & " is selected.")
-		tempDoctor = frmAccountInformation.listDoctors(0)
+		tempDoctor2 = frmAccountInformation.listDoctors(2)
 	End Sub
 End Class
