@@ -253,7 +253,8 @@ Public Class frmMain
 		Try
 			Dim filePath As String = "file.txt"
 			Using file As New FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write)
-				Dim textToWrite As String = "HELLOO"
+
+				Dim textToWrite As String = "I ALONE AM THE HONORED ONE"
 				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
