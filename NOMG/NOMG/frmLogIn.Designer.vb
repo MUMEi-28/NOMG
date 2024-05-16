@@ -43,7 +43,7 @@ Partial Class frmLogIn
         Me.btnLogIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnLogIn.Location = New System.Drawing.Point(176, 300)
-        Me.btnLogIn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLogIn.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogIn.Name = "btnLogIn"
         Me.btnLogIn.Size = New System.Drawing.Size(253, 73)
         Me.btnLogIn.TabIndex = 2
@@ -57,7 +57,7 @@ Partial Class frmLogIn
         Me.btnBackToStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBackToStart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.btnBackToStart.Location = New System.Drawing.Point(176, 412)
-        Me.btnBackToStart.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBackToStart.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBackToStart.Name = "btnBackToStart"
         Me.btnBackToStart.Size = New System.Drawing.Size(253, 73)
         Me.btnBackToStart.TabIndex = 3
@@ -82,7 +82,7 @@ Partial Class frmLogIn
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.txtEmail.Location = New System.Drawing.Point(45, 158)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(525, 26)
         Me.txtEmail.TabIndex = 0
@@ -110,7 +110,7 @@ Partial Class frmLogIn
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtEmail)
         Me.Panel1.Location = New System.Drawing.Point(16, 112)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(632, 527)
         Me.Panel1.TabIndex = 10
@@ -133,7 +133,7 @@ Partial Class frmLogIn
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.txtPassword.Location = New System.Drawing.Point(45, 236)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(525, 26)
         Me.txtPassword.TabIndex = 1
@@ -155,7 +155,7 @@ Partial Class frmLogIn
         '
         Me.PictureBox2.Image = Global.NOMG.My.Resources.Resources.Dr_Login
         Me.PictureBox2.Location = New System.Drawing.Point(656, -81)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(660, 1078)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -171,8 +171,8 @@ Partial Class frmLogIn
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmLogIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -405,6 +405,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnSeeRoutine)
         Me.Controls.Add(Me.lblAppointment)
         Me.Controls.Add(Me.btnLogOut)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.Name = "frmMain"

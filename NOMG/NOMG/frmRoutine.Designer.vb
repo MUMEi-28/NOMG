@@ -142,6 +142,7 @@ Partial Class frmRoutine
         Me.Controls.Add(Me.clbAppointments)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ptbAppointments)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.Name = "frmRoutine"

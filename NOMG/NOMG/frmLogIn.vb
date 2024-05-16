@@ -26,6 +26,8 @@
 				frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 				frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor.GetName & "."
 
+				frmMain.blnLogOut = False
+
 				frmRoutine.getNextCheckUp()
 
 				frmMain.Show()

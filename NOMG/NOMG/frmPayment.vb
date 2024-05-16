@@ -8,6 +8,7 @@
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
                 frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
+                frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill - Payment)
                 Me.Hide()
                 txtPayment.Clear()
                 frmBilling.Hide()
@@ -27,8 +28,6 @@
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         frmBilling.Show()
         Me.Hide()
-
     End Sub
-
 
 End Class

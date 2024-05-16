@@ -87,6 +87,7 @@ Partial Class frmPayment
         Me.Controls.Add(Me.btnPay)
         Me.Controls.Add(Me.txtPayment)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmPayment"

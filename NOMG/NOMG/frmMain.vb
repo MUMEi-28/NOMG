@@ -5,7 +5,7 @@ Public Class frmMain
     Public txtFrmMainPD As New List(Of TextBox)
     Public txtFrmMainCI As New List(Of TextBox)
 
-    Dim blnLogOut As Boolean
+    Public blnLogOut As Boolean
     Dim intI As Integer
     Dim counter As Integer
 
@@ -46,7 +46,6 @@ Public Class frmMain
 
     Public Sub New()
         InitializeComponent()
-        blnLogOut = False
 
         txtFrmMainCI.Add(txtCIName)
         txtFrmMainCI.Add(txtCIAddress)
@@ -74,7 +73,7 @@ Public Class frmMain
         frmStart.Show()
         Me.Hide()
         blnLogOut = True
-        ' It is not set to current date because if it is set to the said date, users could not set it to the current date.
+        'It is not set to current date because if it is set to the said date, users could not set it to the current date.
         dtpFirstAppointment.Value = New Date(Date.Today.Year, Date.Today.Month, Date.Today.Day - 1)
     End Sub
 
@@ -215,6 +214,5 @@ Public Class frmMain
         frmBilling.Calculate()
         frmBilling.PatientName()
         Me.Hide()
-
     End Sub
 End Class

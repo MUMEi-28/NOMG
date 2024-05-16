@@ -42,6 +42,7 @@ Public Class frmAccountInformation
 		Private dteLMC As Date
 		Private listCheckedAppointments As New List(Of Integer)
 		Private listIsPaid As New List(Of Boolean)
+		Private dblBill As New Double
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -116,6 +117,9 @@ Public Class frmAccountInformation
 		Public Function GetListIsPaid() As List(Of Boolean)
 			Return listIsPaid
 		End Function
+		Public Function GetDblBill() As Double
+			Return dblBill
+		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
@@ -125,6 +129,9 @@ Public Class frmAccountInformation
 
 		Public Sub SetListIsPaid(ByVal listTempIsPaid As List(Of Boolean))
 			listIsPaid = listTempIsPaid
+		End Sub
+		Public Sub SetDblBill(ByVal dblTempBill As Double)
+			dblBill = dblTempBill
 		End Sub
 	End Class
 

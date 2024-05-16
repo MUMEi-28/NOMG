@@ -33,6 +33,8 @@
         txtQuantity2.Text = dteInterval.Days
         txtQuantity3.Text = dteInterval.Days
         txtQuantity4.Text = dteInterval.Days * 3
+
+        txtPendingAmount.Text = frmAccountInformation.currentUser.GetDblBill
     End Sub
 
     Public Sub FluVac()
@@ -46,7 +48,6 @@
             txtQuantity5.Text = 0
             txtDescription5.Clear()
             txtUnitPrice5.Text = 0
-
         End If
     End Sub
 
@@ -68,6 +69,9 @@
         txtQuantity3.Text = 0
         txtQuantity4.Text = 0
         txtQuantity5.Text = 0
+
+        txtPendingAmount.Text = 0
+        txtTotal.Text = 0
     End Sub
 
     Public Sub Calculate()
@@ -76,10 +80,10 @@
         txtAmount3.Text = (Val(txtQuantity3.Text) * Val(txtUnitPrice3.Text))
         txtAmount4.Text = (Val(txtQuantity4.Text) * Val(txtUnitPrice4.Text))
         txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
-        txtTotal.Text = (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text))
+        frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill + Val((Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text))))
+        txtTotal.Text = frmAccountInformation.currentUser.GetDblBill
     End Sub
     Public Sub PatientName()
         txtName.Text = frmAccountInformation.currentUser.GetName()
-
     End Sub
 End Class

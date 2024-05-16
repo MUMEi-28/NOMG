@@ -48,7 +48,7 @@ Partial Class FrmSplashScreen
         Me.panelLoadingBG.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
         Me.panelLoadingBG.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(111, Byte), Integer))
         Me.panelLoadingBG.Location = New System.Drawing.Point(15, 570)
-        Me.panelLoadingBG.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelLoadingBG.Margin = New System.Windows.Forms.Padding(4)
         Me.panelLoadingBG.Name = "panelLoadingBG"
         Me.panelLoadingBG.Size = New System.Drawing.Size(1160, 38)
         Me.panelLoadingBG.TabIndex = 2
@@ -58,7 +58,7 @@ Partial Class FrmSplashScreen
         Me.panelLoading.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.panelLoading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.panelLoading.Location = New System.Drawing.Point(16, 570)
-        Me.panelLoading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelLoading.Margin = New System.Windows.Forms.Padding(4)
         Me.panelLoading.Name = "panelLoading"
         Me.panelLoading.Size = New System.Drawing.Size(17, 38)
         Me.panelLoading.TabIndex = 3
@@ -92,7 +92,7 @@ Partial Class FrmSplashScreen
         Me.Controls.Add(Me.panelLoadingBG)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "FrmSplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

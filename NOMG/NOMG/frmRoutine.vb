@@ -58,4 +58,8 @@ Public Class frmRoutine
             frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
         End If
     End Sub
+
+    Private Sub ptbAppointments_Click(sender As Object, e As EventArgs) Handles ptbAppointments.Click
+
+    End Sub
 End Class
