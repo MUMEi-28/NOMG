@@ -187,7 +187,7 @@ Public Class frmAccountInformation
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
-			MsgBox("Can only digit")
+			MsgBox("Can only enter digit")
 		End If
 	End Sub
 
