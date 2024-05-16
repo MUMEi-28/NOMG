@@ -133,4 +133,16 @@
         txtQuantity5.Text = 0
     End Sub
 
+    Public Sub Calculate()
+        txtAmount1.Text = (Val(txtQuantity1.Text) * Val(txtUnitPrice1.Text))
+        txtAmount2.Text = (Val(txtQuantity2.Text) * Val(txtUnitPrice2.Text))
+        txtAmount3.Text = (Val(txtQuantity3.Text) * Val(txtUnitPrice3.Text))
+        txtAmount4.Text = (Val(txtQuantity4.Text) * Val(txtUnitPrice4.Text))
+        txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
+        txtTotal.Text = (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text))
+    End Sub
+    Public Sub PatientName()
+        txtName.Text = frmAccountInformation.currentUser.GetName()
+
+    End Sub
 End Class
