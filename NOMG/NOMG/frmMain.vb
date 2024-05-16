@@ -202,37 +202,15 @@ Public Class frmMain
             frmBilling.ClearBillingFields()
         Else
             If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
-                If AppointmentCount = 1 Then
-                    frmBilling.SetBillingFieldsForFirstAppointment()
-                ElseIf AppointmentCount = 2 Or AppointmentCount = 3 Then
-                    frmBilling.SetBillingFieldsForSecondorThirdAppointment()
-                ElseIf AppointmentCount >= 4 AndAlso AppointmentCount <= 8 Then
-                    frmBilling.SetBillingFieldsForForthtoEightAppointment()
-                Else
-                    frmBilling.SetBillingFieldsForMorethanEightAppointment()
-                End If
+                frmBilling.setCheckUpBill()
+                frmBilling.SetBillingFields()
+                frmBilling.FluVac()
             Else
                 frmBilling.ClearBillingFields()
             End If
         End If
 
-
         Me.Hide()
-
-
-
-        If frmRoutine.cbMed1.Checked = True Then
-            frmRoutine.cbMed1.Checked = False
-            frmRoutine.cbMed1.Enabled = False
-            frmBilling.txtQuantity5.Text = 1
-            frmBilling.txtDescription5.Text = "Flu Vac"
-            frmBilling.txtUnitPrice5.Text = 1500
-        Else
-            frmBilling.txtQuantity5.Text = 0
-            frmBilling.txtDescription5.Clear()
-            frmBilling.txtUnitPrice5.Text = 0
-
-        End If
 
         frmBilling.txtAmount1.Text = (Val(frmBilling.txtQuantity1.Text) * Val(frmBilling.txtUnitPrice1.Text))
         frmBilling.txtAmount2.Text = (Val(frmBilling.txtQuantity2.Text) * Val(frmBilling.txtUnitPrice2.Text))

@@ -1,24 +1,53 @@
 ﻿Public Class frmBilling
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
         frmPayment.Show()
-
-
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         frmMain.Show()
         Me.Hide()
+    End Sub
+    Public Sub setCheckUpBill()
+        txtQuantity1.Text = 1
+        If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 1 Then
+            ' Set initial check up bill
+            txtDescription1.Text = "Initial Check up"
+            txtUnitPrice1.Text = 2000
+        Else
+            txtDescription1.Text = "Follow up Check up"
+            txtUnitPrice1.Text = 500
+        End If
+    End Sub
 
+    Public Sub SetBillingFields()
+        txtDescription2.Text = "Iron Vitamin"
+        txtDescription3.Text = "B Complex"
+        txtDescription4.Text = "DHA"
+
+        txtUnitPrice2.Text = 15
+        txtUnitPrice3.Text = 25
+        txtUnitPrice4.Text = 20
+
+        Dim dteInterval As TimeSpan = frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count) - frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1)
+
+        txtQuantity2.Text = dteInterval.Days
+        txtQuantity3.Text = dteInterval.Days
+        txtQuantity4.Text = dteInterval.Days * 3
     End Sub
-    Public Sub SetInitialCheckup()
-        txtDescription1.Text = "Initial Check up"
-        txtUnitPrice1.Text = 2000
-        txtQuantity1.Text = 1
-    End Sub
-    Public Sub setFollowUpCheckUp()
-        txtDescription1.Text = "Follow up Check up"
-        txtUnitPrice1.Text = 500
-        txtQuantity1.Text = 1
+
+    Public Sub FluVac()
+        If frmRoutine.cbMed1.Checked = True Then
+            frmRoutine.cbMed1.Checked = False
+            frmRoutine.cbMed1.Enabled = False
+            txtQuantity5.Text = 1
+            txtDescription5.Text = "Flu Vac"
+            txtUnitPrice5.Text = 1500
+        Else
+            txtQuantity5.Text = 0
+            txtDescription5.Clear()
+            txtUnitPrice5.Text = 0
+
+        End If
     End Sub
     Public Sub SetBillingFieldsForFirstAppointment()
         txtDescription1.Text = "Initial Check up"
