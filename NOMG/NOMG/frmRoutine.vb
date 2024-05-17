@@ -25,31 +25,31 @@ Public Class frmRoutine
             Else
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                    If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                    If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                         frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                        frmBilling.MainBilling()
                     End If
-                    frmBilling.MainBilling()
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                    If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                    If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                         frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                        frmBilling.MainBilling()
                     End If
-                    frmBilling.MainBilling()
                 End If
             End If
         Else
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                     frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    frmBilling.MainBilling()
                 End If
-                frmBilling.MainBilling()
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                     frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    frmBilling.MainBilling()
                 End If
-                frmBilling.MainBilling()
             End If
         End If
 

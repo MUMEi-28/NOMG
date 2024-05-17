@@ -8,6 +8,7 @@ Public Class frmMain
 	Public txtFrmMainCI As New List(Of TextBox)
 
 	Public blnLogOut As Boolean
+
 	Dim intI As Integer
 	Dim counter As Integer
 
@@ -83,8 +84,6 @@ Public Class frmMain
 	End Sub
 
 	Private Sub btnSeeRoutine_Click(sender As Object, e As EventArgs) Handles btnSeeRoutine.Click
-
-
 		If frmAccountInformation.currentUser.GetListAppointments.Count > 0 Then
 			' Checks if the user has appointments to prevent setting more
 			If frmAccountInformation.currentUser.GetListAppointments.Count < 2 Then
