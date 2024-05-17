@@ -271,25 +271,12 @@ Public Class frmMain
 		End Try
 	End Sub
 	Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
-		frmBilling.Show()
-		Dim AppointmentCount As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
-
-		If AppointmentCount = 0 Then
+		If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Then
 			frmBilling.ClearBillingFields()
-		Else
-			If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
-				frmBilling.setCheckUpBill()
-				frmBilling.SetBillingFields()
-				frmBilling.FluVac()
-			Else
-				frmBilling.ClearBillingFields()
-			End If
 		End If
 
-		Me.Hide()
-
-		frmBilling.Calculate()
-		frmBilling.PatientName()
+		frmBilling.txtName.Text = frmAccountInformation.currentUser.GetName()
+		frmBilling.Show()
 		Me.Hide()
 	End Sub
 End Class

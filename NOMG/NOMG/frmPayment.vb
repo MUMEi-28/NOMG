@@ -8,7 +8,15 @@
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
                 frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
-                frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill - Payment)
+                For Each isPaid In frmAccountInformation.currentUser.GetListIsPaid
+                    If isPaid = False Then
+                        isPaid = True
+                    End If
+                Next
+
+                frmBilling.ClearBillingFields()
+                frmAccountInformation.currentUser.SetDblBill(0)
+
                 Me.Hide()
                 txtPayment.Clear()
                 frmBilling.Hide()

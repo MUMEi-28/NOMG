@@ -45,6 +45,7 @@ Partial Class frmPayment
         Me.txtPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.txtPayment.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPayment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.txtPayment.Location = New System.Drawing.Point(177, 71)
         Me.txtPayment.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPayment.Name = "txtPayment"

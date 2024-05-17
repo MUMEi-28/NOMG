@@ -1,4 +1,21 @@
 ﻿Public Class frmBilling
+    Public Sub MainBilling()
+        Dim AppointmentCount As Integer = frmAccountInformation.currentUser.GetListCheckedAppointments.Count
+
+        If AppointmentCount = 0 Then
+            ClearBillingFields()
+        Else
+            If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
+                setCheckUpBill()
+                SetBillingFields()
+                FluVac()
+            Else
+                ClearBillingFields()
+            End If
+        End If
+
+        Calculate()
+    End Sub
     Private Sub btnPayment_Click(sender As Object, e As EventArgs) Handles btnPayment.Click
         frmPayment.Show()
     End Sub
@@ -48,6 +65,7 @@
             txtQuantity5.Text = 0
             txtDescription5.Clear()
             txtUnitPrice5.Text = 0
+            txtAmount5.Text = 0
         End If
     End Sub
 
@@ -70,6 +88,12 @@
         txtQuantity4.Text = 0
         txtQuantity5.Text = 0
 
+        txtAmount1.Text = 0
+        txtAmount2.Text = 0
+        txtAmount3.Text = 0
+        txtAmount4.Text = 0
+        txtAmount5.Text = 0
+
         txtPendingAmount.Text = 0
         txtTotal.Text = 0
     End Sub
@@ -80,10 +104,7 @@
         txtAmount3.Text = (Val(txtQuantity3.Text) * Val(txtUnitPrice3.Text))
         txtAmount4.Text = (Val(txtQuantity4.Text) * Val(txtUnitPrice4.Text))
         txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
-        frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill + Val((Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text))))
+        frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill + (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text)))
         txtTotal.Text = frmAccountInformation.currentUser.GetDblBill
-    End Sub
-    Public Sub PatientName()
-        txtName.Text = frmAccountInformation.currentUser.GetName()
     End Sub
 End Class

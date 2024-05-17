@@ -25,19 +25,31 @@ Public Class frmRoutine
             Else
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                        frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    End If
+                    frmBilling.MainBilling()
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                    frmAccountInformation.currentUser.GetListIsPaid(e.Index) = False
+                    If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                        frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    End If
+                    frmBilling.MainBilling()
                 End If
             End If
         Else
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                End If
+                frmBilling.MainBilling()
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                frmAccountInformation.currentUser.GetListIsPaid(e.Index) = False
+                If frmAccountInformation.currentUser.GetListIsPaid.Count = e.Index Then
+                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                End If
+                frmBilling.MainBilling()
             End If
         End If
 
@@ -57,9 +69,5 @@ Public Class frmRoutine
         Else
             frmMain.lblAppointment.Text = "Next Check Up: " & vbCrLf & frmAccountInformation.currentUser.GetListAppointments(frmAccountInformation.currentUser.GetListCheckedAppointments.Count)
         End If
-    End Sub
-
-    Private Sub ptbAppointments_Click(sender As Object, e As EventArgs) Handles ptbAppointments.Click
-
     End Sub
 End Class
