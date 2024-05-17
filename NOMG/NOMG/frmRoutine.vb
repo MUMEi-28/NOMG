@@ -23,33 +23,21 @@ Public Class frmRoutine
                 MsgBox("The appointment can not be finished because the previous check up is not yet finished.")
                 e.NewValue = CheckState.Unchecked
             Else
-                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
+                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                    frmBilling.MainBilling()
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                    If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
-                        frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-                        frmBilling.MainBilling()
-                    End If
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                    If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
-                        frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-                        frmBilling.MainBilling()
-                    End If
                 End If
             End If
         Else
-            If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Or e.Index = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+            If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
+                frmAccountInformation.currentUser.GetListIsPaid.Add(False)
+                frmBilling.MainBilling()
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
-                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
-                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-                    frmBilling.MainBilling()
-                End If
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
-                If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
-                    frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-                    frmBilling.MainBilling()
-                End If
             End If
         End If
 
