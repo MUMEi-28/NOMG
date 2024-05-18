@@ -207,10 +207,6 @@ Public Class frmMain
 		End If
 
 	End Sub
-
-
-
-
 	Private Sub ExportFileData()
 		Try
 			Dim filePath As String = txtPDName.Text + ".txt"

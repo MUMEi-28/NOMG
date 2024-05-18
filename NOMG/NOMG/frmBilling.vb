@@ -57,6 +57,7 @@
     Public Sub setFluVac()
         If frmRoutine.cbMed1.Checked = True Then
             frmRoutine.cbMed1.Enabled = False
+            frmRoutine.cbMed1.Checked = False
             txtQuantity5.Text = 1
             txtDescription5.Text = "Flu Vac"
             txtUnitPrice5.Text = 1500

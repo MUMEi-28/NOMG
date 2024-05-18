@@ -2,7 +2,6 @@
 
 Public Class frmRoutine
     Dim intI As Integer
-    Dim intFluVacCounter As Integer
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         frmMain.Show()
         Me.Hide()

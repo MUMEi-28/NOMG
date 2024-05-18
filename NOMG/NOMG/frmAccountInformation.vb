@@ -44,7 +44,6 @@ Public Class frmAccountInformation
 		Private listIsPaid As New List(Of Boolean)
 		Private dblBill As Double
 		Private blnHadFluVac As Boolean
-		Private blnClickedFluVac As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -125,9 +124,6 @@ Public Class frmAccountInformation
 		Public Function GetHadFluVac() As Boolean
 			Return blnHadFluVac
 		End Function
-		Public Function GetClickedFluVac() As Boolean
-			Return blnClickedFluVac
-		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
@@ -143,9 +139,6 @@ Public Class frmAccountInformation
 		End Sub
 		Public Sub SetHadFluVac(ByVal blnTempHadFluVac As Double)
 			blnHadFluVac = blnTempHadFluVac
-		End Sub
-		Public Sub SetClickedFluVac(ByVal blnTempClickedFluVac As Double)
-			blnClickedFluVac = blnTempClickedFluVac
 		End Sub
 	End Class
 

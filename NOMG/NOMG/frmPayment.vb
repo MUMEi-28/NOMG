@@ -16,7 +16,6 @@
 
                 If Val(frmBilling.txtAmount4.Text) > 0 Then
                     frmAccountInformation.currentUser.SetHadFluVac(True)
-                    frmRoutine.cbMed1.Checked = False
                 End If
 
                 frmBilling.ClearBillingFields()
