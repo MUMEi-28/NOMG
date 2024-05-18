@@ -15,7 +15,7 @@
                 Next
 
                 frmBilling.ClearBillingFields()
-                frmAccountInformation.currentUser.SetDblBill(0)
+                frmAccountInformation.currentUser.SetBill(0)
 
                 Me.Hide()
                 txtPayment.Clear()

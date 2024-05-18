@@ -51,7 +51,7 @@
         txtQuantity3.Text = dteInterval.Days
         txtQuantity4.Text = dteInterval.Days * 3
 
-        txtPendingAmount.Text = frmAccountInformation.currentUser.GetDblBill
+        txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill
     End Sub
 
     Public Sub FluVac()
@@ -104,7 +104,7 @@
         txtAmount3.Text = (Val(txtQuantity3.Text) * Val(txtUnitPrice3.Text))
         txtAmount4.Text = (Val(txtQuantity4.Text) * Val(txtUnitPrice4.Text))
         txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
-        frmAccountInformation.currentUser.SetDblBill(frmAccountInformation.currentUser.GetDblBill + (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text)))
-        txtTotal.Text = frmAccountInformation.currentUser.GetDblBill
+        frmAccountInformation.currentUser.SetBill(frmAccountInformation.currentUser.GetBill + (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text)))
+        txtTotal.Text = frmAccountInformation.currentUser.GetBill
     End Sub
 End Class

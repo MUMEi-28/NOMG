@@ -19,7 +19,7 @@ Public Class frmAccountInformation
 		Dim user2 As New User("Juana", "Pangasinan", "juana@email", "1234", 35, "y", 0, listDoctors(1), Date.Today.Date)
 		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 0, listDoctors(2), Date.Today.Date)
 		Dim user4 As New User("a", "a", "a", "a", 30, "n", 0, listDoctors(0), Date.Today.Date)
-		Dim user5 As New User("a", "b", "b", "b", 30, "n", 0, listDoctors(0), Date.Today.Date)
+		Dim user5 As New User("b", "b", "b", "b", 30, "n", 0, listDoctors(0), Date.Today.Date)
 		Dim user6 As New User("a", "c", "c", "c", 30, "n", 0, listDoctors(0), Date.Today.Date)
 
 		listUsers.Add(user1)
@@ -42,7 +42,8 @@ Public Class frmAccountInformation
 		Private dteLMC As Date
 		Private listCheckedAppointments As New List(Of Integer)
 		Private listIsPaid As New List(Of Boolean)
-		Private dblBill As New Double
+		Private dblBill As Double
+		Private blnHadFluVac As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -117,8 +118,11 @@ Public Class frmAccountInformation
 		Public Function GetListIsPaid() As List(Of Boolean)
 			Return listIsPaid
 		End Function
-		Public Function GetDblBill() As Double
+		Public Function GetBill() As Double
 			Return dblBill
+		End Function
+		Public Function GetHadFluVac() As Boolean
+			Return blnHadFluVac
 		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
@@ -130,8 +134,11 @@ Public Class frmAccountInformation
 		Public Sub SetListIsPaid(ByVal listTempIsPaid As List(Of Boolean))
 			listIsPaid = listTempIsPaid
 		End Sub
-		Public Sub SetDblBill(ByVal dblTempBill As Double)
+		Public Sub SetBill(ByVal dblTempBill As Double)
 			dblBill = dblTempBill
+		End Sub
+		Public Sub SetHadFluVac(ByVal blnTempHadFluVac As Double)
+			blnHadFluVac = blnTempHadFluVac
 		End Sub
 	End Class
 

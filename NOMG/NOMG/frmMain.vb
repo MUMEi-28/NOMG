@@ -192,6 +192,12 @@ Public Class frmMain
 				End While
 			End If
 
+			If frmAccountInformation.currentUser.GetHadFluVac Then
+				frmRoutine.cbMed1.Enabled = False
+			Else
+				frmRoutine.cbMed1.Enabled = True
+			End If
+
 			MsgBox("HIDING FORM")
 			frmRoutine.Show()
 			Me.Hide()

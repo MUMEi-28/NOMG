@@ -24,18 +24,18 @@ Public Class frmRoutine
                 e.NewValue = CheckState.Unchecked
             Else
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
+                    frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
                     frmAccountInformation.currentUser.GetListIsPaid.Add(False)
                     frmBilling.MainBilling()
-                    frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
                 Else
                     frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
                 End If
             End If
         Else
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
+                frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
                 frmAccountInformation.currentUser.GetListIsPaid.Add(False)
                 frmBilling.MainBilling()
-                frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
             Else
                 frmAccountInformation.currentUser.GetListCheckedAppointments(e.Index) = e.Index
             End If
