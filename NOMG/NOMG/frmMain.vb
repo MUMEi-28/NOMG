@@ -208,69 +208,65 @@ Public Class frmMain
 	End Sub
 
 
-	Private Sub ExportFileData()
 
+
+	Private Sub ExportFileData()
 		Try
 			Dim filePath As String = txtPDName.Text + ".txt"
 			Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
+				Dim textToWrite1 As String = String.Empty
+				Dim textToWrite2 As String = String.Empty
 
-				Dim textToWrite2 As String
-				Dim textToWrite1 As String
+				' User details with an extra line break after gestational age
+				textToWrite1 = "Name: " + txtPDName.Text + vbCrLf +
+						   "Address: " + txtPDAddress.Text + vbCrLf +
+						   "Age: " + txtPDAge.Text + vbCrLf +
+						   "First Baby: " + txtPDFirstBaby.Text + vbCrLf +
+						   "Gestational Age: " + txtPDGestationalAge.Text + vbCrLf + vbCrLf
 
-				textToWrite1 =
-					"Name: " + txtPDName.Text + vbCrLf + 'USER
-					"Addres: " + txtPDAddress.Text + vbCrLf +
-					"Age: " + txtPDAge.Text + vbCrLf +
-					"First Baby: " + txtPDFirstBaby.Text + vbCrLf +
-					"Gestational Age: " + txtPDGestationalAge.Text + vbCrLf
-
-				' ADD NOTHING TO LIST APPOINTMENT OUTSIDE OF WHILE LOOP, DAHIL SAME CONDITIONS LANG SILA D MA RURUN YUNG ELSE STATEMENT SA LOOB NG WHILE
-
-				If frmAccountInformation.currentUser.GetListAppointments.Count <= 0 Then
-					textToWrite2 =
-						"List Appointments: Nothing" + vbCrLf  'APPOINMENTS
+				' List Appointments
+				If frmAccountInformation.currentUser.GetListAppointments().Count <= 0 Then
+					textToWrite2 += "List Appointments: Nothing" + vbCrLf + vbCrLf
+				Else
+					textToWrite2 += "List Appointments:" + vbCrLf
+					For Each appointment In frmAccountInformation.currentUser.GetListAppointments()
+						textToWrite2 += appointment.ToString() + vbCrLf
+					Next
+					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
 				End If
 
-				If frmAccountInformation.currentUser.GetListIsPaid.Count <= 0 Then
-					textToWrite2 += "List is paid: No" + vbCrLf
+				' Payment status
+				If frmAccountInformation.currentUser.GetListIsPaid().Count <= 0 Then
+					textToWrite2 += "List is paid: No" + vbCrLf + vbCrLf
+				Else
+					textToWrite2 += "List is paid: Yes" + vbCrLf + vbCrLf
 				End If
 
-				If frmAccountInformation.currentUser.GetListCheckedAppointments.Count <= 0 Then
+				' List Checked Appointments
+				If frmAccountInformation.currentUser.GetListCheckedAppointments().Count <= 0 Then
 					textToWrite2 += "List Checked Appointments: None" + vbCrLf
+				Else
+					textToWrite2 += "List Checked Appointments: "
+					For Each checkedAppointment In frmAccountInformation.currentUser.GetListCheckedAppointments()
+						textToWrite2 += checkedAppointment.ToString() + ", "
+					Next
+
+					' Remove the trailing comma and space, and add a newline
+					If textToWrite2.EndsWith(", ") Then
+						textToWrite2 = textToWrite2.Substring(0, textToWrite2.Length - 2) + vbCrLf
+					End If
 				End If
 
-				Dim appointmentCounter = 0
-				Do While appointmentCounter < frmAccountInformation.currentUser.GetListAppointments.Count
-					If frmAccountInformation.currentUser.GetListAppointments.Count <= 0 Then
-						textToWrite2 =
-						"List Appointments: Nothing" + vbCrLf   'APPOINMENTS
-					Else
-						textToWrite2 =
-						"List Appointments: " + frmAccountInformation.currentUser.GetListAppointments(appointmentCounter) + vbCrLf    'APPOINMENTS
-					End If
-					If frmAccountInformation.currentUser.GetListIsPaid.Count <= 0 Then
-						textToWrite2 += "List is paid: No" + vbCrLf
-					Else
-						textToWrite2 += "List is paid: Yes" + vbCrLf
-
-					End If
-					If frmAccountInformation.currentUser.GetListCheckedAppointments.Count <= 0 Then
-						textToWrite2 += "List Checked Appointments: None" + vbCrLf
-					Else
-						'	textToWrite2 += frmAccountInformation.currentUser.GetListCheckedAppointments(appointmentCounter)
-					End If
-
-					appointmentCounter += 1
-
-				Loop
+				' Write to file
 				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
 			' Handle any exceptions (e.g., file access, permissions, etc.)
-			MsgBox("Error: Can't export file")
+			MsgBox("Error: Can't export file. " & ex.Message)
 		End Try
 	End Sub
+
 	Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
 		If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Then
 			frmBilling.ClearBillingFields()
