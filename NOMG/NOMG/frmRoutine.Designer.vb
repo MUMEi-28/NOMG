@@ -129,7 +129,7 @@ Partial Class frmRoutine
         Me.lblReminders.AutoSize = True
         Me.lblReminders.BackColor = System.Drawing.Color.Transparent
         Me.lblReminders.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblReminders.Location = New System.Drawing.Point(894, 356)
+        Me.lblReminders.Location = New System.Drawing.Point(871, 352)
         Me.lblReminders.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblReminders.Name = "lblReminders"
         Me.lblReminders.Size = New System.Drawing.Size(341, 182)

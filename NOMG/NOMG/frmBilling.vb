@@ -108,10 +108,6 @@
     End Sub
 
     Public Sub SavedBilling()
-        If frmAccountInformation.currentUser.GetClickedFluVac Then
-            frmRoutine.cbMed1.Checked = True
-        End If
-
         If frmAccountInformation.currentUser.GetListAppointments.Count = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
             setCheckUpBill()
             setFluVac()

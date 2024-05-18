@@ -19,6 +19,10 @@ Public Class frmRoutine
         ' If clbAppointments.Items(e.Index) > Date.Today.Date Then
         ' MsgBox("The appointment can not be finished because its date is on the future.")
         ' e.NewValue = CheckState.Unchecked
+        If e.NewValue = False Then
+            MsgBox("Reset unavailable", vbOKCancel + vbCritical, "Error")
+            e.NewValue = CheckState.Checked
+        End If
 
         If e.Index <> 0 Then
             If clbAppointments.GetItemChecked(e.Index - 1) = False Then
@@ -28,13 +32,6 @@ Public Class frmRoutine
                 If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                     frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
                     frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-
-                    If frmAccountInformation.currentUser.GetClickedFluVac = True Then
-                        intFluVacCounter = intFluVacCounter + 1
-                        If intFluVacCounter < 1 Then
-                            frmAccountInformation.currentUser.SetClickedFluVac(False)
-                        End If
-                    End If
 
                     If frmAccountInformation.currentUser.GetListAppointments.Count <> e.Index + 1 Then
                         frmBilling.MainBilling()
@@ -53,15 +50,6 @@ Public Class frmRoutine
             If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = e.Index Then
                 frmAccountInformation.currentUser.GetListCheckedAppointments.Add(e.Index)
                 frmAccountInformation.currentUser.GetListIsPaid.Add(False)
-
-
-                If frmAccountInformation.currentUser.GetClickedFluVac = True Then
-                    intFluVacCounter = intFluVacCounter + 1
-                    If intFluVacCounter < 1 Then
-                        frmAccountInformation.currentUser.SetClickedFluVac(False)
-                        cbMed1.Checked = False
-                    End If
-                End If
 
                 If frmAccountInformation.currentUser.GetListAppointments.Count <> e.Index + 1 Then
                     frmBilling.MainBilling()
@@ -119,9 +107,5 @@ Public Class frmRoutine
         If frmAccountInformation.currentUser.GetHadFluVac Then
             cbMed1.Enabled = False
         End If
-    End Sub
-
-    Private Sub cbMed1_CheckedChanged(sender As Object, e As EventArgs) Handles cbMed1.CheckedChanged
-        frmAccountInformation.currentUser.SetClickedFluVac(True)
     End Sub
 End Class
