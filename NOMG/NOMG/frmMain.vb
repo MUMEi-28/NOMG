@@ -240,8 +240,15 @@ Public Class frmMain
 				If frmAccountInformation.currentUser.GetListIsPaid().Count <= 0 Then
 					textToWrite2 += "List is paid: No" + vbCrLf + vbCrLf
 				Else
-					textToWrite2 += "List is paid: Yes" + vbCrLf + vbCrLf
+					'	textToWrite2 += "List is paid: Yes" + vbCrLf + vbCrLf
+					textToWrite2 += "List Is paid:" + vbCrLf
+					For Each appointment In frmAccountInformation.currentUser.GetListIsPaid()
+
+						textToWrite2 += appointment.ToString() + vbCrLf
+					Next
+					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
 				End If
+
 
 				' List Checked Appointments
 				If frmAccountInformation.currentUser.GetListCheckedAppointments().Count <= 0 Then
