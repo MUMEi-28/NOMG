@@ -212,7 +212,7 @@ Public Class frmMain
 
 		Try
 			Dim filePath As String = txtPDName.Text + ".txt"
-			Using file As New FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write)
+			Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
 
 				Dim textToWrite2 As String
 				Dim textToWrite1 As String
@@ -228,48 +228,44 @@ Public Class frmMain
 
 				If frmAccountInformation.currentUser.GetListAppointments.Count <= 0 Then
 					textToWrite2 =
-						"List Appointments: Nothing"    'APPOINMENTS
-
+						"List Appointments: Nothing" + vbCrLf  'APPOINMENTS
 				End If
 
+				If frmAccountInformation.currentUser.GetListIsPaid.Count <= 0 Then
+					textToWrite2 += "List is paid: No" + vbCrLf
+				End If
 
+				If frmAccountInformation.currentUser.GetListCheckedAppointments.Count <= 0 Then
+					textToWrite2 += "List Checked Appointments: None" + vbCrLf
+				End If
 
 				Dim appointmentCounter = 0
 				Do While appointmentCounter < frmAccountInformation.currentUser.GetListAppointments.Count
-
-
 					If frmAccountInformation.currentUser.GetListAppointments.Count <= 0 Then
 						textToWrite2 =
-						"List Appointments: Nothing"    'APPOINMENTS
-
+						"List Appointments: Nothing" + vbCrLf   'APPOINMENTS
 					Else
 						textToWrite2 =
 						"List Appointments: " + frmAccountInformation.currentUser.GetListAppointments(appointmentCounter) + vbCrLf    'APPOINMENTS
 					End If
+					If frmAccountInformation.currentUser.GetListIsPaid.Count <= 0 Then
+						textToWrite2 += "List is paid: No" + vbCrLf
+					Else
+						textToWrite2 += "List is paid: Yes" + vbCrLf
 
-					'		"List Checked Appointments: " + frmAccountInformation.currentUser.GetListCheckedAppointments(appointmentCounter) + vbCrLf
-					'	"List is Paid: " + frmAccountInformation.currentUser.GetListIsPaid(appointmentCounter) + vbCrLf
+					End If
+					If frmAccountInformation.currentUser.GetListCheckedAppointments.Count <= 0 Then
+						textToWrite2 += "List Checked Appointments: None" + vbCrLf
+					Else
+						'	textToWrite2 += frmAccountInformation.currentUser.GetListCheckedAppointments(appointmentCounter)
+					End If
 
-
-					appointmentCounter += 1S
+					appointmentCounter += 1
 
 				Loop
-
-
-				'	textToWrite2 = frmAccountInformation.currentUser.GetListAppointments.Count
-
-
 				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
-
-
 			End Using
-
-
-
-
-			' Confirmation message
-			'		MsgBox("Text file created and text written successfully.")
 		Catch ex As Exception
 			' Handle any exceptions (e.g., file access, permissions, etc.)
 			MsgBox("Error: Can't export file")
