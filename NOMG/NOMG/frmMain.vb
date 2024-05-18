@@ -8,6 +8,7 @@ Public Class frmMain
 	Public txtFrmMainCI As New List(Of TextBox)
 
 	Public blnLogOut As Boolean
+	Public blnSavedBilling As Boolean = True
 
 	Dim intI As Integer
 	Dim counter As Integer
@@ -270,6 +271,8 @@ Public Class frmMain
 	Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
 		If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 0 Then
 			frmBilling.ClearBillingFields()
+		ElseIf blnSavedBilling Then
+			frmBilling.SavedBilling()
 		End If
 
 		frmBilling.txtName.Text = frmAccountInformation.currentUser.GetName()

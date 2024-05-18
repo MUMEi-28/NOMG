@@ -47,9 +47,9 @@ Partial Class frmBilling
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.btnPayment = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.txtPendingAmount = New System.Windows.Forms.TextBox()
@@ -353,19 +353,19 @@ Partial Class frmBilling
         Me.TextBox4.Text = "Quantity"
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label1
+        'lblTotal
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Enabled = False
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(492, 289)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 17)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Total Amount:"
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotal.Enabled = False
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblTotal.Location = New System.Drawing.Point(492, 289)
+        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(109, 17)
+        Me.lblTotal.TabIndex = 29
+        Me.lblTotal.Text = "Total Amount:"
         '
         'txtName
         '
@@ -379,17 +379,17 @@ Partial Class frmBilling
         Me.txtName.Size = New System.Drawing.Size(316, 29)
         Me.txtName.TabIndex = 30
         '
-        'Label2
+        'lblName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(63, 63)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 26)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Name:"
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.lblName.Location = New System.Drawing.Point(63, 63)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(82, 26)
+        Me.lblName.TabIndex = 31
+        Me.lblName.Text = "Name:"
         '
         'btnPayment
         '
@@ -454,9 +454,9 @@ Partial Class frmBilling
         Me.Controls.Add(Me.txtPendingAmount)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnPayment)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.txtName)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox3)
@@ -518,9 +518,9 @@ Partial Class frmBilling
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTotal As Label
     Friend WithEvents txtName As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents btnPayment As Button
     Friend WithEvents btnBack As Button
     Friend WithEvents txtPendingAmount As TextBox

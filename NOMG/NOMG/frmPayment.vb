@@ -14,6 +14,12 @@
                     End If
                 Next
 
+                If Val(frmBilling.txtAmount4.Text) > 0 Then
+                    frmAccountInformation.currentUser.SetHadFluVac(True)
+                    frmAccountInformation.currentUser.SetClickedFluVac(False)
+                    frmRoutine.cbMed1.Checked = False
+                End If
+
                 frmBilling.ClearBillingFields()
                 frmAccountInformation.currentUser.SetBill(0)
 

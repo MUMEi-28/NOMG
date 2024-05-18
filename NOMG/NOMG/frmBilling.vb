@@ -8,7 +8,7 @@
             If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
                 setCheckUpBill()
                 SetBillingFields()
-                FluVac()
+                setFluVac()
             Else
                 ClearBillingFields()
             End If
@@ -54,9 +54,8 @@
         txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill
     End Sub
 
-    Public Sub FluVac()
+    Public Sub setFluVac()
         If frmRoutine.cbMed1.Checked = True Then
-            frmRoutine.cbMed1.Checked = False
             frmRoutine.cbMed1.Enabled = False
             txtQuantity5.Text = 1
             txtDescription5.Text = "Flu Vac"
@@ -106,5 +105,32 @@
         txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
         frmAccountInformation.currentUser.SetBill(frmAccountInformation.currentUser.GetBill + (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text)))
         txtTotal.Text = frmAccountInformation.currentUser.GetBill
+    End Sub
+
+    Public Sub SavedBilling()
+        If frmAccountInformation.currentUser.GetClickedFluVac Then
+            frmRoutine.cbMed1.Checked = True
+        End If
+
+        If frmAccountInformation.currentUser.GetListAppointments.Count = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+            setCheckUpBill()
+            setFluVac()
+
+            txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill - Val(txtAmount1.Text)
+            txtTotal.Text = frmAccountInformation.currentUser.GetBill
+        Else
+            setCheckUpBill()
+            SetBillingFields()
+            setFluVac()
+
+            txtAmount1.Text = (Val(txtQuantity1.Text) * Val(txtUnitPrice1.Text))
+            txtAmount2.Text = (Val(txtQuantity2.Text) * Val(txtUnitPrice2.Text))
+            txtAmount3.Text = (Val(txtQuantity3.Text) * Val(txtUnitPrice3.Text))
+            txtAmount4.Text = (Val(txtQuantity4.Text) * Val(txtUnitPrice4.Text))
+            txtAmount5.Text = (Val(txtQuantity5.Text) * Val(txtUnitPrice5.Text))
+
+            txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill - (Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text))
+            txtTotal.Text = frmAccountInformation.currentUser.GetBill
+        End If
     End Sub
 End Class
