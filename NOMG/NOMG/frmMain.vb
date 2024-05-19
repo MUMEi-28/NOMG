@@ -263,7 +263,7 @@ Public Class frmMain
 				Dim textToWrite3 As String = String.Empty
 
 				' Bill
-				Dim billAmount As Double = frmAccountInformation.currentUser.GetBill() - Val(frmBilling.txtAmount5.Text)
+				Dim billAmount As Double = frmAccountInformation.currentUser.GetBill()
 				Dim amountToSubtract As Double = 0
 
 				' Attempt to parse the amount to subtract from frmBilling.txtAmount5.Text
