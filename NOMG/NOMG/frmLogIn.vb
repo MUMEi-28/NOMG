@@ -5,9 +5,9 @@ Public Class frmLogIn
         frmStart.Show()
         Me.Hide()
     End Sub
-    Private Sub ImportFileData(ByVal email As String)
+    Private Sub ImportFileData(ByVal name As String)
         Try
-            Dim filePath As String = email & ".txt"
+            Dim filePath As String = name & ".txt"
             If Not File.Exists(filePath) Then
                 MsgBox("No saved data found for this user.")
                 Return
@@ -16,48 +16,62 @@ Public Class frmLogIn
             Using reader As New StreamReader(filePath, Encoding.UTF8)
                 Dim user As New frmAccountInformation.User()
 
+                ' Read user details
+                Dim nameLine = reader.ReadLine().Split(":")(1).Trim()
+                Dim addressLine = reader.ReadLine().Split(":")(1).Trim()
+                Dim ageLine = CInt(reader.ReadLine().Split(":")(1).Trim())
+                Dim firstBabyLine = reader.ReadLine().Split(":")(1).Trim()
+                Dim gestationalAgeLine = CInt(reader.ReadLine().Split(":")(1).Trim())
+
+                ' Skip blank line
+                reader.ReadLine()
+
+                ' Set user credentials
                 user.SetUserCredentials(
-                reader.ReadLine().Split(":")(1).Trim(), 'Name
-                reader.ReadLine().Split(":")(1).Trim(), 'Address
-                reader.ReadLine().Split(":")(1).Trim(), 'Email
-                reader.ReadLine().Split(":")(1).Trim(), 'Password
-                CInt(reader.ReadLine().Split(":")(1).Trim()), 'Age
-                reader.ReadLine().Split(":")(1).Trim(), 'IsFirstBaby
-                CInt(reader.ReadLine().Split(":")(1).Trim()), 'GestationalAge
-                frmAccountInformation.listDoctors.First(Function(doc) doc.GetName() = reader.ReadLine().Split(":")(1).Trim()), 'Doctor
-                Date.Parse(reader.ReadLine().Split(":")(1).Trim()) 'LMC
+                nameLine, ' Name
+                addressLine, ' Address
+                frmAccountInformation.currentUser.GetEmail(), ' Use the email from the current user
+                frmAccountInformation.currentUser.GetPass(), ' Use the password from the current user
+                ageLine, ' Age
+                firstBabyLine, ' IsFirstBaby
+                gestationalAgeLine, ' GestationalAge
+                frmAccountInformation.listDoctors.First(Function(doc) doc.GetName() = "Doctor Name Placeholder"), ' Placeholder, update accordingly
+                Date.Parse("01/01/2023") ' Placeholder, update accordingly
             )
 
                 ' Read Appointments
-                reader.ReadLine() ' Skip the "Appointments:" line
+                reader.ReadLine() ' Skip the "List Appointments:" line
                 Dim appointments As New List(Of Date)
                 Dim line As String = reader.ReadLine()
-                While Not line.StartsWith("CheckedAppointments:")
+                While Not String.IsNullOrWhiteSpace(line)
                     appointments.Add(Date.Parse(line.Trim()))
                     line = reader.ReadLine()
                 End While
                 user.GetListAppointments().AddRange(appointments)
 
-                ' Read CheckedAppointments
-                Dim checkedAppointments As New List(Of Integer)
-                line = reader.ReadLine()
-                While Not line.StartsWith("IsPaid:")
-                    checkedAppointments.Add(Integer.Parse(line.Trim()))
-                    line = reader.ReadLine()
-                End While
-                user.GetListCheckedAppointments().AddRange(checkedAppointments)
-
                 ' Read IsPaid
-                Dim isPaidList As New List(Of Boolean)
                 line = reader.ReadLine()
-                While Not line.StartsWith("Bill:")
-                    isPaidList.Add(Boolean.Parse(line.Trim()))
-                    line = reader.ReadLine()
-                End While
+                Dim isPaidList As New List(Of Boolean)
+                If line.StartsWith("List is paid: Yes") Then
+                    isPaidList.Add(True)
+                Else
+                    isPaidList.Add(False)
+                End If
                 user.GetListIsPaid().AddRange(isPaidList)
 
-                user.SetBill(Double.Parse(line.Split(":")(1).Trim())) 'Bill
-                user.SetHadFluVac(Boolean.Parse(reader.ReadLine().Split(":")(1).Trim())) 'HadFluVac
+                ' Read Checked Appointments
+                line = reader.ReadLine()
+                Dim checkedAppointments As New List(Of Integer)
+                If Not line.StartsWith("List Checked Appointments: None") Then
+                    line = line.Substring(line.IndexOf(":") + 1).Trim()
+                    Dim checkedAppointmentItems = line.Split(", ")
+                    For Each item In checkedAppointmentItems
+                        If Not String.IsNullOrWhiteSpace(item) Then
+                            checkedAppointments.Add(Integer.Parse(item.Trim()))
+                        End If
+                    Next
+                End If
+                user.GetListCheckedAppointments().AddRange(checkedAppointments)
 
                 frmAccountInformation.currentUser = user
             End Using
@@ -68,6 +82,15 @@ Public Class frmLogIn
         End Try
     End Sub
 
+    Private Function GetValue(line As String) As String
+        Dim parts As String() = line.Split(New String() {": "}, StringSplitOptions.None)
+        If parts.Length > 1 Then
+            Return parts(1).Trim()
+        Else
+            Return String.Empty
+        End If
+    End Function
+
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim intCounter = 0
         Do While intCounter < frmAccountInformation.listUsers.Count
@@ -76,6 +99,7 @@ Public Class frmLogIn
                 txtEmail.Clear()
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
+                ImportFileData(frmAccountInformation.currentUser.GetName())
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
                 frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
                 frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
