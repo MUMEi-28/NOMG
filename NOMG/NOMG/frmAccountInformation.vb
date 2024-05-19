@@ -20,7 +20,7 @@ Public Class frmAccountInformation
 		Dim user3 As New User("Cardo", "Davao", "cardo@email", "1234", 30, "n", 0, listDoctors(2), Date.Today.Date)
 		Dim user4 As New User("a", "a", "a", "a", 30, "n", 0, listDoctors(0), Date.Today.Date)
 		Dim user5 As New User("b", "b", "b", "b", 30, "n", 0, listDoctors(0), Date.Today.Date)
-		Dim user6 As New User("a", "c", "c", "c", 30, "n", 0, listDoctors(0), Date.Today.Date)
+		Dim user6 As New User("c", "c", "c", "c", 30, "n", 0, listDoctors(0), Date.Today.Date)
 
 		listUsers.Add(user1)
 		listUsers.Add(user2)

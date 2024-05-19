@@ -9,9 +9,7 @@
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
                 frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
                 For Each isPaid In frmAccountInformation.currentUser.GetListIsPaid
-                    If isPaid = False Then
-                        isPaid = True
-                    End If
+                    isPaid = True
                 Next
 
                 If Val(frmBilling.txtAmount4.Text) > 0 Then

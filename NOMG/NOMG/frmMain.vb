@@ -245,7 +245,6 @@ Public Class frmMain
 					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
 				End If
 
-
 				' List Checked Appointments
 				If frmAccountInformation.currentUser.GetListCheckedAppointments().Count <= 0 Then
 					textToWrite2 += "List Checked Appointments: None" + vbCrLf
@@ -261,8 +260,29 @@ Public Class frmMain
 					End If
 				End If
 
+				Dim textToWrite3 As String = String.Empty
+
+				' Bill
+				Dim billAmount As Double = frmAccountInformation.currentUser.GetBill() - Val(frmBilling.txtAmount5.Text)
+				Dim amountToSubtract As Double = 0
+
+				' Attempt to parse the amount to subtract from frmBilling.txtAmount5.Text
+				If Double.TryParse(frmBilling.txtAmount5.Text, amountToSubtract) Then
+					billAmount -= amountToSubtract
+				End If
+
+				If billAmount <= 0 Then
+					textToWrite3 = "Bill: Nothing" + vbCrLf
+				Else
+					textToWrite3 = "Bill: " + billAmount.ToString() + vbCrLf
+				End If
+
+
+				Dim textToWrite4 As String = String.Empty
+				textToWrite4 = "Had Flu Vaccine: " + frmAccountInformation.currentUser.GetHadFluVac().ToString()
+
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
