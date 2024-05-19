@@ -95,7 +95,7 @@ Public Class frmLogIn
         Dim intCounter = 0
         Do While intCounter < frmAccountInformation.listUsers.Count
             If txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() And txtPassword.Text = frmAccountInformation.listUsers(intCounter).GetPass() Then
-                MsgBox("log in successful")
+                MsgBox("Log In Successful", vbOKOnly, "Log In")
                 txtEmail.Clear()
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)

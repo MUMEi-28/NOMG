@@ -7,10 +7,16 @@
             Change = Payment - Total
             If Total <= Payment Then
                 MsgBox("Change: " & Change.ToString(), vbOKOnly, "Thank you")
-                frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
-                For Each isPaid In frmAccountInformation.currentUser.GetListIsPaid
-                    isPaid = True
-                Next
+
+                If frmAccountInformation.currentUser.GetListIsPaid.Count <> 0 Then
+                    frmRoutine.cbxMed1.Checked = False
+                    frmAccountInformation.currentUser.GetListIsPaid(frmAccountInformation.currentUser.GetListCheckedAppointments.Count - 1) = True
+                    Dim intI As Integer = 0
+                    Do While intI < frmAccountInformation.currentUser.GetListIsPaid.Count
+                        frmAccountInformation.currentUser.GetListIsPaid(intI) = True
+                        intI = intI + 1
+                    Loop
+                End If
 
                 If Val(frmBilling.txtAmount4.Text) > 0 Then
                     frmAccountInformation.currentUser.SetHadFluVac(True)
@@ -38,5 +44,4 @@
         frmBilling.Show()
         Me.Hide()
     End Sub
-
 End Class

@@ -9,19 +9,19 @@
 
 		'Check if text boxes are empty
 		If blnLMC = False Then
-			MsgBox("please enter your last menstrual cycle")
+			MsgBox("Please enter your last menstrual cycle", vbOKCancel + vbCritical, "Error")
 			Return
 
 		ElseIf txtAge.Text = "" Then
-			MsgBox("please enter your age")
+			MsgBox("Please enter your age", vbOKCancel + vbCritical, "Error")
 			Return
 
 		ElseIf txtFirstBaby.Text = "" Then
-			MsgBox("please enter details about your first baby")
+			MsgBox("Please enter details about your first baby", vbOKCancel + vbCritical, "Error")
 			Return
 
 		ElseIf txtGasAge.Text = "" Then
-			MsgBox("please enter the age of your gestational age")
+			MsgBox("Please enter the age of your gestational age", vbOKCancel + vbCritical, "Error")
 			Return ' exit the method if any textbox is empty
 
 		Else
@@ -44,7 +44,7 @@
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
-			MsgBox("Can only digit")
+			MsgBox("Can only enter digit", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
@@ -59,7 +59,7 @@
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
-			MsgBox("Can only digit")
+			MsgBox("Can only enter digit", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
@@ -73,13 +73,13 @@
 			textBox.Clear()
 
 			' Show message box for invalid input
-			MsgBox("Can only write y / n")
+			MsgBox("Can only write y / n", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
 	Private Sub dtpLMC_ValueChanged(sender As Object, e As EventArgs) Handles dtpLMC.ValueChanged
 		If dtpLMC.Value.Date > Date.Today.Date Then
-			MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbRetryCancel + vbCritical, "Error")
+			MsgBox("The date chosen is not allowed. Last Menstrual Cycle is not in the future. Please pick again.", vbOKCancel + vbCritical, "Error")
 		Else
 			blnLMC = True
 		End If

@@ -25,10 +25,10 @@ Partial Class frmRoutine
         Me.btnBack = New System.Windows.Forms.Button()
         Me.clbAppointments = New System.Windows.Forms.CheckedListBox()
         Me.ptbAppointments = New System.Windows.Forms.PictureBox()
-        Me.cbMed1 = New System.Windows.Forms.CheckBox()
-        Me.cbMed2 = New System.Windows.Forms.CheckBox()
-        Me.cbMed3 = New System.Windows.Forms.CheckBox()
-        Me.cbMed4 = New System.Windows.Forms.CheckBox()
+        Me.cbxMed1 = New System.Windows.Forms.CheckBox()
+        Me.cbxMed2 = New System.Windows.Forms.CheckBox()
+        Me.cbxMed3 = New System.Windows.Forms.CheckBox()
+        Me.cbxMed4 = New System.Windows.Forms.CheckBox()
         Me.lblReminders = New System.Windows.Forms.Label()
         CType(Me.ptbAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,60 +69,60 @@ Partial Class frmRoutine
         Me.ptbAppointments.TabIndex = 1
         Me.ptbAppointments.TabStop = False
         '
-        'cbMed1
+        'cbxMed1
         '
-        Me.cbMed1.AutoSize = True
-        Me.cbMed1.BackColor = System.Drawing.Color.Transparent
-        Me.cbMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed1.Location = New System.Drawing.Point(479, 352)
-        Me.cbMed1.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbMed1.Name = "cbMed1"
-        Me.cbMed1.Size = New System.Drawing.Size(128, 33)
-        Me.cbMed1.TabIndex = 4
-        Me.cbMed1.Text = "Flu Vac"
-        Me.cbMed1.UseVisualStyleBackColor = False
+        Me.cbxMed1.AutoSize = True
+        Me.cbxMed1.BackColor = System.Drawing.Color.Transparent
+        Me.cbxMed1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxMed1.Location = New System.Drawing.Point(479, 352)
+        Me.cbxMed1.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxMed1.Name = "cbxMed1"
+        Me.cbxMed1.Size = New System.Drawing.Size(128, 33)
+        Me.cbxMed1.TabIndex = 4
+        Me.cbxMed1.Text = "Flu Vac"
+        Me.cbxMed1.UseVisualStyleBackColor = False
         '
-        'cbMed2
+        'cbxMed2
         '
-        Me.cbMed2.AutoSize = True
-        Me.cbMed2.BackColor = System.Drawing.Color.Transparent
-        Me.cbMed2.Enabled = False
-        Me.cbMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed2.Location = New System.Drawing.Point(479, 403)
-        Me.cbMed2.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbMed2.Name = "cbMed2"
-        Me.cbMed2.Size = New System.Drawing.Size(182, 33)
-        Me.cbMed2.TabIndex = 5
-        Me.cbMed2.Text = "Iron Vitamin"
-        Me.cbMed2.UseVisualStyleBackColor = False
+        Me.cbxMed2.AutoSize = True
+        Me.cbxMed2.BackColor = System.Drawing.Color.Transparent
+        Me.cbxMed2.Enabled = False
+        Me.cbxMed2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxMed2.Location = New System.Drawing.Point(479, 403)
+        Me.cbxMed2.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxMed2.Name = "cbxMed2"
+        Me.cbxMed2.Size = New System.Drawing.Size(182, 33)
+        Me.cbxMed2.TabIndex = 5
+        Me.cbxMed2.Text = "Iron Vitamin"
+        Me.cbxMed2.UseVisualStyleBackColor = False
         '
-        'cbMed3
+        'cbxMed3
         '
-        Me.cbMed3.AutoSize = True
-        Me.cbMed3.BackColor = System.Drawing.Color.Transparent
-        Me.cbMed3.Enabled = False
-        Me.cbMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed3.Location = New System.Drawing.Point(479, 456)
-        Me.cbMed3.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbMed3.Name = "cbMed3"
-        Me.cbMed3.Size = New System.Drawing.Size(168, 33)
-        Me.cbMed3.TabIndex = 6
-        Me.cbMed3.Text = "B Complex"
-        Me.cbMed3.UseVisualStyleBackColor = False
+        Me.cbxMed3.AutoSize = True
+        Me.cbxMed3.BackColor = System.Drawing.Color.Transparent
+        Me.cbxMed3.Enabled = False
+        Me.cbxMed3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxMed3.Location = New System.Drawing.Point(479, 456)
+        Me.cbxMed3.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxMed3.Name = "cbxMed3"
+        Me.cbxMed3.Size = New System.Drawing.Size(168, 33)
+        Me.cbxMed3.TabIndex = 6
+        Me.cbxMed3.Text = "B Complex"
+        Me.cbxMed3.UseVisualStyleBackColor = False
         '
-        'cbMed4
+        'cbxMed4
         '
-        Me.cbMed4.AutoSize = True
-        Me.cbMed4.BackColor = System.Drawing.Color.Transparent
-        Me.cbMed4.Enabled = False
-        Me.cbMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbMed4.Location = New System.Drawing.Point(479, 510)
-        Me.cbMed4.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbMed4.Name = "cbMed4"
-        Me.cbMed4.Size = New System.Drawing.Size(91, 33)
-        Me.cbMed4.TabIndex = 7
-        Me.cbMed4.Text = "DHA"
-        Me.cbMed4.UseVisualStyleBackColor = False
+        Me.cbxMed4.AutoSize = True
+        Me.cbxMed4.BackColor = System.Drawing.Color.Transparent
+        Me.cbxMed4.Enabled = False
+        Me.cbxMed4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxMed4.Location = New System.Drawing.Point(479, 510)
+        Me.cbxMed4.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxMed4.Name = "cbxMed4"
+        Me.cbxMed4.Size = New System.Drawing.Size(91, 33)
+        Me.cbxMed4.TabIndex = 7
+        Me.cbxMed4.Text = "DHA"
+        Me.cbxMed4.UseVisualStyleBackColor = False
         '
         'lblReminders
         '
@@ -143,10 +143,10 @@ Partial Class frmRoutine
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1280, 782)
         Me.Controls.Add(Me.lblReminders)
-        Me.Controls.Add(Me.cbMed4)
-        Me.Controls.Add(Me.cbMed3)
-        Me.Controls.Add(Me.cbMed2)
-        Me.Controls.Add(Me.cbMed1)
+        Me.Controls.Add(Me.cbxMed4)
+        Me.Controls.Add(Me.cbxMed3)
+        Me.Controls.Add(Me.cbxMed2)
+        Me.Controls.Add(Me.cbxMed1)
         Me.Controls.Add(Me.clbAppointments)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ptbAppointments)
@@ -165,9 +165,9 @@ Partial Class frmRoutine
     Friend WithEvents ptbAppointments As PictureBox
     Friend WithEvents btnBack As Button
     Friend WithEvents clbAppointments As CheckedListBox
-    Friend WithEvents cbMed1 As CheckBox
-    Friend WithEvents cbMed2 As CheckBox
-    Friend WithEvents cbMed3 As CheckBox
-    Friend WithEvents cbMed4 As CheckBox
+    Friend WithEvents cbxMed1 As CheckBox
+    Friend WithEvents cbxMed2 As CheckBox
+    Friend WithEvents cbxMed3 As CheckBox
+    Friend WithEvents cbxMed4 As CheckBox
     Friend WithEvents lblReminders As Label
 End Class

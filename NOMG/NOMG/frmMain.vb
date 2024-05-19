@@ -16,9 +16,9 @@ Public Class frmMain
 	Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
 		If blnLogOut = False And frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
 			If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
-				MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbRetryCancel + vbCritical, "Error")
+				MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbOKCancel + vbCritical, "Error")
 			ElseIf dtpFirstAppointment.Value.Date < Date.Today.Date Then
-				MsgBox("Dates in the past can not be chosen. Please pick again.", vbRetryCancel + vbCritical, "Error")
+				MsgBox("Dates in the past can not be chosen. Please pick again.", vbOKCancel + vbCritical, "Error")
 			Else
 				intI = 0
 				counter = 0
@@ -74,12 +74,23 @@ Public Class frmMain
 	End Sub
 
 	Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
-		ExportFileData()
+		' Resets flu vac clicked if it is not yet paid
+		If frmAccountInformation.currentUser.GetClickedFV And frmAccountInformation.currentUser.GetHadFluVac = False Then
+			frmAccountInformation.currentUser.SetBill(frmAccountInformation.currentUser.GetBill - 1500)
+		End If
+		frmAccountInformation.currentUser.SetClickedFV(False)
 
+		frmRoutine.cbxMed1.Enabled = True
+		frmRoutine.cbxMed1.Checked = False
+		frmAccountInformation.currentUser.SetCBX1(0)
+		blnSavedBilling = True
+
+		ExportFileData()
 
 		frmStart.Show()
 		Me.Hide()
 		blnLogOut = True
+
 		'It is not set to current date because if it is set to the said date, users could not set it to the current date.
 		dtpFirstAppointment.Value = New Date(Date.Today.Year, Date.Today.Month, Date.Today.Day - 1)
 	End Sub
@@ -193,17 +204,16 @@ Public Class frmMain
 				End While
 			End If
 
+			frmRoutine.DailyMeds()
+
 			If frmAccountInformation.currentUser.GetHadFluVac Then
-				frmRoutine.cbMed1.Enabled = False
-			Else
-				frmRoutine.cbMed1.Enabled = True
+				frmRoutine.cbxMed1.Enabled = False
 			End If
 
-			MsgBox("HIDING FORM")
 			frmRoutine.Show()
 			Me.Hide()
 		Else
-			MsgBox("First appointment is not set.", vbRetryCancel + vbCritical, "Error")
+			MsgBox("First appointment is not set.", vbOKCancel + vbCritical, "Error")
 		End If
 
 	End Sub

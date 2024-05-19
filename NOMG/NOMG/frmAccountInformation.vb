@@ -44,6 +44,8 @@ Public Class frmAccountInformation
 		Private listIsPaid As New List(Of Boolean)
 		Private dblBill As Double
 		Private blnHadFluVac As Boolean
+		Private intCBX1 As Integer
+		Private blnClickedFV As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -124,6 +126,12 @@ Public Class frmAccountInformation
 		Public Function GetHadFluVac() As Boolean
 			Return blnHadFluVac
 		End Function
+		Public Function GetClickedFV() As Boolean
+			Return blnClickedFV
+		End Function
+		Public Function GetCBX1() As Integer
+			Return intCBX1
+		End Function
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
@@ -139,6 +147,12 @@ Public Class frmAccountInformation
 		End Sub
 		Public Sub SetHadFluVac(ByVal blnTempHadFluVac As Double)
 			blnHadFluVac = blnTempHadFluVac
+		End Sub
+		Public Sub SetCBX1(ByVal intTempCB1 As Integer)
+			intCBX1 = intTempCB1
+		End Sub
+		Public Sub SetClickedFV(ByVal blnTempClickedFV As Double)
+			blnClickedFV = blnTempClickedFV
 		End Sub
 	End Class
 
@@ -186,7 +200,7 @@ Public Class frmAccountInformation
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
-			MsgBox("Can only enter digit")
+			MsgBox("Can only enter digit", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
@@ -201,7 +215,7 @@ Public Class frmAccountInformation
 		If Not Char.IsDigit(e.KeyChar) Then
 			' Suppress the non-digit key
 			e.Handled = True
-			MsgBox("Can only enter digit")
+			MsgBox("Can only enter digit", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
@@ -215,7 +229,7 @@ Public Class frmAccountInformation
 			textBox.Clear()
 
 			' Show message box for invalid input
-			MsgBox("Can only write y / n")
+			MsgBox("Can only write y / n", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
 
@@ -223,20 +237,20 @@ Public Class frmAccountInformation
 
 		'		Check If any TextBox Is empty
 		If txtName.Text = "" Then
-			MsgBox("Please enter your name")
+			MsgBox("Please enter your name", vbOKCancel + vbCritical, "Error")
 			Return
 
 
 		ElseIf txtAddress.Text = "" Then
-			MsgBox("Please enter your address")
+			MsgBox("Please enter your address", vbOKCancel + vbCritical, "Error")
 			Return
 
 		ElseIf txtEmail.Text = "" Then
-			MsgBox("Please enter your email")
+			MsgBox("Please enter your email", vbOKCancel + vbCritical, "Error")
 			Return
 
 		ElseIf txtPassword.Text = "" Then
-			MsgBox("Please enter your password")
+			MsgBox("Please enter your password", vbOKCancel + vbCritical, "Error")
 			Return
 		Else
 			frmAccountInformation_Continuation.Show()

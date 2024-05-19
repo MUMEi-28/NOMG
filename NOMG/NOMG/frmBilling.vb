@@ -6,7 +6,7 @@
             ClearBillingFields()
         Else
             If frmAccountInformation.currentUser.GetListIsPaid(AppointmentCount - 1) = False Then
-                setCheckUpBill()
+                SetCheckUpBill()
                 SetBillingFields()
                 setFluVac()
             Else
@@ -24,7 +24,7 @@
         frmMain.Show()
         Me.Hide()
     End Sub
-    Public Sub setCheckUpBill()
+    Public Sub SetCheckUpBill()
         txtQuantity1.Text = 1
         If frmAccountInformation.currentUser.GetListCheckedAppointments.Count = 1 Then
             ' Set initial check up bill
@@ -54,10 +54,8 @@
         txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill
     End Sub
 
-    Public Sub setFluVac()
-        If frmRoutine.cbMed1.Checked = True Then
-            frmRoutine.cbMed1.Enabled = False
-            frmRoutine.cbMed1.Checked = False
+    Public Sub SetFluVac()
+        If frmRoutine.cbxMed1.Checked = True Then
             txtQuantity5.Text = 1
             txtDescription5.Text = "Flu Vac"
             txtUnitPrice5.Text = 1500
@@ -109,16 +107,18 @@
     End Sub
 
     Public Sub SavedBilling()
-        If frmAccountInformation.currentUser.GetListAppointments.Count = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
-            setCheckUpBill()
-            setFluVac()
+        If frmAccountInformation.currentUser.GetBill = 0 Then
+            ClearBillingFields()
+        ElseIf frmAccountInformation.currentUser.GetListAppointments.Count = frmAccountInformation.currentUser.GetListCheckedAppointments.Count Then
+            SetCheckUpBill()
+            SetFluVac()
 
             txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill - Val(txtAmount1.Text)
             txtTotal.Text = frmAccountInformation.currentUser.GetBill
         Else
-            setCheckUpBill()
+            SetCheckUpBill()
             SetBillingFields()
-            setFluVac()
+            SetFluVac()
 
             txtAmount1.Text = (Val(txtQuantity1.Text) * Val(txtUnitPrice1.Text))
             txtAmount2.Text = (Val(txtQuantity2.Text) * Val(txtUnitPrice2.Text))
