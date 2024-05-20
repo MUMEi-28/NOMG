@@ -24,17 +24,6 @@ Public Class frmLogIn
                 Dim userAge = CInt(GetValue(reader.ReadLine()))  ' Age
                 Dim userIsFirstBaby = GetValue(reader.ReadLine())  ' IsFirstBaby
                 Dim userGestationalAge = CInt(GetValue(reader.ReadLine()))  ' GestationalAge
-                Dim userLMCString = GetValue(reader.ReadLine())  ' Last Menstrual Cycle (LMC)
-
-                ' Initialize LMC date with a default value
-                Dim userLMC As Date = Date.MinValue
-
-                ' Parse the Last Menstrual Cycle date if it exists
-                If Not String.IsNullOrWhiteSpace(userLMCString) Then
-                    If Not DateTime.TryParse(userLMCString, userLMC) Then
-                        Throw New Exception("Invalid date format for Last Menstrual Cycle: " & userLMCString)
-                    End If
-                End If
 
                 ' Skip blank line after user details
                 reader.ReadLine()
@@ -42,29 +31,26 @@ Public Class frmLogIn
                 ' Read List Appointments
                 Dim appointments As New List(Of Date)
                 Dim appointmentsHeader = reader.ReadLine()
-                If appointmentsHeader <> "List Appointments: Nothing" Then
-                    Dim line As String
-                    Do
-                        line = reader.ReadLine()
-                        If Not String.IsNullOrWhiteSpace(line) Then
-                            Dim appointmentDate As Date
-                            If DateTime.TryParse(line.Trim(), appointmentDate) Then
-                                appointments.Add(appointmentDate)
-                            Else
-                                Throw New Exception("Invalid date format in appointments: " & line.Trim())
-                            End If
-                        End If
-                    Loop Until String.IsNullOrWhiteSpace(line)
+                If appointmentsHeader <> "Patient's Appointment Lists:" Then
+                    Throw New Exception("Unexpected format for appointment lists.")
                 End If
+                Dim line As String
+                Do
+                    line = reader.ReadLine()
+                    If Not String.IsNullOrWhiteSpace(line) Then
+                        Dim appointmentDate As Date
+                        If DateTime.TryParse(line.Trim(), appointmentDate) Then
+                            appointments.Add(appointmentDate)
+                        Else
+                            Throw New Exception("Invalid date format in appointments: " & line.Trim())
+                        End If
+                    End If
+                Loop Until String.IsNullOrWhiteSpace(line)
 
                 ' Read Payment status
                 Dim isPaidList As New List(Of Boolean)
                 Dim isPaidHeader As String = reader.ReadLine()
-                If isPaidHeader = "List is paid: No" Then
-                    ' Skip blank line
-                    reader.ReadLine()
-                ElseIf isPaidHeader = "List Is paid:" Then
-                    Dim line As String
+                If isPaidHeader = "List Is paid:" Then
                     Do
                         line = reader.ReadLine()
                         If Not String.IsNullOrWhiteSpace(line) Then
@@ -81,7 +67,7 @@ Public Class frmLogIn
                 ' Read List Checked Appointments
                 Dim checkedAppointmentsLine As String = reader.ReadLine()
                 Dim checkedAppointments As New List(Of Integer)
-                If checkedAppointmentsLine <> "List Checked Appointments: None" Then
+                If checkedAppointmentsLine.StartsWith("List Checked Appointments: ") Then
                     If checkedAppointmentsLine.Length > 27 Then
                         Dim checkedItems = checkedAppointmentsLine.Substring(27).Split(", ")
                         For Each item In checkedItems
@@ -116,7 +102,7 @@ Public Class frmLogIn
                 End If
 
                 ' Set user credentials and data without doctor
-                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, userLMC)
+                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
                 user.GetListIsPaid().AddRange(isPaidList)
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
@@ -126,6 +112,14 @@ Public Class frmLogIn
                 ' Set current user
                 frmAccountInformation.currentUser = user
             End Using
+
+            ' Update the UI based on the imported data
+            If frmAccountInformation.currentUser.GetHadFluVac() Then
+                frmRoutine.cbxMed1.Checked = True
+                frmRoutine.cbxMed1.Enabled = False
+            End If
+
+            frmBilling.txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill().ToString("F2")
 
             MsgBox("Data imported successfully.")
         Catch ex As Exception
@@ -141,6 +135,8 @@ Public Class frmLogIn
             Return String.Empty
         End If
     End Function
+
+
 
 
 
