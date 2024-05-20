@@ -49,7 +49,8 @@ Public Class frmAccountInformation
 
 		' Constructor with no parameters
 		Public Sub New()
-
+			' Ensure doctor is initialized
+			doctor = New Doctor()
 		End Sub
 
 		' User Constructor

@@ -231,11 +231,11 @@ Public Class frmMain
 						   "First Baby: " + txtPDFirstBaby.Text + vbCrLf +
 						   "Gestational Age: " + txtPDGestationalAge.Text + vbCrLf + vbCrLf
 
-				' List Appointments
+				' Patient Appointments
 				If frmAccountInformation.currentUser.GetListAppointments().Count <= 0 Then
-					textToWrite2 += "List Appointments: Nothing" + vbCrLf + vbCrLf
+					textToWrite2 += "Patient's Appointment Lists: Nothing" + vbCrLf + vbCrLf
 				Else
-					textToWrite2 += "List Appointments:" + vbCrLf
+					textToWrite2 += "Patient's Appointment Lists:" + vbCrLf
 					For Each appointment In frmAccountInformation.currentUser.GetListAppointments()
 						textToWrite2 += appointment.ToString() + vbCrLf
 					Next
@@ -291,8 +291,38 @@ Public Class frmMain
 				Dim textToWrite4 As String = String.Empty
 				textToWrite4 = "Had Flu Vaccine: " + frmAccountInformation.currentUser.GetHadFluVac().ToString()
 
+
+				' Doctor appointment
+				Dim textToWrite5 As String = String.Empty
+
+
+				' ORIGINAL CODE, ETO GAMITIN KUNG NAAYOS NA ERROR SA DR APPOINTMENT
+				'If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
+				'	textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
+				'Else
+				'	textToWrite5 += "Doctor's Appointments:" + vbCrLf
+				'	For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments
+				'		textToWrite5 += drAppointment.ToString() + vbCrLf
+				'	Next
+				'	textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
+				'End If
+
+				' MAKES SURE HINDI NULL YUNG DOCTOR, NAG IINSTANTIATE MUNA PERO SAME PARIN DAPAT VALUES NIYA
+				' YUNG VERSION NA NAKA COMMENT SA TAAS YUNG ORIGINAL PERO MERON ERROR KUNG WALA NA VALUE YUNG DOCTOR AFTER SECOND LOG IN
+				Dim doctor As frmAccountInformation.Doctor = frmAccountInformation.currentUser.GetDoctor()
+				If doctor Is Nothing OrElse doctor.listDrAppointments Is Nothing OrElse doctor.listDrAppointments.Count <= 0 Then
+					textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
+				Else
+					textToWrite5 += "Doctor's Appointments:" + vbCrLf
+					For Each drAppointment In doctor.listDrAppointments
+						textToWrite5 += drAppointment.ToString() + vbCrLf
+					Next
+					textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
+				End If
+
+
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + vbCrLf + textToWrite5)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
