@@ -17,62 +17,97 @@ Public Class frmLogIn
                 Dim user As New frmAccountInformation.User()
 
                 ' Read user details
-                Dim nameLine = reader.ReadLine().Split(":")(1).Trim()
-                Dim addressLine = reader.ReadLine().Split(":")(1).Trim()
-                Dim ageLine = CInt(reader.ReadLine().Split(":")(1).Trim())
-                Dim firstBabyLine = reader.ReadLine().Split(":")(1).Trim()
-                Dim gestationalAgeLine = CInt(reader.ReadLine().Split(":")(1).Trim())
+                Dim userName = GetValue(reader.ReadLine())  ' Name
+                Dim userAddress = GetValue(reader.ReadLine())  ' Address
+                Dim userEmail = frmAccountInformation.currentUser.GetEmail() ' Use the email from the current user
+                Dim userPass = frmAccountInformation.currentUser.GetPass()  ' Use the password from the current user
+                Dim userAge = CInt(GetValue(reader.ReadLine()))  ' Age
+                Dim userIsFirstBaby = GetValue(reader.ReadLine())  ' IsFirstBaby
+                Dim userGestationalAge = CInt(GetValue(reader.ReadLine()))  ' GestationalAge
 
-                ' Skip blank line
+                ' Skip blank line after user details
                 reader.ReadLine()
 
-                ' Set user credentials
-                user.SetUserCredentials(
-                nameLine, ' Name
-                addressLine, ' Address
-                frmAccountInformation.currentUser.GetEmail(), ' Use the email from the current user
-                frmAccountInformation.currentUser.GetPass(), ' Use the password from the current user
-                ageLine, ' Age
-                firstBabyLine, ' IsFirstBaby
-                gestationalAgeLine, ' GestationalAge
-                frmAccountInformation.listDoctors.First(Function(doc) doc.GetName() = "Doctor Name Placeholder"), ' Placeholder, update accordingly
-                Date.Parse("01/01/2023") ' Placeholder, update accordingly
-            )
-
-                ' Read Appointments
-                reader.ReadLine() ' Skip the "List Appointments:" line
+                ' Read List Appointments
                 Dim appointments As New List(Of Date)
-                Dim line As String = reader.ReadLine()
-                While Not String.IsNullOrWhiteSpace(line)
-                    appointments.Add(Date.Parse(line.Trim()))
-                    line = reader.ReadLine()
-                End While
-                user.GetListAppointments().AddRange(appointments)
-
-                ' Read IsPaid
-                line = reader.ReadLine()
-                Dim isPaidList As New List(Of Boolean)
-                If line.StartsWith("List is paid: Yes") Then
-                    isPaidList.Add(True)
-                Else
-                    isPaidList.Add(False)
-                End If
-                user.GetListIsPaid().AddRange(isPaidList)
-
-                ' Read Checked Appointments
-                line = reader.ReadLine()
-                Dim checkedAppointments As New List(Of Integer)
-                If Not line.StartsWith("List Checked Appointments: None") Then
-                    line = line.Substring(line.IndexOf(":") + 1).Trim()
-                    Dim checkedAppointmentItems = line.Split(", ")
-                    For Each item In checkedAppointmentItems
-                        If Not String.IsNullOrWhiteSpace(item) Then
-                            checkedAppointments.Add(Integer.Parse(item.Trim()))
+                Dim appointmentsHeader = reader.ReadLine()
+                If appointmentsHeader <> "List Appointments: Nothing" Then
+                    Dim line As String
+                    Do
+                        line = reader.ReadLine()
+                        If Not String.IsNullOrWhiteSpace(line) Then
+                            appointments.Add(Date.Parse(line.Trim()))
                         End If
-                    Next
+                    Loop Until String.IsNullOrWhiteSpace(line)
                 End If
-                user.GetListCheckedAppointments().AddRange(checkedAppointments)
 
+                ' Read Payment status
+                Dim isPaidList As New List(Of Boolean)
+                Dim isPaidHeader As String = reader.ReadLine()
+                If isPaidHeader = "List is paid: No" Then
+                    ' Skip blank line
+                    reader.ReadLine()
+                ElseIf isPaidHeader = "List Is paid:" Then
+                    Dim line As String
+                    Do
+                        line = reader.ReadLine()
+                        If Not String.IsNullOrWhiteSpace(line) Then
+                            Dim isPaid As Boolean
+                            If Boolean.TryParse(line.Trim(), isPaid) Then
+                                isPaidList.Add(isPaid)
+                            Else
+                                Throw New Exception("Invalid boolean value in payment status: " & line.Trim())
+                            End If
+                        End If
+                    Loop Until String.IsNullOrWhiteSpace(line)
+                End If
+
+                ' Read List Checked Appointments
+                Dim checkedAppointmentsLine As String = reader.ReadLine()
+                Dim checkedAppointments As New List(Of Integer)
+                If checkedAppointmentsLine <> "List Checked Appointments: None" Then
+                    If checkedAppointmentsLine.Length > 27 Then
+                        Dim checkedItems = checkedAppointmentsLine.Substring(27).Split(", ")
+                        For Each item In checkedItems
+                            If Not String.IsNullOrWhiteSpace(item) Then
+                                checkedAppointments.Add(Integer.Parse(item.Trim()))
+                            End If
+                        Next
+                    End If
+                End If
+
+                ' Read Bill
+                Dim billLine As String = reader.ReadLine()
+                Dim billAmount As Double = 0
+                If Not String.IsNullOrWhiteSpace(billLine) AndAlso billLine.StartsWith("Bill: ") Then
+                    Dim billValue = billLine.Substring(6).Trim()
+                    If Not billValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
+                        billAmount = Double.Parse(billValue)
+                    End If
+                End If
+
+                ' Read Had Flu Vaccine
+                Dim fluVaccineLine As String = reader.ReadLine()
+                Dim hadFluVaccine As Boolean = False
+                If Not String.IsNullOrWhiteSpace(fluVaccineLine) AndAlso fluVaccineLine.StartsWith("Had Flu Vaccine: ") Then
+                    If fluVaccineLine.Length >= 17 Then
+                        If Boolean.TryParse(fluVaccineLine.Substring(17).Trim(), hadFluVaccine) Then
+                            ' Successfully parsed boolean
+                        Else
+                            Throw New Exception("Invalid boolean value for flu vaccine: " & fluVaccineLine.Substring(17).Trim())
+                        End If
+                    End If
+                End If
+
+                ' Set user credentials and data without doctor
+                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.Parse("01/01/2023"))
+                user.GetListAppointments().AddRange(appointments)
+                user.GetListIsPaid().AddRange(isPaidList)
+                user.GetListCheckedAppointments().AddRange(checkedAppointments)
+                user.SetBill(billAmount)
+                user.SetHadFluVac(hadFluVaccine)
+
+                ' Set current user
                 frmAccountInformation.currentUser = user
             End Using
 
@@ -91,6 +126,13 @@ Public Class frmLogIn
         End If
     End Function
 
+
+
+
+
+
+
+
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim intCounter = 0
         Do While intCounter < frmAccountInformation.listUsers.Count
@@ -105,13 +147,19 @@ Public Class frmLogIn
                 frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
                 frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
-                frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor.GetName & "."
+
+                If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
+                    frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
+                Else
+                    frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
+                End If
+
                 frmMain.blnLogOut = False
                 frmRoutine.getNextCheckUp()
                 frmMain.Show()
                 Me.Hide()
 
-                Return '' Make sure not to show the other msgBox
+                Return ' Make sure not to show the other MsgBox
             End If
             intCounter += 1
         Loop
@@ -119,5 +167,4 @@ Public Class frmLogIn
         txtEmail.Clear()
         txtPassword.Clear()
     End Sub
-
 End Class
