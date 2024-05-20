@@ -24,6 +24,17 @@ Public Class frmLogIn
                 Dim userAge = CInt(GetValue(reader.ReadLine()))  ' Age
                 Dim userIsFirstBaby = GetValue(reader.ReadLine())  ' IsFirstBaby
                 Dim userGestationalAge = CInt(GetValue(reader.ReadLine()))  ' GestationalAge
+                Dim userLMCString = GetValue(reader.ReadLine())  ' Last Menstrual Cycle (LMC)
+
+                ' Initialize LMC date with a default value
+                Dim userLMC As Date = Date.MinValue
+
+                ' Parse the Last Menstrual Cycle date if it exists
+                If Not String.IsNullOrWhiteSpace(userLMCString) Then
+                    If Not DateTime.TryParse(userLMCString, userLMC) Then
+                        Throw New Exception("Invalid date format for Last Menstrual Cycle: " & userLMCString)
+                    End If
+                End If
 
                 ' Skip blank line after user details
                 reader.ReadLine()
@@ -36,7 +47,12 @@ Public Class frmLogIn
                     Do
                         line = reader.ReadLine()
                         If Not String.IsNullOrWhiteSpace(line) Then
-                            appointments.Add(Date.Parse(line.Trim()))
+                            Dim appointmentDate As Date
+                            If DateTime.TryParse(line.Trim(), appointmentDate) Then
+                                appointments.Add(appointmentDate)
+                            Else
+                                Throw New Exception("Invalid date format in appointments: " & line.Trim())
+                            End If
                         End If
                     Loop Until String.IsNullOrWhiteSpace(line)
                 End If
@@ -100,7 +116,7 @@ Public Class frmLogIn
                 End If
 
                 ' Set user credentials and data without doctor
-                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.Parse("01/01/2023"))
+                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, userLMC)
                 user.GetListAppointments().AddRange(appointments)
                 user.GetListIsPaid().AddRange(isPaidList)
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
@@ -125,6 +141,11 @@ Public Class frmLogIn
             Return String.Empty
         End If
     End Function
+
+
+
+
+
 
 
 
