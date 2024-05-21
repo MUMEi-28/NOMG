@@ -81,9 +81,12 @@ Public Class frmLogIn
                 ' Read Bill
                 Dim billLine As String = reader.ReadLine()
                 Dim billAmount As Double = 0
+                MsgBox(billLine)
                 If Not String.IsNullOrWhiteSpace(billLine) AndAlso billLine.StartsWith("Bill: ") Then
+                    MsgBox("Running 1")
                     Dim billValue = billLine.Substring(6).Trim()
                     If Not billValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
+                        MsgBox("Running 2")
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
@@ -135,21 +138,6 @@ Public Class frmLogIn
             Return String.Empty
         End If
     End Function
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim intCounter = 0
         Do While intCounter < frmAccountInformation.listUsers.Count
@@ -159,11 +147,15 @@ Public Class frmLogIn
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
                 ImportFileData(frmAccountInformation.currentUser.GetName())
+
+                ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
                 frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
                 frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
                 frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
+
+                MsgBox(frmAccountInformation.currentUser.GetBill)
 
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
                     frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
