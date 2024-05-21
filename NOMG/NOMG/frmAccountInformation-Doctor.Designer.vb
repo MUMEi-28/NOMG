@@ -309,7 +309,7 @@ Partial Class frmAccountInformation_Doctor
         'txtDr2Name
         '
         Me.txtDr2Name.Enabled = False
-        Me.txtDr2Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDr2Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDr2Name.Location = New System.Drawing.Point(513, 318)
         Me.txtDr2Name.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDr2Name.Multiline = True
@@ -709,7 +709,7 @@ Partial Class frmAccountInformation_Doctor
         Me.Controls.Add(Me.txtDr3Gender)
         Me.Controls.Add(Me.lblDr3Gender)
         Me.Controls.Add(Me.btnBack)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmAccountInformation_Doctor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

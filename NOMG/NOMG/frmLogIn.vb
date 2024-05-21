@@ -151,8 +151,6 @@ Public Class frmLogIn
                 frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
-
-
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
                     frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
                 Else
