@@ -78,18 +78,18 @@ Public Class frmLogIn
                     End If
                 End If
 
+                reader.ReadLine()
                 ' Read Bill
                 Dim billLine As String = reader.ReadLine()
                 Dim billAmount As Double = 0
-                MsgBox(billLine)
                 If Not String.IsNullOrWhiteSpace(billLine) AndAlso billLine.StartsWith("Bill: ") Then
-                    MsgBox("Running 1")
                     Dim billValue = billLine.Substring(6).Trim()
                     If Not billValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
-                        MsgBox("Running 2")
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
+
+                reader.ReadLine()
 
                 ' Read Had Flu Vaccine
                 Dim fluVaccineLine As String = reader.ReadLine()
@@ -117,10 +117,6 @@ Public Class frmLogIn
             End Using
 
             ' Update the UI based on the imported data
-            If frmAccountInformation.currentUser.GetHadFluVac() Then
-                frmRoutine.cbxMed1.Checked = True
-                frmRoutine.cbxMed1.Enabled = False
-            End If
 
             frmBilling.txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill().ToString("F2")
 
@@ -155,7 +151,7 @@ Public Class frmLogIn
                 frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
-                MsgBox(frmAccountInformation.currentUser.GetBill)
+
 
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
                     frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
