@@ -104,6 +104,20 @@ Public Class frmLogIn
                     End If
                 End If
 
+                reader.ReadLine()
+
+                ' Read Patient's Doctor
+                Dim doctorLine As String = reader.ReadLine()
+                Dim doctor As String
+                If Not String.IsNullOrWhiteSpace(doctorLine) AndAlso doctorLine.StartsWith("Doctor Name: ") Then
+                    If doctorLine.Length >= 13 Then
+                        Dim doctorValue = doctorLine.Substring(6).Trim()
+                        If Not doctorValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
+                            doctor = doctorValue
+                        End If
+                    End If
+                End If
+
                 ' Set user credentials and data without doctor
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
@@ -111,6 +125,7 @@ Public Class frmLogIn
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
+                user.SetDoctor(doctor)
 
                 ' Set current user
                 frmAccountInformation.currentUser = user

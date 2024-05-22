@@ -133,6 +133,9 @@ Public Class frmAccountInformation
 		Public Function GetCBX1() As Integer
 			Return intCBX1
 		End Function
+		Public Sub SetDoctor(ByVal tempDoctor As Doctor)
+			doctor = tempDoctor
+		End Sub
 		Public Sub SetDteLMC(ByVal dteTempLMC As Date)
 			dteLMC = dteTempLMC
 		End Sub
