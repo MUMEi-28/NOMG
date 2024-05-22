@@ -296,6 +296,10 @@ Public Class frmMain
 				' Doctor appointment
 				Dim textToWrite5 As String = String.Empty
 
+				' User Password
+				Dim textToWrite7 As String = String.Empty
+				textToWrite7 = "Password: " + frmAccountInformation.currentUser.GetPass().ToString()
+
 
 				' ORIGINAL CODE, ETO GAMITIN KUNG NAAYOS NA ERROR SA DR APPOINTMENT
 				'If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
@@ -310,16 +314,18 @@ Public Class frmMain
 
 				' MAKES SURE HINDI NULL YUNG DOCTOR, NAG IINSTANTIATE MUNA PERO SAME PARIN DAPAT VALUES NIYA
 				' YUNG VERSION NA NAKA COMMENT SA TAAS YUNG ORIGINAL PERO MERON ERROR KUNG WALA NA VALUE YUNG DOCTOR AFTER SECOND LOG IN
-				Dim doctor As frmAccountInformation.Doctor = frmAccountInformation.currentUser.GetDoctor()
-				If doctor Is Nothing OrElse doctor.listDrAppointments Is Nothing OrElse doctor.listDrAppointments.Count <= 0 Then
-					textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
-				Else
-					textToWrite5 += "Doctor's Appointments:" + vbCrLf
-					For Each drAppointment In doctor.listDrAppointments
-						textToWrite5 += drAppointment.ToString() + vbCrLf
-					Next
-					textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
-				End If
+
+
+				'Dim doctor As frmAccountInformation.Doctor = frmAccountInformation.currentUser.GetDoctor()
+				'If doctor Is Nothing OrElse doctor.listDrAppointments Is Nothing OrElse doctor.listDrAppointments.Count <= 0 Then
+				'	textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
+				'Else
+				'	textToWrite5 += "Doctor's Appointments:" + vbCrLf
+				'	For Each drAppointment In doctor.listDrAppointments
+				'		textToWrite5 += drAppointment.ToString() + vbCrLf
+				'	Next
+				'	textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
+				'End If
 
 
 				Dim textToWrite6 As String = String.Empty
@@ -337,7 +343,7 @@ Public Class frmMain
 				End If
 
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + vbCrLf + textToWrite5 + vbCrLf + textToWrite6)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + vbCrLf + textToWrite5 + vbCrLf + textToWrite6 + vbCrLf + textToWrite7)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
@@ -346,22 +352,23 @@ Public Class frmMain
 		End Try
 
 
+		'	DOCTOR Data
+		'For index = 1 To frmAccountInformation.currentUser.GetListCheckedAppointments().Count
+		'	Try
+		'		Dim filePath As String = frmAccountInformation.currentUser.GetDoctor().GetName() + ".txt"
+		'		Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
 
-		' DOCTOR DATA
-		'Try
-		'	Dim filePath As String = ".txt"
-		'	Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
+		'			Dim textToWrite1 As String = String.Empty
 
-		'		Dim textToWrite1 As String = String.Empty
-
-		'		' Write to file
-		'		Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1)
-		'		file.Write(bytesToWrite, 0, bytesToWrite.Length)
-		'	End Using
-		'Catch ex As Exception
-		'	' Handle any exceptions (e.g., file access, permissions, etc.)
-		'	MsgBox("Error: Can't export file. " & ex.Message)
-		'End Try
+		'			' Write to file
+		'			Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1)
+		'			file.Write(bytesToWrite, 0, bytesToWrite.Length)
+		'		End Using
+		'	Catch ex As Exception
+		'		' Handle any exceptions (e.g., file access, permissions, etc.)
+		'		MsgBox("Error: Can't export file. " & ex.Message)
+		'	End Try
+		'Next
 	End Sub
 
 	Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
