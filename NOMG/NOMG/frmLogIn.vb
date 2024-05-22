@@ -5,9 +5,9 @@ Public Class frmLogIn
         frmStart.Show()
         Me.Hide()
     End Sub
-    Private Sub ImportFileData(ByVal name As String)
+    Private Sub ImportFileData(ByVal email As String)
         Try
-            Dim filePath As String = name & ".txt"
+            Dim filePath As String = email & ".txt"
             If Not File.Exists(filePath) Then
                 MsgBox("No saved data found for this user.")
                 Return
@@ -109,9 +109,10 @@ Public Class frmLogIn
                 ' Read Patient's Doctor
                 Dim doctorLine As String = reader.ReadLine()
                 Dim doctorName As String
+
                 If Not String.IsNullOrWhiteSpace(doctorLine) AndAlso doctorLine.StartsWith("Doctor Name: ") Then
                     If doctorLine.Length >= 13 Then
-                        Dim doctorValue = doctorLine.Substring(6).Trim()
+                        Dim doctorValue = doctorLine.Substring(13).Trim()
                         If Not doctorValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
                             doctorName = doctorValue
                         End If
@@ -119,21 +120,21 @@ Public Class frmLogIn
                 End If
 
                 Dim counter As Integer = 0
-                Dim doctor As frmAccountInformation.Doctor
+                Dim userDoctor As frmAccountInformation.Doctor
                 Do While counter < frmAccountInformation.listDoctors.Count
                     If doctorName = frmAccountInformation.listDoctors(counter).GetName Then
-                        doctor = frmAccountInformation.listDoctors(counter)
+                        userDoctor = frmAccountInformation.listDoctors(counter)
                     End If
+                    counter = counter + 1
                 Loop
 
                 ' Set user credentials and data without doctor
-                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.MinValue)
+                user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
                 user.GetListIsPaid().AddRange(isPaidList)
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
-                user.SetDoctor(doctor)
 
                 ' Set current user
                 frmAccountInformation.currentUser = user
@@ -141,7 +142,7 @@ Public Class frmLogIn
 
             ' Update the UI based on the imported data
 
-            frmBilling.txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill().ToString("F2")
+            ' frmBilling.txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill().ToString("F2")
 
             MsgBox("Data imported successfully.")
         Catch ex As Exception
@@ -165,7 +166,7 @@ Public Class frmLogIn
                 txtEmail.Clear()
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
-                ImportFileData(frmAccountInformation.currentUser.GetName())
+                ' ImportFileData(frmAccountInformation.currentUser.GetName())
 
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()

@@ -334,7 +334,7 @@ Public Class frmMain
 				If frmAccountInformation.currentUser.GetListAppointments().Count <= 0 Then
 					textToWrite6 += "Doctor Name: Nothing" + vbCrLf + vbCrLf
 				Else
-					textToWrite6 += "Doctor Name: " 
+					textToWrite6 += "Doctor Name: "
 					For Each appointment In frmAccountInformation.currentUser.GetDoctor().GetName()
 						textToWrite6 += appointment.ToString()
 					Next
