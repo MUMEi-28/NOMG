@@ -108,15 +108,23 @@ Public Class frmLogIn
 
                 ' Read Patient's Doctor
                 Dim doctorLine As String = reader.ReadLine()
-                Dim doctor As String
+                Dim doctorName As String
                 If Not String.IsNullOrWhiteSpace(doctorLine) AndAlso doctorLine.StartsWith("Doctor Name: ") Then
                     If doctorLine.Length >= 13 Then
                         Dim doctorValue = doctorLine.Substring(6).Trim()
                         If Not doctorValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
-                            doctor = doctorValue
+                            doctorName = doctorValue
                         End If
                     End If
                 End If
+
+                Dim counter As Integer = 0
+                Dim doctor As frmAccountInformation.Doctor
+                Do While counter < frmAccountInformation.listDoctors.Count
+                    If doctorName = frmAccountInformation.listDoctors(counter).GetName Then
+                        doctor = frmAccountInformation.listDoctors(counter)
+                    End If
+                Loop
 
                 ' Set user credentials and data without doctor
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, Nothing, Date.MinValue)
