@@ -292,7 +292,6 @@ Public Class frmMain
 				Dim textToWrite4 As String = String.Empty
 				textToWrite4 = "Had Flu Vaccine: " + frmAccountInformation.currentUser.GetHadFluVac().ToString()
 
-
 				' Doctor appointment
 				Dim textToWrite5 As String = String.Empty
 
@@ -343,7 +342,7 @@ Public Class frmMain
 				End If
 
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + vbCrLf + textToWrite5 + vbCrLf + textToWrite6 + vbCrLf + textToWrite7)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + textToWrite6 + vbCrLf + textToWrite7)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
@@ -352,23 +351,22 @@ Public Class frmMain
 		End Try
 
 
-		'	DOCTOR Data
-		'For index = 1 To frmAccountInformation.currentUser.GetListCheckedAppointments().Count
-		'	Try
-		'		Dim filePath As String = frmAccountInformation.currentUser.GetDoctor().GetName() + ".txt"
-		'		Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
+		For index = 1 To frmAccountInformation.listDoctors.Count
+			Try
+				Dim filePath As String = frmAccountInformation.currentUser.GetDoctor().GetName() + ".txt"
+				Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
 
-		'			Dim textToWrite1 As String = String.Empty
+					Dim textToWrite1 As String = String.Empty
 
-		'			' Write to file
-		'			Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1)
-		'			file.Write(bytesToWrite, 0, bytesToWrite.Length)
-		'		End Using
-		'	Catch ex As Exception
-		'		' Handle any exceptions (e.g., file access, permissions, etc.)
-		'		MsgBox("Error: Can't export file. " & ex.Message)
-		'	End Try
-		'Next
+					' Write to file
+					Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1)
+					file.Write(bytesToWrite, 0, bytesToWrite.Length)
+				End Using
+			Catch ex As Exception
+				' Handle any exceptions (e.g., file access, permissions, etc.)
+				MsgBox("Error: Can't export file. " & ex.Message)
+			End Try
+		Next
 	End Sub
 
 	Private Sub btnBillingInfo_Click(sender As Object, e As EventArgs) Handles btnBillingInfo.Click
