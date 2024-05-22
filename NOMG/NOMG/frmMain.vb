@@ -357,9 +357,25 @@ Public Class frmMain
 				Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
 
 					Dim textToWrite1 As String = String.Empty
+					Dim textToWrite2 As String = String.Empty
+
+					textToWrite2 += "Doctor Name: " + frmAccountInformation.currentUser.GetDoctor().GetName()
+
+					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
+
+					If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
+						textToWrite1 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
+					Else
+						textToWrite1 += "Doctor's Appointments:" + vbCrLf
+						For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments
+							textToWrite1 += drAppointment.ToString() + vbCrLf
+						Next
+						textToWrite1 += vbCrLf ' Add an extra line break after the list of appointments
+					End If
+
 
 					' Write to file
-					Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1)
+					Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite2 + vbCrLf + textToWrite1)
 					file.Write(bytesToWrite, 0, bytesToWrite.Length)
 				End Using
 			Catch ex As Exception
