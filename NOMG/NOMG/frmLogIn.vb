@@ -166,7 +166,7 @@ Public Class frmLogIn
                 txtEmail.Clear()
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
-                ' ImportFileData(frmAccountInformation.currentUser.GetName())
+                ImportFileData(frmAccountInformation.currentUser.GetEmail())
 
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
