@@ -29,7 +29,7 @@ Public Class frmLogIn
                 ' Read List Appointments
                 Dim appointments As New List(Of Date)
                 Dim appointmentsHeader = reader.ReadLine()
-                If appointmentsHeader <> "Patient's Appointment Lists:" Then
+                If Not appointmentsHeader.StartsWith("Patient's Appointment Lists:") Then
                     Throw New Exception("Unexpected format for appointment lists.")
                 End If
                 Dim line As String
@@ -44,11 +44,12 @@ Public Class frmLogIn
                         End If
                     End If
                 Loop Until String.IsNullOrWhiteSpace(line)
+                MsgBox(line)
 
                 ' Read Payment status
                 Dim isPaidList As New List(Of Boolean)
                 Dim isPaidHeader As String = reader.ReadLine()
-                If isPaidHeader = "List Is paid:" Then
+                If isPaidHeader.StartsWith("List Is paid:") Then
                     Do
                         line = reader.ReadLine()
                         If Not String.IsNullOrWhiteSpace(line) Then
@@ -61,11 +62,12 @@ Public Class frmLogIn
                         End If
                     Loop Until String.IsNullOrWhiteSpace(line)
                 End If
+                MsgBox(isPaidHeader)
 
                 ' Read List Checked Appointments
                 Dim checkedAppointmentsLine As String = reader.ReadLine()
                 Dim checkedAppointments As New List(Of Integer)
-                If checkedAppointmentsLine.StartsWith("List Checked Appointments: ") Then
+                If checkedAppointmentsLine.StartsWith("List Checked Appointments:") And checkedAppointmentsLine = "List Checked Appointments: None" Then
                     If checkedAppointmentsLine.Length > 27 Then
                         Dim checkedItems = checkedAppointmentsLine.Substring(27).Split(", ")
                         For Each item In checkedItems
@@ -75,18 +77,20 @@ Public Class frmLogIn
                         Next
                     End If
                 End If
-
+                MsgBox(checkedAppointmentsLine)
+                ' Here is the error
                 reader.ReadLine()
 
                 ' Read Bill
                 Dim billLine As String = reader.ReadLine()
                 Dim billAmount As Double = 0
-                If Not String.IsNullOrWhiteSpace(billLine) AndAlso billLine.StartsWith("Bill: ") Then
+                If (Not String.IsNullOrWhiteSpace(billLine) And Not billLine = "Bill: Nothing") AndAlso billLine.StartsWith("Bill: ") Then
                     Dim billValue = billLine.Substring(6).Trim()
                     If Not billValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
+                MsgBox(billLine)
 
                 reader.ReadLine()
 
@@ -97,13 +101,12 @@ Public Class frmLogIn
                     If fluVaccineLine.Length >= 17 Then
                         If Boolean.TryParse(fluVaccineLine.Substring(17).Trim(), hadFluVaccine) Then
                             ' Successfully parsed boolean
-
                         Else
                             Throw New Exception("Invalid boolean value for flu vaccine: " & fluVaccineLine.Substring(17).Trim())
                         End If
                     End If
                 End If
-                MsgBox(hadFluVaccine)
+                MsgBox(fluVaccineLine)
 
                 reader.ReadLine()
 
@@ -210,8 +213,9 @@ Public Class frmLogIn
                 Me.Hide()
 
                 Return ' Make sure not to show the other MsgBox
-            Else
+            ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
                 frmAccountInformation.listUsers.RemoveAt(intCounter)
+                Exit Do
             End If
             intCounter += 1
         Loop
