@@ -23,25 +23,25 @@ Partial Class FrmSplashScreen
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblNewOB = New System.Windows.Forms.Label()
         Me.panelLoadingBG = New System.Windows.Forms.Panel()
         Me.panelLoading = New System.Windows.Forms.Panel()
         Me.SplashScreenTImer = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblNOMG = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label2
+        'lblNewOB
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(137, 130)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(869, 76)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "New OB Master GYN Clinic"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblNewOB.AutoSize = True
+        Me.lblNewOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNewOB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblNewOB.Location = New System.Drawing.Point(137, 130)
+        Me.lblNewOB.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNewOB.Name = "lblNewOB"
+        Me.lblNewOB.Size = New System.Drawing.Size(869, 76)
+        Me.lblNewOB.TabIndex = 1
+        Me.lblNewOB.Text = "New OB Master GYN Clinic"
+        Me.lblNewOB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'panelLoadingBG
         '
@@ -68,18 +68,18 @@ Partial Class FrmSplashScreen
         Me.SplashScreenTImer.Enabled = True
         Me.SplashScreenTImer.Interval = 2
         '
-        'Label3
+        'lblNOMG
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(469, 223)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(244, 76)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "NOMG"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblNOMG.AutoSize = True
+        Me.lblNOMG.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNOMG.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblNOMG.Location = New System.Drawing.Point(469, 223)
+        Me.lblNOMG.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNOMG.Name = "lblNOMG"
+        Me.lblNOMG.Size = New System.Drawing.Size(244, 76)
+        Me.lblNOMG.TabIndex = 4
+        Me.lblNOMG.Text = "NOMG"
+        Me.lblNOMG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmSplashScreen
         '
@@ -87,10 +87,10 @@ Partial Class FrmSplashScreen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1192, 623)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lblNOMG)
         Me.Controls.Add(Me.panelLoading)
         Me.Controls.Add(Me.panelLoadingBG)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblNewOB)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
@@ -101,9 +101,9 @@ Partial Class FrmSplashScreen
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblNewOB As Label
 	Friend WithEvents panelLoadingBG As Panel
 	Friend WithEvents panelLoading As Panel
 	Friend WithEvents SplashScreenTImer As Timer
-	Friend WithEvents Label3 As Label
+	Friend WithEvents lblNOMG As Label
 End Class
