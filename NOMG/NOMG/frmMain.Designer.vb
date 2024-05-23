@@ -60,7 +60,7 @@ Partial Class frmMain
 		Me.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup
 		Me.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
 		Me.btnLogOut.Location = New System.Drawing.Point(9, 10)
-		Me.btnLogOut.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.btnLogOut.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnLogOut.Name = "btnLogOut"
 		Me.btnLogOut.Size = New System.Drawing.Size(71, 34)
 		Me.btnLogOut.TabIndex = 1
@@ -87,7 +87,7 @@ Partial Class frmMain
 		Me.btnSeeRoutine.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btnSeeRoutine.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
 		Me.btnSeeRoutine.Location = New System.Drawing.Point(153, 181)
-		Me.btnSeeRoutine.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.btnSeeRoutine.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnSeeRoutine.Name = "btnSeeRoutine"
 		Me.btnSeeRoutine.Size = New System.Drawing.Size(164, 37)
 		Me.btnSeeRoutine.TabIndex = 4
@@ -99,7 +99,7 @@ Partial Class frmMain
 		Me.dtpFirstAppointment.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.dtpFirstAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.dtpFirstAppointment.Location = New System.Drawing.Point(106, 117)
-		Me.dtpFirstAppointment.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.dtpFirstAppointment.Margin = New System.Windows.Forms.Padding(2)
 		Me.dtpFirstAppointment.Name = "dtpFirstAppointment"
 		Me.dtpFirstAppointment.Size = New System.Drawing.Size(258, 24)
 		Me.dtpFirstAppointment.TabIndex = 8
@@ -111,7 +111,7 @@ Partial Class frmMain
 		Me.btnViewDoctors.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btnViewDoctors.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
 		Me.btnViewDoctors.Location = New System.Drawing.Point(89, 587)
-		Me.btnViewDoctors.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.btnViewDoctors.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnViewDoctors.Name = "btnViewDoctors"
 		Me.btnViewDoctors.Size = New System.Drawing.Size(293, 41)
 		Me.btnViewDoctors.TabIndex = 9
@@ -126,7 +126,7 @@ Partial Class frmMain
 		Me.pnlClinicInfo.Controls.Add(Me.lblCIAddress)
 		Me.pnlClinicInfo.Controls.Add(Me.lblClOperationalDays)
 		Me.pnlClinicInfo.Location = New System.Drawing.Point(33, 249)
-		Me.pnlClinicInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.pnlClinicInfo.Margin = New System.Windows.Forms.Padding(2)
 		Me.pnlClinicInfo.Name = "pnlClinicInfo"
 		Me.pnlClinicInfo.Size = New System.Drawing.Size(406, 315)
 		Me.pnlClinicInfo.TabIndex = 10
@@ -187,7 +187,7 @@ Partial Class frmMain
 		'
 		Me.txtCIName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.txtCIName.Location = New System.Drawing.Point(59, 353)
-		Me.txtCIName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtCIName.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtCIName.Multiline = True
 		Me.txtCIName.Name = "txtCIName"
 		Me.txtCIName.Size = New System.Drawing.Size(354, 46)
@@ -199,7 +199,7 @@ Partial Class frmMain
 		'
 		Me.txtCIAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.txtCIAddress.Location = New System.Drawing.Point(59, 424)
-		Me.txtCIAddress.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtCIAddress.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtCIAddress.Multiline = True
 		Me.txtCIAddress.Name = "txtCIAddress"
 		Me.txtCIAddress.Size = New System.Drawing.Size(354, 46)
@@ -211,7 +211,7 @@ Partial Class frmMain
 		'
 		Me.txtCIOperationalDays.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.txtCIOperationalDays.Location = New System.Drawing.Point(59, 492)
-		Me.txtCIOperationalDays.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtCIOperationalDays.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtCIOperationalDays.Multiline = True
 		Me.txtCIOperationalDays.Name = "txtCIOperationalDays"
 		Me.txtCIOperationalDays.Size = New System.Drawing.Size(354, 46)
@@ -226,7 +226,7 @@ Partial Class frmMain
 		Me.btnBillingInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btnBillingInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
 		Me.btnBillingInfo.Location = New System.Drawing.Point(516, 554)
-		Me.btnBillingInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.btnBillingInfo.Margin = New System.Windows.Forms.Padding(2)
 		Me.btnBillingInfo.Name = "btnBillingInfo"
 		Me.btnBillingInfo.Size = New System.Drawing.Size(368, 55)
 		Me.btnBillingInfo.TabIndex = 20
@@ -244,7 +244,7 @@ Partial Class frmMain
 		Me.pnlPatientDetails.Controls.Add(Me.lblPDAdditionalInfo)
 		Me.pnlPatientDetails.Controls.Add(Me.lblPDGestationalAge)
 		Me.pnlPatientDetails.Location = New System.Drawing.Point(472, 44)
-		Me.pnlPatientDetails.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.pnlPatientDetails.Margin = New System.Windows.Forms.Padding(2)
 		Me.pnlPatientDetails.Name = "pnlPatientDetails"
 		Me.pnlPatientDetails.Size = New System.Drawing.Size(455, 481)
 		Me.pnlPatientDetails.TabIndex = 11
@@ -343,7 +343,7 @@ Partial Class frmMain
 		'txtPDName
 		'
 		Me.txtPDName.Location = New System.Drawing.Point(516, 163)
-		Me.txtPDName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDName.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDName.Multiline = True
 		Me.txtPDName.Name = "txtPDName"
 		Me.txtPDName.Size = New System.Drawing.Size(369, 46)
@@ -352,7 +352,7 @@ Partial Class frmMain
 		'txtPDAddress
 		'
 		Me.txtPDAddress.Location = New System.Drawing.Point(516, 233)
-		Me.txtPDAddress.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDAddress.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDAddress.Multiline = True
 		Me.txtPDAddress.Name = "txtPDAddress"
 		Me.txtPDAddress.Size = New System.Drawing.Size(369, 46)
@@ -361,7 +361,7 @@ Partial Class frmMain
 		'txtPDAdditionalInfo
 		'
 		Me.txtPDAdditionalInfo.Location = New System.Drawing.Point(516, 389)
-		Me.txtPDAdditionalInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDAdditionalInfo.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDAdditionalInfo.Multiline = True
 		Me.txtPDAdditionalInfo.Name = "txtPDAdditionalInfo"
 		Me.txtPDAdditionalInfo.Size = New System.Drawing.Size(369, 118)
@@ -370,7 +370,7 @@ Partial Class frmMain
 		'txtPDAge
 		'
 		Me.txtPDAge.Location = New System.Drawing.Point(516, 311)
-		Me.txtPDAge.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDAge.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDAge.Multiline = True
 		Me.txtPDAge.Name = "txtPDAge"
 		Me.txtPDAge.Size = New System.Drawing.Size(116, 46)
@@ -379,7 +379,7 @@ Partial Class frmMain
 		'txtPDFirstBaby
 		'
 		Me.txtPDFirstBaby.Location = New System.Drawing.Point(647, 311)
-		Me.txtPDFirstBaby.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDFirstBaby.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDFirstBaby.Multiline = True
 		Me.txtPDFirstBaby.Name = "txtPDFirstBaby"
 		Me.txtPDFirstBaby.Size = New System.Drawing.Size(102, 46)
@@ -388,7 +388,7 @@ Partial Class frmMain
 		'txtPDGestationalAge
 		'
 		Me.txtPDGestationalAge.Location = New System.Drawing.Point(760, 311)
-		Me.txtPDGestationalAge.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.txtPDGestationalAge.Margin = New System.Windows.Forms.Padding(2)
 		Me.txtPDGestationalAge.Multiline = True
 		Me.txtPDGestationalAge.Name = "txtPDGestationalAge"
 		Me.txtPDGestationalAge.Size = New System.Drawing.Size(126, 46)
@@ -417,8 +417,8 @@ Partial Class frmMain
 		Me.Controls.Add(Me.btnSeeRoutine)
 		Me.Controls.Add(Me.lblAppointment)
 		Me.Controls.Add(Me.btnLogOut)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-		Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+		Me.Margin = New System.Windows.Forms.Padding(2)
 		Me.MaximizeBox = False
 		Me.Name = "frmMain"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

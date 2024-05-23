@@ -214,7 +214,7 @@ Partial Class frmAccountInformation
 		Me.Controls.Add(Me.ptbDr)
 		Me.Controls.Add(Me.lblTItle)
 		Me.Controls.Add(Me.pnlMain)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.MaximizeBox = False
 		Me.Name = "frmAccountInformation"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

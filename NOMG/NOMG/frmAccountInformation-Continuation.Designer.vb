@@ -111,7 +111,7 @@ Partial Class frmAccountInformation_Continuation
 		Me.dtpLMC.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 7.799999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.dtpLMC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.dtpLMC.Location = New System.Drawing.Point(20, 140)
-		Me.dtpLMC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+		Me.dtpLMC.Margin = New System.Windows.Forms.Padding(2)
 		Me.dtpLMC.Name = "dtpLMC"
 		Me.dtpLMC.Size = New System.Drawing.Size(258, 24)
 		Me.dtpLMC.TabIndex = 1
@@ -228,7 +228,7 @@ Partial Class frmAccountInformation_Continuation
 		Me.Controls.Add(Me.pnlMain)
 		Me.Controls.Add(Me.ptbDr)
 		Me.Controls.Add(Me.Label2)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.MaximizeBox = False
 		Me.Name = "frmAccountInformation_Continuation"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
