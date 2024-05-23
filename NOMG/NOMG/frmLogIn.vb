@@ -5,9 +5,9 @@ Public Class frmLogIn
         frmStart.Show()
         Me.Hide()
     End Sub
-    Private Sub ImportFileData(ByVal email As String)
+    Private Sub ImportFileData(ByVal userEmail As String)
         Try
-            Dim filePath As String = email & ".txt"
+            Dim filePath As String = userEmail & ".txt"
             If Not File.Exists(filePath) Then
                 MsgBox("No saved data found for this user.")
                 Return
@@ -19,11 +19,10 @@ Public Class frmLogIn
                 ' Read user details
                 Dim userName = GetValue(reader.ReadLine())  ' Name
                 Dim userAddress = GetValue(reader.ReadLine())  ' Address
-                Dim userEmail = frmAccountInformation.currentUser.GetEmail() ' Use the email from the current user
-                Dim userPass = frmAccountInformation.currentUser.GetPass()  ' Use the password from the current user
                 Dim userAge = CInt(GetValue(reader.ReadLine()))  ' Age
                 Dim userIsFirstBaby = GetValue(reader.ReadLine())  ' IsFirstBaby
                 Dim userGestationalAge = CInt(GetValue(reader.ReadLine()))  ' GestationalAge
+                MsgBox(userName)
 
                 ' Skip blank line after user details
                 reader.ReadLine()
@@ -88,6 +87,7 @@ Public Class frmLogIn
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
+                MsgBox(billAmount)
 
                 reader.ReadLine()
 
@@ -103,12 +103,13 @@ Public Class frmLogIn
                         End If
                     End If
                 End If
+                MsgBox(hadFluVaccine)
 
                 reader.ReadLine()
 
                 ' Read Patient's Doctor
                 Dim doctorLine As String = reader.ReadLine()
-                Dim doctorName As String
+                Dim doctorName As String = Nothing
 
                 If Not String.IsNullOrWhiteSpace(doctorLine) AndAlso doctorLine.StartsWith("Doctor Name: ") Then
                     If doctorLine.Length >= 13 Then
@@ -120,13 +121,29 @@ Public Class frmLogIn
                 End If
 
                 Dim counter As Integer = 0
-                Dim userDoctor As frmAccountInformation.Doctor
+                Dim userDoctor As frmAccountInformation.Doctor = Nothing
                 Do While counter < frmAccountInformation.listDoctors.Count
                     If doctorName = frmAccountInformation.listDoctors(counter).GetName Then
                         userDoctor = frmAccountInformation.listDoctors(counter)
                     End If
                     counter = counter + 1
                 Loop
+                MsgBox(doctorName)
+
+                reader.ReadLine()
+
+                Dim passLine As String = reader.ReadLine()
+                Dim userPass As String = Nothing
+
+                If Not String.IsNullOrWhiteSpace(passLine) AndAlso passLine.StartsWith("Password: ") Then
+                    If doctorLine.Length >= 13 Then
+                        Dim passValue = doctorLine.Substring(13).Trim()
+                        If Not passValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
+                            userPass = passValue
+                        End If
+                    End If
+                End If
+                MsgBox(userPass)
 
                 ' Set user credentials and data without doctor
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
@@ -136,8 +153,11 @@ Public Class frmLogIn
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
 
+                ' Adds to the list of users
+                frmAccountInformation.listUsers.Add(user)
+
                 ' Set current user
-                frmAccountInformation.currentUser = user
+                ' frmAccountInformation.currentUser = user
             End Using
 
             ' Update the UI based on the imported data
@@ -160,13 +180,14 @@ Public Class frmLogIn
     End Function
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim intCounter = 0
+        ImportFileData(txtEmail.Text)
+
         Do While intCounter < frmAccountInformation.listUsers.Count
             If txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() And txtPassword.Text = frmAccountInformation.listUsers(intCounter).GetPass() Then
                 MsgBox("Log In Successful", vbOKOnly, "Log In")
                 txtEmail.Clear()
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
-                ImportFileData(frmAccountInformation.currentUser.GetEmail())
 
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
@@ -187,6 +208,8 @@ Public Class frmLogIn
                 Me.Hide()
 
                 Return ' Make sure not to show the other MsgBox
+            Else
+                frmAccountInformation.listUsers.RemoveAt(intCounter)
             End If
             intCounter += 1
         Loop
