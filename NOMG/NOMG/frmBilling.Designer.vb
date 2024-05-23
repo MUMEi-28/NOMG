@@ -369,11 +369,11 @@ Partial Class frmBilling
         '
         'txtName
         '
-        Me.txtName.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.txtName.BackColor = System.Drawing.Color.White
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtName.Enabled = False
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.txtName.ForeColor = System.Drawing.Color.Black
         Me.txtName.Location = New System.Drawing.Point(154, 63)
         Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"

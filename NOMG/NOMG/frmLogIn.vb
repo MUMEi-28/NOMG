@@ -136,8 +136,8 @@ Public Class frmLogIn
                 Dim userPass As String = Nothing
 
                 If Not String.IsNullOrWhiteSpace(passLine) AndAlso passLine.StartsWith("Password: ") Then
-                    If doctorLine.Length >= 13 Then
-                        Dim passValue = doctorLine.Substring(13).Trim()
+                    If passLine.Length >= 10 Then
+                        Dim passValue = passLine.Substring(10).Trim()
                         If Not passValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
                             userPass = passValue
                         End If
@@ -152,6 +152,8 @@ Public Class frmLogIn
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
+
+                MsgBox("Reaches here")
 
                 ' Adds to the list of users
                 frmAccountInformation.listUsers.Add(user)
