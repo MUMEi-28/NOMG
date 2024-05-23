@@ -44,12 +44,11 @@ Public Class frmLogIn
                         End If
                     End If
                 Loop Until String.IsNullOrWhiteSpace(line)
-                MsgBox(line)
 
                 ' Read Payment status
                 Dim isPaidList As New List(Of Boolean)
                 Dim isPaidHeader As String = reader.ReadLine()
-                If isPaidHeader.StartsWith("List Is paid:") Then
+                If isPaidHeader.StartsWith("List Is paid:") Or isPaidHeader.StartsWith("List is paid:") Then
                     Do
                         line = reader.ReadLine()
                         If Not String.IsNullOrWhiteSpace(line) Then
@@ -62,12 +61,11 @@ Public Class frmLogIn
                         End If
                     Loop Until String.IsNullOrWhiteSpace(line)
                 End If
-                MsgBox(isPaidHeader)
 
                 ' Read List Checked Appointments
                 Dim checkedAppointmentsLine As String = reader.ReadLine()
                 Dim checkedAppointments As New List(Of Integer)
-                If checkedAppointmentsLine.StartsWith("List Checked Appointments:") And checkedAppointmentsLine = "List Checked Appointments: None" Then
+                If checkedAppointmentsLine.StartsWith("List Checked Appointments:") And checkedAppointmentsLine <> "List Checked Appointments: None" Then
                     If checkedAppointmentsLine.Length > 27 Then
                         Dim checkedItems = checkedAppointmentsLine.Substring(27).Split(", ")
                         For Each item In checkedItems
@@ -77,8 +75,7 @@ Public Class frmLogIn
                         Next
                     End If
                 End If
-                MsgBox(checkedAppointmentsLine)
-                ' Here is the error
+
                 reader.ReadLine()
 
                 ' Read Bill
@@ -90,7 +87,6 @@ Public Class frmLogIn
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
-                MsgBox(billLine)
 
                 reader.ReadLine()
 
@@ -106,7 +102,6 @@ Public Class frmLogIn
                         End If
                     End If
                 End If
-                MsgBox(fluVaccineLine)
 
                 reader.ReadLine()
 
@@ -131,7 +126,6 @@ Public Class frmLogIn
                     End If
                     counter = counter + 1
                 Loop
-                MsgBox(doctorName)
 
                 reader.ReadLine()
 
@@ -146,7 +140,6 @@ Public Class frmLogIn
                         End If
                     End If
                 End If
-                MsgBox(userPass)
 
                 ' Set user credentials and data without doctor
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
@@ -155,8 +148,6 @@ Public Class frmLogIn
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
-
-                MsgBox("Reaches here")
 
                 ' Adds to the list of users
                 frmAccountInformation.listUsers.Add(user)
