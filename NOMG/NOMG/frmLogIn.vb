@@ -154,22 +154,14 @@ Public Class frmLogIn
                     userDoctor.listDrAppointments.AddRange(appointments)
                 End If
 
-                MsgBox("Reaches here")
-
                 ' Adds to the list of users
                 frmAccountInformation.listUsers.Add(user)
 
-                ' Set current user
-                ' frmAccountInformation.currentUser = user
             End Using
-
-            ' Update the UI based on the imported data
-
-            ' frmBilling.txtPendingAmount.Text = frmAccountInformation.currentUser.GetBill().ToString("F2")
 
             MsgBox("Data imported successfully.")
         Catch ex As Exception
-            MsgBox("Error importing data: " & ex.Message)
+
         End Try
     End Sub
 

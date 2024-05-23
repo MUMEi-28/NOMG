@@ -159,6 +159,7 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAccountInformation-Doctor.resx">
       <DependentUpon>frmAccountInformation-Doctor.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -168,21 +169,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctors.resx">
       <DependentUpon>frmDoctors.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBilling.resx">
       <DependentUpon>frmBilling.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment.resx">
       <DependentUpon>frmPayment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountInformation-Continuation.resx">
       <DependentUpon>frmAccountInformation-Continuation.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountInformation.resx">
       <DependentUpon>frmAccountInformation.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.vb</DependentUpon>
