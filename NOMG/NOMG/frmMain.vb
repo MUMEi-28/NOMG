@@ -14,6 +14,8 @@ Public Class frmMain
 	Dim counter As Integer
 
 	Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
+		Console.WriteLine("APPOINTMENT VALUE CHANGED")
+
 		If blnLogOut = False And frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
 			If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
 				MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbOKCancel + vbCritical, "Error")
@@ -24,6 +26,7 @@ Public Class frmMain
 				counter = 0
 				Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
 					If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
+						Console.WriteLine(frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value)
 						counter = counter + 1
 					End If
 
@@ -216,17 +219,18 @@ Public Class frmMain
 			MsgBox("First appointment is not set.", vbOKCancel + vbCritical, "Error")
 		End If
 	End Sub
-	Private Sub ExportFileData()
+	Public Sub ExportFileData()
+		Console.WriteLine("DATA EXPORTED")
 
 		' USER DATA
 		Try
 			Dim filePath As String = frmAccountInformation.currentUser.GetEmail() + ".txt"
 			Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
-				Dim textToWrite1 As String = String.Empty
+				Dim userInfo As String = String.Empty
 				Dim textToWrite2 As String = String.Empty
 
 				' User details with an extra line break after gestational age
-				textToWrite1 = "Name: " + txtPDName.Text + vbCrLf +
+				userInfo = "Name: " + txtPDName.Text + vbCrLf +
 						   "Address: " + txtPDAddress.Text + vbCrLf +
 						   "Age: " + txtPDAge.Text + vbCrLf +
 						   "First Baby: " + txtPDFirstBaby.Text + vbCrLf +
@@ -327,22 +331,13 @@ Public Class frmMain
 				'End If
 
 
-				Dim textToWrite6 As String = String.Empty
-
+				Dim doctorInfo As String = String.Empty
 
 				' Doctor Name
-				If frmAccountInformation.currentUser.GetListAppointments().Count <= 0 Then
-					textToWrite6 += "Doctor Name: Nothing" + vbCrLf + vbCrLf
-				Else
-					textToWrite6 += "Doctor Name: "
-					For Each appointment In frmAccountInformation.currentUser.GetDoctor().GetName()
-						textToWrite6 += appointment.ToString()
-					Next
-					textToWrite6 += vbCrLf ' Add an extra line break after the list of appointments
-				End If
-
+				doctorInfo += "Doctor Name: " + frmAccountInformation.currentUser.GetDoctor().GetName()
+				doctorInfo += vbCrLf ' Add an extra line break after the list of appointments
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite1 + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + textToWrite6 + vbCrLf + textToWrite7)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(userInfo + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + doctorInfo + vbCrLf + textToWrite7)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
@@ -350,32 +345,34 @@ Public Class frmMain
 			MsgBox("Error: Can't export file. " & ex.Message)
 		End Try
 
-
+		'DOCTOR DATA
 		For index = 1 To frmAccountInformation.listDoctors.Count
 			Try
 				Dim filePath As String = frmAccountInformation.currentUser.GetDoctor().GetName() + ".txt"
 				Using file As New FileStream(filePath, FileMode.Create, FileAccess.Write)
 
-					Dim textToWrite1 As String = String.Empty
+					Dim userInfo As String = String.Empty
 					Dim textToWrite2 As String = String.Empty
 
 					textToWrite2 += "Doctor Name: " + frmAccountInformation.currentUser.GetDoctor().GetName()
 
 					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
 
+
+					' Writes doctor appointment
 					If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
-						textToWrite1 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
+						userInfo += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
 					Else
-						textToWrite1 += "Doctor's Appointments:" + vbCrLf
-						For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments
-							textToWrite1 += drAppointment.ToString() + vbCrLf
+						userInfo += "Doctor's Appointments:" + vbCrLf
+						For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().GetListDrAppointment()
+							userInfo += drAppointment.ToString() + vbCrLf
 						Next
-						textToWrite1 += vbCrLf ' Add an extra line break after the list of appointments
+						userInfo += vbCrLf ' Add an extra line break after the list of appointments
 					End If
 
 
 					' Write to file
-					Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite2 + vbCrLf + textToWrite1)
+					Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(textToWrite2 + vbCrLf + userInfo)
 					file.Write(bytesToWrite, 0, bytesToWrite.Length)
 				End Using
 			Catch ex As Exception

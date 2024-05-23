@@ -181,6 +181,11 @@ Public Class frmAccountInformation
 
 		End Sub
 
+		Public Function GetListDrAppointment() As List(Of Date)
+			Return listDrAppointments
+		End Function
+
+
 		Public Function GetName() As String
 			Return strName
 		End Function

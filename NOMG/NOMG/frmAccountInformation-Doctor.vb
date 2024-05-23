@@ -30,6 +30,9 @@
 		tempDoctor2 = Nothing
 		frmAccountInformation_Continuation.dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 
+
+		frmMain.ExportFileData()
+
 		' Hide the current form and show the login form
 		Me.Hide()
 		frmLogIn.Show()
