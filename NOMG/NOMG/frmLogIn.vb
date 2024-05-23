@@ -22,7 +22,6 @@ Public Class frmLogIn
                 Dim userAge = CInt(GetValue(reader.ReadLine()))  ' Age
                 Dim userIsFirstBaby = GetValue(reader.ReadLine())  ' IsFirstBaby
                 Dim userGestationalAge = CInt(GetValue(reader.ReadLine()))  ' GestationalAge
-                MsgBox(userName)
 
                 ' Skip blank line after user details
                 reader.ReadLine()
@@ -78,6 +77,7 @@ Public Class frmLogIn
                 End If
 
                 reader.ReadLine()
+
                 ' Read Bill
                 Dim billLine As String = reader.ReadLine()
                 Dim billAmount As Double = 0
@@ -87,7 +87,6 @@ Public Class frmLogIn
                         billAmount = Double.Parse(billValue)
                     End If
                 End If
-                MsgBox(billAmount)
 
                 reader.ReadLine()
 
@@ -98,6 +97,7 @@ Public Class frmLogIn
                     If fluVaccineLine.Length >= 17 Then
                         If Boolean.TryParse(fluVaccineLine.Substring(17).Trim(), hadFluVaccine) Then
                             ' Successfully parsed boolean
+
                         Else
                             Throw New Exception("Invalid boolean value for flu vaccine: " & fluVaccineLine.Substring(17).Trim())
                         End If
