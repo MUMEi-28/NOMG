@@ -141,13 +141,20 @@ Public Class frmLogIn
                     End If
                 End If
 
-                ' Set user credentials and data without doctor
+                ' Set user credentials and data
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
                 user.GetListIsPaid().AddRange(isPaidList)
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
+
+                ' Add user's appointments to doctor's appointments
+                If userDoctor IsNot Nothing Then
+                    userDoctor.listDrAppointments.AddRange(appointments)
+                End If
+
+                MsgBox("Reaches here")
 
                 ' Adds to the list of users
                 frmAccountInformation.listUsers.Add(user)

@@ -14,8 +14,6 @@ Public Class frmMain
 	Dim counter As Integer
 
 	Private Sub dtpFirstAppointment_ValueChanged(sender As Object, e As EventArgs) Handles dtpFirstAppointment.ValueChanged
-		Console.WriteLine("APPOINTMENT VALUE CHANGED")
-
 		If blnLogOut = False And frmAccountInformation.currentUser.GetListAppointments.Count = 0 Then
 			If dtpFirstAppointment.Value.DayOfWeek = 0 Or dtpFirstAppointment.Value.DayOfWeek = 1 Then
 				MsgBox("The date chosen is not allowed. Sunday and Monday are not available. Please pick again.", vbOKCancel + vbCritical, "Error")
@@ -26,7 +24,6 @@ Public Class frmMain
 				counter = 0
 				Do While intI < frmAccountInformation.currentUser.GetDoctor.listDrAppointments.Count
 					If frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value Then
-						Console.WriteLine(frmAccountInformation.currentUser.GetDoctor.listDrAppointments(intI) = dtpFirstAppointment.Value)
 						counter = counter + 1
 					End If
 
@@ -220,7 +217,6 @@ Public Class frmMain
 		End If
 	End Sub
 	Public Sub ExportFileData()
-		Console.WriteLine("DATA EXPORTED")
 
 		' USER DATA
 		Try
@@ -303,39 +299,13 @@ Public Class frmMain
 				Dim textToWrite7 As String = String.Empty
 				textToWrite7 = "Password: " + frmAccountInformation.currentUser.GetPass().ToString()
 
-
-				' ORIGINAL CODE, ETO GAMITIN KUNG NAAYOS NA ERROR SA DR APPOINTMENT
-				'If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
-				'	textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
-				'Else
-				'	textToWrite5 += "Doctor's Appointments:" + vbCrLf
-				'	For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments
-				'		textToWrite5 += drAppointment.ToString() + vbCrLf
-				'	Next
-				'	textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
-				'End If
-
-				' MAKES SURE HINDI NULL YUNG DOCTOR, NAG IINSTANTIATE MUNA PERO SAME PARIN DAPAT VALUES NIYA
-				' YUNG VERSION NA NAKA COMMENT SA TAAS YUNG ORIGINAL PERO MERON ERROR KUNG WALA NA VALUE YUNG DOCTOR AFTER SECOND LOG IN
-
-
-				'Dim doctor As frmAccountInformation.Doctor = frmAccountInformation.currentUser.GetDoctor()
-				'If doctor Is Nothing OrElse doctor.listDrAppointments Is Nothing OrElse doctor.listDrAppointments.Count <= 0 Then
-				'	textToWrite5 += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
-				'Else
-				'	textToWrite5 += "Doctor's Appointments:" + vbCrLf
-				'	For Each drAppointment In doctor.listDrAppointments
-				'		textToWrite5 += drAppointment.ToString() + vbCrLf
-				'	Next
-				'	textToWrite5 += vbCrLf ' Add an extra line break after the list of appointments
-				'End If
-
-
 				Dim doctorInfo As String = String.Empty
 
 				' Doctor Name
+
 				doctorInfo += "Doctor Name: " + frmAccountInformation.currentUser.GetDoctor().GetName()
 				doctorInfo += vbCrLf ' Add an extra line break after the list of appointments
+
 				' Write to file
 				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(userInfo + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + doctorInfo + vbCrLf + textToWrite7)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
@@ -345,7 +315,7 @@ Public Class frmMain
 			MsgBox("Error: Can't export file. " & ex.Message)
 		End Try
 
-		'DOCTOR DATA
+
 		For index = 1 To frmAccountInformation.listDoctors.Count
 			Try
 				Dim filePath As String = frmAccountInformation.currentUser.GetDoctor().GetName() + ".txt"
@@ -358,16 +328,15 @@ Public Class frmMain
 
 					textToWrite2 += vbCrLf ' Add an extra line break after the list of appointments
 
-
-					' Writes doctor appointment
 					If frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count <= 0 Then
 						userInfo += "Doctor's Appointments: Nothing" + vbCrLf + vbCrLf
 					Else
 						userInfo += "Doctor's Appointments:" + vbCrLf
+						'	For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments ' ETO ORIG, IF D GUMANA UNCOMMENT
 						For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().GetListDrAppointment()
-							userInfo += drAppointment.ToString() + vbCrLf
-						Next
-						userInfo += vbCrLf ' Add an extra line break after the list of appointments
+								userInfo += drAppointment.ToString() + vbCrLf
+							Next
+							userInfo += vbCrLf ' Add an extra line break after the list of appointments
 					End If
 
 

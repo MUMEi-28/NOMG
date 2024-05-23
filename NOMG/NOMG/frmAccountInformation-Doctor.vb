@@ -8,8 +8,6 @@
 	End Sub
 
 	Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-
-
 		' Create a new user instance
 		Dim newUser As New frmAccountInformation.User()
 		newUser.SetUserCredentials(frmAccountInformation.txtName.Text, frmAccountInformation.txtAddress.Text,
@@ -18,6 +16,12 @@
 								   Val(frmAccountInformation_Continuation.txtGasAge.Text), tempDoctor2, frmAccountInformation_Continuation.dtpLMC.Value)
 
 		frmAccountInformation.listUsers.Add(newUser)
+
+		' Set the currentUser to the new user
+		frmAccountInformation.currentUser = newUser
+
+		' Call ExportFileData
+		frmMain.ExportFileData()
 
 		' Clear all TextBoxes
 		frmAccountInformation.txtName.Clear()
@@ -31,11 +35,11 @@
 		frmAccountInformation_Continuation.dtpLMC.Value = New DateTime(Date.Today.Year, Date.Today.Month, Date.Today.Day)
 
 
-		frmMain.ExportFileData()
 
 		' Hide the current form and show the login form
 		Me.Hide()
 		frmLogIn.Show()
+
 	End Sub
 
 	Private Sub btnDoctor1_Click(sender As Object, e As EventArgs) Handles btnDoctor1.Click
