@@ -25,6 +25,7 @@ Partial Class frmStart
 		Me.lblTitle = New System.Windows.Forms.Label()
 		Me.btnExisting = New System.Windows.Forms.Button()
 		Me.btnNew = New System.Windows.Forms.Button()
+		Me.btnCLose = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'lblTitle
@@ -65,12 +66,26 @@ Partial Class frmStart
 		Me.btnNew.Text = "I AM A NEW PATIENT"
 		Me.btnNew.UseVisualStyleBackColor = False
 		'
+		'btnCLose
+		'
+		Me.btnCLose.BackColor = System.Drawing.Color.FromArgb(CType(CType(79, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(87, Byte), Integer))
+		Me.btnCLose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+		Me.btnCLose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btnCLose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(224, Byte), Integer))
+		Me.btnCLose.Location = New System.Drawing.Point(125, 365)
+		Me.btnCLose.Name = "btnCLose"
+		Me.btnCLose.Size = New System.Drawing.Size(252, 59)
+		Me.btnCLose.TabIndex = 6
+		Me.btnCLose.Text = "EXIT"
+		Me.btnCLose.UseVisualStyleBackColor = False
+		'
 		'frmStart
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(70, Byte), Integer))
 		Me.ClientSize = New System.Drawing.Size(484, 562)
+		Me.Controls.Add(Me.btnCLose)
 		Me.Controls.Add(Me.btnNew)
 		Me.Controls.Add(Me.btnExisting)
 		Me.Controls.Add(Me.lblTitle)
@@ -87,4 +102,5 @@ Partial Class frmStart
 	Friend WithEvents lblTitle As Label
 	Friend WithEvents btnExisting As Button
 	Friend WithEvents btnNew As Button
+	Friend WithEvents btnCLose As Button
 End Class
