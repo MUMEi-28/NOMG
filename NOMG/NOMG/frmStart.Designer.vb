@@ -74,7 +74,7 @@ Partial Class frmStart
 		Me.Controls.Add(Me.btnNew)
 		Me.Controls.Add(Me.btnExisting)
 		Me.Controls.Add(Me.lblTitle)
-		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
 		Me.MaximizeBox = False
 		Me.Name = "frmStart"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
