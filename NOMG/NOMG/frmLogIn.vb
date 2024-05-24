@@ -1,11 +1,13 @@
 ﻿Imports System.IO
 Imports System.Text
 Public Class frmLogIn
+    Dim appCount As Integer
     Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click
         frmStart.Show()
         Me.Hide()
     End Sub
     Private Sub ImportFileData(ByVal userEmail As String)
+        appCount = 0
         Try
             Dim filePath As String = userEmail & ".txt"
             If Not File.Exists(filePath) Then
@@ -44,6 +46,7 @@ Public Class frmLogIn
                         End If
                     End If
                 Loop Until String.IsNullOrWhiteSpace(line)
+                appCount = appointments.Count
 
                 ' Read Payment status
                 Dim isPaidList As New List(Of Boolean)
@@ -184,12 +187,15 @@ Public Class frmLogIn
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
 
+                ExistingDrAppointments()
+
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
                 frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
                 frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
                 frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
+
 
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
                     frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
@@ -203,7 +209,15 @@ Public Class frmLogIn
                 Me.Hide()
 
                 Return ' Make sure not to show the other MsgBox
+
             ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
+                'If the password is incorrect
+                Dim i As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount
+                Dim totalDrApp As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count
+                Do While i < totalDrApp
+                    frmAccountInformation.currentUser.GetDoctor().listDrAppointments.RemoveAt(frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount)
+                    i = i + 1
+                Loop
                 frmAccountInformation.listUsers.RemoveAt(intCounter)
                 Exit Do
             End If
@@ -212,5 +226,39 @@ Public Class frmLogIn
         MsgBox("Log in error: User not found")
         txtEmail.Clear()
         txtPassword.Clear()
+    End Sub
+
+    Public Sub ExistingDrAppointments()
+        Try
+            Dim drFilePath As String = frmAccountInformation.currentUser.GetDoctor().GetName & ".txt"
+            If Not File.Exists(drFilePath) Then
+                Return
+            End If
+
+            Using reader2 As New StreamReader(drFilePath, Encoding.UTF8)
+                reader2.ReadLine()
+                reader2.ReadLine()
+
+                ' Read Appointments of Doctor
+                Dim drAppointments As New List(Of Date)
+                Dim drAppointmentsHeader = reader2.ReadLine()
+                If Not drAppointmentsHeader.StartsWith("Doctor's Appointments:") Then
+                    Throw New Exception("Unexpected format for appointments of doctor.")
+                End If
+                Dim drLine As String
+                Do
+                    drLine = reader2.ReadLine()
+                    If Not String.IsNullOrWhiteSpace(drLine) Then
+                        Dim drAppointmentDate As Date
+                        If DateTime.TryParse(drLine.Trim(), drAppointmentDate) Then
+                            frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Add(drAppointmentDate)
+                        Else
+                            Throw New Exception("Invalid date format in appointments of doctor: " & drLine.Trim())
+                        End If
+                    End If
+                Loop Until String.IsNullOrWhiteSpace(drLine)
+            End Using
+        Catch err As Exception
+        End Try
     End Sub
 End Class
