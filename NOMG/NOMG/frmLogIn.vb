@@ -156,7 +156,6 @@ Public Class frmLogIn
                 End If
                 MsgBox(userSetInDrApp)
 
-
                 ' Set user credentials and data
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
@@ -192,6 +191,7 @@ Public Class frmLogIn
             Return String.Empty
         End If
     End Function
+
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim intCounter = 0
         ImportFileData(txtEmail.Text)
@@ -216,21 +216,20 @@ Public Class frmLogIn
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
-                        frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
-                    Else
-                        frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
-                    End If
+                    frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
+                Else
+                    frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
+                End If
 
-                    frmMain.blnLogOut = False
-                    frmRoutine.getNextCheckUp()
-                    frmMain.Show()
-                    Me.Hide()
+                frmMain.blnLogOut = False
+                frmRoutine.getNextCheckUp()
+                frmMain.Show()
+                Me.Hide()
 
-                    Return ' Make sure not to show the other MsgBox
-
-                ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
-                    'If the password is incorrect
-                    Dim i As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount
+                Return ' Make sure not to show the other MsgBox
+            ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
+                ' If the password is incorrect
+                Dim i As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount
                 Dim totalDrApp As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count
                 Do While i < totalDrApp
                     frmAccountInformation.currentUser.GetDoctor().listDrAppointments.RemoveAt(frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount)
