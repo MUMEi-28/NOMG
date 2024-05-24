@@ -32,6 +32,7 @@ Public Class frmAccountInformation
 		Private blnHadFluVac As Boolean
 		Private intCBX1 As Integer
 		Private blnClickedFV As Boolean
+		Private blnSetInDrApp As Boolean
 
 		' Constructor with no parameters
 		Public Sub New()
@@ -119,6 +120,9 @@ Public Class frmAccountInformation
 		Public Function GetCBX1() As Integer
 			Return intCBX1
 		End Function
+		Public Function GetSetInDrApp() As Boolean
+			Return blnSetInDrApp
+		End Function
 		Public Sub SetDoctor(ByVal tempDoctor As Doctor)
 			doctor = tempDoctor
 		End Sub
@@ -143,6 +147,9 @@ Public Class frmAccountInformation
 		End Sub
 		Public Sub SetClickedFV(ByVal blnTempClickedFV As Double)
 			blnClickedFV = blnTempClickedFV
+		End Sub
+		Public Sub SetSetInDrApp(ByVal blnTempSetInDrApp As Boolean)
+			blnSetInDrApp = blnTempSetInDrApp
 		End Sub
 	End Class
 

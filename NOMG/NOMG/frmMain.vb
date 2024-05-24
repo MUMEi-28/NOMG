@@ -306,8 +306,13 @@ Public Class frmMain
 				doctorInfo += "Doctor Name: " + frmAccountInformation.currentUser.GetDoctor().GetName()
 				doctorInfo += vbCrLf ' Add an extra line break after the list of appointments
 
+
+				Dim hadDrAppointment As String = String.Empty
+				hadDrAppointment += "Doctor Name: " + frmAccountInformation.currentUser.GetSetInDrApp()
+
+
 				' Write to file
-				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(userInfo + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + doctorInfo + vbCrLf + textToWrite7)
+				Dim bytesToWrite() As Byte = Encoding.UTF8.GetBytes(userInfo + textToWrite2 + vbCrLf + textToWrite3 + vbCrLf + textToWrite4 + vbCrLf + textToWrite5 + vbCrLf + doctorInfo + vbCrLf + textToWrite7 + vbCrLf + hadDrAppointment)
 				file.Write(bytesToWrite, 0, bytesToWrite.Length)
 			End Using
 		Catch ex As Exception
@@ -334,9 +339,9 @@ Public Class frmMain
 						userInfo += "Doctor's Appointments:" + vbCrLf
 						'	For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().listDrAppointments ' ETO ORIG, IF D GUMANA UNCOMMENT
 						For Each drAppointment In frmAccountInformation.currentUser.GetDoctor().GetListDrAppointment()
-								userInfo += drAppointment.ToString() + vbCrLf
-							Next
-							userInfo += vbCrLf ' Add an extra line break after the list of appointments
+							userInfo += drAppointment.ToString() + vbCrLf
+						Next
+						userInfo += vbCrLf ' Add an extra line break after the list of appointments
 					End If
 
 

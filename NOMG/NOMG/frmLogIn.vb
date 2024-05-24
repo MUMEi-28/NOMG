@@ -2,6 +2,7 @@
 Imports System.Text
 Public Class frmLogIn
     Dim appCount As Integer
+    Dim blnExistingDrApp As Boolean
     Private Sub btnBackToStart_Click(sender As Object, e As EventArgs) Handles btnBackToStart.Click
         frmStart.Show()
         Me.Hide()
@@ -187,32 +188,35 @@ Public Class frmLogIn
                 txtPassword.Clear()
                 frmAccountInformation.currentUser = frmAccountInformation.listUsers(intCounter)
 
-                ExistingDrAppointments()
+                If blnExistingDrApp = False Then
+                    ExistingDrAppointments()
+                    blnExistingDrApp = True
+                End If
 
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
-                frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
-                frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
-                frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
-                frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
+                    frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
+                    frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
+                    frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
+                    frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
 
-                If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
-                    frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
-                Else
-                    frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
-                End If
+                    If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
+                        frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
+                    Else
+                        frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
+                    End If
 
-                frmMain.blnLogOut = False
-                frmRoutine.getNextCheckUp()
-                frmMain.Show()
-                Me.Hide()
+                    frmMain.blnLogOut = False
+                    frmRoutine.getNextCheckUp()
+                    frmMain.Show()
+                    Me.Hide()
 
-                Return ' Make sure not to show the other MsgBox
+                    Return ' Make sure not to show the other MsgBox
 
-            ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
-                'If the password is incorrect
-                Dim i As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount
+                ElseIf txtEmail.Text = frmAccountInformation.listUsers(intCounter).GetEmail() Then
+                    'If the password is incorrect
+                    Dim i As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount
                 Dim totalDrApp As Integer = frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count
                 Do While i < totalDrApp
                     frmAccountInformation.currentUser.GetDoctor().listDrAppointments.RemoveAt(frmAccountInformation.currentUser.GetDoctor().listDrAppointments.Count - appCount)
