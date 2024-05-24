@@ -154,7 +154,6 @@ Public Class frmLogIn
                         End If
                     End If
                 End If
-                MsgBox(userSetInDrApp)
 
                 ' Set user credentials and data
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
