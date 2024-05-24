@@ -10,12 +10,13 @@ Public Class frmLogIn
     Private Sub ImportFileData(ByVal userEmail As String)
         appCount = 0
         Try
+            MsgBox("Running 1")
             Dim filePath As String = userEmail & ".txt"
             If Not File.Exists(filePath) Then
                 MsgBox("No saved data found for this user.")
                 Return
             End If
-
+            MsgBox("Running 2")
             Using reader As New StreamReader(filePath, Encoding.UTF8)
                 Dim user As New frmAccountInformation.User()
 
@@ -106,6 +107,7 @@ Public Class frmLogIn
                         End If
                     End If
                 End If
+
                 reader.ReadLine()
 
                 ' Read Patient's Doctor
@@ -129,6 +131,7 @@ Public Class frmLogIn
                     End If
                     counter = counter + 1
                 Loop
+
                 reader.ReadLine()
 
                 Dim passLine As String = reader.ReadLine()
@@ -146,9 +149,9 @@ Public Class frmLogIn
                 Dim setInDrAppLine As String = reader.ReadLine()
                 Dim userSetInDrApp As String = Nothing
 
-                If Not String.IsNullOrWhiteSpace(setInDrAppLine) AndAlso setInDrAppLine.StartsWith("Had Doctor Appointment: ") Then
-                    If setInDrAppLine.Length >= 24 Then
-                        Dim setInDrAppValue = setInDrAppLine.Substring(24).Trim()
+                If Not String.IsNullOrWhiteSpace(setInDrAppLine) AndAlso setInDrAppLine.StartsWith("Password: ") Then
+                    If setInDrAppLine.Length >= 10 Then
+                        Dim setInDrAppValue = setInDrAppLine.Substring(10).Trim()
                         If Not setInDrAppValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
                             userSetInDrApp = setInDrAppValue
                         End If
@@ -165,20 +168,20 @@ Public Class frmLogIn
                 user.SetSetInDrApp(userSetInDrApp)
 
                 ' Add user's appointments to doctor's appointments
-                If userSetInDrApp = False Then
-                    If userDoctor IsNot Nothing Then
-                        userDoctor.listDrAppointments.AddRange(appointments)
-                        userSetInDrApp = True
-                        user.SetSetInDrApp(userSetInDrApp)
-                    End If
+                If (Not userSetInDrApp) And userDoctor IsNot Nothing Then
+                    userDoctor.listDrAppointments.AddRange(appointments)
+                    userSetInDrApp = True
+                    user.SetSetInDrApp(userSetInDrApp)
                 End If
 
                 ' Adds to the list of users
                 frmAccountInformation.listUsers.Add(user)
+
             End Using
 
             MsgBox("Data imported successfully.")
         Catch ex As Exception
+            MsgBox("Running 3")
         End Try
     End Sub
 
@@ -209,9 +212,9 @@ Public Class frmLogIn
 
                 ' Initializes the textboxes in frmMain
                 frmMain.txtPDName.Text = frmAccountInformation.currentUser.GetName()
-                frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
-                frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
-                frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
+                    frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
+                    frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
+                    frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
                 frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
                 If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
