@@ -145,6 +145,20 @@ Public Class frmLogIn
                     End If
                 End If
 
+                reader.ReadLine()
+
+                Dim setInDrAppLine As String = reader.ReadLine()
+                Dim userSetInDrApp As String = Nothing
+
+                If Not String.IsNullOrWhiteSpace(setInDrAppLine) AndAlso setInDrAppLine.StartsWith("Password: ") Then
+                    If setInDrAppLine.Length >= 10 Then
+                        Dim setInDrAppValue = setInDrAppLine.Substring(10).Trim()
+                        If Not setInDrAppValue.Equals("Nothing", StringComparison.OrdinalIgnoreCase) Then
+                            userSetInDrApp = setInDrAppValue
+                        End If
+                    End If
+                End If
+
                 ' Set user credentials and data
                 user.SetUserCredentials(userName, userAddress, userEmail, userPass, userAge, userIsFirstBaby, userGestationalAge, userDoctor, Date.MinValue)
                 user.GetListAppointments().AddRange(appointments)
@@ -152,10 +166,13 @@ Public Class frmLogIn
                 user.GetListCheckedAppointments().AddRange(checkedAppointments)
                 user.SetBill(billAmount)
                 user.SetHadFluVac(hadFluVaccine)
+                user.SetSetInDrApp(userSetInDrApp)
 
                 ' Add user's appointments to doctor's appointments
-                If userDoctor IsNot Nothing Then
+                If (Not userSetInDrApp) And userDoctor IsNot Nothing Then
                     userDoctor.listDrAppointments.AddRange(appointments)
+                    userSetInDrApp = True
+                    user.SetSetInDrApp(userSetInDrApp)
                 End If
 
                 ' Adds to the list of users
@@ -198,10 +215,9 @@ Public Class frmLogIn
                     frmMain.txtPDAddress.Text = frmAccountInformation.currentUser.GetAddress()
                     frmMain.txtPDAge.Text = frmAccountInformation.currentUser.GetAge()
                     frmMain.txtPDFirstBaby.Text = frmAccountInformation.currentUser.GetIsFirstBaby()
-                    frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
+                frmMain.txtPDGestationalAge.Text = frmAccountInformation.currentUser.GetGestationalAge()
 
-
-                    If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
+                If frmAccountInformation.currentUser.GetDoctor() IsNot Nothing Then
                         frmMain.txtPDAdditionalInfo.Text = "The patient's doctor is " & frmAccountInformation.currentUser.GetDoctor().GetName() & "."
                     Else
                         frmMain.txtPDAdditionalInfo.Text = "The patient has no assigned doctor."
