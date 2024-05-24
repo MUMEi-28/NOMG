@@ -308,7 +308,7 @@ Public Class frmMain
 
 
 				Dim hadDrAppointment As String = String.Empty
-				hadDrAppointment += "Doctor Name: " + frmAccountInformation.currentUser.GetSetInDrApp()
+				hadDrAppointment += "Had Doctor Appointment: " + frmAccountInformation.currentUser.GetSetInDrApp().ToString() + vbCrLf
 
 
 				' Write to file

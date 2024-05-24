@@ -10,12 +10,13 @@ Public Class frmLogIn
     Private Sub ImportFileData(ByVal userEmail As String)
         appCount = 0
         Try
+            MsgBox("Running 1")
             Dim filePath As String = userEmail & ".txt"
             If Not File.Exists(filePath) Then
                 MsgBox("No saved data found for this user.")
                 Return
             End If
-
+            MsgBox("Running 2")
             Using reader As New StreamReader(filePath, Encoding.UTF8)
                 Dim user As New frmAccountInformation.User()
 
@@ -145,8 +146,6 @@ Public Class frmLogIn
                     End If
                 End If
 
-                reader.ReadLine()
-
                 Dim setInDrAppLine As String = reader.ReadLine()
                 Dim userSetInDrApp As String = Nothing
 
@@ -182,7 +181,7 @@ Public Class frmLogIn
 
             MsgBox("Data imported successfully.")
         Catch ex As Exception
-
+            MsgBox("Running 3")
         End Try
     End Sub
 
